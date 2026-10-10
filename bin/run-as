@@ -1,7 +1,11 @@
 #!/usr/bin/env bash
 # Run the agent on a task as one engineer.
 #
-#   bin/run-as <who> <task.md> [--runtime pi|claude]
+#   bin/run-as <who> <task.md> [--runtime pi|claude] [--strip-context]
+#
+# --strip-context removes AGENTS.md / CLAUDE.md files from the copy: the agent
+# runs as if the team's context never reached it (a subagent, a compacted
+# session, a misconfigured runtime). Hooks still load — they're runtime config.
 #
 # The engineer's personal layer (people/<who>.md) is appended to the system
 # prompt — in real life it lives in ~/.claude or ~/.pi, outside the repo.
@@ -14,9 +18,11 @@ who="${1:?usage: bin/run-as <who> <task.md> [--runtime pi|claude]}"
 task="${2:?usage: bin/run-as <who> <task.md> [--runtime pi|claude]}"
 shift 2
 runtime="${AGENT_RUNTIME:-}"
+strip=0
 while [[ $# -gt 0 ]]; do
   case "$1" in
     --runtime) runtime="$2"; shift 2 ;;
+    --strip-context) strip=1; shift ;;
     *) echo "unknown argument: $1" >&2; exit 2 ;;
   esac
 done
@@ -36,6 +42,9 @@ mkdir -p "$dest"
 rsync -a --exclude .git --exclude .venv --exclude people --exclude target \
   --exclude logs --exclude '*.duckdb' --exclude '*.duckdb.wal' "$root/" "$dest/"
 ln -s "$root/.venv" "$dest/.venv"
+if [[ $strip == 1 ]]; then
+  find "$dest" \( -name AGENTS.md -o -name CLAUDE.md \) -not -path "*/.venv/*" -delete
+fi
 (
   cd "$dest"
   git init -q && git add -A && git -c user.name=demo -c user.email=demo@example.com commit -qm baseline

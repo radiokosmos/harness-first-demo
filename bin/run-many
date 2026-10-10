@@ -8,12 +8,13 @@
 #   bin/decisions          # where agents chose between layers on their own
 set -euo pipefail
 root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-n=3; runtime="${AGENT_RUNTIME:-pi}"; task=tasks/act1.md; people=()
+n=3; runtime="${AGENT_RUNTIME:-pi}"; task=tasks/act1.md; people=(); extra=()
 while [[ $# -gt 0 ]]; do
   case "$1" in
     -n) n="$2"; shift 2 ;;
     --runtime) runtime="$2"; shift 2 ;;
     --task) task="$2"; shift 2 ;;
+    --strip-context) extra+=(--strip-context); shift ;;
     *) people+=("$1"); shift ;;
   esac
 done
@@ -23,7 +24,7 @@ mkdir -p "$base"
 pids=()
 for i in $(seq 1 "$n"); do
   for who in "${people[@]}"; do
-    HARNESS_RUNS="$base/$runtime-$i" "$root/bin/run-as" "$who" "$task" --runtime "$runtime" \
+    HARNESS_RUNS="$base/$runtime-$i" "$root/bin/run-as" "$who" "$task" --runtime "$runtime" ${extra[@]+"${extra[@]}"} \
       > "$base/$runtime-$i-$who.out" 2>&1 &
     pids+=($!)
     sleep 2   # let rsync finish before the next copy starts
