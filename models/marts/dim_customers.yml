@@ -1,0 +1,8 @@
+version: 2
+
+models:
+  - name: dim_customers
+    description: One row per customer who has contacted support. Built from a PII source.
+    columns:
+      - name: customer_id
+        data_tests: [unique, not_null]

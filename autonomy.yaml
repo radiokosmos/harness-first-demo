@@ -1,0 +1,27 @@
+# How far may an agent go on its own? Decided per zone, not per feeling.
+# Resolver: bin/autonomy <path>
+levels:
+  - unattended-to-mr        # may go all the way to a merge request
+  - checkpoint-before-mr    # stops for a human before opening the MR
+  - checkpoint-each-stage   # human go-ahead between every stage
+  - human-only              # agent drafts, a human makes the change
+
+default: checkpoint-before-mr
+
+zones:
+  - paths: ["models/**", "docs/**"]
+    level: unattended-to-mr
+  - paths: ["macros/**", "dbt_project.yml", "profiles.yml", "packages.yml"]
+    level: checkpoint-before-mr
+  - paths: ["hooks/**", ".claude/**", ".pi/**", "autonomy.yaml", "AGENTS.md"]
+    level: checkpoint-each-stage
+
+# Whatever the zone says, these force at least checkpoint-each-stage.
+escalators:
+  pii: a model that reads a source or column tagged meta.pii
+  destroy: drop, delete, truncate or --full-refresh on a mart
+
+human_only:
+  - merge a merge request
+  - run anything against the prod target
+  - change autonomy.yaml itself
