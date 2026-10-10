@@ -33,12 +33,22 @@ Fell behind? Every exercise has a checkpoint branch: `git checkout act-N-…`.
 
 ## Tools
 
-| Command | What |
-|---|---|
-| `bin/doctor` | is the machine ready |
-| `bin/run-as <who> <task>` | run the agent as Alice or Bob (their personal layer goes into the system prompt) in a throwaway copy |
-| `bin/run-many -n N alice bob` | many runs in parallel (agents are not deterministic) |
-| `bin/compare alice bob` / `--all` | what each run built; `--all` = the distribution over every run |
-| `bin/decisions` | where the agent chose between layers on its own |
-| `bin/check-layers` | act 1: is every line of context in the right layer (7 checks) |
-| `bin/check-counts [who]` | daily model vs source, by UTC day |
+| Command | Act | What |
+|---|---|---|
+| `bin/doctor` | — | is the machine ready |
+| `bin/run-as <who> <task>` | 1+ | run the agent as Alice or Bob (their personal layer goes into the system prompt) in a throwaway copy |
+| `bin/run-many -n N alice bob` | 1+ | many runs in parallel (agents are not deterministic) |
+| `bin/compare alice bob` / `--all` | 1 | what each run built; `--all` = the distribution over every run |
+| `bin/decisions` | 1 | where the agent chose between layers on its own |
+| `bin/check-layers` | 1 | is every line of context in the right layer (7 checks) |
+| `bin/check-counts [who]` | 1–2 | daily model vs source, by UTC day |
+| `bin/test-hook` | 2 | cases for the prod guardrail (`hooks/core.mjs`) |
+| `bin/reconcile <model>` · `bin/check-done <model>` | 2 | evidence on data; done = generated evidence + planned tests ran |
+| `bin/autonomy <path>` | 2 | how far an agent may go on a change (`autonomy.yaml`) |
+| `bin/pii-score [--hidden]` | 3 | the PII masker (`pii/masker.mjs`) on a labelled corpus |
+| `bin/show-provider-payload [who]` | 3 | what actually left the machine |
+| `bin/run-headless <task> --scenario …` · `bin/verify-run <dir>` | 4 | an unattended run, and checking it by artifacts |
+| `bin/drift-check` · `bin/reflections-report` | 5 | does the harness agree with itself; which mistakes keep coming back |
+| `bin/test-guard` · `bin/lint-models` | 5 | the day-boundary guard |
+
+Tools for later acts exist on their branches. `recordings/` has real runs of every act.
