@@ -31,9 +31,11 @@ TOLERANCE_PCT = 0.5
 
 
 def completeness(con, m: str, d: str, e: str, u: str) -> list[tuple]:
-    # TODO: act 2, exercise 2b.
-    # Source side: the number of distinct event_id per day in raw.raw_events.
-    source_sql = "select null::date as day, null::bigint as n"
+    # event_ts is stored in UTC; the session time zone is not — say UTC explicitly.
+    source_sql = """
+        select cast(timezone('UTC', event_ts) as date) as day, count(distinct event_id) as n
+        from raw.raw_events group by 1
+    """
     return con.execute(f"""
         with src as ({source_sql}),
              mdl as (select "{d}" as day, sum("{e}") as n from {m} group by 1)
@@ -45,9 +47,10 @@ def completeness(con, m: str, d: str, e: str, u: str) -> list[tuple]:
 
 
 def keys(con, m: str, d: str, e: str, u: str) -> list[tuple]:
-    # TODO: act 2, exercise 2b.
-    # Source side: the number of distinct user_id per day in raw.raw_events.
-    source_sql = "select null::date as day, null::bigint as n"
+    source_sql = """
+        select cast(timezone('UTC', event_ts) as date) as day, count(distinct user_id) as n
+        from raw.raw_events group by 1
+    """
     return con.execute(f"""
         with src as ({source_sql}),
              mdl as (select "{d}" as day, sum("{u}") as n from {m} group by 1)

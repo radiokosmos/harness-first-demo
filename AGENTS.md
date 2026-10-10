@@ -26,5 +26,9 @@ Owners of each area: see `CODEOWNERS`.
 - Don't run `dbt clean`; ask before adding packages to `pyproject.toml`.
 - The `raw` schema is loaded from seeds; don't edit the CSVs by hand.
 
+## Guardrails
+- `hooks/` blocks dbt runs against prod for every agent runtime (Claude Code, pi).
+- How far an agent may go on its own: `autonomy.yaml` (`bin/autonomy <path>`).
+
 ## Skills
 - Adding a model: `skills/add-model/SKILL.md`.

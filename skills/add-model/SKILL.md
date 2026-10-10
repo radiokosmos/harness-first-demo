@@ -15,3 +15,10 @@ description: Add a new dbt model (staging or mart) — grain, dedup, tests, PII 
 8. If any column comes from a PII source, add `meta: {pii: true}` to it.
 9. Run `dbt build -s <model>` and fix failures.
 10. Write a short summary of what you built.
+
+## Definition of done
+
+1. Run `bin/reconcile <model>`. Do not edit its output or EVIDENCE.md.
+2. If any check fails, find the cause and fix the model. Do not loosen thresholds or change the checks.
+3. Run `dbt build -s <model>` so the tests run, then `bin/check-done <model>`.
+4. You are done only when `bin/check-done <model>` prints DONE.
