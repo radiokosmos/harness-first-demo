@@ -4,3 +4,4 @@
 - Reply in English.
 - I like to see the SQL you ran, not just the result.
 - Note to self: almost ran dbt against prod last week — my profile defaulted to prod. Careful.
+- The daily mart is `fct_daily_activity` — check it first when numbers look off.
