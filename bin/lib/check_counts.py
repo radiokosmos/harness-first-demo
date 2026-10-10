@@ -1,6 +1,6 @@
 """Compare a daily model's event counts with the source, by UTC day.
 
-    bin/check-counts            # the repo you're in
+    bin/check-counts            # the directory you're in
     bin/check-counts alice      # the copy bin/run-as made for alice
 
 Finds the mart table with a date column and an event-count column, and
@@ -70,7 +70,7 @@ def off(src_n, mdl_n) -> bool:
 
 
 def main() -> int:
-    where = RUNS / sys.argv[1] if len(sys.argv) > 1 else ROOT
+    where = RUNS / sys.argv[1] if len(sys.argv) > 1 else Path.cwd()
     db = where / os.environ.get("DEMO_DB", "demo.duckdb")
     if not db.exists():
         print(f"{RED}no database at {db}{RESET}")
