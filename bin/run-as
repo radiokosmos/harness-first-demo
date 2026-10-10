@@ -56,6 +56,7 @@ case "$runtime" in
     ;;
   claude)
     claude -p "$task_text" --append-system-prompt "$persona" \
+      --model "${CLAUDE_MODEL:-claude-sonnet-5-5}" \
       --setting-sources project,local \
       --allowedTools "Bash Read Edit Write Glob Grep" ${CLAUDE_ARGS:-} \
       2>&1 | tee "$runs/$who.log"
