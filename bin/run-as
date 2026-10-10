@@ -56,6 +56,9 @@ fi
   cd "$dest"
   git init -q && git add -A && git -c user.name=demo -c user.email=demo@example.com commit -qm baseline
   DBT_PROFILES_DIR=. .venv/bin/dbt seed -q >/dev/null && DBT_PROFILES_DIR=. .venv/bin/dbt run -q -s staging >/dev/null
+  if [[ "${SCENARIO_NO_WAREHOUSE:-0}" == 1 ]]; then   # act 4: the warehouse is unreachable
+    rm -f demo.duckdb && mkdir demo.duckdb && chmod 000 demo.duckdb
+  fi
 )
 
 echo "▶ $who · $runtime · $dest"
@@ -64,7 +67,11 @@ export PATH="$dest/.venv/bin:$PATH" DBT_PROFILES_DIR=.
 # act 3: the pi PII extension writes every outgoing provider request here
 export PII_PAYLOAD_LOG="${PII_PAYLOAD_LOG:-$runs/$who.payload.jsonl}"
 rm -f "$PII_PAYLOAD_LOG"
+if [[ -n "${AGENT_FAKE:-}" ]]; then runtime=fake; fi   # act 4: a CLI that fails silently
 case "$runtime" in
+  fake)
+    "$AGENT_FAKE" | tee "$runs/$who.log"
+    ;;
   pi)
     # stdin closed: with an inherited, never-closing stdin pi -p waits forever
     pi -p --approve --no-session ${PI_ARGS:-} --append-system-prompt "$persona" "$task_text" \

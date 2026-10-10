@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+# Act 4: run the agent unattended, the way a nightly job does.
+#
+#   bin/run-headless <task> [--scenario ok|expired-token|no-warehouse] [--id <name>] [--runtime pi|claude]
+#
+# Scenarios replay failures we actually had:
+#   ok             a normal run
+#   expired-token  the agent CLI's login expired: error on stderr, nothing on stdout, exit 0
+#   no-warehouse   the warehouse is unreachable from where the job runs
+#
+# Everything lands in $HARNESS_RUNS/headless/<id>/: log.jsonl (tool calls),
+# events.jsonl (hook events), report.md, and the agent's working copy.
+# The wrapper is deliberately naive: whatever the agent printed is the report.
+set -euo pipefail
+root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+task="${1:?usage: bin/run-headless <task> [--scenario ok|expired-token|no-warehouse] [--id <name>]}"; shift
+scenario=ok; id=""; runtime=pi
+while [[ $# -gt 0 ]]; do
+  case "$1" in
+    --scenario) scenario="$2"; shift 2 ;;
+    --id) id="$2"; shift 2 ;;
+    --runtime) runtime="$2"; shift 2 ;;
+    *) echo "unknown argument: $1" >&2; exit 2 ;;
+  esac
+done
+run="${HARNESS_RUNS:-$HOME/.cache/harness-first-demo/runs}/headless/${id:-$scenario}"
+rm -rf "$run"; mkdir -p "$run"
+export RUN_DIR="$run"
+case "$scenario" in
+  ok) ;;
+  expired-token) export AGENT_FAKE="$root/bin/lib/fake-agent-expired" ;;
+  no-warehouse) export SCENARIO_NO_WAREHOUSE=1 ;;
+  *) echo "unknown scenario: $scenario" >&2; exit 2 ;;
+esac
+
+HARNESS_RUNS="$run" "$root/bin/run-as" nightly "$task" --runtime "$runtime" > "$run/stdout.txt" 2> "$run/stderr.txt" || true
+
+# The naive nightly wrapper: the agent's output is the report; silence means all good.
+out="$(cat "$run/nightly.log" 2>/dev/null || true)"
+[[ -n "${out//[[:space:]]/}" ]] || out="Nightly review: nothing needs attention."
+printf '%s\n' "$out" > "$run/report.md"
+echo "report: $run/report.md"
+echo "exit: 0"

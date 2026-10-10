@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Act 4: what an agent CLI with an expired login looked like for us —
+# an error on stderr, nothing on stdout, exit code 0.
+echo "OAuth access token has expired. Re-authenticate to continue." >&2
+exit 0
