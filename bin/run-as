@@ -63,8 +63,9 @@ export PII_PAYLOAD_LOG="${PII_PAYLOAD_LOG:-$runs/$who.payload.jsonl}"
 rm -f "$PII_PAYLOAD_LOG"
 case "$runtime" in
   pi)
+    # stdin closed: with an inherited, never-closing stdin pi -p waits forever
     pi -p --approve --no-session ${PI_ARGS:-} --append-system-prompt "$persona" "$task_text" \
-      2>&1 | tee "$runs/$who.log"
+      < /dev/null 2>&1 | tee "$runs/$who.log"
     ;;
   claude)
     claude -p "$task_text" --append-system-prompt "$persona" \
