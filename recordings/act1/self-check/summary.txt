@@ -1,0 +1,22 @@
+# act 1 · self-check · pi (claude-sonnet-5) · bob · recorded 2026-10-10
+# Earlier repo state (profiles.yml still had a time-zone comment). Kept for the act 1 → 2 transition:
+# the agent verified the TOTAL against the source, and the days were still wrong.
+
+"main"."fct_events_daily".event_count vs distinct events in raw_events, by UTC day
+2026-09-30  source      0  model    684  (day exists on one side only)
+2026-10-01  source   2261  model   2231    -1.3%
+2026-10-02  source   2058  model   2101    +2.1%
+2026-10-03  source   2327  model   2274    -2.3%
+2026-10-04  source   2122  model   2212    +4.2%
+2026-10-05  source   2408  model   2300    -4.5%
+2026-10-06  source   2065  model   2064    -0.0%
+2026-10-07  source   2135  model   2244    +5.1%
+2026-10-08  source   2292  model   2216    -3.3%
+2026-10-09  source   2058  model   2082    +1.2%
+2026-10-10  source   2161  model   2188    +1.2%
+2026-10-11  source   2260  model   2274    +0.6%
+2026-10-12  source   2353  model   2296    -2.4%
+2026-10-13  source   2260  model   2296    +1.6%
+2026-10-14  source   2345  model   1643   -29.9%
+
+14 of 15 days off by more than 0.5%.

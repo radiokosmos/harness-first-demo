@@ -8,6 +8,7 @@ Each folder has the files the agents added, their logs, and `summary.txt`
 |---|---|---|
 | `act1/before` | `act-1-start` (monolithic CLAUDE.md) | pi × 8, Claude Code × 6 |
 | `act1/after` | `act-1-layers` (layers + precedence) | pi × 6, Claude Code × 4 |
+| `act1/self-check` | earlier `act-1-start` | one pi run: verified the total, days still wrong |
 
 Models: pi with `claude-sonnet-5`, Claude Code with `claude-sonnet-5-5`.
 To compare a recording yourself: `HARNESS_RUNS=<scratch copy of runs> bin/compare --all`.

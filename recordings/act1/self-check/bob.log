@@ -1,0 +1,31 @@
+## Summary
+
+**Built:** `models/marts/fct_events_daily.sql` + its `.yml` schema file — one row per calendar day (UTC), with `active_users` (distinct users) and `event_count`.
+
+- Deduplicated `stg_events` on `event_id` (keeping earliest `ingested_at`) inside the model, since `stg_events` itself isn't deduped and mobile replays would otherwise double-count events.
+- Added `unique`/`not_null` test on `activity_date` and `not_null` on the two metrics, per this repo's standard (every model needs tests on its key) — I didn't skip them.
+- Followed repo conventions already in place: `fct_` prefix, lives in `models/marts`, CTEs only, lowercase SQL, no leading commas, no `select *`.
+
+**Commands run (always `--target dev`, never prod):**
+```bash
+DBT_PROFILES_DIR=. .venv/bin/dbt debug --target dev
+DBT_PROFILES_DIR=. .venv/bin/dbt seed --target dev
+DBT_PROFILES_DIR=. .venv/bin/dbt build -s stg_events --target dev
+DBT_PROFILES_DIR=. .venv/bin/dbt build -s fct_events_daily --target dev
+```
+All 4 tests passed.
+
+**Verification SQL** (via `duckdb` against `demo.duckdb`):
+```sql
+select activity_date, active_users, event_count
+from main.fct_events_daily
+order by activity_date limit 5;
+
+select count(*) as days, sum(event_count) as total_events,
+       min(activity_date), max(activity_date)
+from main.fct_events_daily;
+
+select count(distinct event_id) as distinct_source_events
+from raw.raw_events;
+```
+Result: 15 days, 2026‑09‑30 → 2026‑10‑14, `sum(event_count) = 31105` which matches `count(distinct event_id)` in the raw source exactly — confirms the dedup logic is correct.
