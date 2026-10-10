@@ -3,6 +3,9 @@
 #
 #   bin/run-headless <task> [--scenario ok|expired-token|no-warehouse] [--id <name>] [--runtime pi|claude]
 #
+# HEADLESS_TIMEOUT (seconds, default 900): a hung run is killed — and, like
+# everything else here, the naive wrapper still reports "nothing needs attention".
+#
 # Scenarios replay failures we actually had:
 #   ok             a normal run
 #   expired-token  the agent CLI's login expired: error on stderr, nothing on stdout, exit 0
@@ -24,6 +27,7 @@ while [[ $# -gt 0 ]]; do
   esac
 done
 run="${HARNESS_RUNS:-$HOME/.cache/harness-first-demo/runs}/headless/${id:-$scenario}"
+chmod -R u+rwx "$run" 2>/dev/null || true
 rm -rf "$run"; mkdir -p "$run"
 export RUN_DIR="$run"
 case "$scenario" in
@@ -33,7 +37,12 @@ case "$scenario" in
   *) echo "unknown scenario: $scenario" >&2; exit 2 ;;
 esac
 
-HARNESS_RUNS="$run" "$root/bin/run-as" nightly "$task" --runtime "$runtime" > "$run/stdout.txt" 2> "$run/stderr.txt" || true
+HARNESS_RUNS="$run" "$root/bin/run-as" nightly "$task" --runtime "$runtime" > "$run/stdout.txt" 2> "$run/stderr.txt" &
+agent=$!
+( sleep "${HEADLESS_TIMEOUT:-900}" && pkill -P "$agent" 2>/dev/null; kill "$agent" 2>/dev/null; echo "timed out" > "$run/timeout" ) &
+watchdog=$!
+wait "$agent" 2>/dev/null || true
+kill "$watchdog" 2>/dev/null || true
 
 # The naive nightly wrapper: the agent's output is the report; silence means all good.
 out="$(cat "$run/nightly.log" 2>/dev/null || true)"
