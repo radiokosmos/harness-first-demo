@@ -1,0 +1,9 @@
+✗ the agent worked
+    zero tool calls — the agent never touched anything (expired login? crash?)
+✗ required systems answered
+    warehouse: never contacted
+✗ the report is backed by evidence
+    no EVIDENCE.md — data-diff never ran, so the report is an opinion
+✓ nothing destructive happened
+
+RUN FAILED — whatever report.md says

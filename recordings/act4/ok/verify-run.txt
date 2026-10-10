@@ -1,0 +1,6 @@
+✓ the agent worked
+✓ required systems answered
+✓ the report is backed by evidence
+✓ nothing destructive happened
+
+RUN OK
