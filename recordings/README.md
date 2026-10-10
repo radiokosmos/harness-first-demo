@@ -17,6 +17,7 @@ Each folder has the files the agents added, their logs, and `summary.txt`
 | `act3/leak` | `act-3-start`, `PII_FILTER=0` | 16 requests; the last one carried 42 distinct customer emails (history is re-sent every turn) |
 | `act3/masked` | `act-3-masker`, both echelons | no email, phone, IBAN or card left the machine; names did |
 | `act3/detokenize` | `act-3-masker` + `PII_DETOKENIZE=1` | filtered on `<EMAIL_3>`, found all 23 tickets, never saw the address |
+| `act3/paste` | `act-3-masker`, `PII_PROVIDER_GUARD=1` | PII pasted into the prompt: echelon 2 masked EMAIL, CARD, PHONE before the request left |
 
 Models: pi with `claude-sonnet-5`, Claude Code with `claude-sonnet-5-5`.
 To compare a recording yourself: `HARNESS_RUNS=<scratch copy of runs> bin/compare --all`.

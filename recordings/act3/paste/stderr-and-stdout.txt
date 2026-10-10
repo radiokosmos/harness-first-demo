@@ -1,0 +1,5 @@
+▶ bob · pi · <run>
+[pii-filter] provider guard masked EMAIL×1, CARD×1, PHONE×1 in the outgoing request — PII reached the context outside a tool result
+Category: Billing — duplicate/double charge on deposit (payments issue).
+Urgency: High — financial error affecting the customer, already waiting a week; should be escalated/resolved promptly (note: don't copy the customer's card, phone, or email into any marts/tickets data per PII policy).
+RUN-EXIT 0
