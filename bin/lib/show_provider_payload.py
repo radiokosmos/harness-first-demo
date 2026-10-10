@@ -26,6 +26,20 @@ PATTERNS = {
 }
 
 
+def luhn(digits: str) -> bool:
+    total, dbl = 0, False
+    for ch in reversed(digits):
+        d = int(ch)
+        if dbl:
+            d = d * 2 - 9 if d > 4 else d * 2
+        total += d
+        dbl = not dbl
+    return total % 10 == 0
+
+
+CHECKS = {"CARD": lambda m: luhn(re.sub(r"\D", "", m))}
+
+
 def strings(v):
     if isinstance(v, str):
         yield v
@@ -50,6 +64,8 @@ def main() -> int:
         for s in strings(req):
             for kind, rx in PATTERNS.items():
                 for m in rx.finditer(s):
+                    if kind in CHECKS and not CHECKS[kind](m.group()):
+                        continue
                     found[kind] += 1
                     if m.group() not in seen and len(seen) < 8:
                         a, b = max(0, m.start() - 40), min(len(s), m.end() + 30)
