@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: stg_events
+    description: One row per ingested event. Not deduplicated — mobile replays appear twice with the same event_id.
+    columns:
+      - name: event_id
+        data_tests: [not_null]
+      - name: user_id
+        data_tests: [not_null]
+      - name: event_ts
+        description: Event time, UTC.
+        data_tests: [not_null]

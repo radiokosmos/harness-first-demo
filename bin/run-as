@@ -1,0 +1,64 @@
+#!/usr/bin/env bash
+# Run the agent on a task as one engineer.
+#
+#   bin/run-as <who> <task.md> [--runtime pi|claude]
+#
+# The engineer's personal layer (people/<who>.md) is appended to the system
+# prompt — in real life it lives in ~/.claude or ~/.pi, outside the repo.
+# The agent works in a throwaway copy of the repo, outside this directory
+# (agents read context files from parent directories too), without people/.
+set -euo pipefail
+
+root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+who="${1:?usage: bin/run-as <who> <task.md> [--runtime pi|claude]}"
+task="${2:?usage: bin/run-as <who> <task.md> [--runtime pi|claude]}"
+shift 2
+runtime="${AGENT_RUNTIME:-}"
+while [[ $# -gt 0 ]]; do
+  case "$1" in
+    --runtime) runtime="$2"; shift 2 ;;
+    *) echo "unknown argument: $1" >&2; exit 2 ;;
+  esac
+done
+if [[ -z "$runtime" ]]; then
+  if command -v pi >/dev/null; then runtime=pi; else runtime=claude; fi
+fi
+
+persona_file="$root/people/$who.md"
+[[ -f "$persona_file" ]] || { echo "no personal layer: $persona_file" >&2; exit 1; }
+[[ -f "$root/$task" || -f "$task" ]] || { echo "no task file: $task" >&2; exit 1; }
+task_text="$(cat "$root/$task" 2>/dev/null || cat "$task")"
+
+runs="${HARNESS_RUNS:-$HOME/.cache/harness-first-demo/runs}"
+dest="$runs/$who"
+rm -rf "$dest"
+mkdir -p "$dest"
+rsync -a --exclude .git --exclude .venv --exclude people --exclude target \
+  --exclude logs --exclude '*.duckdb' --exclude '*.duckdb.wal' "$root/" "$dest/"
+ln -s "$root/.venv" "$dest/.venv"
+(
+  cd "$dest"
+  git init -q && git add -A && git -c user.name=demo -c user.email=demo@example.com commit -qm baseline
+  DBT_PROFILES_DIR=. .venv/bin/dbt seed -q >/dev/null && DBT_PROFILES_DIR=. .venv/bin/dbt run -q -s staging >/dev/null
+)
+
+persona="You are working with $who. These are $who's personal notes for their agent:
+
+$(cat "$persona_file")"
+
+echo "▶ $who · $runtime · $dest"
+cd "$dest"
+export PATH="$dest/.venv/bin:$PATH" DBT_PROFILES_DIR=.
+case "$runtime" in
+  pi)
+    pi -p --approve --no-session ${PI_ARGS:-} --append-system-prompt "$persona" "$task_text" \
+      2>&1 | tee "$runs/$who.log"
+    ;;
+  claude)
+    claude -p "$task_text" --append-system-prompt "$persona" \
+      --setting-sources project,local \
+      --allowedTools "Bash Read Edit Write Glob Grep" ${CLAUDE_ARGS:-} \
+      2>&1 | tee "$runs/$who.log"
+    ;;
+  *) echo "unknown runtime: $runtime" >&2; exit 2 ;;
+esac

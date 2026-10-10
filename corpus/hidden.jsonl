@@ -1,0 +1,500 @@
+{"text": "Spread on DAX was too wide yesterday. Call the office 0519 3423355 if you need details.", "spans": []}
+{"text": "Mareike Möchlichen-Lange here. Why was my position closed? Ticket from order 6770853379836572 was ignored.", "spans": [{"start": 0, "end": 24, "type": "PERSON"}]}
+{"text": "Spread on DAX was too wide yesterday. Call the office 0863 716483 if you need details.", "spans": []}
+{"text": "Your agent maxime.blaser@corp.example promised a callback on olena.schmidt@corp.example. Nobody called. Reach me at hansruedilanz@example.com.", "spans": [{"start": 116, "end": 141, "type": "EMAIL"}]}
+{"text": "Spread on DAX was too wide yesterday. Call the office 0994 8359573 if you need details.", "spans": []}
+{"text": "Hi, this is Andrej Varga. My withdrawal is still pending, see ref 1760866592985. Please call me on +41 064 0233 15.", "spans": [{"start": 12, "end": 24, "type": "PERSON"}, {"start": 99, "end": 114, "type": "PHONE"}]}
+{"text": "Your agent pascale.gumprich@corp.example promised a callback on 0343 5269983. Nobody called. Reach me at guelaykruschwitz@example.org.", "spans": [{"start": 105, "end": 133, "type": "EMAIL"}]}
+{"text": "Deposit failed again. Card 4192561717852330, tried giacomo.graf@corp.example. My number is +43-735-0936689, Raffaele Hofmann.", "spans": [{"start": 27, "end": 43, "type": "CARD"}, {"start": 91, "end": 106, "type": "PHONE"}, {"start": 108, "end": 124, "type": "PERSON"}]}
+{"text": "Vera Günther here. Why was my position closed? Ticket from ref 1759516698965 was ignored.", "spans": [{"start": 0, "end": 12, "type": "PERSON"}]}
+{"text": "Deposit failed again. Card 2463542689029871, tried order 3950186951424974. My number is +4128287270025, Waldemar Keller-Ritter.", "spans": [{"start": 27, "end": 43, "type": "CARD"}, {"start": 88, "end": 102, "type": "PHONE"}, {"start": 104, "end": 126, "type": "PERSON"}]}
+{"text": "Spread on DAX was too wide yesterday. Call the office 0577 2382491 if you need details.", "spans": []}
+{"text": "Spread on DAX was too wide yesterday. Call the office 0203 3249862 if you need details.", "spans": []}
+{"text": "Please send the refund to CH9317752740782786656. Account holder: Theres Seiler.", "spans": [{"start": 26, "end": 47, "type": "IBAN"}, {"start": 65, "end": 78, "type": "PERSON"}]}
+{"text": "Hi, this is Hannes Berger. My withdrawal is still pending, see order 1760538136708467. Please call me on +4937921377931.", "spans": [{"start": 12, "end": 25, "type": "PERSON"}, {"start": 105, "end": 119, "type": "PHONE"}]}
+{"text": "Hi, this is Dipl.-Ing. Sigrun Mentzel. My withdrawal is still pending, see order 6058986697542331. Please call me on +4188776881434.", "spans": [{"start": 12, "end": 37, "type": "PERSON"}, {"start": 117, "end": 131, "type": "PHONE"}]}
+{"text": "Change my email to steinacherannabell@example.net and the payout account to AT033035121185949673.", "spans": [{"start": 19, "end": 49, "type": "EMAIL"}, {"start": 76, "end": 96, "type": "IBAN"}]}
+{"text": "Verification documents uploaded twice, 4 613.28 EUR. Please confirm. Tomas Rädel, +43 697 2098 3755.", "spans": [{"start": 69, "end": 80, "type": "PERSON"}, {"start": 82, "end": 99, "type": "PHONE"}]}
+{"text": "Verification documents uploaded twice, 2026-09-14. Please confirm. Eveline Schmid, +49543343270.", "spans": [{"start": 67, "end": 81, "type": "PERSON"}, {"start": 83, "end": 95, "type": "PHONE"}]}
+{"text": "Deposit failed again. Card 2273379836572671, tried juliane.trubin@corp.example. My number is +49260004652, Johannes Hering.", "spans": [{"start": 27, "end": 43, "type": "CARD"}, {"start": 93, "end": 105, "type": "PHONE"}, {"start": 107, "end": 122, "type": "PERSON"}]}
+{"text": "Ingetraud Mude here. Why was my position closed? Ticket from order 9752448652343657 was ignored.", "spans": [{"start": 0, "end": 14, "type": "PERSON"}]}
+{"text": "Your agent lily.suter@corp.example promised a callback on dragica.marti@corp.example. Nobody called. Reach me at martinveronika@example.net.", "spans": [{"start": 113, "end": 139, "type": "EMAIL"}]}
+{"text": "Hi, this is Ing. Wiltrud Bien B.A.. My withdrawal is still pending, see 8 543.57 EUR. Please call me on +41 380 5531 89.", "spans": [{"start": 12, "end": 34, "type": "PERSON"}, {"start": 104, "end": 119, "type": "PHONE"}]}
+{"text": "App crashes when I open the chart, ref 1759784472875. Not urgent.", "spans": []}
+{"text": "App crashes when I open the chart, ref 1760705995277. Not urgent.", "spans": []}
+{"text": "Verification documents uploaded twice, 0472 7363280. Please confirm. Cecilia Hutterer, +4348831153320.", "spans": [{"start": 69, "end": 85, "type": "PERSON"}, {"start": 87, "end": 101, "type": "PHONE"}]}
+{"text": "Ali Kramer here. Why was my position closed? Ticket from 2026-09-17 was ignored.", "spans": [{"start": 0, "end": 10, "type": "PERSON"}]}
+{"text": "Your agent gabriel.lipp@corp.example promised a callback on order 1171056584340530. Nobody called. Reach me at nhemetsberger@example.org.", "spans": [{"start": 111, "end": 136, "type": "EMAIL"}]}
+{"text": "Deposit failed again. Card 2250233152336343, tried 2026-09-13. My number is +412357082012, Corinna Huhn.", "spans": [{"start": 27, "end": 43, "type": "CARD"}, {"start": 76, "end": 89, "type": "PHONE"}, {"start": 91, "end": 103, "type": "PERSON"}]}
+{"text": "Gerlind Mies here. Why was my position closed? Ticket from 0661 4388806 was ignored.", "spans": [{"start": 0, "end": 12, "type": "PERSON"}]}
+{"text": "Deposit failed again. Card 2718554616584574, tried 7 987.34 EUR. My number is +49559357070, Noelia Gasser.", "spans": [{"start": 27, "end": 43, "type": "CARD"}, {"start": 78, "end": 90, "type": "PHONE"}, {"start": 92, "end": 105, "type": "PERSON"}]}
+{"text": "Change my email to elianekern@example.org and the payout account to CH5226892750313774367.", "spans": [{"start": 19, "end": 41, "type": "EMAIL"}, {"start": 68, "end": 89, "type": "IBAN"}]}
+{"text": "Spread on DAX was too wide yesterday. Call the office 0587 2693512 if you need details.", "spans": []}
+{"text": "Your agent alix.mäder@corp.example promised a callback on ref 1759833538309. Nobody called. Reach me at tomislavwuthrich@example.com.", "spans": [{"start": 104, "end": 132, "type": "EMAIL"}]}
+{"text": "Please send the refund to AT861069278517465503. Account holder: Noel Werner.", "spans": [{"start": 26, "end": 46, "type": "IBAN"}, {"start": 64, "end": 75, "type": "PERSON"}]}
+{"text": "Deposit failed again. Card 4960794237018906, tried 2026-09-06. My number is +43 152 2381 158, Dafina Hodel.", "spans": [{"start": 27, "end": 43, "type": "CARD"}, {"start": 76, "end": 92, "type": "PHONE"}, {"start": 94, "end": 106, "type": "PERSON"}]}
+{"text": "I was charged twice on card 2245093668955624 for 6 290.90 EUR. Contact me at brankakeudel@example.com.", "spans": [{"start": 28, "end": 44, "type": "CARD"}, {"start": 77, "end": 101, "type": "EMAIL"}]}
+{"text": "Maximilian Steinbauer here. Why was my position closed? Ticket from 2026-09-14 was ignored.", "spans": [{"start": 0, "end": 21, "type": "PERSON"}]}
+{"text": "I was charged twice on card 5449597285458389 for 5 015.00 EUR. Contact me at stockerjakub@example.org.", "spans": [{"start": 28, "end": 44, "type": "CARD"}, {"start": 77, "end": 101, "type": "EMAIL"}]}
+{"text": "Change my email to gumprichcaecilia@example.com and the payout account to DE25018695142497428287.", "spans": [{"start": 19, "end": 47, "type": "EMAIL"}, {"start": 74, "end": 96, "type": "IBAN"}]}
+{"text": "Your agent levi.danninger@corp.example promised a callback on 0342 1472125. Nobody called. Reach me at bucherlisa@example.org.", "spans": [{"start": 103, "end": 125, "type": "EMAIL"}]}
+{"text": "Please send the refund to CH6856052575794625817. Account holder: Hanspeter Jost.", "spans": [{"start": 26, "end": 47, "type": "IBAN"}, {"start": 65, "end": 79, "type": "PERSON"}]}
+{"text": "Change my email to theodorbloch@example.org and the payout account to DE65257792071392001760.", "spans": [{"start": 19, "end": 43, "type": "EMAIL"}, {"start": 70, "end": 92, "type": "IBAN"}]}
+{"text": "Florentin Steiner-Holler here. Why was my position closed? Ticket from ref 1759111329987 was ignored.", "spans": [{"start": 0, "end": 24, "type": "PERSON"}]}
+{"text": "Philippa Böhler here. Why was my position closed? Ticket from 2026-10-11 was ignored.", "spans": [{"start": 0, "end": 15, "type": "PERSON"}]}
+{"text": "Verification documents uploaded twice, patric.gude@corp.example. Please confirm. Eduard Lehmann, +43502481395.", "spans": [{"start": 81, "end": 95, "type": "PERSON"}, {"start": 97, "end": 109, "type": "PHONE"}]}
+{"text": "Verification documents uploaded twice, 2026-09-26. Please confirm. Lucienne Ott Kälin, +49421786707.", "spans": [{"start": 67, "end": 85, "type": "PERSON"}, {"start": 87, "end": 99, "type": "PHONE"}]}
+{"text": "Your agent darko.zenz@corp.example promised a callback on 854.45 EUR. Nobody called. Reach me at lydiarudolf@example.net.", "spans": [{"start": 97, "end": 120, "type": "EMAIL"}]}
+{"text": "Hi, this is Snezana Braun. My withdrawal is still pending, see order 0969247449769818. Please call me on +43-612-425676.", "spans": [{"start": 12, "end": 25, "type": "PERSON"}, {"start": 105, "end": 119, "type": "PHONE"}]}
+{"text": "Deposit failed again. Card 4608859638113933, tried 6 875.02 EUR. My number is +43 269 1914 9730, Emilia Bachmann.", "spans": [{"start": 27, "end": 43, "type": "CARD"}, {"start": 78, "end": 95, "type": "PHONE"}, {"start": 97, "end": 112, "type": "PERSON"}]}
+{"text": "Your agent toni.kälin@corp.example promised a callback on yann.zimmermann@corp.example. Nobody called. Reach me at hoffmannkushtrim@example.org.", "spans": [{"start": 115, "end": 143, "type": "EMAIL"}]}
+{"text": "Verification documents uploaded twice, 3 728.97 EUR. Please confirm. Andjela Maurer-Neuhold, +411229438929.", "spans": [{"start": 69, "end": 91, "type": "PERSON"}, {"start": 93, "end": 106, "type": "PHONE"}]}
+{"text": "Ilias Fiedler here. Why was my position closed? Ticket from ref 1760134641440 was ignored.", "spans": [{"start": 0, "end": 13, "type": "PERSON"}]}
+{"text": "Spread on DAX was too wide yesterday. Call the office 0501 3760825 if you need details.", "spans": []}
+{"text": "Hi, this is Seline Eugster-Peter. My withdrawal is still pending, see fredy.staub@corp.example. Please call me on +4387089664160.", "spans": [{"start": 12, "end": 32, "type": "PERSON"}, {"start": 114, "end": 128, "type": "PHONE"}]}
+{"text": "Verification documents uploaded twice, 2026-10-11. Please confirm. Wenke Beier B.Eng., +4169920789727.", "spans": [{"start": 67, "end": 85, "type": "PERSON"}, {"start": 87, "end": 101, "type": "PHONE"}]}
+{"text": "I was charged twice on card 2273009883308493 for order 6037489553493433. Contact me at rosaria67@example.org.", "spans": [{"start": 28, "end": 44, "type": "CARD"}, {"start": 87, "end": 108, "type": "EMAIL"}]}
+{"text": "Please send the refund to AT265503906642740270. Account holder: Johanna Wiener-Strohmaier.", "spans": [{"start": 26, "end": 46, "type": "IBAN"}, {"start": 64, "end": 89, "type": "PERSON"}]}
+{"text": "Antonia Gahleitner here. Why was my position closed? Ticket from ref 1760401578472 was ignored.", "spans": [{"start": 0, "end": 18, "type": "PERSON"}]}
+{"text": "Verification documents uploaded twice, ref 1760296757353. Please confirm. Dipl.-Ing. Elena Zimmer, +43 653 6115 54.", "spans": [{"start": 74, "end": 97, "type": "PERSON"}, {"start": 99, "end": 114, "type": "PHONE"}]}
+{"text": "Your agent susi.sidler@corp.example promised a callback on ref 1760427804868. Nobody called. Reach me at raul30@example.net.", "spans": [{"start": 105, "end": 123, "type": "EMAIL"}]}
+{"text": "App crashes when I open the chart, 2026-10-07. Not urgent.", "spans": []}
+{"text": "Verification documents uploaded twice, gabriela.heintze@corp.example. Please confirm. Prof. Christiane Briemer B.A., +498203860461.", "spans": [{"start": 86, "end": 115, "type": "PERSON"}, {"start": 117, "end": 130, "type": "PHONE"}]}
+{"text": "Change my email to haderertristan@example.net and the payout account to AT731083126144811434.", "spans": [{"start": 19, "end": 45, "type": "EMAIL"}, {"start": 72, "end": 92, "type": "IBAN"}]}
+{"text": "Change my email to louiseeisl@example.net and the payout account to AT944616801655611433.", "spans": [{"start": 19, "end": 41, "type": "EMAIL"}, {"start": 68, "end": 88, "type": "IBAN"}]}
+{"text": "Hi, this is Isabel Scholl B.A.. My withdrawal is still pending, see 0872 9153482. Please call me on +4392974509484.", "spans": [{"start": 12, "end": 30, "type": "PERSON"}, {"start": 100, "end": 114, "type": "PHONE"}]}
+{"text": "Spread on DAX was too wide yesterday. Call the office 0430 3338665 if you need details.", "spans": []}
+{"text": "Change my email to sritter@example.net and the payout account to CH3775269014929396329.", "spans": [{"start": 19, "end": 38, "type": "EMAIL"}, {"start": 65, "end": 86, "type": "IBAN"}]}
+{"text": "Change my email to nicogiger@example.org and the payout account to CH8490661513911769814.", "spans": [{"start": 19, "end": 40, "type": "EMAIL"}, {"start": 67, "end": 88, "type": "IBAN"}]}
+{"text": "Hi, this is Karl-Friedrich Hänel. My withdrawal is still pending, see order 1190974343611333. Please call me on +43 387 2051 3369.", "spans": [{"start": 12, "end": 32, "type": "PERSON"}, {"start": 112, "end": 129, "type": "PHONE"}]}
+{"text": "App crashes when I open the chart, order 0158186662837884. Not urgent.", "spans": []}
+{"text": "Spread on DAX was too wide yesterday. Call the office 0430 6170773 if you need details.", "spans": []}
+{"text": "Hi, this is Amir Lindau. My withdrawal is still pending, see ref 1759112118511. Please call me on +41 614 9076 070.", "spans": [{"start": 12, "end": 23, "type": "PERSON"}, {"start": 98, "end": 114, "type": "PHONE"}]}
+{"text": "Hi, this is Marko Johann. My withdrawal is still pending, see ref 1759216703380. Please call me on +434774467816.", "spans": [{"start": 12, "end": 24, "type": "PERSON"}, {"start": 99, "end": 112, "type": "PHONE"}]}
+{"text": "Deposit failed again. Card 2222421783014984, tried 0556 2200609. My number is +43-852-985115, Lara-Sophie Kolm-Puchner.", "spans": [{"start": 27, "end": 43, "type": "CARD"}, {"start": 78, "end": 92, "type": "PHONE"}, {"start": 94, "end": 118, "type": "PERSON"}]}
+{"text": "Verification documents uploaded twice, 2026-09-10. Please confirm. Mika Näf-Schmid, +4194174043984.", "spans": [{"start": 67, "end": 82, "type": "PERSON"}, {"start": 84, "end": 98, "type": "PHONE"}]}
+{"text": "Hi, this is Ana Friedli. My withdrawal is still pending, see order 1839823419677808. Please call me on +49-405-5805272.", "spans": [{"start": 12, "end": 23, "type": "PERSON"}, {"start": 103, "end": 118, "type": "PHONE"}]}
+{"text": "Please send the refund to AT157110660906754765. Account holder: Sofia Schiestl-Sigl.", "spans": [{"start": 26, "end": 46, "type": "IBAN"}, {"start": 64, "end": 83, "type": "PERSON"}]}
+{"text": "Deposit failed again. Card 4836976365444614, tried ref 1760542875189. My number is +49-497-63654994, Sofie Gross.", "spans": [{"start": 27, "end": 43, "type": "CARD"}, {"start": 83, "end": 99, "type": "PHONE"}, {"start": 101, "end": 112, "type": "PERSON"}]}
+{"text": "Deposit failed again. Card 4697542331988874, tried 5 029.26 EUR. My number is +49-147-91306966, Dipl.-Ing. Kati Röhricht B.Sc..", "spans": [{"start": 27, "end": 43, "type": "CARD"}, {"start": 78, "end": 94, "type": "PHONE"}, {"start": 96, "end": 126, "type": "PERSON"}]}
+{"text": "Change my email to marica34@example.net and the payout account to DE25781943596972098375.", "spans": [{"start": 19, "end": 39, "type": "EMAIL"}, {"start": 66, "end": 88, "type": "IBAN"}]}
+{"text": "Zeynep Hellwig here. Why was my position closed? Ticket from 2 600.55 EUR was ignored.", "spans": [{"start": 0, "end": 14, "type": "PERSON"}]}
+{"text": "App crashes when I open the chart, 2026-09-26. Not urgent.", "spans": []}
+{"text": "Spread on DAX was too wide yesterday. Call the office 0913 2350183 if you need details.", "spans": []}
+{"text": "Hi, this is Ercan Carsten B.Eng.. My withdrawal is still pending, see 2026-09-22. Please call me on +43-619-9271894.", "spans": [{"start": 12, "end": 32, "type": "PERSON"}, {"start": 100, "end": 115, "type": "PHONE"}]}
+{"text": "Magret Gude here. Why was my position closed? Ticket from ref 1760175383907 was ignored.", "spans": [{"start": 0, "end": 11, "type": "PERSON"}]}
+{"text": "Hi, this is Daniel Gasser-Rath. My withdrawal is still pending, see 0573 2318560. Please call me on +495505125768.", "spans": [{"start": 12, "end": 30, "type": "PERSON"}, {"start": 100, "end": 113, "type": "PHONE"}]}
+{"text": "Please send the refund to CH6524836167198814306. Account holder: Erol Mettler.", "spans": [{"start": 26, "end": 47, "type": "IBAN"}, {"start": 65, "end": 77, "type": "PERSON"}]}
+{"text": "Change my email to john80@example.com and the payout account to AT354257894297539270.", "spans": [{"start": 19, "end": 37, "type": "EMAIL"}, {"start": 64, "end": 84, "type": "IBAN"}]}
+{"text": "Verification documents uploaded twice, javier.leunberger@corp.example. Please confirm. Anne-Sophie Gross, +49471055671.", "spans": [{"start": 87, "end": 104, "type": "PERSON"}, {"start": 106, "end": 118, "type": "PHONE"}]}
+{"text": "Gerard Gunpf B.A. here. Why was my position closed? Ticket from order 9255035358196488 was ignored.", "spans": [{"start": 0, "end": 17, "type": "PERSON"}]}
+{"text": "Your agent laura.geier@corp.example promised a callback on ref 1759783882342. Nobody called. Reach me at salma44@example.com.", "spans": [{"start": 105, "end": 124, "type": "EMAIL"}]}
+{"text": "Your agent sara.braun@corp.example promised a callback on 0306 7752238. Nobody called. Reach me at bmoosbrugger@example.net.", "spans": [{"start": 99, "end": 123, "type": "EMAIL"}]}
+{"text": "App crashes when I open the chart, 0253 583033. Not urgent.", "spans": []}
+{"text": "Hi, this is Simone Hoffmann. My withdrawal is still pending, see ref 1759400256378. Please call me on +43 658 4622 51.", "spans": [{"start": 12, "end": 27, "type": "PERSON"}, {"start": 102, "end": 117, "type": "PHONE"}]}
+{"text": "I was charged twice on card 2229038892874901 for order 3615275343265397. Contact me at slustenberger@example.net.", "spans": [{"start": 28, "end": 44, "type": "CARD"}, {"start": 87, "end": 112, "type": "EMAIL"}]}
+{"text": "Deposit failed again. Card 4714548620867447, tried 8 197.38 EUR. My number is +41 422 6517 46, Angela Martin.", "spans": [{"start": 27, "end": 43, "type": "CARD"}, {"start": 78, "end": 93, "type": "PHONE"}, {"start": 95, "end": 108, "type": "PERSON"}]}
+{"text": "I was charged twice on card 4005453226000469 for order 0965694894829482. Contact me at fredo91@example.com.", "spans": [{"start": 28, "end": 44, "type": "CARD"}, {"start": 87, "end": 106, "type": "EMAIL"}]}
+{"text": "Your agent omar.ritter@corp.example promised a callback on davide.schwab@corp.example. Nobody called. Reach me at martinlucien@example.com.", "spans": [{"start": 114, "end": 138, "type": "EMAIL"}]}
+{"text": "I was charged twice on card 5297524486523434 for 0405 5447253. Contact me at tspiess@example.com.", "spans": [{"start": 28, "end": 44, "type": "CARD"}, {"start": 77, "end": 96, "type": "EMAIL"}]}
+{"text": "Deposit failed again. Card 4343087338055317, tried order 9077516719056862. My number is +43 606 8902 2788, Ing. Gero Gute B.Eng..", "spans": [{"start": 27, "end": 43, "type": "CARD"}, {"start": 88, "end": 105, "type": "PHONE"}, {"start": 107, "end": 128, "type": "PERSON"}]}
+{"text": "Verification documents uploaded twice, order 7498128598249216. Please confirm. Marcus Ebner, +432517091456.", "spans": [{"start": 79, "end": 91, "type": "PERSON"}, {"start": 93, "end": 106, "type": "PHONE"}]}
+{"text": "Please send the refund to AT778455941422236535. Account holder: Luca Singer.", "spans": [{"start": 26, "end": 46, "type": "IBAN"}, {"start": 64, "end": 75, "type": "PERSON"}]}
+{"text": "Please send the refund to CH3368627513293078613. Account holder: Maik Rey.", "spans": [{"start": 26, "end": 47, "type": "IBAN"}, {"start": 65, "end": 73, "type": "PERSON"}]}
+{"text": "Deposit failed again. Card 2229124792310921, tried 5 114.70 EUR. My number is +41 342 0820 061, Lennard Hell.", "spans": [{"start": 27, "end": 43, "type": "CARD"}, {"start": 78, "end": 94, "type": "PHONE"}, {"start": 96, "end": 108, "type": "PERSON"}]}
+{"text": "Hi, this is Chantal Matthäi. My withdrawal is still pending, see 2026-09-25. Please call me on +43 020 1769 354.", "spans": [{"start": 12, "end": 27, "type": "PERSON"}, {"start": 95, "end": 111, "type": "PHONE"}]}
+{"text": "I was charged twice on card 4566948831153323 for 0183 8713738. Contact me at weinholdivo@example.com.", "spans": [{"start": 28, "end": 44, "type": "CARD"}, {"start": 77, "end": 100, "type": "EMAIL"}]}
+{"text": "Change my email to zdravko30@example.org and the payout account to DE46171056584340530358.", "spans": [{"start": 19, "end": 40, "type": "EMAIL"}, {"start": 67, "end": 89, "type": "IBAN"}]}
+{"text": "Verification documents uploaded twice, ref 1760213385251. Please confirm. Rino Küng-Ott, +4309704907650.", "spans": [{"start": 74, "end": 87, "type": "PERSON"}, {"start": 89, "end": 103, "type": "PHONE"}]}
+{"text": "App crashes when I open the chart, order 8252907628101331. Not urgent.", "spans": []}
+{"text": "I was charged twice on card 2712103210034986 for 8 810.90 EUR. Contact me at vlackner@example.net.", "spans": [{"start": 28, "end": 44, "type": "CARD"}, {"start": 77, "end": 97, "type": "EMAIL"}]}
+{"text": "Please send the refund to DE88683852357082012936. Account holder: Prof. Liselotte Scholl B.Eng..", "spans": [{"start": 26, "end": 48, "type": "IBAN"}, {"start": 66, "end": 95, "type": "PERSON"}]}
+{"text": "Spread on DAX was too wide yesterday. Call the office 0173 6087650 if you need details.", "spans": []}
+{"text": "Fanny Steuer here. Why was my position closed? Ticket from ref 1760039236966 was ignored.", "spans": [{"start": 0, "end": 12, "type": "PERSON"}]}
+{"text": "Change my email to timkunz@example.org and the payout account to AT577331652803037427.", "spans": [{"start": 19, "end": 38, "type": "EMAIL"}, {"start": 65, "end": 85, "type": "IBAN"}]}
+{"text": "Verification documents uploaded twice, 0899 9809546. Please confirm. Martina Glück, +49-060-13335093.", "spans": [{"start": 69, "end": 82, "type": "PERSON"}, {"start": 84, "end": 100, "type": "PHONE"}]}
+{"text": "Verification documents uploaded twice, order 5355591254567979. Please confirm. Christian Schweitzer-Kirchner, +4186808903858.", "spans": [{"start": 79, "end": 108, "type": "PERSON"}, {"start": 110, "end": 124, "type": "PHONE"}]}
+{"text": "Please send the refund to DE06742055935707089867. Account holder: Dr. Luzia Henck B.A..", "spans": [{"start": 26, "end": 48, "type": "IBAN"}, {"start": 66, "end": 86, "type": "PERSON"}]}
+{"text": "App crashes when I open the chart, 791.13 EUR. Not urgent.", "spans": []}
+{"text": "Spread on DAX was too wide yesterday. Call the office 0466 247792 if you need details.", "spans": []}
+{"text": "Please send the refund to DE96642850914615223811. Account holder: Sofia Reising.", "spans": [{"start": 26, "end": 48, "type": "IBAN"}, {"start": 66, "end": 79, "type": "PERSON"}]}
+{"text": "Deposit failed again. Card 4181911114926273, tried 0100 8280097. My number is +411904215252, Claire Schimpl.", "spans": [{"start": 27, "end": 43, "type": "CARD"}, {"start": 78, "end": 91, "type": "PHONE"}, {"start": 93, "end": 107, "type": "PERSON"}]}
+{"text": "Your agent andrei.buchholz@corp.example promised a callback on 0103 8877726. Nobody called. Reach me at ritterjaroslaw@example.net.", "spans": [{"start": 104, "end": 130, "type": "EMAIL"}]}
+{"text": "Univ.Prof. Jannik Freitag here. Why was my position closed? Ticket from luis.praxmarer@corp.example was ignored.", "spans": [{"start": 0, "end": 25, "type": "PERSON"}]}
+{"text": "Please send the refund to AT290461910176097230. Account holder: Leo Buchegger.", "spans": [{"start": 26, "end": 46, "type": "IBAN"}, {"start": 64, "end": 77, "type": "PERSON"}]}
+{"text": "App crashes when I open the chart, 3 393.56 EUR. Not urgent.", "spans": []}
+{"text": "Please send the refund to CH2735371257145902658. Account holder: Sonia Burri.", "spans": [{"start": 26, "end": 47, "type": "IBAN"}, {"start": 65, "end": 76, "type": "PERSON"}]}
+{"text": "Spread on DAX was too wide yesterday. Call the office 0526 3249079 if you need details.", "spans": []}
+{"text": "Spread on DAX was too wide yesterday. Call the office 0623 6069160 if you need details.", "spans": []}
+{"text": "Verification documents uploaded twice, 2026-09-08. Please confirm. Prof. Ina Jenni, +41 133 6688 347.", "spans": [{"start": 67, "end": 82, "type": "PERSON"}, {"start": 84, "end": 100, "type": "PHONE"}]}
+{"text": "Please send the refund to CH0398392988744470275. Account holder: Nives Meyer.", "spans": [{"start": 26, "end": 47, "type": "IBAN"}, {"start": 65, "end": 76, "type": "PERSON"}]}
+{"text": "Deposit failed again. Card 2701040364399083, tried jose.hermann@corp.example. My number is +49359240214, Raimund Kägi.", "spans": [{"start": 27, "end": 43, "type": "CARD"}, {"start": 91, "end": 103, "type": "PHONE"}, {"start": 105, "end": 117, "type": "PERSON"}]}
+{"text": "Maximilian Steinbauer here. Why was my position closed? Ticket from yvonne.steinacher@corp.example was ignored.", "spans": [{"start": 0, "end": 21, "type": "PERSON"}]}
+{"text": "Your agent ralf.trommler@corp.example promised a callback on 0359 4381461. Nobody called. Reach me at rosa-maria68@example.org.", "spans": [{"start": 102, "end": 126, "type": "EMAIL"}]}
+{"text": "Deposit failed again. Card 5199677677877925, tried 0959 5373120. My number is +491407800488, Vinzenz Leu.", "spans": [{"start": 27, "end": 43, "type": "CARD"}, {"start": 78, "end": 91, "type": "PHONE"}, {"start": 93, "end": 104, "type": "PERSON"}]}
+{"text": "Verification documents uploaded twice, cristiano.schön@corp.example. Please confirm. Lisa-Marie Vogler, +4132058983104.", "spans": [{"start": 85, "end": 102, "type": "PERSON"}, {"start": 104, "end": 118, "type": "PHONE"}]}
+{"text": "Herr Teodor Knaus here. Why was my position closed? Ticket from ref 1760348516840 was ignored.", "spans": [{"start": 0, "end": 17, "type": "PERSON"}]}
+{"text": "Wolfgang Scheidegger here. Why was my position closed? Ticket from 8 536.13 EUR was ignored.", "spans": [{"start": 0, "end": 20, "type": "PERSON"}]}
+{"text": "Deposit failed again. Card 4640086363192086, tried 2026-09-11. My number is +49 074 4275 4559, Henni Zimmer.", "spans": [{"start": 27, "end": 43, "type": "CARD"}, {"start": 76, "end": 93, "type": "PHONE"}, {"start": 95, "end": 107, "type": "PERSON"}]}
+{"text": "Your agent anika.jenewein@corp.example promised a callback on order 5433445293215570. Nobody called. Reach me at gloriarohrmoser@example.com.", "spans": [{"start": 113, "end": 140, "type": "EMAIL"}]}
+{"text": "Please send the refund to AT163523060140026616. Account holder: Michelle Eisner.", "spans": [{"start": 26, "end": 46, "type": "IBAN"}, {"start": 64, "end": 79, "type": "PERSON"}]}
+{"text": "Your agent gunter.birnbaum@corp.example promised a callback on ref 1760332259219. Nobody called. Reach me at reinhold83@example.net.", "spans": [{"start": 109, "end": 131, "type": "EMAIL"}]}
+{"text": "Spread on DAX was too wide yesterday. Call the office 0618 2306215 if you need details.", "spans": []}
+{"text": "Hi, this is Francoise Franke. My withdrawal is still pending, see ref 1760959478122. Please call me on +4302681278805.", "spans": [{"start": 12, "end": 28, "type": "PERSON"}, {"start": 103, "end": 117, "type": "PHONE"}]}
+{"text": "I was charged twice on card 2547926736084049 for ref 1759689103288. Contact me at freinthaler@example.com.", "spans": [{"start": 28, "end": 44, "type": "CARD"}, {"start": 82, "end": 105, "type": "EMAIL"}]}
+{"text": "Deposit failed again. Card 2280248139599635, tried edelbert.hettner@corp.example. My number is +43-655-36587467, Rouven Davids-Martin.", "spans": [{"start": 27, "end": 43, "type": "CARD"}, {"start": 95, "end": 111, "type": "PHONE"}, {"start": 113, "end": 133, "type": "PERSON"}]}
+{"text": "Deposit failed again. Card 4707843050009696, tried gabriel.jessel@corp.example. My number is +41821029604, Ing. Francoise Scheibe MBA..", "spans": [{"start": 27, "end": 43, "type": "CARD"}, {"start": 93, "end": 105, "type": "PHONE"}, {"start": 107, "end": 134, "type": "PERSON"}]}
+{"text": "Mira Walter here. Why was my position closed? Ticket from 8 721.01 EUR was ignored.", "spans": [{"start": 0, "end": 11, "type": "PERSON"}]}
+{"text": "I was charged twice on card 4671150249076590 for 2026-10-01. Contact me at sebastian88@example.com.", "spans": [{"start": 28, "end": 44, "type": "CARD"}, {"start": 75, "end": 98, "type": "EMAIL"}]}
+{"text": "Verification documents uploaded twice, nando.hodel@corp.example. Please confirm. Dalia Scheidegger, +41 034 5856 2725.", "spans": [{"start": 81, "end": 98, "type": "PERSON"}, {"start": 100, "end": 117, "type": "PHONE"}]}
+{"text": "Deposit failed again. Card 4893839679204399, tried 2026-09-16. My number is +43 954 0772 122, Prof. Cindy Leu.", "spans": [{"start": 27, "end": 43, "type": "CARD"}, {"start": 76, "end": 92, "type": "PHONE"}, {"start": 94, "end": 109, "type": "PERSON"}]}
+{"text": "Spread on DAX was too wide yesterday. Call the office 0268 5123346 if you need details.", "spans": []}
+{"text": "Prof. Klara Drub here. Why was my position closed? Ticket from anita.möchlichen@corp.example was ignored.", "spans": [{"start": 0, "end": 16, "type": "PERSON"}]}
+{"text": "Your agent philipp.keller@corp.example promised a callback on noel.eichberger@corp.example. Nobody called. Reach me at xerler@example.com.", "spans": [{"start": 119, "end": 137, "type": "EMAIL"}]}
+{"text": "Heimo Drubin here. Why was my position closed? Ticket from 3 570.69 EUR was ignored.", "spans": [{"start": 0, "end": 12, "type": "PERSON"}]}
+{"text": "Walfried Hiller-Geißler here. Why was my position closed? Ticket from order 5741649550211421 was ignored.", "spans": [{"start": 0, "end": 23, "type": "PERSON"}]}
+{"text": "Deposit failed again. Card 2286765952605268, tried 0962 9046760. My number is +49807551888, Maik Rosenow.", "spans": [{"start": 27, "end": 43, "type": "CARD"}, {"start": 78, "end": 90, "type": "PHONE"}, {"start": 92, "end": 104, "type": "PERSON"}]}
+{"text": "Zara Freudenthaler here. Why was my position closed? Ticket from order 4323508391640371 was ignored.", "spans": [{"start": 0, "end": 18, "type": "PERSON"}]}
+{"text": "Hi, this is Fritz Schäfer. My withdrawal is still pending, see 1 064.86 EUR. Please call me on +41 177 6508 1045.", "spans": [{"start": 12, "end": 25, "type": "PERSON"}, {"start": 95, "end": 112, "type": "PHONE"}]}
+{"text": "Your agent lennart.larcher@corp.example promised a callback on order 5222255354631835. Nobody called. Reach me at jhirschmann@example.net.", "spans": [{"start": 114, "end": 137, "type": "EMAIL"}]}
+{"text": "Hi, this is Dr. Anica Bonbach B.A.. My withdrawal is still pending, see 6 890.30 EUR. Please call me on +49-575-2662974.", "spans": [{"start": 12, "end": 34, "type": "PERSON"}, {"start": 104, "end": 119, "type": "PHONE"}]}
+{"text": "Verification documents uploaded twice, 6 371.76 EUR. Please confirm. Stella Kusch, +411564590156.", "spans": [{"start": 69, "end": 81, "type": "PERSON"}, {"start": 83, "end": 96, "type": "PHONE"}]}
+{"text": "Please send the refund to AT195714389860262843. Account holder: Ing. Christopher Koppensteiner.", "spans": [{"start": 26, "end": 46, "type": "IBAN"}, {"start": 64, "end": 94, "type": "PERSON"}]}
+{"text": "Deposit failed again. Card 2713612294389297, tried 7 046.34 EUR. My number is +4942144454859, Dipl.-Ing. Sophie Eimer MBA..", "spans": [{"start": 27, "end": 43, "type": "CARD"}, {"start": 78, "end": 92, "type": "PHONE"}, {"start": 94, "end": 122, "type": "PERSON"}]}
+{"text": "Naim Steffen here. Why was my position closed? Ticket from 2026-09-11 was ignored.", "spans": [{"start": 0, "end": 12, "type": "PERSON"}]}
+{"text": "Spread on DAX was too wide yesterday. Call the office 0524 5497771 if you need details.", "spans": []}
+{"text": "Deposit failed again. Card 4737925989005681, tried ref 1759881464039. My number is +49 719 3542 9441, Christophe Hauser.", "spans": [{"start": 27, "end": 43, "type": "CARD"}, {"start": 83, "end": 100, "type": "PHONE"}, {"start": 102, "end": 119, "type": "PERSON"}]}
+{"text": "Your agent leander.keller@corp.example promised a callback on 0437 987162. Nobody called. Reach me at selina66@example.org.", "spans": [{"start": 102, "end": 122, "type": "EMAIL"}]}
+{"text": "Please send the refund to CH2621027393459694101. Account holder: Estelle Haas Ernst.", "spans": [{"start": 26, "end": 47, "type": "IBAN"}, {"start": 65, "end": 83, "type": "PERSON"}]}
+{"text": "Your agent zenon.krein@corp.example promised a callback on 0515 3608440. Nobody called. Reach me at ljubicaweimer@example.org.", "spans": [{"start": 100, "end": 125, "type": "EMAIL"}]}
+{"text": "Spread on DAX was too wide yesterday. Call the office 0189 5608933 if you need details.", "spans": []}
+{"text": "Change my email to christentanja@example.org and the payout account to CH1066373150558800448.", "spans": [{"start": 19, "end": 44, "type": "EMAIL"}, {"start": 71, "end": 92, "type": "IBAN"}]}
+{"text": "I was charged twice on card 2272856262889563 for silvia.hermann@corp.example. Contact me at fstucki@example.net.", "spans": [{"start": 28, "end": 44, "type": "CARD"}, {"start": 92, "end": 111, "type": "EMAIL"}]}
+{"text": "Verification documents uploaded twice, 7 929.29 EUR. Please confirm. Cornelius Pöll, +436382776341.", "spans": [{"start": 69, "end": 83, "type": "PERSON"}, {"start": 85, "end": 98, "type": "PHONE"}]}
+{"text": "Please send the refund to DE78478708966416019896. Account holder: Herr Isidor Weinhold.", "spans": [{"start": 26, "end": 48, "type": "IBAN"}, {"start": 66, "end": 86, "type": "PERSON"}]}
+{"text": "Verification documents uploaded twice, 0263 4957795. Please confirm. Constance Matthäi B.Sc., +49 185 1392 68.", "spans": [{"start": 69, "end": 92, "type": "PERSON"}, {"start": 94, "end": 109, "type": "PHONE"}]}
+{"text": "Your agent hans-ulrich.schmid@corp.example promised a callback on 2026-09-30. Nobody called. Reach me at magali73@example.org.", "spans": [{"start": 105, "end": 125, "type": "EMAIL"}]}
+{"text": "Your agent valentino.baumann@corp.example promised a callback on ref 1760520298666. Nobody called. Reach me at jacob97@example.net.", "spans": [{"start": 111, "end": 130, "type": "EMAIL"}]}
+{"text": "Please send the refund to AT567724779180182394. Account holder: Nils Meister.", "spans": [{"start": 26, "end": 46, "type": "IBAN"}, {"start": 64, "end": 76, "type": "PERSON"}]}
+{"text": "Alexandra Mettler here. Why was my position closed? Ticket from 3 163.37 EUR was ignored.", "spans": [{"start": 0, "end": 17, "type": "PERSON"}]}
+{"text": "Verification documents uploaded twice, margret.hofstetter@corp.example. Please confirm. Kujtim Hoffmann, +41 573 9269 79.", "spans": [{"start": 88, "end": 103, "type": "PERSON"}, {"start": 105, "end": 120, "type": "PHONE"}]}
+{"text": "Please send the refund to DE71716037489553493433. Account holder: Charlotte Löwer.", "spans": [{"start": 26, "end": 48, "type": "IBAN"}, {"start": 66, "end": 81, "type": "PERSON"}]}
+{"text": "Hi, this is Beate Kohler. My withdrawal is still pending, see christos.staub@corp.example. Please call me on +49 076 5652 124.", "spans": [{"start": 12, "end": 24, "type": "PERSON"}, {"start": 109, "end": 125, "type": "PHONE"}]}
+{"text": "Dr. Margarethe Briemer here. Why was my position closed? Ticket from ref 1760141859477 was ignored.", "spans": [{"start": 0, "end": 22, "type": "PERSON"}]}
+{"text": "I was charged twice on card 2720296165361154 for 4 428.31 EUR. Contact me at linus28@example.org.", "spans": [{"start": 28, "end": 44, "type": "CARD"}, {"start": 77, "end": 96, "type": "EMAIL"}]}
+{"text": "App crashes when I open the chart, giorgio.stadelmann@corp.example. Not urgent.", "spans": []}
+{"text": "Spread on DAX was too wide yesterday. Call the office 0938 3717580 if you need details.", "spans": []}
+{"text": "Spread on DAX was too wide yesterday. Call the office 0659 3431040 if you need details.", "spans": []}
+{"text": "Maëlle Gerber here. Why was my position closed? Ticket from ref 1760724315129 was ignored.", "spans": [{"start": 0, "end": 13, "type": "PERSON"}]}
+{"text": "Verification documents uploaded twice, 863.00 EUR. Please confirm. Prof. Joel Strohmaier, +41-650-6564248.", "spans": [{"start": 67, "end": 88, "type": "PERSON"}, {"start": 90, "end": 105, "type": "PHONE"}]}
+{"text": "Your agent robert.stelzer@corp.example promised a callback on 2026-09-07. Nobody called. Reach me at rubenkessler@example.org.", "spans": [{"start": 101, "end": 125, "type": "EMAIL"}]}
+{"text": "Abel Isler here. Why was my position closed? Ticket from 0935 8259001 was ignored.", "spans": [{"start": 0, "end": 10, "type": "PERSON"}]}
+{"text": "Hi, this is Ing. Johannes Postl. My withdrawal is still pending, see 0704 6879032. Please call me on +43 342 8075 958.", "spans": [{"start": 12, "end": 31, "type": "PERSON"}, {"start": 101, "end": 117, "type": "PHONE"}]}
+{"text": "Your agent zara.scheucher@corp.example promised a callback on 2026-10-13. Nobody called. Reach me at schoepfmarlene@example.org.", "spans": [{"start": 101, "end": 127, "type": "EMAIL"}]}
+{"text": "Please send the refund to CH6236118343282328532. Account holder: Gianfranco Albrecht.", "spans": [{"start": 26, "end": 47, "type": "IBAN"}, {"start": 65, "end": 84, "type": "PERSON"}]}
+{"text": "Verification documents uploaded twice, oliver.prager@corp.example. Please confirm. Theresa Schreiber-Aigner, +49 590 4109 272.", "spans": [{"start": 83, "end": 107, "type": "PERSON"}, {"start": 109, "end": 125, "type": "PHONE"}]}
+{"text": "Hi, this is Ljubica Ruppert. My withdrawal is still pending, see 2026-10-07. Please call me on +43999008811.", "spans": [{"start": 12, "end": 27, "type": "PERSON"}, {"start": 95, "end": 107, "type": "PHONE"}]}
+{"text": "Hi, this is Prof. Raik Höfig B.Sc.. My withdrawal is still pending, see 2 526.58 EUR. Please call me on +49-749-3613775.", "spans": [{"start": 12, "end": 34, "type": "PERSON"}, {"start": 104, "end": 119, "type": "PHONE"}]}
+{"text": "Your agent severin.kager@corp.example promised a callback on rita.landl@corp.example. Nobody called. Reach me at clarissa72@example.net.", "spans": [{"start": 113, "end": 135, "type": "EMAIL"}]}
+{"text": "Change my email to anita20@example.org and the payout account to DE26860461687800684992.", "spans": [{"start": 19, "end": 38, "type": "EMAIL"}, {"start": 65, "end": 87, "type": "IBAN"}]}
+{"text": "I was charged twice on card 4991031658423155 for ref 1760732787430. Contact me at leibetsedercalvin@example.org.", "spans": [{"start": 28, "end": 44, "type": "CARD"}, {"start": 82, "end": 111, "type": "EMAIL"}]}
+{"text": "Change my email to vhiller@example.org and the payout account to DE09948437538800111909.", "spans": [{"start": 19, "end": 38, "type": "EMAIL"}, {"start": 65, "end": 87, "type": "IBAN"}]}
+{"text": "Your agent mathilda.hahn@corp.example promised a callback on 3 044.91 EUR. Nobody called. Reach me at irinahoefer@example.org.", "spans": [{"start": 102, "end": 125, "type": "EMAIL"}]}
+{"text": "Maëlle Bosshard here. Why was my position closed? Ticket from order 2620704816096200 was ignored.", "spans": [{"start": 0, "end": 15, "type": "PERSON"}]}
+{"text": "Spread on DAX was too wide yesterday. Call the office 0394 9745767 if you need details.", "spans": []}
+{"text": "Deposit failed again. Card 2543436113337386, tried 0740 7574027. My number is +417706062120, Dr. Almuth Kitzmann B.Sc..", "spans": [{"start": 27, "end": 43, "type": "CARD"}, {"start": 78, "end": 91, "type": "PHONE"}, {"start": 93, "end": 118, "type": "PERSON"}]}
+{"text": "Spread on DAX was too wide yesterday. Call the office 0365 9448746 if you need details.", "spans": []}
+{"text": "I was charged twice on card 4643532944957221 for 0570 7513087. Contact me at wurmismail@example.org.", "spans": [{"start": 28, "end": 44, "type": "CARD"}, {"start": 77, "end": 99, "type": "EMAIL"}]}
+{"text": "Please send the refund to DE53336933410158186662. Account holder: Dipl.-Ing. Karl-Friedrich Zahn B.Eng..", "spans": [{"start": 26, "end": 48, "type": "IBAN"}, {"start": 66, "end": 103, "type": "PERSON"}]}
+{"text": "Please send the refund to CH6091818953313680990. Account holder: Siro Gerber.", "spans": [{"start": 26, "end": 47, "type": "IBAN"}, {"start": 65, "end": 76, "type": "PERSON"}]}
+{"text": "App crashes when I open the chart, 4 727.42 EUR. Not urgent.", "spans": []}
+{"text": "I was charged twice on card 2702849027830196 for hugo.schuster@corp.example. Contact me at florintauber@example.com.", "spans": [{"start": 28, "end": 44, "type": "CARD"}, {"start": 91, "end": 115, "type": "EMAIL"}]}
+{"text": "Arianna Ritter Schärer here. Why was my position closed? Ticket from marjorie.thommen@corp.example was ignored.", "spans": [{"start": 0, "end": 22, "type": "PERSON"}]}
+{"text": "Deposit failed again. Card 4755102085614900, tried 2026-10-09. My number is +49227408866, Dipl.-Ing. Ann Mühle B.Sc..", "spans": [{"start": 27, "end": 43, "type": "CARD"}, {"start": 76, "end": 88, "type": "PHONE"}, {"start": 90, "end": 116, "type": "PERSON"}]}
+{"text": "Change my email to sabinegross@example.com and the payout account to CH0773557399471062220.", "spans": [{"start": 19, "end": 42, "type": "EMAIL"}, {"start": 69, "end": 90, "type": "IBAN"}]}
+{"text": "Hi, this is Marijana Friedli. My withdrawal is still pending, see ref 1759445197559. Please call me on +43 173 7608 526.", "spans": [{"start": 12, "end": 28, "type": "PERSON"}, {"start": 103, "end": 119, "type": "PHONE"}]}
+{"text": "Spread on DAX was too wide yesterday. Call the office 0433 5599545 if you need details.", "spans": []}
+{"text": "Deposit failed again. Card 4122403111283462, tried jasmina.dittrich@corp.example. My number is +43-207-910264, Stephanie Rauter.", "spans": [{"start": 27, "end": 43, "type": "CARD"}, {"start": 95, "end": 109, "type": "PHONE"}, {"start": 111, "end": 127, "type": "PERSON"}]}
+{"text": "App crashes when I open the chart, 0983 484829. Not urgent.", "spans": []}
+{"text": "Change my email to markverena@example.com and the payout account to AT751273628800088700.", "spans": [{"start": 19, "end": 41, "type": "EMAIL"}, {"start": 68, "end": 88, "type": "IBAN"}]}
+{"text": "Spread on DAX was too wide yesterday. Call the office 0664 6260703 if you need details.", "spans": []}
+{"text": "Spread on DAX was too wide yesterday. Call the office 0800 1610871 if you need details.", "spans": []}
+{"text": "Please send the refund to DE50130316447744678169. Account holder: Univ.Prof. Rosalinde Kensy MBA..", "spans": [{"start": 26, "end": 48, "type": "IBAN"}, {"start": 66, "end": 97, "type": "PERSON"}]}
+{"text": "Deposit failed again. Card 2433678273106316, tried ref 1759724713465. My number is +41 013 6085 59, Matheo Pfeifer.", "spans": [{"start": 27, "end": 43, "type": "CARD"}, {"start": 83, "end": 98, "type": "PHONE"}, {"start": 100, "end": 114, "type": "PERSON"}]}
+{"text": "Hi, this is Nevin Wolf. My withdrawal is still pending, see 0817 7535743. Please call me on +43 422 7991 809.", "spans": [{"start": 12, "end": 22, "type": "PERSON"}, {"start": 92, "end": 108, "type": "PHONE"}]}
+{"text": "Change my email to reyadrienne@example.net and the payout account to CH3366902892432719069.", "spans": [{"start": 19, "end": 42, "type": "EMAIL"}, {"start": 69, "end": 90, "type": "IBAN"}]}
+{"text": "I was charged twice on card 2379251852985116 for 0428 5732722. Contact me at magret59@example.net.", "spans": [{"start": 28, "end": 44, "type": "CARD"}, {"start": 77, "end": 97, "type": "EMAIL"}]}
+{"text": "App crashes when I open the chart, clemens.meier@corp.example. Not urgent.", "spans": []}
+{"text": "Deposit failed again. Card 2351407129783047, tried samuele.kessler@corp.example. My number is +49774415091, Jean-Claude Flückiger-Roth.", "spans": [{"start": 27, "end": 43, "type": "CARD"}, {"start": 94, "end": 106, "type": "PHONE"}, {"start": 108, "end": 134, "type": "PERSON"}]}
+{"text": "Hi, this is Karl-Werner Weller-Roskoth. My withdrawal is still pending, see 0828 3814213. Please call me on +41-854-056606.", "spans": [{"start": 12, "end": 38, "type": "PERSON"}, {"start": 108, "end": 122, "type": "PHONE"}]}
+{"text": "Hi, this is Natasha Albrecht Koch. My withdrawal is still pending, see 0507 8634821. Please call me on +4304434332250.", "spans": [{"start": 12, "end": 33, "type": "PERSON"}, {"start": 103, "end": 117, "type": "PHONE"}]}
+{"text": "Verification documents uploaded twice, 7 815.09 EUR. Please confirm. Anne-Marie Meister, +41 484 9035 0260.", "spans": [{"start": 69, "end": 87, "type": "PERSON"}, {"start": 89, "end": 106, "type": "PHONE"}]}
+{"text": "Armin Radl here. Why was my position closed? Ticket from 0761 4685782 was ignored.", "spans": [{"start": 0, "end": 10, "type": "PERSON"}]}
+{"text": "App crashes when I open the chart, 3 980.66 EUR. Not urgent.", "spans": []}
+{"text": "Your agent karl-heinz.bender@corp.example promised a callback on 2026-10-05. Nobody called. Reach me at flora39@example.net.", "spans": [{"start": 104, "end": 123, "type": "EMAIL"}]}
+{"text": "Deposit failed again. Card 4134200761977344, tried ref 1759942156723. My number is +43-357-33394481, Seline Näf.", "spans": [{"start": 27, "end": 43, "type": "CARD"}, {"start": 83, "end": 99, "type": "PHONE"}, {"start": 101, "end": 111, "type": "PERSON"}]}
+{"text": "Change my email to beata90@example.org and the payout account to DE71183982341967780824.", "spans": [{"start": 19, "end": 38, "type": "EMAIL"}, {"start": 65, "end": 87, "type": "IBAN"}]}
+{"text": "I was charged twice on card 2221956245366028 for 2 778.89 EUR. Contact me at grossbernhard@example.org.", "spans": [{"start": 28, "end": 44, "type": "CARD"}, {"start": 77, "end": 102, "type": "EMAIL"}]}
+{"text": "App crashes when I open the chart, 2026-09-25. Not urgent.", "spans": []}
+{"text": "Hi, this is Monja Bolander. My withdrawal is still pending, see 2026-10-14. Please call me on +49 048 2968 7144.", "spans": [{"start": 12, "end": 26, "type": "PERSON"}, {"start": 94, "end": 111, "type": "PHONE"}]}
+{"text": "Svetlana Betschart here. Why was my position closed? Ticket from 708.38 EUR was ignored.", "spans": [{"start": 0, "end": 18, "type": "PERSON"}]}
+{"text": "Change my email to otraxler@example.com and the payout account to AT263847420588289413.", "spans": [{"start": 19, "end": 39, "type": "EMAIL"}, {"start": 66, "end": 86, "type": "IBAN"}]}
+{"text": "App crashes when I open the chart, hüseyin.schumacher@corp.example. Not urgent.", "spans": []}
+{"text": "Verification documents uploaded twice, 2026-09-27. Please confirm. Renate Hofmann, +43-199-78527811.", "spans": [{"start": 67, "end": 81, "type": "PERSON"}, {"start": 83, "end": 99, "type": "PHONE"}]}
+{"text": "Hi, this is Gabriele Rohleder. My withdrawal is still pending, see susanna.berger@corp.example. Please call me on +43 070 8084 7403.", "spans": [{"start": 12, "end": 29, "type": "PERSON"}, {"start": 114, "end": 131, "type": "PHONE"}]}
+{"text": "Marlène Herzog Lanz here. Why was my position closed? Ticket from ref 1760986057273 was ignored.", "spans": [{"start": 0, "end": 19, "type": "PERSON"}]}
+{"text": "Verification documents uploaded twice, ref 1760059925337. Please confirm. Levi Kummer, +4918373113566.", "spans": [{"start": 74, "end": 85, "type": "PERSON"}, {"start": 87, "end": 101, "type": "PHONE"}]}
+{"text": "Deposit failed again. Card 4272752513094978, tried 2 932.70 EUR. My number is +49-970-66394589, Univ.Prof. Dörthe Kusch.", "spans": [{"start": 27, "end": 43, "type": "CARD"}, {"start": 78, "end": 94, "type": "PHONE"}, {"start": 96, "end": 119, "type": "PERSON"}]}
+{"text": "Please send the refund to AT936652662552749570. Account holder: Emilian Simon.", "spans": [{"start": 26, "end": 46, "type": "IBAN"}, {"start": 64, "end": 77, "type": "PERSON"}]}
+{"text": "Your agent hedi.ullmann@corp.example promised a callback on niko.hörle@corp.example. Nobody called. Reach me at silvana52@example.net.", "spans": [{"start": 112, "end": 133, "type": "EMAIL"}]}
+{"text": "Change my email to martivictoria@example.org and the payout account to CH1908821926148965002.", "spans": [{"start": 19, "end": 44, "type": "EMAIL"}, {"start": 71, "end": 92, "type": "IBAN"}]}
+{"text": "Change my email to felicitas20@example.com and the payout account to AT330144788626960255.", "spans": [{"start": 19, "end": 42, "type": "EMAIL"}, {"start": 69, "end": 89, "type": "IBAN"}]}
+{"text": "I was charged twice on card 2280176610378882 for 2026-10-14. Contact me at wehrligoncalo@example.net.", "spans": [{"start": 28, "end": 44, "type": "CARD"}, {"start": 75, "end": 100, "type": "EMAIL"}]}
+{"text": "Mirjana Wulf here. Why was my position closed? Ticket from 1 356.93 EUR was ignored.", "spans": [{"start": 0, "end": 12, "type": "PERSON"}]}
+{"text": "I was charged twice on card 5394716286518422 for 2026-10-12. Contact me at jochenleunberger@example.net.", "spans": [{"start": 28, "end": 44, "type": "CARD"}, {"start": 75, "end": 103, "type": "EMAIL"}]}
+{"text": "Your agent lukasz.brunner@corp.example promised a callback on celia.giger@corp.example. Nobody called. Reach me at yannis93@example.org.", "spans": [{"start": 115, "end": 135, "type": "EMAIL"}]}
+{"text": "App crashes when I open the chart, ref 1760467541874. Not urgent.", "spans": []}
+{"text": "App crashes when I open the chart, 0848 2233792. Not urgent.", "spans": []}
+{"text": "Your agent evelyn.beer@corp.example promised a callback on order 3643570806491856. Nobody called. Reach me at harold38@example.org.", "spans": [{"start": 110, "end": 130, "type": "EMAIL"}]}
+{"text": "Your agent milan.schuh@corp.example promised a callback on 2026-10-03. Nobody called. Reach me at josef53@example.org.", "spans": [{"start": 98, "end": 117, "type": "EMAIL"}]}
+{"text": "Verification documents uploaded twice, 2026-09-08. Please confirm. Frau Fiona Peer, +49 796 8165 67.", "spans": [{"start": 67, "end": 82, "type": "PERSON"}, {"start": 84, "end": 99, "type": "PHONE"}]}
+{"text": "App crashes when I open the chart, order 7392222931848062. Not urgent.", "spans": []}
+{"text": "I was charged twice on card 2281120022534582 for order 0316930814327525. Contact me at leonard08@example.com.", "spans": [{"start": 28, "end": 44, "type": "CARD"}, {"start": 87, "end": 108, "type": "EMAIL"}]}
+{"text": "Aleksandra Raab here. Why was my position closed? Ticket from 6 738.98 EUR was ignored.", "spans": [{"start": 0, "end": 15, "type": "PERSON"}]}
+{"text": "App crashes when I open the chart, 8 216.60 EUR. Not urgent.", "spans": []}
+{"text": "App crashes when I open the chart, ref 1760808402504. Not urgent.", "spans": []}
+{"text": "Deposit failed again. Card 4791306966638369, tried 8 493.13 EUR. My number is +49 800 9790 79, Heinz-Günther Rogge-Hofmann.", "spans": [{"start": 27, "end": 43, "type": "CARD"}, {"start": 78, "end": 93, "type": "PHONE"}, {"start": 95, "end": 122, "type": "PERSON"}]}
+{"text": "Your agent carina.wallner@corp.example promised a callback on ref 1760857966637. Nobody called. Reach me at froeschlpauline@example.net.", "spans": [{"start": 108, "end": 135, "type": "EMAIL"}]}
+{"text": "Gesine Oderwald-Tröst here. Why was my position closed? Ticket from ludwina.eimer@corp.example was ignored.", "spans": [{"start": 0, "end": 21, "type": "PERSON"}]}
+{"text": "Verification documents uploaded twice, 0506 7717727. Please confirm. Marko Bachler, +419690546229.", "spans": [{"start": 69, "end": 82, "type": "PERSON"}, {"start": 84, "end": 97, "type": "PHONE"}]}
+{"text": "Spread on DAX was too wide yesterday. Call the office 0932 9622834 if you need details.", "spans": []}
+{"text": "Change my email to hneuwirth@example.org and the payout account to AT152797187983457320.", "spans": [{"start": 19, "end": 40, "type": "EMAIL"}, {"start": 67, "end": 87, "type": "IBAN"}]}
+{"text": "App crashes when I open the chart, order 4345002913107366. Not urgent.", "spans": []}
+{"text": "Your agent dragan.schomber@corp.example promised a callback on 0401 4206973. Nobody called. Reach me at schmidtmiguel@example.com.", "spans": [{"start": 104, "end": 129, "type": "EMAIL"}]}
+{"text": "Verification documents uploaded twice, order 9690384439432396. Please confirm. Helga Buchholz, +41 755 6574 467.", "spans": [{"start": 79, "end": 93, "type": "PERSON"}, {"start": 95, "end": 111, "type": "PHONE"}]}
+{"text": "Milica Schüller-Dittrich here. Why was my position closed? Ticket from leonardo.schauer@corp.example was ignored.", "spans": [{"start": 0, "end": 24, "type": "PERSON"}]}
+{"text": "Please send the refund to DE62992718944062840672. Account holder: Ing. Hans D. Klemm B.Sc..", "spans": [{"start": 26, "end": 48, "type": "IBAN"}, {"start": 66, "end": 90, "type": "PERSON"}]}
+{"text": "Verification documents uploaded twice, 1 193.50 EUR. Please confirm. Ilias Friedl, +43 619 3069 3879.", "spans": [{"start": 69, "end": 81, "type": "PERSON"}, {"start": 83, "end": 100, "type": "PHONE"}]}
+{"text": "Please send the refund to AT121622326083055839. Account holder: Stephanie Staudinger.", "spans": [{"start": 26, "end": 46, "type": "IBAN"}, {"start": 64, "end": 84, "type": "PERSON"}]}
+{"text": "Spread on DAX was too wide yesterday. Call the office 0653 9668553 if you need details.", "spans": []}
+{"text": "Please send the refund to CH0296277081467136150. Account holder: Ariana Stauffer.", "spans": [{"start": 26, "end": 47, "type": "IBAN"}, {"start": 65, "end": 80, "type": "PERSON"}]}
+{"text": "Ghislaine Ferrari Maurer here. Why was my position closed? Ticket from ref 1759563767035 was ignored.", "spans": [{"start": 0, "end": 24, "type": "PERSON"}]}
+{"text": "Your agent maximilian.lagler@corp.example promised a callback on anne.hirsch@corp.example. Nobody called. Reach me at adrian08@example.net.", "spans": [{"start": 118, "end": 138, "type": "EMAIL"}]}
+{"text": "Jannis Klingler-Kiss here. Why was my position closed? Ticket from ref 1759159245380 was ignored.", "spans": [{"start": 0, "end": 20, "type": "PERSON"}]}
+{"text": "Your agent jaime.rey@corp.example promised a callback on 3 979.22 EUR. Nobody called. Reach me at christentahir@example.org.", "spans": [{"start": 98, "end": 123, "type": "EMAIL"}]}
+{"text": "Your agent gaia.roth@corp.example promised a callback on 0915 3600785. Nobody called. Reach me at astrit75@example.com.", "spans": [{"start": 98, "end": 118, "type": "EMAIL"}]}
+{"text": "Natalia Dippel here. Why was my position closed? Ticket from 2026-09-29 was ignored.", "spans": [{"start": 0, "end": 14, "type": "PERSON"}]}
+{"text": "App crashes when I open the chart, 6 503.53 EUR. Not urgent.", "spans": []}
+{"text": "Your agent frank-michael.junck@corp.example promised a callback on ref 1760942119370. Nobody called. Reach me at ysontag@example.net.", "spans": [{"start": 113, "end": 132, "type": "EMAIL"}]}
+{"text": "App crashes when I open the chart, order 0555440083763263. Not urgent.", "spans": []}
+{"text": "Deposit failed again. Card 4789432471055677, tried 5 474.57 EUR. My number is +41-405-5070399, Valentin Reichmann.", "spans": [{"start": 27, "end": 43, "type": "CARD"}, {"start": 78, "end": 93, "type": "PHONE"}, {"start": 95, "end": 113, "type": "PERSON"}]}
+{"text": "Your agent herwig.krein@corp.example promised a callback on order 2422174051231435. Nobody called. Reach me at saeuberlichwalli@example.org.", "spans": [{"start": 111, "end": 139, "type": "EMAIL"}]}
+{"text": "Hi, this is Grete Atzler. My withdrawal is still pending, see 0712 5090992. Please call me on +43-027-65058745.", "spans": [{"start": 12, "end": 24, "type": "PERSON"}, {"start": 94, "end": 110, "type": "PHONE"}]}
+{"text": "Verification documents uploaded twice, 2026-10-11. Please confirm. Philip Kasper, +436685140417.", "spans": [{"start": 67, "end": 80, "type": "PERSON"}, {"start": 82, "end": 95, "type": "PHONE"}]}
+{"text": "Change my email to mettlerghislaine@example.com and the payout account to CH9699302817290360275.", "spans": [{"start": 19, "end": 47, "type": "EMAIL"}, {"start": 74, "end": 95, "type": "IBAN"}]}
+{"text": "Please send the refund to CH9409032782229875786. Account holder: Hannah Häfliger.", "spans": [{"start": 26, "end": 47, "type": "IBAN"}, {"start": 65, "end": 80, "type": "PERSON"}]}
+{"text": "Your agent mirko.walder@corp.example promised a callback on ref 1760270709821. Nobody called. Reach me at yasminaschoch@example.net.", "spans": [{"start": 106, "end": 131, "type": "EMAIL"}]}
+{"text": "I was charged twice on card 4576376933061921 for leonard.walch@corp.example. Contact me at sigrid97@example.com.", "spans": [{"start": 28, "end": 44, "type": "CARD"}, {"start": 91, "end": 111, "type": "EMAIL"}]}
+{"text": "Change my email to loicleu@example.net and the payout account to CH9061548953572401963.", "spans": [{"start": 19, "end": 38, "type": "EMAIL"}, {"start": 65, "end": 86, "type": "IBAN"}]}
+{"text": "Hi, this is Herr Kristian Waltl. My withdrawal is still pending, see samuel.leithner@corp.example. Please call me on +41 382 2996 208.", "spans": [{"start": 12, "end": 31, "type": "PERSON"}, {"start": 117, "end": 133, "type": "PHONE"}]}
+{"text": "Spread on DAX was too wide yesterday. Call the office 0432 8910810 if you need details.", "spans": []}
+{"text": "Wieslaw Juncken B.A. here. Why was my position closed? Ticket from 6 327.68 EUR was ignored.", "spans": [{"start": 0, "end": 20, "type": "PERSON"}]}
+{"text": "Iris Schnyder here. Why was my position closed? Ticket from 7 744.18 EUR was ignored.", "spans": [{"start": 0, "end": 13, "type": "PERSON"}]}
+{"text": "Please send the refund to CH8931832308155711380. Account holder: Ibrahim Schuler.", "spans": [{"start": 26, "end": 47, "type": "IBAN"}, {"start": 65, "end": 80, "type": "PERSON"}]}
+{"text": "Verification documents uploaded twice, 2026-09-20. Please confirm. Violeta Keller, +491802761014.", "spans": [{"start": 67, "end": 81, "type": "PERSON"}, {"start": 83, "end": 96, "type": "PHONE"}]}
+{"text": "Please send the refund to CH4823516531565412418. Account holder: Veronika Aebi.", "spans": [{"start": 26, "end": 47, "type": "IBAN"}, {"start": 65, "end": 78, "type": "PERSON"}]}
+{"text": "Spread on DAX was too wide yesterday. Call the office 0851 9191001 if you need details.", "spans": []}
+{"text": "Hi, this is Kreszenz Trub. My withdrawal is still pending, see 0729 1427762. Please call me on +41 351 3112 516.", "spans": [{"start": 12, "end": 25, "type": "PERSON"}, {"start": 95, "end": 111, "type": "PHONE"}]}
+{"text": "Verification documents uploaded twice, 867.53 EUR. Please confirm. Knut Lange, +492559527599.", "spans": [{"start": 67, "end": 77, "type": "PERSON"}, {"start": 79, "end": 92, "type": "PHONE"}]}
+{"text": "Please send the refund to AT381033540636926011. Account holder: Yvonne Paulitsch.", "spans": [{"start": 26, "end": 46, "type": "IBAN"}, {"start": 64, "end": 80, "type": "PERSON"}]}
+{"text": "Your agent louisa.prem@corp.example promised a callback on ref 1760544370919. Nobody called. Reach me at frederik54@example.org.", "spans": [{"start": 105, "end": 127, "type": "EMAIL"}]}
+{"text": "Verification documents uploaded twice, order 5959833025078915. Please confirm. Xavier Eberl-Zeiner, +49 951 8838 4495.", "spans": [{"start": 79, "end": 98, "type": "PERSON"}, {"start": 100, "end": 117, "type": "PHONE"}]}
+{"text": "Hi, this is Annabella Reindl. My withdrawal is still pending, see 8 277.49 EUR. Please call me on +43-490-2066799.", "spans": [{"start": 12, "end": 28, "type": "PERSON"}, {"start": 98, "end": 113, "type": "PHONE"}]}
+{"text": "Verification documents uploaded twice, 623.50 EUR. Please confirm. Kai Widmann, +49-588-115200.", "spans": [{"start": 67, "end": 78, "type": "PERSON"}, {"start": 80, "end": 94, "type": "PHONE"}]}
+{"text": "App crashes when I open the chart, ref 1760259376724. Not urgent.", "spans": []}
+{"text": "Hi, this is Ruth Bachmann-Scherrer. My withdrawal is still pending, see 8 867.27 EUR. Please call me on +43-339-514566.", "spans": [{"start": 12, "end": 34, "type": "PERSON"}, {"start": 104, "end": 118, "type": "PHONE"}]}
+{"text": "Hi, this is Delia Gloor. My withdrawal is still pending, see 2026-10-06. Please call me on +43 879 5830 962.", "spans": [{"start": 12, "end": 23, "type": "PERSON"}, {"start": 91, "end": 107, "type": "PHONE"}]}
+{"text": "Verification documents uploaded twice, 7 351.75 EUR. Please confirm. Adriano Gabriel-Friedrich, +49-875-4417182.", "spans": [{"start": 69, "end": 94, "type": "PERSON"}, {"start": 96, "end": 111, "type": "PHONE"}]}
+{"text": "Your agent franz.thaller@corp.example promised a callback on 774.70 EUR. Nobody called. Reach me at fiedlercatharina@example.net.", "spans": [{"start": 100, "end": 128, "type": "EMAIL"}]}
+{"text": "Hi, this is Elsa Kohler. My withdrawal is still pending, see 0370 6067240. Please call me on +43-609-643637.", "spans": [{"start": 12, "end": 23, "type": "PERSON"}, {"start": 93, "end": 107, "type": "PHONE"}]}
+{"text": "Hi, this is Kristin Bättig. My withdrawal is still pending, see order 2588382957675082. Please call me on +4175322748024.", "spans": [{"start": 12, "end": 26, "type": "PERSON"}, {"start": 106, "end": 120, "type": "PHONE"}]}
+{"text": "Your agent livio.schaller@corp.example promised a callback on ref 1759795943692. Nobody called. Reach me at sorayabosshard@example.org.", "spans": [{"start": 108, "end": 134, "type": "EMAIL"}]}
+{"text": "Hi, this is Mike Jandl. My withdrawal is still pending, see 667.96 EUR. Please call me on +49 326 5857 909.", "spans": [{"start": 12, "end": 22, "type": "PERSON"}, {"start": 90, "end": 106, "type": "PHONE"}]}
+{"text": "Deposit failed again. Card 4884325436379477, tried 0629 2873766. My number is +43-817-157754, Alexander Trommler-Adolph.", "spans": [{"start": 27, "end": 43, "type": "CARD"}, {"start": 78, "end": 92, "type": "PHONE"}, {"start": 94, "end": 119, "type": "PERSON"}]}
+{"text": "Verification documents uploaded twice, lina.meier@corp.example. Please confirm. Ing. Markus Holzer, +435281152789.", "spans": [{"start": 80, "end": 98, "type": "PERSON"}, {"start": 100, "end": 113, "type": "PHONE"}]}
+{"text": "Spread on DAX was too wide yesterday. Call the office 0478 8005622 if you need details.", "spans": []}
+{"text": "App crashes when I open the chart, seline.roos@corp.example. Not urgent.", "spans": []}
+{"text": "Deposit failed again. Card 4271658462251181, tried eckehard.mans@corp.example. My number is +49 232 0059 831, Erol Lorch.", "spans": [{"start": 27, "end": 43, "type": "CARD"}, {"start": 92, "end": 108, "type": "PHONE"}, {"start": 110, "end": 120, "type": "PERSON"}]}
+{"text": "App crashes when I open the chart, ref 1759166771533. Not urgent.", "spans": []}
+{"text": "Your agent sabine.erni@corp.example promised a callback on ref 1759966404442. Nobody called. Reach me at stockligaelle@example.org.", "spans": [{"start": 105, "end": 130, "type": "EMAIL"}]}
+{"text": "Your agent nicole.widmer@corp.example promised a callback on tanja.zürcher@corp.example. Nobody called. Reach me at peterzimmermann@example.org.", "spans": [{"start": 116, "end": 143, "type": "EMAIL"}]}
+{"text": "Hi, this is Victor Fink. My withdrawal is still pending, see 0720 1468233. Please call me on +41-529-497177.", "spans": [{"start": 12, "end": 23, "type": "PERSON"}, {"start": 93, "end": 107, "type": "PHONE"}]}
+{"text": "Verification documents uploaded twice, order 3897829387892636. Please confirm. Emilie Schäfer Gfeller, +4947377974954.", "spans": [{"start": 79, "end": 101, "type": "PERSON"}, {"start": 103, "end": 117, "type": "PHONE"}]}
+{"text": "Giorgia Fuchs here. Why was my position closed? Ticket from order 3016589065730301 was ignored.", "spans": [{"start": 0, "end": 13, "type": "PERSON"}]}
+{"text": "Your agent dominic.killer@corp.example promised a callback on ref 1759772085197. Nobody called. Reach me at vittoriojuettner@example.org.", "spans": [{"start": 108, "end": 136, "type": "EMAIL"}]}
+{"text": "Hi, this is Asia Stocker Gfeller. My withdrawal is still pending, see 7 460.37 EUR. Please call me on +434889661093.", "spans": [{"start": 12, "end": 32, "type": "PERSON"}, {"start": 102, "end": 115, "type": "PHONE"}]}
+{"text": "Delia Finke here. Why was my position closed? Ticket from 0517 1375785 was ignored.", "spans": [{"start": 0, "end": 11, "type": "PERSON"}]}
+{"text": "Please send the refund to AT431270775613336245. Account holder: Anika Lang.", "spans": [{"start": 26, "end": 46, "type": "IBAN"}, {"start": 64, "end": 74, "type": "PERSON"}]}
+{"text": "Spread on DAX was too wide yesterday. Call the office 0196 3412533 if you need details.", "spans": []}
+{"text": "Please send the refund to AT428885821561916914. Account holder: Philippa Reisinger.", "spans": [{"start": 26, "end": 46, "type": "IBAN"}, {"start": 64, "end": 82, "type": "PERSON"}]}
+{"text": "Please send the refund to CH2479798364324237307. Account holder: Eduard Beck.", "spans": [{"start": 26, "end": 47, "type": "IBAN"}, {"start": 65, "end": 76, "type": "PERSON"}]}
+{"text": "I was charged twice on card 4539745274142266 for ref 1760465137540. Contact me at christian74@example.com.", "spans": [{"start": 28, "end": 44, "type": "CARD"}, {"start": 82, "end": 105, "type": "EMAIL"}]}
+{"text": "Verification documents uploaded twice, order 5183601002907894. Please confirm. Karl Redl, +43609036104.", "spans": [{"start": 79, "end": 88, "type": "PERSON"}, {"start": 90, "end": 102, "type": "PHONE"}]}
+{"text": "Your agent arthur.gfeller@corp.example promised a callback on 444.08 EUR. Nobody called. Reach me at ajanlustenberger@example.org.", "spans": [{"start": 101, "end": 129, "type": "EMAIL"}]}
+{"text": "Your agent nora.kreidl@corp.example promised a callback on order 4486724616644110. Nobody called. Reach me at cornelius77@example.net.", "spans": [{"start": 110, "end": 133, "type": "EMAIL"}]}
+{"text": "I was charged twice on card 2226390985106938 for irina.fitz@corp.example. Contact me at pschuler@example.com.", "spans": [{"start": 28, "end": 44, "type": "CARD"}, {"start": 88, "end": 108, "type": "EMAIL"}]}
+{"text": "Spread on DAX was too wide yesterday. Call the office 0212 6849652 if you need details.", "spans": []}
+{"text": "Your agent egon.schneider@corp.example promised a callback on 0435 3035159. Nobody called. Reach me at ernsttil@example.org.", "spans": [{"start": 103, "end": 123, "type": "EMAIL"}]}
+{"text": "I was charged twice on card 4155759783670744 for 2 530.73 EUR. Contact me at freytristan@example.net.", "spans": [{"start": 28, "end": 44, "type": "CARD"}, {"start": 77, "end": 100, "type": "EMAIL"}]}
+{"text": "Verification documents uploaded twice, 0572 1494156. Please confirm. David Zobel, +49 764 9788 40.", "spans": [{"start": 69, "end": 80, "type": "PERSON"}, {"start": 82, "end": 97, "type": "PHONE"}]}
+{"text": "Deposit failed again. Card 4044990222523138, tried 0569 5319382. My number is +4170699032629, Filip Aichholzer.", "spans": [{"start": 27, "end": 43, "type": "CARD"}, {"start": 78, "end": 92, "type": "PHONE"}, {"start": 94, "end": 110, "type": "PERSON"}]}
+{"text": "Verification documents uploaded twice, friedrich.reisinger@corp.example. Please confirm. Olivia Rudolf, +43 459 7344 0307.", "spans": [{"start": 89, "end": 102, "type": "PERSON"}, {"start": 104, "end": 121, "type": "PHONE"}]}
+{"text": "Verification documents uploaded twice, 2026-09-03. Please confirm. Kushtrim Gross-Friedli, +41 822 9586 57.", "spans": [{"start": 67, "end": 89, "type": "PERSON"}, {"start": 91, "end": 106, "type": "PHONE"}]}
+{"text": "Your agent evelyn.weidinger@corp.example promised a callback on 6 760.65 EUR. Nobody called. Reach me at knowak@example.org.", "spans": [{"start": 105, "end": 123, "type": "EMAIL"}]}
+{"text": "Change my email to heintzebernd-dieter@example.org and the payout account to DE24965694894829482934.", "spans": [{"start": 19, "end": 50, "type": "EMAIL"}, {"start": 77, "end": 99, "type": "IBAN"}]}
+{"text": "Verification documents uploaded twice, order 7355753972710512. Please confirm. Herr Jonas Hethur MBA., +49 783 5451 55.", "spans": [{"start": 79, "end": 101, "type": "PERSON"}, {"start": 103, "end": 118, "type": "PHONE"}]}
+{"text": "Deposit failed again. Card 4525204044558886, tried 0909 2273129. My number is +41727344847, Krista Heß B.Sc..", "spans": [{"start": 27, "end": 43, "type": "CARD"}, {"start": 78, "end": 90, "type": "PHONE"}, {"start": 92, "end": 108, "type": "PERSON"}]}
+{"text": "Your agent nelly.hosp@corp.example promised a callback on 7 596.65 EUR. Nobody called. Reach me at merlingeier@example.net.", "spans": [{"start": 99, "end": 122, "type": "EMAIL"}]}
+{"text": "App crashes when I open the chart, 2026-09-24. Not urgent.", "spans": []}
+{"text": "App crashes when I open the chart, order 7150815059200484. Not urgent.", "spans": []}
+{"text": "Your agent klaus-günter.schuchhardt@corp.example promised a callback on order 3960185178202667. Nobody called. Reach me at elisabet07@example.com.", "spans": [{"start": 123, "end": 145, "type": "EMAIL"}]}
+{"text": "Please send the refund to CH4358594138419931841. Account holder: Christel Vogel.", "spans": [{"start": 26, "end": 47, "type": "IBAN"}, {"start": 65, "end": 79, "type": "PERSON"}]}
+{"text": "Change my email to denis67@example.org and the payout account to DE39905686246068902278.", "spans": [{"start": 19, "end": 38, "type": "EMAIL"}, {"start": 65, "end": 87, "type": "IBAN"}]}
+{"text": "Hi, this is Franz Heinzl. My withdrawal is still pending, see marijana.haas@corp.example. Please call me on +41 500 4798 244.", "spans": [{"start": 12, "end": 24, "type": "PERSON"}, {"start": 108, "end": 124, "type": "PHONE"}]}
+{"text": "Spread on DAX was too wide yesterday. Call the office 0783 4362091 if you need details.", "spans": []}
+{"text": "Deposit failed again. Card 2571792735867860, tried 0342 5838487. My number is +49667221577, Eric Lorenz.", "spans": [{"start": 27, "end": 43, "type": "CARD"}, {"start": 78, "end": 90, "type": "PHONE"}, {"start": 92, "end": 103, "type": "PERSON"}]}
+{"text": "Your agent milica.kölbl@corp.example promised a callback on 2026-09-12. Nobody called. Reach me at ylviesammer@example.com.", "spans": [{"start": 99, "end": 122, "type": "EMAIL"}]}
+{"text": "Change my email to kuehnertcynthia@example.org and the payout account to DE78749812859824921667.", "spans": [{"start": 19, "end": 46, "type": "EMAIL"}, {"start": 73, "end": 95, "type": "IBAN"}]}
+{"text": "Your agent alexia.steinbauer@corp.example promised a callback on 7 443.71 EUR. Nobody called. Reach me at andrej36@example.net.", "spans": [{"start": 106, "end": 126, "type": "EMAIL"}]}
+{"text": "Change my email to helenakitzmann@example.org and the payout account to DE70709145686224564853.", "spans": [{"start": 19, "end": 45, "type": "EMAIL"}, {"start": 72, "end": 94, "type": "IBAN"}]}
+{"text": "Hi, this is Birgitt van der Dussen. My withdrawal is still pending, see ahmet.preiß@corp.example. Please call me on +43-161-97543418.", "spans": [{"start": 12, "end": 34, "type": "PERSON"}, {"start": 116, "end": 132, "type": "PHONE"}]}
+{"text": "Please send the refund to CH1626500252260467658. Account holder: Marcela Steiger.", "spans": [{"start": 26, "end": 47, "type": "IBAN"}, {"start": 65, "end": 80, "type": "PERSON"}]}
+{"text": "I was charged twice on card 2713264142536131 for christof.mayer@corp.example. Contact me at timothywalter@example.org.", "spans": [{"start": 28, "end": 44, "type": "CARD"}, {"start": 92, "end": 117, "type": "EMAIL"}]}
+{"text": "Verification documents uploaded twice, ref 1760668677742. Please confirm. Luana Mitterlehner, +49969039512.", "spans": [{"start": 74, "end": 92, "type": "PERSON"}, {"start": 94, "end": 106, "type": "PHONE"}]}
+{"text": "Verification documents uploaded twice, 2026-10-01. Please confirm. Lily Prem, +43 230 2974 0426.", "spans": [{"start": 67, "end": 76, "type": "PERSON"}, {"start": 78, "end": 95, "type": "PHONE"}]}
+{"text": "Your agent fabrizio.hermann@corp.example promised a callback on 0277 3718733. Nobody called. Reach me at sbianchi@example.net.", "spans": [{"start": 105, "end": 125, "type": "EMAIL"}]}
+{"text": "Verification documents uploaded twice, 5 564.24 EUR. Please confirm. Emre Meier, +4915909542718.", "spans": [{"start": 69, "end": 79, "type": "PERSON"}, {"start": 81, "end": 95, "type": "PHONE"}]}
+{"text": "Change my email to koesslernikolaus@example.net and the payout account to AT169507422629648140.", "spans": [{"start": 19, "end": 47, "type": "EMAIL"}, {"start": 74, "end": 94, "type": "IBAN"}]}
+{"text": "I was charged twice on card 4006102086640208 for ref 1760717274358. Contact me at nergerzita@example.com.", "spans": [{"start": 28, "end": 44, "type": "CARD"}, {"start": 82, "end": 104, "type": "EMAIL"}]}
+{"text": "Hi, this is Annick Bieri. My withdrawal is still pending, see 2026-09-04. Please call me on +49 374 0876 343.", "spans": [{"start": 12, "end": 24, "type": "PERSON"}, {"start": 92, "end": 108, "type": "PHONE"}]}
+{"text": "App crashes when I open the chart, order 2979340007070643. Not urgent.", "spans": []}
+{"text": "Please send the refund to AT946536149149822281. Account holder: Liam Rath-Lassnig.", "spans": [{"start": 26, "end": 46, "type": "IBAN"}, {"start": 64, "end": 81, "type": "PERSON"}]}
+{"text": "Hi, this is Univ.Prof. Stephan Geiger. My withdrawal is still pending, see 7 644.78 EUR. Please call me on +490735625181.", "spans": [{"start": 12, "end": 37, "type": "PERSON"}, {"start": 107, "end": 120, "type": "PHONE"}]}
+{"text": "App crashes when I open the chart, 0888 191722. Not urgent.", "spans": []}
+{"text": "Kim Hotz here. Why was my position closed? Ticket from 2026-10-04 was ignored.", "spans": [{"start": 0, "end": 8, "type": "PERSON"}]}
+{"text": "App crashes when I open the chart, 6 805.31 EUR. Not urgent.", "spans": []}
+{"text": "Verification documents uploaded twice, 2026-09-09. Please confirm. Kyra Schweitzer, +4103359460687.", "spans": [{"start": 67, "end": 82, "type": "PERSON"}, {"start": 84, "end": 98, "type": "PHONE"}]}
+{"text": "Teodora Roos here. Why was my position closed? Ticket from arben.burri@corp.example was ignored.", "spans": [{"start": 0, "end": 12, "type": "PERSON"}]}
+{"text": "Spread on DAX was too wide yesterday. Call the office 0992 689923 if you need details.", "spans": []}
+{"text": "Deposit failed again. Card 2287303872957384, tried 0441 9303610. My number is +49-642-09635429, Rayan Bader.", "spans": [{"start": 27, "end": 43, "type": "CARD"}, {"start": 78, "end": 94, "type": "PHONE"}, {"start": 96, "end": 107, "type": "PERSON"}]}
+{"text": "Ing. Sigismund Hethur B.Sc. here. Why was my position closed? Ticket from 2 685.13 EUR was ignored.", "spans": [{"start": 0, "end": 27, "type": "PERSON"}]}
+{"text": "Your agent florian.linder@corp.example promised a callback on order 4822549251054717. Nobody called. Reach me at lisa-mariehofinger@example.net.", "spans": [{"start": 113, "end": 143, "type": "EMAIL"}]}
+{"text": "Deposit failed again. Card 4095201410553087, tried ref 1760813681887. My number is +41 853 1068 5192, Leonora Wilfinger.", "spans": [{"start": 27, "end": 43, "type": "CARD"}, {"start": 83, "end": 100, "type": "PHONE"}, {"start": 102, "end": 119, "type": "PERSON"}]}
+{"text": "Your agent laurenz.schuler@corp.example promised a callback on 2026-09-14. Nobody called. Reach me at melaniethaler@example.org.", "spans": [{"start": 102, "end": 127, "type": "EMAIL"}]}
+{"text": "Spread on DAX was too wide yesterday. Call the office 0168 8936207 if you need details.", "spans": []}
+{"text": "Deposit failed again. Card 2262591823839607, tried 2026-10-05. My number is +49 744 8296 9395, Remo Fankhauser.", "spans": [{"start": 27, "end": 43, "type": "CARD"}, {"start": 76, "end": 93, "type": "PHONE"}, {"start": 95, "end": 110, "type": "PERSON"}]}
+{"text": "Your agent cornelius.kaufmann@corp.example promised a callback on 0947 3834884. Nobody called. Reach me at sofia78@example.com.", "spans": [{"start": 107, "end": 126, "type": "EMAIL"}]}
+{"text": "Your agent samantha.schumacher@corp.example promised a callback on order 4941892953917050. Nobody called. Reach me at svetlana73@example.org.", "spans": [{"start": 118, "end": 140, "type": "EMAIL"}]}
+{"text": "I was charged twice on card 5118071838939501 for order 9848023150185132. Contact me at qbluemel@example.net.", "spans": [{"start": 28, "end": 44, "type": "CARD"}, {"start": 87, "end": 107, "type": "EMAIL"}]}
+{"text": "Change my email to malenawaldner@example.com and the payout account to AT617300443083859784.", "spans": [{"start": 19, "end": 44, "type": "EMAIL"}, {"start": 71, "end": 91, "type": "IBAN"}]}
+{"text": "Deposit failed again. Card 4502043917025368, tried order 0422417462122134. My number is +49-922-500762, Elia Kuhn-Brunner.", "spans": [{"start": 27, "end": 43, "type": "CARD"}, {"start": 88, "end": 102, "type": "PHONE"}, {"start": 104, "end": 121, "type": "PERSON"}]}
+{"text": "Hi, this is Kathrin Steiger. My withdrawal is still pending, see lorenz.widmer@corp.example. Please call me on +43 257 8513 596.", "spans": [{"start": 12, "end": 27, "type": "PERSON"}, {"start": 111, "end": 127, "type": "PHONE"}]}
+{"text": "Dragica Kunz here. Why was my position closed? Ticket from order 9204704640064933 was ignored.", "spans": [{"start": 0, "end": 12, "type": "PERSON"}]}
+{"text": "I was charged twice on card 2283092164401425 for nevio.schwab@corp.example. Contact me at omar70@example.net.", "spans": [{"start": 28, "end": 44, "type": "CARD"}, {"start": 90, "end": 108, "type": "EMAIL"}]}
+{"text": "Verification documents uploaded twice, ref 1759587782672. Please confirm. Hermann Josef Krein, +43 466 0491 82.", "spans": [{"start": 74, "end": 93, "type": "PERSON"}, {"start": 95, "end": 110, "type": "PHONE"}]}
+{"text": "Regine Zänker here. Why was my position closed? Ticket from 5 014.29 EUR was ignored.", "spans": [{"start": 0, "end": 13, "type": "PERSON"}]}
+{"text": "Spread on DAX was too wide yesterday. Call the office 0424 7909651 if you need details.", "spans": []}
+{"text": "App crashes when I open the chart, 2026-10-09. Not urgent.", "spans": []}
+{"text": "I was charged twice on card 5154182529076282 for danny.adler@corp.example. Contact me at heintzesusi@example.org.", "spans": [{"start": 28, "end": 44, "type": "CARD"}, {"start": 89, "end": 112, "type": "EMAIL"}]}
+{"text": "Your agent aurora.portmann@corp.example promised a callback on ref 1760005203585. Nobody called. Reach me at eveleunberger@example.net.", "spans": [{"start": 109, "end": 134, "type": "EMAIL"}]}
+{"text": "Ing. Dominik Ritter here. Why was my position closed? Ticket from 1 067.20 EUR was ignored.", "spans": [{"start": 0, "end": 19, "type": "PERSON"}]}
+{"text": "Hi, this is Hans-Otto Budig. My withdrawal is still pending, see ref 1759967827606. Please call me on +43 060 9193 0399.", "spans": [{"start": 12, "end": 27, "type": "PERSON"}, {"start": 102, "end": 119, "type": "PHONE"}]}
+{"text": "Please send the refund to CH5329638569531087133. Account holder: Prof. Emir Zehnder.", "spans": [{"start": 26, "end": 47, "type": "IBAN"}, {"start": 65, "end": 83, "type": "PERSON"}]}
+{"text": "Spread on DAX was too wide yesterday. Call the office 0443 7654627 if you need details.", "spans": []}
+{"text": "Change my email to reichina@example.org and the payout account to AT424158026218601250.", "spans": [{"start": 19, "end": 39, "type": "EMAIL"}, {"start": 66, "end": 86, "type": "IBAN"}]}
+{"text": "Spread on DAX was too wide yesterday. Call the office 0415 917137 if you need details.", "spans": []}
+{"text": "Spread on DAX was too wide yesterday. Call the office 0149 9055367 if you need details.", "spans": []}
+{"text": "Deposit failed again. Card 2580247151627784, tried 0237 4413206. My number is +49 294 3338 4891, Prof. Slavica Langern B.Sc..", "spans": [{"start": 27, "end": 43, "type": "CARD"}, {"start": 78, "end": 95, "type": "PHONE"}, {"start": 97, "end": 124, "type": "PERSON"}]}
+{"text": "Please send the refund to DE64060133350937690535. Account holder: Sibille Klemt.", "spans": [{"start": 26, "end": 48, "type": "IBAN"}, {"start": 66, "end": 79, "type": "PERSON"}]}
+{"text": "Carlo Kade here. Why was my position closed? Ticket from ref 1759186220569 was ignored.", "spans": [{"start": 0, "end": 10, "type": "PERSON"}]}
+{"text": "Verification documents uploaded twice, order 6128002449647314. Please confirm. Prof. Arif Bachmann, +43-587-72787763.", "spans": [{"start": 79, "end": 98, "type": "PERSON"}, {"start": 100, "end": 116, "type": "PHONE"}]}
+{"text": "Hi, this is Umberto Schenk. My withdrawal is still pending, see 2026-10-06. Please call me on +43 005 2252 51.", "spans": [{"start": 12, "end": 26, "type": "PERSON"}, {"start": 94, "end": 109, "type": "PHONE"}]}
+{"text": "I was charged twice on card 4567979886808908 for order 3245519336487695. Contact me at wilhelminepechel@example.com.", "spans": [{"start": 28, "end": 44, "type": "CARD"}, {"start": 87, "end": 115, "type": "EMAIL"}]}
+{"text": "Verification documents uploaded twice, order 6264169499593553. Please confirm. Dr. Herwig Heser B.Sc., +41 953 7496 0448.", "spans": [{"start": 79, "end": 101, "type": "PERSON"}, {"start": 103, "end": 120, "type": "PHONE"}]}
+{"text": "Hi, this is Ing. Pascal Wilfinger. My withdrawal is still pending, see 4 878.41 EUR. Please call me on +49 175 3984 441.", "spans": [{"start": 12, "end": 33, "type": "PERSON"}, {"start": 103, "end": 119, "type": "PHONE"}]}
+{"text": "Your agent morris.schoch@corp.example promised a callback on luisa.walder@corp.example. Nobody called. Reach me at lwenger@example.com.", "spans": [{"start": 115, "end": 134, "type": "EMAIL"}]}
+{"text": "App crashes when I open the chart, 3 426.01 EUR. Not urgent.", "spans": []}
+{"text": "I was charged twice on card 4904333494596103 for 2026-09-30. Contact me at arda79@example.net.", "spans": [{"start": 28, "end": 44, "type": "CARD"}, {"start": 75, "end": 93, "type": "EMAIL"}]}
+{"text": "Hi, this is Oswald Meyer. My withdrawal is still pending, see order 7315332466475350. Please call me on +41 785 4631 02.", "spans": [{"start": 12, "end": 24, "type": "PERSON"}, {"start": 104, "end": 119, "type": "PHONE"}]}
+{"text": "Change my email to albert32@example.com and the payout account to DE86591707719042152523.", "spans": [{"start": 19, "end": 39, "type": "EMAIL"}, {"start": 66, "end": 88, "type": "IBAN"}]}
+{"text": "Your agent heinz-jürgen.mies@corp.example promised a callback on ref 1760074600695. Nobody called. Reach me at preisspirmin@example.com.", "spans": [{"start": 111, "end": 135, "type": "EMAIL"}]}
+{"text": "Please send the refund to CH6726966957814767001. Account holder: Margrit Baur.", "spans": [{"start": 26, "end": 47, "type": "IBAN"}, {"start": 65, "end": 77, "type": "PERSON"}]}
+{"text": "Spread on DAX was too wide yesterday. Call the office 0908 8787655 if you need details.", "spans": []}
+{"text": "App crashes when I open the chart, order 6201621750871796. Not urgent.", "spans": []}
+{"text": "Verification documents uploaded twice, order 9794179179624099. Please confirm. Iris Fritsch, +49-514-928330.", "spans": [{"start": 79, "end": 91, "type": "PERSON"}, {"start": 93, "end": 107, "type": "PHONE"}]}
+{"text": "I was charged twice on card 4437287635785999 for 0865 8129400. Contact me at schleichrosi@example.com.", "spans": [{"start": 28, "end": 44, "type": "CARD"}, {"start": 77, "end": 101, "type": "EMAIL"}]}
+{"text": "Verification documents uploaded twice, ref 1759581832727. Please confirm. Liliane Taferner, +49 838 7306 34.", "spans": [{"start": 74, "end": 90, "type": "PERSON"}, {"start": 92, "end": 107, "type": "PHONE"}]}
+{"text": "Spread on DAX was too wide yesterday. Call the office 0818 8969064 if you need details.", "spans": []}
+{"text": "Change my email to lisa90@example.org and the payout account to CH0668457864740765391.", "spans": [{"start": 19, "end": 37, "type": "EMAIL"}, {"start": 64, "end": 85, "type": "IBAN"}]}
+{"text": "I was charged twice on card 4753531024924990 for 2026-09-16. Contact me at bosshardmarta@example.net.", "spans": [{"start": 28, "end": 44, "type": "CARD"}, {"start": 75, "end": 100, "type": "EMAIL"}]}
+{"text": "App crashes when I open the chart, ref 1760607178567. Not urgent.", "spans": []}
+{"text": "Your agent nathan.rössler@corp.example promised a callback on 0831 8075256. Nobody called. Reach me at laurenzstolz@example.net.", "spans": [{"start": 103, "end": 127, "type": "EMAIL"}]}
+{"text": "App crashes when I open the chart, 0611 1507230. Not urgent.", "spans": []}
+{"text": "Please send the refund to CH5933263875938513427. Account holder: Luzia Hess.", "spans": [{"start": 26, "end": 47, "type": "IBAN"}, {"start": 65, "end": 75, "type": "PERSON"}]}
+{"text": "Matthias Wyss-Berger here. Why was my position closed? Ticket from ref 1760171591337 was ignored.", "spans": [{"start": 0, "end": 20, "type": "PERSON"}]}
+{"text": "Hi, this is Prof. Aron Michel. My withdrawal is still pending, see 2026-10-02. Please call me on +49 004 9592 76.", "spans": [{"start": 12, "end": 29, "type": "PERSON"}, {"start": 97, "end": 112, "type": "PHONE"}]}
+{"text": "Spread on DAX was too wide yesterday. Call the office 0474 9753026 if you need details.", "spans": []}
+{"text": "Change my email to omairhofer@example.com and the payout account to AT398772998093466158.", "spans": [{"start": 19, "end": 41, "type": "EMAIL"}, {"start": 68, "end": 88, "type": "IBAN"}]}
+{"text": "Your agent anja.kasper@corp.example promised a callback on 0517 1968670. Nobody called. Reach me at dgindl@example.org.", "spans": [{"start": 100, "end": 118, "type": "EMAIL"}]}
+{"text": "Deposit failed again. Card 4201317679870771, tried samuel.bianchi@corp.example. My number is +416680339705, Deniz Bernasconi-Eugster.", "spans": [{"start": 27, "end": 43, "type": "CARD"}, {"start": 93, "end": 106, "type": "PHONE"}, {"start": 108, "end": 132, "type": "PERSON"}]}
+{"text": "I was charged twice on card 4336688347128596 for ref 1760150501988. Contact me at ohiller@example.org.", "spans": [{"start": 28, "end": 44, "type": "CARD"}, {"start": 82, "end": 101, "type": "EMAIL"}]}
+{"text": "Verification documents uploaded twice, alan.streicher@corp.example. Please confirm. Univ.Prof. Ilias Puntigam, +410381706080.", "spans": [{"start": 84, "end": 109, "type": "PERSON"}, {"start": 111, "end": 124, "type": "PHONE"}]}
+{"text": "Please send the refund to CH7100528669388762308. Account holder: Kathleen Suter.", "spans": [{"start": 26, "end": 47, "type": "IBAN"}, {"start": 65, "end": 79, "type": "PERSON"}]}
+{"text": "I was charged twice on card 2496849857628405 for ref 1759493782183. Contact me at tamarasieberer@example.com.", "spans": [{"start": 28, "end": 44, "type": "CARD"}, {"start": 82, "end": 108, "type": "EMAIL"}]}
+{"text": "Spread on DAX was too wide yesterday. Call the office 0866 1950669 if you need details.", "spans": []}
+{"text": "Deposit failed again. Card 2245924021456522, tried order 8441182719523551. My number is +49 742 3258 25, Heribert Herrmann B.Eng..", "spans": [{"start": 27, "end": 43, "type": "CARD"}, {"start": 88, "end": 103, "type": "PHONE"}, {"start": 105, "end": 129, "type": "PERSON"}]}
+{"text": "Please send the refund to DE87854652514078004888. Account holder: Univ.Prof. Malgorzata Zobel B.Eng..", "spans": [{"start": 26, "end": 48, "type": "IBAN"}, {"start": 66, "end": 100, "type": "PERSON"}]}
+{"text": "App crashes when I open the chart, 1 645.95 EUR. Not urgent.", "spans": []}
+{"text": "Your agent nuran.röhricht@corp.example promised a callback on 2026-09-25. Nobody called. Reach me at hagenbaehr@example.com.", "spans": [{"start": 101, "end": 123, "type": "EMAIL"}]}
+{"text": "Your agent lora.hörl@corp.example promised a callback on 0307 2673155. Nobody called. Reach me at marlenegmeiner@example.net.", "spans": [{"start": 98, "end": 124, "type": "EMAIL"}]}
+{"text": "App crashes when I open the chart, 0703 8256410. Not urgent.", "spans": []}
+{"text": "Aribert Albers B.Eng. here. Why was my position closed? Ticket from order 2317005112253294 was ignored.", "spans": [{"start": 0, "end": 21, "type": "PERSON"}]}
+{"text": "Verification documents uploaded twice, 2026-09-25. Please confirm. Dipl.-Ing. Urte Heintze, +49-358-5965244.", "spans": [{"start": 67, "end": 90, "type": "PERSON"}, {"start": 92, "end": 107, "type": "PHONE"}]}
+{"text": "Spread on DAX was too wide yesterday. Call the office 0500 3940327 if you need details.", "spans": []}
+{"text": "I was charged twice on card 2239474135528541 for ref 1759680361256. Contact me at bittnerclemens@example.org.", "spans": [{"start": 28, "end": 44, "type": "CARD"}, {"start": 82, "end": 108, "type": "EMAIL"}]}
+{"text": "Deposit failed again. Card 2459907201041942, tried order 0724643542291442. My number is +43 179 7086 90, Dipl.-Ing. Angelika Zangerl.", "spans": [{"start": 27, "end": 43, "type": "CARD"}, {"start": 88, "end": 103, "type": "PHONE"}, {"start": 105, "end": 132, "type": "PERSON"}]}
+{"text": "Please send the refund to AT524543011960196315. Account holder: Daniel Salzmann.", "spans": [{"start": 26, "end": 46, "type": "IBAN"}, {"start": 64, "end": 79, "type": "PERSON"}]}
+{"text": "Hi, this is Miriam Koch. My withdrawal is still pending, see stefanie.rohrer@corp.example. Please call me on +43-821-546419.", "spans": [{"start": 12, "end": 23, "type": "PERSON"}, {"start": 109, "end": 123, "type": "PHONE"}]}
+{"text": "Change my email to tzobel@example.net and the payout account to DE02115292007442754559.", "spans": [{"start": 19, "end": 37, "type": "EMAIL"}, {"start": 64, "end": 86, "type": "IBAN"}]}
+{"text": "Spread on DAX was too wide yesterday. Call the office 0374 1867584 if you need details.", "spans": []}
+{"text": "Hi, this is Halil Grein Groth B.Sc.. My withdrawal is still pending, see 2026-09-24. Please call me on +41 891 6604 668.", "spans": [{"start": 12, "end": 35, "type": "PERSON"}, {"start": 103, "end": 119, "type": "PHONE"}]}
+{"text": "Spread on DAX was too wide yesterday. Call the office 0988 7213992 if you need details.", "spans": []}
+{"text": "Steven Petz here. Why was my position closed? Ticket from justus.schrittwieser@corp.example was ignored.", "spans": [{"start": 0, "end": 11, "type": "PERSON"}]}
+{"text": "Verification documents uploaded twice, 760.86 EUR. Please confirm. Hannah Strauß, +439049638424.", "spans": [{"start": 67, "end": 80, "type": "PERSON"}, {"start": 82, "end": 95, "type": "PHONE"}]}
+{"text": "Sofie Wende here. Why was my position closed? Ticket from ref 1759459332663 was ignored.", "spans": [{"start": 0, "end": 11, "type": "PERSON"}]}
+{"text": "Spread on DAX was too wide yesterday. Call the office 0625 710043 if you need details.", "spans": []}
+{"text": "Your agent julius.gunpf@corp.example promised a callback on ref 1759310799597. Nobody called. Reach me at majahofmann@example.net.", "spans": [{"start": 106, "end": 129, "type": "EMAIL"}]}
+{"text": "I was charged twice on card 4529321557042037 for 5 160.57 EUR. Contact me at elsahuebel@example.com.", "spans": [{"start": 28, "end": 44, "type": "CARD"}, {"start": 77, "end": 99, "type": "EMAIL"}]}
+{"text": "Deposit failed again. Card 4888445682572835, tried luca.mitter@corp.example. My number is +49-796-265807, Christian Frühwirth.", "spans": [{"start": 27, "end": 43, "type": "CARD"}, {"start": 90, "end": 104, "type": "PHONE"}, {"start": 106, "end": 125, "type": "PERSON"}]}
+{"text": "Change my email to hfischer@example.net and the payout account to CH2154677329876445192.", "spans": [{"start": 19, "end": 39, "type": "EMAIL"}, {"start": 66, "end": 87, "type": "IBAN"}]}
+{"text": "Your agent susanne.roos@corp.example promised a callback on 5 439.88 EUR. Nobody called. Reach me at ammannnadja@example.org.", "spans": [{"start": 101, "end": 124, "type": "EMAIL"}]}
+{"text": "Please send the refund to AT771699295249936881. Account holder: Claudia Pfister.", "spans": [{"start": 26, "end": 46, "type": "IBAN"}, {"start": 64, "end": 79, "type": "PERSON"}]}
+{"text": "Spread on DAX was too wide yesterday. Call the office 0892 9228267 if you need details.", "spans": []}
+{"text": "Change my email to artursorgatz@example.org and the payout account to DE13240268127880587172.", "spans": [{"start": 19, "end": 43, "type": "EMAIL"}, {"start": 70, "end": 92, "type": "IBAN"}]}
+{"text": "Hi, this is Vinzenz Schnyder. My withdrawal is still pending, see 0931 7480316. Please call me on +49 421 5773 86.", "spans": [{"start": 12, "end": 28, "type": "PERSON"}, {"start": 98, "end": 113, "type": "PHONE"}]}
+{"text": "Spread on DAX was too wide yesterday. Call the office 0546 3474465 if you need details.", "spans": []}
+{"text": "Verification documents uploaded twice, tiffany.artner@corp.example. Please confirm. Florentina Unterberger, +411534168402.", "spans": [{"start": 84, "end": 106, "type": "PERSON"}, {"start": 108, "end": 121, "type": "PHONE"}]}
+{"text": "I was charged twice on card 4355459655365873 for ref 1759380074036. Contact me at steven76@example.org.", "spans": [{"start": 28, "end": 44, "type": "CARD"}, {"start": 82, "end": 102, "type": "EMAIL"}]}
+{"text": "Hi, this is Dr. Alexa Nowak. My withdrawal is still pending, see ref 1760850038684. Please call me on +495272381700.", "spans": [{"start": 12, "end": 27, "type": "PERSON"}, {"start": 102, "end": 115, "type": "PHONE"}]}
+{"text": "Hi, this is Cecilia Schrammel. My withdrawal is still pending, see order 0806193686622020. Please call me on +49-865-830737.", "spans": [{"start": 12, "end": 29, "type": "PERSON"}, {"start": 109, "end": 123, "type": "PHONE"}]}
+{"text": "Your agent adelina.lenz@corp.example promised a callback on nicolas.bischof@corp.example. Nobody called. Reach me at kaspercarolina@example.com.", "spans": [{"start": 117, "end": 143, "type": "EMAIL"}]}
+{"text": "Deposit failed again. Card 2283428210296049, tried order 2581775537568597. My number is +43-861-9509420, Natalja Rädel-Austermühle.", "spans": [{"start": 27, "end": 43, "type": "CARD"}, {"start": 88, "end": 103, "type": "PHONE"}, {"start": 105, "end": 130, "type": "PERSON"}]}
+{"text": "Please send the refund to DE19612879948034585627. Account holder: Ing. Erdogan Schulz.", "spans": [{"start": 26, "end": 48, "type": "IBAN"}, {"start": 66, "end": 85, "type": "PERSON"}]}
+{"text": "App crashes when I open the chart, order 4738217599131812. Not urgent.", "spans": []}
+{"text": "Verification documents uploaded twice, 532.36 EUR. Please confirm. Birthe Scholz, +49 646 2421 9151.", "spans": [{"start": 67, "end": 80, "type": "PERSON"}, {"start": 82, "end": 99, "type": "PHONE"}]}
+{"text": "Please send the refund to DE16356954077212237243. Account holder: Freya Matthäi-Hentschel.", "spans": [{"start": 26, "end": 48, "type": "IBAN"}, {"start": 66, "end": 89, "type": "PERSON"}]}
+{"text": "Your agent elfriede.schaub@corp.example promised a callback on jil.bühlmann@corp.example. Nobody called. Reach me at wilhelm72@example.net.", "spans": [{"start": 117, "end": 138, "type": "EMAIL"}]}
+{"text": "Your agent roger.zürcher@corp.example promised a callback on 2026-09-07. Nobody called. Reach me at seankunz@example.net.", "spans": [{"start": 100, "end": 120, "type": "EMAIL"}]}
+{"text": "Your agent adelina.wiesinger@corp.example promised a callback on lara-sophie.schuller@corp.example. Nobody called. Reach me at gjank@example.org.", "spans": [{"start": 127, "end": 144, "type": "EMAIL"}]}
+{"text": "Hi, this is Raffaella Gasser. My withdrawal is still pending, see 0292 4178667. Please call me on +43 063 3865 26.", "spans": [{"start": 12, "end": 28, "type": "PERSON"}, {"start": 98, "end": 113, "type": "PHONE"}]}
+{"text": "Change my email to ahosp@example.net and the payout account to AT792066059534755185.", "spans": [{"start": 19, "end": 36, "type": "EMAIL"}, {"start": 63, "end": 83, "type": "IBAN"}]}

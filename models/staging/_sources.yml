@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: raw
+    tables:
+      - name: raw_events
+        description: Product events from web and mobile clients. Mobile clients may replay an event; replays share event_id.
+      - name: support_tickets
+        description: Customer support tickets. body is free text written by customers and contains PII.
+        meta:
+          pii: true

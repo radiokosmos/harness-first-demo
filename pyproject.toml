@@ -1,0 +1,13 @@
+[project]
+name = "harness-first-demo"
+version = "0.1.0"
+description = "Demo repo for the 'Harness First' tutorial: building an AI agent harness for a data platform"
+requires-python = ">=3.11"
+dependencies = [
+    "dbt-duckdb>=1.9",
+    "duckdb>=1.1",
+    "faker>=30",
+]
+
+[tool.uv]
+package = false

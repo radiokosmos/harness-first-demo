@@ -1,0 +1,29 @@
+name: harness_demo
+version: "1.0.0"
+profile: harness_demo
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+target-path: "target"
+clean-targets: ["target"]
+
+seeds:
+  harness_demo:
+    +schema: raw
+    raw_events:
+      +column_types:
+        event_id: varchar
+        user_id: integer
+        event_ts: timestamptz
+        ingested_at: timestamptz
+    support_tickets:
+      +column_types:
+        created_at: timestamptz
+
+models:
+  harness_demo:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table
