@@ -58,6 +58,9 @@ $(cat "$persona_file")"
 echo "▶ $who · $runtime · $dest"
 cd "$dest"
 export PATH="$dest/.venv/bin:$PATH" DBT_PROFILES_DIR=.
+# act 3: the pi PII extension writes every outgoing provider request here
+export PII_PAYLOAD_LOG="${PII_PAYLOAD_LOG:-$runs/$who.payload.jsonl}"
+rm -f "$PII_PAYLOAD_LOG"
 case "$runtime" in
   pi)
     pi -p --approve --no-session ${PI_ARGS:-} --append-system-prompt "$persona" "$task_text" \
@@ -68,7 +71,7 @@ case "$runtime" in
       --model "${CLAUDE_MODEL:-claude-sonnet-5-5}" \
       --setting-sources project,local \
       --allowedTools "Bash Read Edit Write Glob Grep" ${CLAUDE_ARGS:-} \
-      2>&1 | tee "$runs/$who.log"
+      < /dev/null 2>&1 | tee "$runs/$who.log"
     ;;
   *) echo "unknown runtime: $runtime" >&2; exit 2 ;;
 esac

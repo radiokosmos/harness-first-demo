@@ -10,6 +10,8 @@ tutorial relies on:
 - support_tickets: free-text complaints with PII (names, emails, phones, IBANs,
   card numbers) plus decoys that look like PII but aren't (order ids, epoch
   millis, internal addresses, local numbers, dates, amounts).
+- support_tickets: 120 customers with stable PII — a customer's tickets repeat
+  the same email and phone, like real ones do.
 - corpus/*.jsonl: the same generator with labelled PII spans, for scoring
   the masking filter in act 3.
 
@@ -19,6 +21,7 @@ Run:  uv run python data/generate.py
 from __future__ import annotations
 
 import csv
+import gzip
 import json
 import random
 from datetime import datetime, timedelta, timezone
@@ -151,23 +154,26 @@ TEMPLATES = [
 ]
 
 
-def render(fake: Faker, rng: random.Random, template: list) -> Text:
+def new_pii(fake: Faker, rng: random.Random) -> dict:
+    return {
+        "PERSON": fake.name(),
+        "EMAIL": fake.email(),
+        "PHONE": intl_phone(fake, rng),
+        "IBAN": fake.iban(),
+        "CARD": fake.credit_card_number(card_type=rng.choice(["visa16", "mastercard"])),
+    }
+
+
+def render(fake: Faker, rng: random.Random, template: list, who: dict | None = None) -> Text:
+    """Render a template. `who` pins a customer's PII so their tickets repeat it."""
     t = Text()
     for piece in template:
         if isinstance(piece, str):
             t.add(piece)
             continue
         kind = piece[0]
-        if kind == "PERSON":
-            t.add(fake.name(), "PERSON")
-        elif kind == "EMAIL":
-            t.add(fake.email(), "EMAIL")
-        elif kind == "PHONE":
-            t.add(intl_phone(fake, rng), "PHONE")
-        elif kind == "IBAN":
-            t.add(fake.iban(), "IBAN")
-        elif kind == "CARD":
-            t.add(fake.credit_card_number(card_type=rng.choice(["visa16", "mastercard"])), "CARD")
+        if kind in ("PERSON", "EMAIL", "PHONE", "IBAN", "CARD"):
+            t.add(who[kind] if who else new_pii(fake, rng)[kind], kind)
         elif kind == "decoy_internal":
             t.add(f"{fake.first_name().lower()}.{fake.last_name().lower()}@{INTERNAL_DOMAIN}")
         elif kind == "decoy_local":
@@ -208,12 +214,26 @@ def main() -> None:
     rng = random.Random(42)
     write_csv(ROOT / "seeds" / "raw_events.csv", gen_events(rng))
 
+    # Tickets: 120 customers, each with stable PII, so their tickets repeat it.
+    trng = random.Random(7)
+    tfakers = {loc: Faker(loc) for loc in LOCALES}
+    for i, f in enumerate(tfakers.values()):
+        f.seed_instance(7 + i)
+    customers = {}
+    for cid in trng.sample(range(1, USERS + 1), 120):
+        fake = tfakers[trng.choice(LOCALES)]
+        customers[cid] = (fake, new_pii(fake, trng))
+    weights = [1 / (k + 1) for k in range(len(customers))]  # a few customers write a lot
+    ids = list(customers)
     tickets = []
-    for i, t in enumerate(gen_texts(seed=7, n=400), start=1):
+    for i in range(1, 401):
+        cid = trng.choices(ids, weights=weights)[0]
+        fake, who = customers[cid]
+        t = render(fake, trng, trng.choice(TEMPLATES), who)
         created = START + timedelta(days=rng.randrange(DAYS), hours=rng.randrange(24), minutes=rng.randrange(60))
         tickets.append({
             "ticket_id": f"tk_{i:05d}",
-            "customer_id": rng.randint(1, USERS),
+            "customer_id": cid,
             "channel": rng.choice(["email", "chat", "phone_note"]),
             "created_at": created.strftime("%Y-%m-%d %H:%M:%S+00"),
             "body": t.value(),
@@ -222,7 +242,10 @@ def main() -> None:
 
     write_corpus(ROOT / "corpus" / "public.jsonl", gen_texts(seed=101, n=200))
     write_corpus(ROOT / "corpus" / "hidden.jsonl", gen_texts(seed=202, n=500))
-    print("seeds/raw_events.csv, seeds/support_tickets.csv, corpus/public.jsonl, corpus/hidden.jsonl")
+    hidden = ROOT / "corpus" / "hidden.jsonl"
+    hidden.with_suffix(".jsonl.gz").write_bytes(gzip.compress(hidden.read_bytes(), mtime=0))
+    hidden.unlink()  # scored by bin/pii-score --hidden; not meant for tuning
+    print("seeds/raw_events.csv, seeds/support_tickets.csv, corpus/public.jsonl, corpus/hidden.jsonl.gz")
 
 
 if __name__ == "__main__":

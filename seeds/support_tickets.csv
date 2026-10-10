@@ -1,401 +1,401 @@
 ticket_id,customer_id,channel,created_at,body
-tk_00001,745,email,2026-10-12 08:31:00+00,Please send the refund to AT173562301238360777. Account holder: Patricia Platzer.
-tk_00002,542,chat,2026-10-06 02:31:00+00,"Hi, this is Tom Trauner. My withdrawal is still pending, see order 8159083016613186. Please call me on +49 139 0996 0308."
-tk_00003,1223,email,2026-10-08 06:22:00+00,Berra Meier here. Why was my position closed? Ticket from ref 1760161114102 was ignored.
-tk_00004,1131,chat,2026-10-05 09:29:00+00,"Verification documents uploaded twice, markus.flantz@corp.example. Please confirm. Margarete Biggen-Briemer, +4121993518190."
-tk_00005,516,chat,2026-10-14 17:01:00+00,Spread on DAX was too wide yesterday. Call the office 0796 9020785 if you need details.
-tk_00006,578,email,2026-10-01 07:24:00+00,"Deposit failed again. Card 2240486761411690, tried 2026-09-30. My number is +43-323-1948757, Christina Salcher."
-tk_00007,267,email,2026-10-10 21:17:00+00,I was charged twice on card 4954220587915895 for 2026-09-27. Contact me at wagnergazmend@example.org.
-tk_00008,250,phone_note,2026-10-06 19:50:00+00,"Deposit failed again. Card 4590830166131860, tried 0531 757788. My number is +41 895 5597 97, Sandro Rosemann."
-tk_00009,1414,chat,2026-10-08 04:54:00+00,"App crashes when I open the chart, 0813 1190518. Not urgent."
-tk_00010,577,chat,2026-10-08 12:19:00+00,"App crashes when I open the chart, 7 351.36 EUR. Not urgent."
-tk_00011,1255,phone_note,2026-10-14 12:23:00+00,Kata Vogt-Leunberger here. Why was my position closed? Ticket from 5 735.02 EUR was ignored.
-tk_00012,539,phone_note,2026-10-05 06:27:00+00,"Deposit failed again. Card 4531783929180736, tried 2026-09-08. My number is +43-342-366712, Sven Polzer."
-tk_00013,159,phone_note,2026-10-14 18:08:00+00,Change my email to lschwarz@example.com and the payout account to AT494856229185578934.
-tk_00014,1451,email,2026-10-10 08:49:00+00,Please send the refund to AT202584818835304534. Account holder: Justus Heissenberger.
-tk_00015,1213,email,2026-10-12 11:49:00+00,Change my email to thutterer@example.com and the payout account to AT812612032410652963.
-tk_00016,770,chat,2026-10-01 12:23:00+00,Joshua Philipp here. Why was my position closed? Ticket from melek.kuhn@corp.example was ignored.
-tk_00017,679,chat,2026-10-01 12:52:00+00,Flurin Graf here. Why was my position closed? Ticket from ref 1759324100190 was ignored.
-tk_00018,1189,phone_note,2026-10-05 14:00:00+00,Please send the refund to DE52139099603082462819. Account holder: Kristina Stoll.
-tk_00019,379,email,2026-10-13 03:01:00+00,Your agent hans-albert.dobes@corp.example promised a callback on 3 872.01 EUR. Nobody called. Reach me at perodietz@example.net.
-tk_00020,1018,email,2026-10-01 07:11:00+00,"Verification documents uploaded twice, ref 1759564244066. Please confirm. Aylin Prohaska, +43268599528."
-tk_00021,1200,email,2026-10-13 21:51:00+00,"Hi, this is Sergio Egger. My withdrawal is still pending, see 0991 9483022. Please call me on +43 661 7603 137."
-tk_00022,1188,phone_note,2026-10-09 00:32:00+00,"Deposit failed again. Card 4909378657975433, tried order 0928159013962459. My number is +431177774121, Univ.Prof. Reinhardt Henk."
-tk_00023,749,chat,2026-10-12 19:00:00+00,"App crashes when I open the chart, 0948 2808490. Not urgent."
-tk_00024,386,chat,2026-10-01 06:50:00+00,"Hi, this is Grace Schnyder Berger. My withdrawal is still pending, see ref 1760134424124. Please call me on +43-808-414852."
-tk_00025,176,email,2026-10-10 16:44:00+00,Change my email to ruppertkunibert@example.net and the payout account to DE65757491186252760189.
-tk_00026,664,chat,2026-10-03 10:06:00+00,Change my email to vzbinden@example.org and the payout account to CH3943361436450306067.
-tk_00027,995,chat,2026-10-01 09:47:00+00,Your agent frederik.hosp@corp.example promised a callback on 2026-09-13. Nobody called. Reach me at beerismail@example.net.
-tk_00028,893,email,2026-10-05 12:33:00+00,Gertraud Täsche here. Why was my position closed? Ticket from 3 764.25 EUR was ignored.
-tk_00029,124,phone_note,2026-10-06 21:44:00+00,Spread on DAX was too wide yesterday. Call the office 0464 586206 if you need details.
-tk_00030,149,email,2026-10-02 01:07:00+00,"App crashes when I open the chart, 0365 3348823. Not urgent."
-tk_00031,690,phone_note,2026-10-14 17:01:00+00,"Verification documents uploaded twice, steven.bachmann@corp.example. Please confirm. Rexhep Walter, +4355131373537."
-tk_00032,555,chat,2026-10-05 16:42:00+00,"Hi, this is Annabelle Schoch. My withdrawal is still pending, see 0768 5871478. Please call me on +41-163-726516."
-tk_00033,865,email,2026-10-14 09:15:00+00,I was charged twice on card 4885287291302565 for ref 1759272812826. Contact me at schuellerdilara@example.com.
-tk_00034,543,email,2026-10-10 02:22:00+00,Please send the refund to DE42597971147104974650. Account holder: Gislinde Geisler B.Sc..
-tk_00035,973,chat,2026-10-14 16:46:00+00,Spread on DAX was too wide yesterday. Call the office 0925 2552397 if you need details.
-tk_00036,1349,phone_note,2026-10-04 08:58:00+00,"Verification documents uploaded twice, 0773 5978862. Please confirm. Laurin Widmer, +49-820-01826330."
-tk_00037,992,email,2026-10-08 20:17:00+00,"App crashes when I open the chart, 2026-09-16. Not urgent."
-tk_00038,1335,email,2026-10-12 11:15:00+00,"Deposit failed again. Card 2713350128081976, tried 2026-09-27. My number is +49579868282, Jaël Frick Leu."
-tk_00039,355,email,2026-10-03 00:04:00+00,"Hi, this is Rayan Frey. My withdrawal is still pending, see 0895 3172040. Please call me on +41222791805."
-tk_00040,151,phone_note,2026-10-02 09:10:00+00,Change my email to suterlarissa@example.org and the payout account to CH9529004892490163298.
-tk_00041,345,chat,2026-10-07 00:09:00+00,Spread on DAX was too wide yesterday. Call the office 0903 1880220 if you need details.
-tk_00042,1191,phone_note,2026-10-06 07:07:00+00,"Hi, this is Ginette Käser. My withdrawal is still pending, see ref 1759410826796. Please call me on +43187801759."
-tk_00043,1106,email,2026-10-02 15:10:00+00,Change my email to jennipedro@example.net and the payout account to CH3657363906950613374.
-tk_00044,825,phone_note,2026-10-08 12:05:00+00,"App crashes when I open the chart, 0620 9047044. Not urgent."
-tk_00045,1399,email,2026-10-01 23:21:00+00,Change my email to karoline07@example.org and the payout account to AT230909225671139377.
-tk_00046,1021,email,2026-10-01 17:26:00+00,Change my email to nbonbach@example.com and the payout account to DE21236671276842684656.
-tk_00047,1090,phone_note,2026-10-03 06:42:00+00,Change my email to leafalkner@example.org and the payout account to AT629727817965730307.
-tk_00048,958,phone_note,2026-10-03 03:56:00+00,Spread on DAX was too wide yesterday. Call the office 0240 7090009 if you need details.
-tk_00049,490,email,2026-10-14 16:17:00+00,Dr. Athanasios Gierschner B.A. here. Why was my position closed? Ticket from 0423 1317121 was ignored.
-tk_00050,1368,email,2026-10-14 00:51:00+00,Your agent matthew.zürcher@corp.example promised a callback on 0174 3668342. Nobody called. Reach me at hofstettermuriel@example.com.
-tk_00051,783,chat,2026-10-02 20:58:00+00,"App crashes when I open the chart, order 2524273167232686. Not urgent."
-tk_00052,829,chat,2026-10-07 19:21:00+00,Bernhard Götz here. Why was my position closed? Ticket from ref 1759765824442 was ignored.
-tk_00053,646,email,2026-10-01 17:05:00+00,I was charged twice on card 5199056819893837 for order 5877065894811311. Contact me at tea68@example.net.
-tk_00054,29,phone_note,2026-10-08 04:51:00+00,"App crashes when I open the chart, order 2426462889751402. Not urgent."
-tk_00055,184,chat,2026-10-01 19:53:00+00,I was charged twice on card 2230494156341862 for order 1419314170586492. Contact me at emma84@example.net.
-tk_00056,890,email,2026-10-08 02:01:00+00,Change my email to gertraudheintze@example.org and the payout account to DE60792440268599528907.
-tk_00057,885,email,2026-10-06 12:15:00+00,Your agent oskar.portmann@corp.example promised a callback on order 2402344834782450. Nobody called. Reach me at bachmanndanny@example.net.
-tk_00058,703,chat,2026-10-11 23:57:00+00,"Hi, this is Ing. Michael Vogler. My withdrawal is still pending, see order 0883873716786843. Please call me on +49 326 5020 146."
-tk_00059,987,email,2026-10-10 21:26:00+00,I was charged twice on card 2706666176031376 for 2026-10-13. Contact me at emilkarge@example.net.
-tk_00060,278,email,2026-10-08 21:25:00+00,"Verification documents uploaded twice, ref 1760487530830. Please confirm. Eduard Meier, +43722470455."
-tk_00061,432,phone_note,2026-10-04 21:07:00+00,Your agent kerstin.koller@corp.example promised a callback on order 4352056174833801. Nobody called. Reach me at sam46@example.net.
-tk_00062,1106,chat,2026-10-05 06:59:00+00,I was charged twice on card 4859956378814211 for 0700 799055. Contact me at rschweighofer@example.com.
-tk_00063,41,chat,2026-10-11 07:48:00+00,"Hi, this is Matteo Trattner. My withdrawal is still pending, see aylin.huemer@corp.example. Please call me on +4331982965724."
-tk_00064,206,email,2026-10-13 09:32:00+00,Please send the refund to CH9467539163168585242. Account holder: Oliver Baumgartner.
-tk_00065,454,phone_note,2026-10-08 20:33:00+00,Change my email to dobesabbas@example.net and the payout account to DE67281590139624595711.
-tk_00066,516,chat,2026-10-08 17:52:00+00,Jannik Felber here. Why was my position closed? Ticket from 8 332.17 EUR was ignored.
-tk_00067,151,chat,2026-10-01 21:36:00+00,Change my email to schurchmicha@example.org and the payout account to CH8600736490542784218.
-tk_00068,34,phone_note,2026-10-04 13:50:00+00,"Hi, this is Emine Bühlmann. My withdrawal is still pending, see 3 817.10 EUR. Please call me on +49251678008."
-tk_00069,1498,chat,2026-10-01 01:08:00+00,Spread on DAX was too wide yesterday. Call the office 0370 155605 if you need details.
-tk_00070,1392,phone_note,2026-10-07 12:03:00+00,I was charged twice on card 4844635338733988 for 8 667.08 EUR. Contact me at katharinamittermayr@example.org.
-tk_00071,115,chat,2026-10-05 14:33:00+00,Spread on DAX was too wide yesterday. Call the office 0358 1349063 if you need details.
-tk_00072,1493,chat,2026-10-13 14:05:00+00,Your agent konrad.kral@corp.example promised a callback on 3 412.29 EUR. Nobody called. Reach me at rudolfnicholas@example.net.
-tk_00073,460,email,2026-10-02 08:12:00+00,Spread on DAX was too wide yesterday. Call the office 0605 6518299 if you need details.
-tk_00074,76,chat,2026-10-02 04:50:00+00,Spread on DAX was too wide yesterday. Call the office 0800 4920415 if you need details.
-tk_00075,533,chat,2026-10-13 09:23:00+00,"Verification documents uploaded twice, 3 298.09 EUR. Please confirm. Dipl.-Ing. Jadwiga Nette B.Eng., +41-544-992070."
-tk_00076,1322,email,2026-10-03 13:25:00+00,I was charged twice on card 4020934117749125 for 8 071.37 EUR. Contact me at florentin50@example.org.
-tk_00077,800,phone_note,2026-10-04 00:53:00+00,Change my email to leuzlatko@example.org and the payout account to CH9686924997510482212.
-tk_00078,609,email,2026-10-14 07:54:00+00,Spread on DAX was too wide yesterday. Call the office 0577 7923872 if you need details.
-tk_00079,1266,phone_note,2026-10-12 10:41:00+00,Change my email to fechneredmund@example.net and the payout account to DE14547280385280841485.
-tk_00080,114,email,2026-10-05 18:32:00+00,"App crashes when I open the chart, order 7047187463319128. Not urgent."
-tk_00081,324,phone_note,2026-10-06 00:11:00+00,"Deposit failed again. Card 4513095345518197, tried 2026-10-11. My number is +411537760207, Dipl.-Ing. Cristiano Fritsch."
-tk_00082,343,chat,2026-10-10 05:11:00+00,Tobias Krall-Franz here. Why was my position closed? Ticket from marie-louise.schwaighofer@corp.example was ignored.
-tk_00083,274,email,2026-10-14 07:31:00+00,Please send the refund to CH0730327798861287948. Account holder: Clarissa Stalder.
-tk_00084,508,phone_note,2026-10-03 01:54:00+00,"Deposit failed again. Card 5318314253100821, tried nicholas.pfeffer@corp.example. My number is +49 055 6130 445, Liliana Hummer-Wilfinger."
-tk_00085,844,email,2026-10-03 15:44:00+00,Noel Moser here. Why was my position closed? Ticket from 2026-09-05 was ignored.
-tk_00086,788,email,2026-10-13 14:14:00+00,Christine Pfleger here. Why was my position closed? Ticket from igor.fichtinger@corp.example was ignored.
-tk_00087,894,phone_note,2026-10-06 10:31:00+00,"App crashes when I open the chart, order 0423468535606883. Not urgent."
-tk_00088,982,email,2026-10-05 04:01:00+00,I was charged twice on card 4996848881984132 for 6 781.57 EUR. Contact me at oskarbraun@example.net.
-tk_00089,932,chat,2026-10-10 04:06:00+00,Please send the refund to CH3877070905373599730. Account holder: Dr. Elvira Baumgartner.
-tk_00090,1122,chat,2026-10-12 21:48:00+00,"App crashes when I open the chart, 0150 9329284. Not urgent."
-tk_00091,1452,phone_note,2026-10-01 05:19:00+00,Please send the refund to DE10253888539336338750. Account holder: Rigo Holt.
-tk_00092,1372,phone_note,2026-10-03 11:23:00+00,Dr. Isabella Kaindl here. Why was my position closed? Ticket from theodor.kummer@corp.example was ignored.
-tk_00093,893,email,2026-10-11 13:02:00+00,"App crashes when I open the chart, nicolas.gamsjäger@corp.example. Not urgent."
-tk_00094,338,email,2026-10-05 20:30:00+00,"App crashes when I open the chart, 0771 4104134. Not urgent."
-tk_00095,187,chat,2026-10-10 12:47:00+00,Spread on DAX was too wide yesterday. Call the office 0670 6716393 if you need details.
-tk_00096,1107,email,2026-10-13 19:28:00+00,Please send the refund to DE55743957551313735379. Account holder: Igor Söding.
-tk_00097,242,email,2026-10-10 13:05:00+00,Please send the refund to CH6566911309211059788. Account holder: Roman Sutter-Wirz.
-tk_00098,1404,phone_note,2026-10-06 05:22:00+00,Your agent mohammed.seifert@corp.example promised a callback on 2026-10-02. Nobody called. Reach me at speerernst-dieter@example.com.
-tk_00099,280,email,2026-10-10 09:04:00+00,Your agent pius.isler@corp.example promised a callback on 0440 7649083. Nobody called. Reach me at wuthrichmladen@example.org.
-tk_00100,1266,phone_note,2026-10-10 04:50:00+00,Please send the refund to AT202707994669597582. Account holder: Florian Scheer-Marte.
-tk_00101,282,chat,2026-10-02 11:29:00+00,Your agent jordan.maier@corp.example promised a callback on ref 1759194807921. Nobody called. Reach me at kushtrimmerz@example.org.
-tk_00102,607,email,2026-10-08 11:22:00+00,"Deposit failed again. Card 4726516761222025, tried daniela.mohaupt@corp.example. My number is +49-493-0666836, Leonard Schenk-Mühle."
-tk_00103,451,email,2026-10-05 17:05:00+00,"Hi, this is Sebastian Ulrich. My withdrawal is still pending, see 0384 9734832. Please call me on +43-883-143667."
-tk_00104,1492,chat,2026-10-11 22:37:00+00,"Hi, this is Leonardo Rieder-Müller. My withdrawal is still pending, see ref 1759069242371. Please call me on +43 797 0168 7731."
-tk_00105,775,chat,2026-10-05 06:42:00+00,Please send the refund to DE05528820018263304348. Account holder: Prof. Gotthold Heser MBA..
-tk_00106,664,chat,2026-10-07 08:33:00+00,I was charged twice on card 5453723311011157 for order 8002390424861114. Contact me at webersamuel@example.com.
-tk_00107,214,email,2026-10-03 11:32:00+00,"Verification documents uploaded twice, ref 1759833399647. Please confirm. Danielle Kaufmann Siegrist, +43-900-847453."
-tk_00108,285,chat,2026-10-11 16:08:00+00,Your agent livio.graf@corp.example promised a callback on 2026-09-16. Nobody called. Reach me at hafligermilica@example.net.
-tk_00109,772,chat,2026-10-02 03:53:00+00,Ante Warmer-Klapp here. Why was my position closed? Ticket from 5 086.07 EUR was ignored.
-tk_00110,970,phone_note,2026-10-03 08:28:00+00,Your agent rosmarie.mielcarek@corp.example promised a callback on 0790 7146697. Nobody called. Reach me at iotto@example.net.
-tk_00111,766,email,2026-10-14 07:58:00+00,"App crashes when I open the chart, ref 1760433134048. Not urgent."
-tk_00112,941,phone_note,2026-10-07 20:16:00+00,"Deposit failed again. Card 4398627714600584, tried 0134 5771564. My number is +41-563-0481373, Jacob Kohler-Schlögl."
-tk_00113,1102,email,2026-10-04 20:28:00+00,Your agent gereon.pruschke@corp.example promised a callback on 0326 4546330. Nobody called. Reach me at mansleokadia@example.org.
-tk_00114,946,email,2026-10-13 03:14:00+00,I was charged twice on card 5192012792699151 for 2026-09-12. Contact me at rablkatja@example.com.
-tk_00115,931,email,2026-10-08 00:08:00+00,Spread on DAX was too wide yesterday. Call the office 0527 1046521 if you need details.
-tk_00116,66,email,2026-10-13 02:26:00+00,Please send the refund to CH0230749018604759304. Account holder: Lio Bättig.
-tk_00117,760,email,2026-10-04 12:11:00+00,"Hi, this is Henry Rosner. My withdrawal is still pending, see ref 1759050742274. Please call me on +41 600 2675 11."
-tk_00118,739,email,2026-10-06 10:26:00+00,Your agent joshua.martin@corp.example promised a callback on ref 1760401164883. Nobody called. Reach me at ajnamartin@example.com.
-tk_00119,1379,email,2026-10-05 21:12:00+00,Spread on DAX was too wide yesterday. Call the office 0132 5331591 if you need details.
-tk_00120,801,email,2026-10-07 02:08:00+00,Iryna Kägi here. Why was my position closed? Ticket from tiffany.kunz@corp.example was ignored.
-tk_00121,1037,email,2026-10-13 12:12:00+00,Spread on DAX was too wide yesterday. Call the office 0273 1928005 if you need details.
-tk_00122,1160,email,2026-10-10 06:58:00+00,I was charged twice on card 2720022279180581 for order 3557063606071043. Contact me at xziegert@example.org.
-tk_00123,488,chat,2026-10-07 04:00:00+00,I was charged twice on card 5141057369579569 for swen.furrer@corp.example. Contact me at hermannemmanuel@example.com.
-tk_00124,1116,phone_note,2026-10-12 06:34:00+00,"Deposit failed again. Card 4565025003857576, tried nicolai.hödl@corp.example. My number is +41-544-09103177, Mert Hinteregger."
-tk_00125,1164,chat,2026-10-01 03:43:00+00,Raffael Lengauer here. Why was my position closed? Ticket from 0235 8430569 was ignored.
-tk_00126,1031,chat,2026-10-06 06:12:00+00,"Hi, this is Falko Grein Groth. My withdrawal is still pending, see 5 019.88 EUR. Please call me on +49 355 7591 8362."
-tk_00127,760,email,2026-10-03 23:36:00+00,I was charged twice on card 4947446771775296 for 0665 9237150. Contact me at klinglermiriam@example.com.
-tk_00128,1186,email,2026-10-13 21:49:00+00,Please send the refund to AT417963889228018432. Account holder: Marijana Heiss-Wild.
-tk_00129,1255,chat,2026-10-03 11:26:00+00,I was charged twice on card 4100735500029444 for angelo.bitschnau@corp.example. Contact me at florentinajost@example.org.
-tk_00130,214,phone_note,2026-10-11 13:26:00+00,I was charged twice on card 4997762560512586 for order 6772326793814449. Contact me at freijanick@example.net.
-tk_00131,967,chat,2026-10-13 03:17:00+00,"Deposit failed again. Card 2330188376168217, tried 4 315.25 EUR. My number is +43-233-249351, Mike Schober."
-tk_00132,921,email,2026-10-13 05:15:00+00,Your agent isabella.pöschl@corp.example promised a callback on 2026-10-04. Nobody called. Reach me at droeck@example.com.
-tk_00133,614,phone_note,2026-10-12 21:22:00+00,I was charged twice on card 2250187801759893 for order 1073750431039931. Contact me at helmtrudhofmann@example.com.
-tk_00134,6,email,2026-10-12 09:59:00+00,Change my email to qschinagl@example.org and the payout account to AT520417523064448490.
-tk_00135,395,phone_note,2026-10-13 11:09:00+00,Spread on DAX was too wide yesterday. Call the office 0717 4461207 if you need details.
-tk_00136,721,chat,2026-10-14 17:36:00+00,"Hi, this is Elin Eichenberger. My withdrawal is still pending, see order 9953055203409305. Please call me on +43-529-41307871."
-tk_00137,399,chat,2026-10-06 12:09:00+00,Prof. Veronika Hentschel B.Eng. here. Why was my position closed? Ticket from 2 582.81 EUR was ignored.
-tk_00138,455,chat,2026-10-07 04:36:00+00,I was charged twice on card 4579963851086738 for 0812 4649425. Contact me at corinna88@example.org.
-tk_00139,303,phone_note,2026-10-04 01:38:00+00,"App crashes when I open the chart, 5 089.53 EUR. Not urgent."
-tk_00140,1031,email,2026-10-11 19:03:00+00,"App crashes when I open the chart, 5 902.53 EUR. Not urgent."
-tk_00141,229,chat,2026-10-04 02:58:00+00,"Hi, this is Helena Schmied. My withdrawal is still pending, see simon.grasser@corp.example. Please call me on +41-663-062611."
-tk_00142,1279,phone_note,2026-10-06 00:54:00+00,"Deposit failed again. Card 2404831305012524, tried ref 1759279119405. My number is +49 826 1995 82, Gabriela Zbinden."
-tk_00143,758,chat,2026-10-03 20:34:00+00,"App crashes when I open the chart, ref 1760119180174. Not urgent."
-tk_00144,421,chat,2026-10-03 22:04:00+00,I was charged twice on card 4726167513613416 for 0602 3410844. Contact me at teresatrubin@example.net.
-tk_00145,1378,email,2026-10-14 02:36:00+00,Please send the refund to AT901725316588779592. Account holder: Emanuela Mairhofer.
-tk_00146,1078,phone_note,2026-10-07 23:43:00+00,Spread on DAX was too wide yesterday. Call the office 0422 995476 if you need details.
-tk_00147,865,email,2026-10-03 13:23:00+00,Berta Kuhn here. Why was my position closed? Ticket from order 9239693729306826 was ignored.
-tk_00148,409,chat,2026-10-07 20:56:00+00,I was charged twice on card 4385928336935290 for ref 1760556673712. Contact me at friedrich75@example.net.
-tk_00149,1125,phone_note,2026-10-12 06:30:00+00,"Hi, this is Brunhilde Herrmann. My withdrawal is still pending, see 2026-10-14. Please call me on +49-516-97846493."
-tk_00150,1289,phone_note,2026-10-13 04:22:00+00,"Deposit failed again. Card 5539605654116768, tried 2026-09-29. My number is +49-097-737972, Alena Meixner."
-tk_00151,1270,email,2026-10-11 22:31:00+00,I was charged twice on card 4830098557919216 for ref 1759770034104. Contact me at lerchbeatrice@example.org.
-tk_00152,77,email,2026-10-10 01:39:00+00,"Deposit failed again. Card 4331055657927402, tried 0616 8659085. My number is +41021581086, Nela Prem."
-tk_00153,1143,phone_note,2026-10-07 14:46:00+00,"Hi, this is Yilmaz Mosemann-Hartmann. My withdrawal is still pending, see order 9132742315942594. Please call me on +43-487-394983."
-tk_00154,864,email,2026-10-07 02:26:00+00,"Hi, this is Tim Streicher. My withdrawal is still pending, see ref 1759391049017. Please call me on +43-456-241805."
-tk_00155,661,phone_note,2026-10-14 07:45:00+00,Change my email to gschneider@example.org and the payout account to CH0585543569292920404.
-tk_00156,96,email,2026-10-02 09:25:00+00,I was charged twice on card 2586144287732527 for 2026-10-11. Contact me at dana90@example.net.
-tk_00157,935,phone_note,2026-10-07 19:11:00+00,"Deposit failed again. Card 2700886787219980, tried 0477 9786502. My number is +49-517-3290484, Dr. Liliane Schäfer."
-tk_00158,987,chat,2026-10-08 19:19:00+00,"Verification documents uploaded twice, 5 172.93 EUR. Please confirm. Sereina Jenni, +49-032-49668502."
-tk_00159,1483,chat,2026-10-10 01:50:00+00,"Verification documents uploaded twice, 796.02 EUR. Please confirm. Hans-Uwe Neuschäfer, +49954185836."
-tk_00160,1034,email,2026-10-06 23:30:00+00,"Verification documents uploaded twice, ref 1759438482605. Please confirm. Marc Pauer-Kreuzer, +43-722-03271124."
-tk_00161,639,chat,2026-10-06 20:00:00+00,"Hi, this is Clarissa Lettner. My withdrawal is still pending, see order 2320109832638986. Please call me on +41-841-407806."
-tk_00162,90,chat,2026-10-10 17:21:00+00,Spread on DAX was too wide yesterday. Call the office 0182 7691476 if you need details.
-tk_00163,1387,phone_note,2026-10-10 09:35:00+00,Your agent gotthold.stahr@corp.example promised a callback on order 4301540486844318. Nobody called. Reach me at gottfriedtrapp@example.com.
-tk_00164,231,email,2026-10-08 04:19:00+00,Please send the refund to DE08865635515058770658. Account holder: Julia Bolnbach.
-tk_00165,467,chat,2026-10-12 03:55:00+00,Your agent noah.hutterer@corp.example promised a callback on 3 372.20 EUR. Nobody called. Reach me at juliakirschner@example.net.
-tk_00166,65,chat,2026-10-10 04:41:00+00,"Deposit failed again. Card 4928172538263839, tried 0436 4112569. My number is +43-877-80063943, Prof. Kurt Schärer."
-tk_00167,134,phone_note,2026-10-02 12:39:00+00,"Verification documents uploaded twice, order 9220011925200020. Please confirm. Solène Wirz, +41 019 5381 61."
-tk_00168,503,chat,2026-10-07 12:17:00+00,Your agent enrico.zirme@corp.example promised a callback on order 0014712134556405. Nobody called. Reach me at wilmadoehn@example.org.
-tk_00169,612,email,2026-10-05 13:05:00+00,"App crashes when I open the chart, order 5598749060681570. Not urgent."
-tk_00170,790,chat,2026-10-14 11:53:00+00,"Verification documents uploaded twice, ref 1760534140993. Please confirm. Marianne Keller, +49 426 0834 0057."
-tk_00171,811,chat,2026-10-13 08:39:00+00,Please send the refund to AT200694138774378114. Account holder: Darko Kreidl.
-tk_00172,624,phone_note,2026-10-02 12:46:00+00,"Verification documents uploaded twice, joseph.paul@corp.example. Please confirm. Darko Gollner, +419243372117."
-tk_00173,813,phone_note,2026-10-09 18:12:00+00,I was charged twice on card 5256763812915430 for biljana.meili@corp.example. Contact me at elianaritter@example.org.
-tk_00174,1443,email,2026-10-07 00:57:00+00,Emine Benthin here. Why was my position closed? Ticket from 0863 1545741 was ignored.
-tk_00175,413,chat,2026-10-08 03:06:00+00,"Hi, this is Dipl.-Ing. Lilia Pircher. My withdrawal is still pending, see aleksandra.schmölzer@corp.example. Please call me on +494688263728."
-tk_00176,555,chat,2026-10-07 07:02:00+00,"Verification documents uploaded twice, 605.44 EUR. Please confirm. Arlette Steiner Gfeller, +41 827 8527 749."
-tk_00177,1030,chat,2026-10-05 04:38:00+00,"Deposit failed again. Card 2225264628897511, tried 3 948.64 EUR. My number is +49 492 2359 852, Anna Stroh."
-tk_00178,759,phone_note,2026-10-09 04:58:00+00,Your agent philip.leitgeb@corp.example promised a callback on andjela.springer@corp.example. Nobody called. Reach me at hbaumgartner@example.com.
-tk_00179,64,email,2026-10-05 04:50:00+00,I was charged twice on card 4009935425460169 for 1 715.25 EUR. Contact me at balzmayer@example.net.
-tk_00180,426,chat,2026-10-10 02:43:00+00,Please send the refund to AT904188790917545113. Account holder: Melek Pinter.
-tk_00181,681,phone_note,2026-10-01 05:06:00+00,"App crashes when I open the chart, 4 922.55 EUR. Not urgent."
-tk_00182,79,chat,2026-10-01 08:07:00+00,Your agent mia.ecker@corp.example promised a callback on order 1436700663847024. Nobody called. Reach me at boriskirchner@example.org.
-tk_00183,224,chat,2026-10-07 15:58:00+00,Reinhold Ferrari here. Why was my position closed? Ticket from order 3699639321765416 was ignored.
-tk_00184,1421,chat,2026-10-04 18:49:00+00,Dipl.-Ing. Timo Briemer here. Why was my position closed? Ticket from 2 613.32 EUR was ignored.
-tk_00185,850,chat,2026-10-04 23:25:00+00,Spread on DAX was too wide yesterday. Call the office 0566 429794 if you need details.
-tk_00186,1112,email,2026-10-01 08:19:00+00,Theres Schlatter here. Why was my position closed? Ticket from 2026-10-14 was ignored.
-tk_00187,526,email,2026-10-08 14:20:00+00,Please send the refund to CH8638968260624672918. Account holder: Susanna Hafner-Haas.
-tk_00188,65,phone_note,2026-10-10 04:30:00+00,"Deposit failed again. Card 4958030874130371, tried 0951 8318154. My number is +49-483-238519, Fatmir Hotz."
-tk_00189,641,chat,2026-10-01 13:26:00+00,Your agent andre.gfeller@corp.example promised a callback on 7 844.65 EUR. Nobody called. Reach me at fischerjuliette@example.net.
-tk_00190,488,phone_note,2026-10-09 06:35:00+00,"Deposit failed again. Card 2250141931417054, tried 0859 7765670. My number is +49 268 1950 4466, Ing. Luisa Ehlert."
-tk_00191,1221,phone_note,2026-10-08 18:08:00+00,I was charged twice on card 5283124023448348 for 0743 6007677. Contact me at rotto@example.org.
-tk_00192,1205,chat,2026-10-14 17:48:00+00,"App crashes when I open the chart, order 3468367322137832. Not urgent."
-tk_00193,564,chat,2026-10-06 12:44:00+00,Mona Yilmaz here. Why was my position closed? Ticket from 0401 9298405 was ignored.
-tk_00194,1239,phone_note,2026-10-08 11:50:00+00,Please send the refund to CH3264555828023103047. Account holder: Gérard Schärer.
-tk_00195,106,chat,2026-10-01 16:32:00+00,"Deposit failed again. Card 4869167621237345, tried markus.götz@corp.example. My number is +41-462-7045345, Adelina Stütz."
-tk_00196,593,phone_note,2026-10-02 10:13:00+00,Ing. Ben Stockhammer here. Why was my position closed? Ticket from 2026-10-11 was ignored.
-tk_00197,468,email,2026-10-14 14:21:00+00,"Deposit failed again. Card 4504000883873716, tried gertraud.seip@corp.example. My number is +43 195 2859 00, Univ.Prof. Jeannine Ritter."
-tk_00198,979,chat,2026-10-04 18:44:00+00,"App crashes when I open the chart, martha.kreusel@corp.example. Not urgent."
-tk_00199,1025,chat,2026-10-02 07:07:00+00,I was charged twice on card 4166203928965351 for ref 1759398709268. Contact me at kbar@example.net.
-tk_00200,781,phone_note,2026-10-03 19:22:00+00,"Deposit failed again. Card 4858642360912319, tried ref 1760941512631. My number is +4329918437381, Merlin Forstner."
-tk_00201,606,phone_note,2026-10-08 14:34:00+00,I was charged twice on card 4486174167765732 for ella.zechmeister@corp.example. Contact me at zettljoshua@example.org.
-tk_00202,365,phone_note,2026-10-01 02:20:00+00,Your agent kalina.rosner@corp.example promised a callback on ref 1760016279031. Nobody called. Reach me at uangerer@example.com.
-tk_00203,435,phone_note,2026-10-11 15:03:00+00,Change my email to daniel29@example.org and the payout account to AT838708001523558851.
-tk_00204,933,chat,2026-10-08 02:31:00+00,Spread on DAX was too wide yesterday. Call the office 0578 2522979 if you need details.
-tk_00205,955,chat,2026-10-09 10:56:00+00,Spread on DAX was too wide yesterday. Call the office 0352 8458000 if you need details.
-tk_00206,397,chat,2026-10-03 17:03:00+00,Change my email to heiderose33@example.com and the payout account to DE17326502014620168493.
-tk_00207,675,chat,2026-10-11 12:47:00+00,"Hi, this is Marcello Maurer. My withdrawal is still pending, see ref 1760805534491. Please call me on +439747566125."
-tk_00208,892,email,2026-10-01 22:56:00+00,"Hi, this is Ivica Lüthi. My withdrawal is still pending, see order 9051877203625155. Please call me on +43-834-65648044."
-tk_00209,29,phone_note,2026-10-03 19:20:00+00,Theo Wenzl here. Why was my position closed? Ticket from patrick.nagele@corp.example was ignored.
-tk_00210,612,email,2026-10-04 09:31:00+00,"App crashes when I open the chart, 2026-09-23. Not urgent."
-tk_00211,1377,chat,2026-10-02 13:48:00+00,Spread on DAX was too wide yesterday. Call the office 0910 2078507 if you need details.
-tk_00212,955,chat,2026-10-03 03:35:00+00,Your agent alena.hollaus@corp.example promised a callback on jonas.reiter@corp.example. Nobody called. Reach me at mbaumgartner@example.org.
-tk_00213,703,chat,2026-10-02 09:18:00+00,"App crashes when I open the chart, ref 1760259394281. Not urgent."
-tk_00214,572,chat,2026-10-04 07:28:00+00,I was charged twice on card 4105364575168212 for 0840 9399511. Contact me at zieglerkarine@example.net.
-tk_00215,81,email,2026-10-03 09:29:00+00,Change my email to sperllora@example.com and the payout account to AT402843055868295420.
-tk_00216,988,chat,2026-10-12 06:17:00+00,"Hi, this is Kaan Moser. My withdrawal is still pending, see 0407 1920336. Please call me on +49 379 0889 69."
-tk_00217,364,phone_note,2026-10-14 07:12:00+00,"Verification documents uploaded twice, 1 409.27 EUR. Please confirm. Santiago Lüthi, +4972120610524."
-tk_00218,305,email,2026-10-02 02:37:00+00,"App crashes when I open the chart, silvio.koch@corp.example. Not urgent."
-tk_00219,729,chat,2026-10-05 09:17:00+00,Angelica Mies here. Why was my position closed? Ticket from order 5069907980169671 was ignored.
-tk_00220,173,phone_note,2026-10-11 22:57:00+00,Dr. Franz Matthäi here. Why was my position closed? Ticket from 2026-10-08 was ignored.
-tk_00221,41,chat,2026-10-06 09:56:00+00,Please send the refund to CH6343972903408199037. Account holder: Dr. Ensar Ott.
-tk_00222,1460,phone_note,2026-10-13 19:01:00+00,Ing. Alexia Nussbaumer here. Why was my position closed? Ticket from 2026-09-07 was ignored.
-tk_00223,679,chat,2026-10-06 19:52:00+00,Spread on DAX was too wide yesterday. Call the office 0317 2646181 if you need details.
-tk_00224,1278,phone_note,2026-10-04 08:25:00+00,"Hi, this is Georgette Forster. My withdrawal is still pending, see 0104 256488. Please call me on +4111312704937."
-tk_00225,129,phone_note,2026-10-03 02:27:00+00,Please send the refund to CH6618842623474785870. Account holder: Prof. Liana Blum.
-tk_00226,103,email,2026-10-11 08:54:00+00,"Deposit failed again. Card 4455853043520562, tried 1 431.37 EUR. My number is +41-774-00000916, Ian Holsten."
-tk_00227,762,phone_note,2026-10-02 03:23:00+00,"Verification documents uploaded twice, ref 1760848913736. Please confirm. Matteo Redl, +4305597722152."
-tk_00228,761,email,2026-10-13 16:52:00+00,Spread on DAX was too wide yesterday. Call the office 0494 7695977 if you need details.
-tk_00229,714,chat,2026-10-13 11:28:00+00,"Verification documents uploaded twice, dana.penz@corp.example. Please confirm. Gustav Winkler, +43-099-5902949."
-tk_00230,792,chat,2026-10-12 03:38:00+00,Falko Pärtzelt B.Sc. here. Why was my position closed? Ticket from 0801 6411586 was ignored.
-tk_00231,625,chat,2026-10-02 00:05:00+00,Your agent livio.lang@corp.example promised a callback on 0390 128269. Nobody called. Reach me at matteo72@example.net.
-tk_00232,1033,chat,2026-10-05 02:42:00+00,"App crashes when I open the chart, yvonne.rabl@corp.example. Not urgent."
-tk_00233,1275,email,2026-10-08 04:18:00+00,Please send the refund to AT793020892547454257. Account holder: Vivian Schinagl.
-tk_00234,636,chat,2026-10-09 00:28:00+00,"Hi, this is Ilse Eugster Stadelmann. My withdrawal is still pending, see anna.stutz@corp.example. Please call me on +49 248 7581 8876."
-tk_00235,184,chat,2026-10-13 04:31:00+00,Your agent alvaro.roth@corp.example promised a callback on erika.bühler@corp.example. Nobody called. Reach me at sutterraul@example.com.
-tk_00236,561,email,2026-10-07 01:41:00+00,"Hi, this is Dr. Malgorzata Schenk. My withdrawal is still pending, see 6 529.59 EUR. Please call me on +41 490 6781 85."
-tk_00237,488,phone_note,2026-10-06 22:34:00+00,Franco Cichorius here. Why was my position closed? Ticket from 2026-10-04 was ignored.
-tk_00238,556,chat,2026-10-14 15:31:00+00,Change my email to stellawilhelm@example.net and the payout account to AT228518490458140097.
-tk_00239,318,phone_note,2026-10-09 04:07:00+00,Spread on DAX was too wide yesterday. Call the office 0618 9987293 if you need details.
-tk_00240,209,phone_note,2026-10-03 23:24:00+00,Your agent friedrich.kuhl@corp.example promised a callback on ref 1759412991252. Nobody called. Reach me at kreuselanatoli@example.com.
-tk_00241,1122,chat,2026-10-07 18:07:00+00,Please send the refund to DE77431982965724920868. Account holder: Uli Pruschke-Weller.
-tk_00242,1077,phone_note,2026-10-11 07:29:00+00,"App crashes when I open the chart, katarina.hartmann@corp.example. Not urgent."
-tk_00243,310,email,2026-10-06 19:35:00+00,"Verification documents uploaded twice, annalise.schärer@corp.example. Please confirm. Carl Aebi, +4323075157125."
-tk_00244,643,chat,2026-10-05 15:54:00+00,"Deposit failed again. Card 2690931002516786, tried 2026-10-09. My number is +49-039-799344, Lukas Bähr."
-tk_00245,745,email,2026-10-10 12:46:00+00,Spread on DAX was too wide yesterday. Call the office 0885 2296201 if you need details.
-tk_00246,348,phone_note,2026-10-06 22:55:00+00,"Hi, this is Dipl.-Ing. Zoey Wiesinger. My withdrawal is still pending, see tina.grundner@corp.example. Please call me on +49 610 0085 77."
-tk_00247,495,email,2026-10-10 07:41:00+00,Julia Walter here. Why was my position closed? Ticket from order 1459318627253320 was ignored.
-tk_00248,1500,phone_note,2026-10-12 21:57:00+00,"Deposit failed again. Card 4028055836893770, tried 2026-09-02. My number is +498701250349, Joseph Schuh-Steurer."
-tk_00249,1122,chat,2026-10-06 12:13:00+00,I was charged twice on card 2696716856786906 for valentina.trauner@corp.example. Contact me at adelinapfister@example.org.
-tk_00250,221,phone_note,2026-10-05 01:37:00+00,"App crashes when I open the chart, 0227 6391173. Not urgent."
-tk_00251,977,chat,2026-10-11 03:22:00+00,Maryam Jost here. Why was my position closed? Ticket from ref 1759947866704 was ignored.
-tk_00252,1304,email,2026-10-14 01:25:00+00,Please send the refund to DE09837407188181741433. Account holder: Univ.Prof. Martin Mies MBA..
-tk_00253,1225,phone_note,2026-10-10 14:09:00+00,"Hi, this is Matilda Portmann-Winkler. My withdrawal is still pending, see 0834 3373297. Please call me on +49319527160."
-tk_00254,939,chat,2026-10-07 00:02:00+00,Spread on DAX was too wide yesterday. Call the office 0447 5511752 if you need details.
-tk_00255,606,email,2026-10-03 06:20:00+00,Spread on DAX was too wide yesterday. Call the office 0218 6240999 if you need details.
-tk_00256,1094,phone_note,2026-10-08 23:27:00+00,"Deposit failed again. Card 4174093192544994, tried 979.23 EUR. My number is +41-827-2466320, Adrian Nerger-Bolander."
-tk_00257,1468,chat,2026-10-07 23:44:00+00,"App crashes when I open the chart, serkan.hunziker@corp.example. Not urgent."
-tk_00258,987,chat,2026-10-05 18:18:00+00,"App crashes when I open the chart, 0211 5436276. Not urgent."
-tk_00259,1160,chat,2026-10-04 16:52:00+00,Spread on DAX was too wide yesterday. Call the office 0216 2673105 if you need details.
-tk_00260,1107,phone_note,2026-10-05 01:16:00+00,"Hi, this is Janik Stutz. My withdrawal is still pending, see 3 509.71 EUR. Please call me on +43-143-5643316."
-tk_00261,910,phone_note,2026-10-13 03:01:00+00,Please send the refund to AT923485804366847507. Account holder: Jana Wandl.
-tk_00262,989,email,2026-10-10 01:51:00+00,"App crashes when I open the chart, ref 1760373980336. Not urgent."
-tk_00263,636,email,2026-10-07 18:59:00+00,Spread on DAX was too wide yesterday. Call the office 0926 8619343 if you need details.
-tk_00264,465,chat,2026-10-14 14:09:00+00,Change my email to julianegamsjaeger@example.net and the payout account to AT922330698391244027.
-tk_00265,1274,phone_note,2026-10-14 04:43:00+00,Spread on DAX was too wide yesterday. Call the office 0101 8934658 if you need details.
-tk_00266,618,chat,2026-10-09 21:28:00+00,Please send the refund to AT741519884192015454. Account holder: Ralph Scherzer.
-tk_00267,362,email,2026-10-03 10:50:00+00,Annalena Wiener here. Why was my position closed? Ticket from order 6349222832391197 was ignored.
-tk_00268,412,chat,2026-10-01 16:46:00+00,Please send the refund to AT532600775630597548. Account holder: Domenica Hirschmann.
-tk_00269,111,email,2026-10-06 12:31:00+00,Please send the refund to DE59741374847771834170. Account holder: Iris Buchholz.
-tk_00270,320,chat,2026-10-04 10:07:00+00,Your agent elvis.stutz@corp.example promised a callback on 2026-09-20. Nobody called. Reach me at melvin71@example.com.
-tk_00271,193,email,2026-10-05 17:23:00+00,"Hi, this is Elzbieta Kraushaar B.A.. My withdrawal is still pending, see order 9502599058781153. Please call me on +43 690 4177 8088."
-tk_00272,1491,phone_note,2026-10-05 01:18:00+00,Your agent simona.häring@corp.example promised a callback on order 3922144800134099. Nobody called. Reach me at salzdimitri@example.org.
-tk_00273,945,chat,2026-10-07 02:07:00+00,Change my email to eburgstaller@example.org and the payout account to AT315386074345460006.
-tk_00274,480,phone_note,2026-10-02 22:02:00+00,Spread on DAX was too wide yesterday. Call the office 0205 5983765 if you need details.
-tk_00275,1069,email,2026-10-14 19:38:00+00,Please send the refund to DE36845298415377602077. Account holder: Felicitas Vogt-Faust.
-tk_00276,831,phone_note,2026-10-01 03:00:00+00,"App crashes when I open the chart, order 7798411162893329. Not urgent."
-tk_00277,1351,email,2026-10-07 14:02:00+00,Michael Gratzl here. Why was my position closed? Ticket from ref 1760773851215 was ignored.
-tk_00278,192,phone_note,2026-10-10 02:26:00+00,Ing. Gülay Jopich here. Why was my position closed? Ticket from 6 939.76 EUR was ignored.
-tk_00279,1027,chat,2026-10-13 16:57:00+00,Change my email to bluette19@example.com and the payout account to CH0240967146374678032.
-tk_00280,455,email,2026-10-07 04:56:00+00,Sieghard Kabus here. Why was my position closed? Ticket from order 5563569568058253 was ignored.
-tk_00281,1082,chat,2026-10-05 12:51:00+00,"Hi, this is Lucas Eichberger. My withdrawal is still pending, see henry.markl@corp.example. Please call me on +49-215-63803266."
-tk_00282,930,chat,2026-10-05 18:41:00+00,"Hi, this is Claudine Bernasconi. My withdrawal is still pending, see order 0949480914180630. Please call me on +43-452-109841."
-tk_00283,269,email,2026-10-07 13:42:00+00,Change my email to bolligermarie-claude@example.net and the payout account to CH1340740722141124543.
-tk_00284,1316,chat,2026-10-02 01:23:00+00,Spread on DAX was too wide yesterday. Call the office 0226 8683768 if you need details.
-tk_00285,989,email,2026-10-07 15:46:00+00,"App crashes when I open the chart, 0691 4936991. Not urgent."
-tk_00286,989,phone_note,2026-10-01 00:38:00+00,Your agent louis.glück@corp.example promised a callback on 1 489.94 EUR. Nobody called. Reach me at tmitteregger@example.net.
-tk_00287,1122,chat,2026-10-02 13:25:00+00,"App crashes when I open the chart, 0724 9666020. Not urgent."
-tk_00288,25,phone_note,2026-10-06 20:05:00+00,Gotthilf Weitzel here. Why was my position closed? Ticket from ref 1760178053966 was ignored.
-tk_00289,635,chat,2026-10-12 09:05:00+00,"Deposit failed again. Card 2233798364736144, tried 2026-09-20. My number is +417403533886, Tiago Wagner."
-tk_00290,1324,email,2026-10-13 17:32:00+00,"Hi, this is Ricardo Bayer. My withdrawal is still pending, see anna-lena.horn@corp.example. Please call me on +49 585 7443 40."
-tk_00291,1053,phone_note,2026-10-02 09:46:00+00,Change my email to mechtild61@example.org and the payout account to DE43044516691564041042.
-tk_00292,97,email,2026-10-08 08:23:00+00,"Verification documents uploaded twice, jacob.hethur@corp.example. Please confirm. Prof. Freya Grein Groth, +4308675183265."
-tk_00293,229,chat,2026-10-07 07:11:00+00,Please send the refund to AT680851458478330137. Account holder: Anton Vogt-Erber.
-tk_00294,550,chat,2026-10-01 16:55:00+00,Your agent catarina.forster@corp.example promised a callback on 2026-10-10. Nobody called. Reach me at schurchadriana@example.com.
-tk_00295,791,email,2026-10-07 00:06:00+00,Change my email to jwirth@example.com and the payout account to AT286125657677816565.
-tk_00296,715,email,2026-10-13 07:45:00+00,Spread on DAX was too wide yesterday. Call the office 0375 2235280 if you need details.
-tk_00297,1230,phone_note,2026-10-10 17:41:00+00,I was charged twice on card 4447703141890204 for 0884 9326568. Contact me at eisnersven@example.net.
-tk_00298,884,email,2026-10-03 23:24:00+00,I was charged twice on card 5577191966852351 for 0685 2610426. Contact me at morrisschafer@example.net.
-tk_00299,816,phone_note,2026-10-04 05:31:00+00,"App crashes when I open the chart, 2026-10-09. Not urgent."
-tk_00300,502,phone_note,2026-10-10 01:35:00+00,Raisa Lorch here. Why was my position closed? Ticket from 0809 7782327 was ignored.
-tk_00301,848,email,2026-10-01 15:38:00+00,"Deposit failed again. Card 2574314854729750, tried annabella.hufnagl@corp.example. My number is +43-896-50767428, Joseph Steinbacher."
-tk_00302,1224,email,2026-10-08 00:09:00+00,Rudi Wesack here. Why was my position closed? Ticket from 2026-09-25 was ignored.
-tk_00303,883,chat,2026-10-01 09:45:00+00,Your agent elia.brunner@corp.example promised a callback on order 5593536000497484. Nobody called. Reach me at ackermanngianfranco@example.net.
-tk_00304,367,chat,2026-10-07 21:51:00+00,"Verification documents uploaded twice, 0629 8778277. Please confirm. Wilma Kaufmann-Stadelmann, +41 667 5095 7018."
-tk_00305,404,phone_note,2026-10-09 14:17:00+00,Traude Röhrdanz-Rogner here. Why was my position closed? Ticket from hansjürgen.tschentscher@corp.example was ignored.
-tk_00306,1347,email,2026-10-07 15:34:00+00,Laure Maier here. Why was my position closed? Ticket from 2 576.24 EUR was ignored.
-tk_00307,396,chat,2026-10-11 14:32:00+00,Spread on DAX was too wide yesterday. Call the office 0511 7484716 if you need details.
-tk_00308,96,chat,2026-10-04 04:10:00+00,"Verification documents uploaded twice, aline.staub@corp.example. Please confirm. Pauline Marti, +4112555148214."
-tk_00309,930,phone_note,2026-10-08 20:49:00+00,Change my email to bruno10@example.net and the payout account to AT343683922912477293.
-tk_00310,80,chat,2026-10-07 13:45:00+00,Please send the refund to AT776469602907125716. Account holder: Benedikt Bergmann-Bäck.
-tk_00311,991,phone_note,2026-10-01 19:06:00+00,"App crashes when I open the chart, 2026-09-14. Not urgent."
-tk_00312,104,chat,2026-10-11 01:33:00+00,Your agent enzo.stöckli@corp.example promised a callback on 0286 1109483. Nobody called. Reach me at alberto51@example.com.
-tk_00313,597,phone_note,2026-10-11 06:21:00+00,"Verification documents uploaded twice, 2026-09-07. Please confirm. Gerardo Schwab, +43 060 0480 4619."
-tk_00314,1479,chat,2026-10-04 14:05:00+00,"Hi, this is Arda Burri. My withdrawal is still pending, see ref 1759376226676. Please call me on +43 948 8293 6912."
-tk_00315,528,chat,2026-10-07 04:34:00+00,Change my email to grafalina@example.org and the payout account to CH4802916264971624182.
-tk_00316,175,chat,2026-10-01 15:12:00+00,"Hi, this is Andree Wagenknecht. My withdrawal is still pending, see order 1287796009523542. Please call me on +49 191 5379 600."
-tk_00317,604,phone_note,2026-10-09 01:28:00+00,"Verification documents uploaded twice, order 7093330292507469. Please confirm. Maximilian Streicher-Wirth, +43 136 9364 670."
-tk_00318,339,phone_note,2026-10-09 20:35:00+00,Please send the refund to DE59679247082276544446. Account holder: Ing. Ilja Roht MBA..
-tk_00319,170,chat,2026-10-13 09:03:00+00,"Deposit failed again. Card 5422138783757625, tried ref 1759016388793. My number is +43-851-5865611, Eugen Conradi B.A.."
-tk_00320,1410,chat,2026-10-09 10:16:00+00,Change my email to luanakain@example.org and the payout account to AT426508092727247864.
-tk_00321,802,email,2026-10-08 18:34:00+00,Kriemhild Conradi here. Why was my position closed? Ticket from ref 1760002904613 was ignored.
-tk_00322,906,email,2026-10-14 05:39:00+00,"Deposit failed again. Card 4594503264214401, tried 0135 4783072. My number is +41523213482, Lean Hermann."
-tk_00323,845,phone_note,2026-10-14 02:49:00+00,Spread on DAX was too wide yesterday. Call the office 0956 4129625 if you need details.
-tk_00324,831,email,2026-10-10 05:14:00+00,"Deposit failed again. Card 2273549306668361, tried ref 1760551484557. My number is +439347833724, Gerta Weller."
-tk_00325,208,email,2026-10-12 23:49:00+00,"Verification documents uploaded twice, lucas.reinprecht@corp.example. Please confirm. Mira Langer, +41-698-321818."
-tk_00326,256,chat,2026-10-02 12:54:00+00,Idriz Ritter here. Why was my position closed? Ticket from order 3141342645672420 was ignored.
-tk_00327,1384,phone_note,2026-10-01 06:13:00+00,"Deposit failed again. Card 5538654048396828, tried order 7365124149306092. My number is +43426084293, Ava Reichel."
-tk_00328,860,email,2026-10-05 18:58:00+00,Change my email to jamiearnold@example.org and the payout account to AT302483062759463066.
-tk_00329,1190,email,2026-10-07 02:33:00+00,Romy Strauß here. Why was my position closed? Ticket from 5 768.00 EUR was ignored.
-tk_00330,673,phone_note,2026-10-06 08:47:00+00,"App crashes when I open the chart, order 9903105351669348. Not urgent."
-tk_00331,1039,phone_note,2026-10-05 13:53:00+00,"Deposit failed again. Card 5274952883143661, tried 0448 8540193. My number is +41-780-36827308, Ida Jockel B.Sc.."
-tk_00332,438,phone_note,2026-10-08 16:31:00+00,Change my email to antoninoloeffler@example.net and the payout account to DE91797016877313228171.
-tk_00333,1137,phone_note,2026-10-11 03:26:00+00,Your agent bianka.wulf@corp.example promised a callback on 2026-09-17. Nobody called. Reach me at ackermannlieschen@example.org.
-tk_00334,729,email,2026-10-14 01:55:00+00,"Hi, this is Prof. Vassilios Bender B.Eng.. My withdrawal is still pending, see ref 1759768425054. Please call me on +431342277330."
-tk_00335,414,email,2026-10-02 10:26:00+00,Spread on DAX was too wide yesterday. Call the office 0236 5996537 if you need details.
-tk_00336,647,phone_note,2026-10-08 00:19:00+00,"App crashes when I open the chart, ref 1760899847248. Not urgent."
-tk_00337,804,chat,2026-10-12 04:53:00+00,Please send the refund to CH1540519941037828543. Account holder: Aleksandra Iten.
-tk_00338,1500,email,2026-10-14 18:23:00+00,"Verification documents uploaded twice, ref 1759716339749. Please confirm. Emmanuelle Graf, +41862297631."
-tk_00339,621,email,2026-10-01 23:40:00+00,"Hi, this is Aleksander Kummer-Hammerer. My withdrawal is still pending, see kyra.lorenz@corp.example. Please call me on +43 004 4314 71."
-tk_00340,417,chat,2026-10-13 22:31:00+00,Spread on DAX was too wide yesterday. Call the office 0579 9649350 if you need details.
-tk_00341,302,chat,2026-10-05 23:01:00+00,"App crashes when I open the chart, ref 1760197290122. Not urgent."
-tk_00342,1207,email,2026-10-06 22:19:00+00,"Hi, this is Luis Hermann-Rädel. My withdrawal is still pending, see order 7715941767385051. Please call me on +41-943-1200624."
-tk_00343,495,chat,2026-10-06 09:53:00+00,Change my email to wthanel@example.org and the payout account to DE86114893643900847453.
-tk_00344,92,phone_note,2026-10-13 07:25:00+00,Please send the refund to CH1413060700344816838. Account holder: Carlo Bosshard.
-tk_00345,1375,email,2026-10-11 00:53:00+00,"App crashes when I open the chart, 5 402.48 EUR. Not urgent."
-tk_00346,908,phone_note,2026-10-14 02:36:00+00,"Deposit failed again. Card 2583830640037611, tried ref 1759791402990. My number is +49-543-00196037, Dorothee Stahr."
-tk_00347,167,chat,2026-10-04 07:39:00+00,Please send the refund to AT824171097825352254. Account holder: Univ.Prof. Elsa Dengg.
-tk_00348,1474,email,2026-10-03 11:58:00+00,"Verification documents uploaded twice, 2026-10-11. Please confirm. Linus Jungwirth, +49 322 7610 77."
-tk_00349,109,phone_note,2026-10-09 07:23:00+00,"Deposit failed again. Card 4537056563048137, tried order 9862410865170226. My number is +43795937185, Dr. Franziska Wilms B.A.."
-tk_00350,259,chat,2026-10-12 12:13:00+00,Aurelia Nussbaumer here. Why was my position closed? Ticket from 2026-10-11 was ignored.
-tk_00351,1216,phone_note,2026-10-09 01:31:00+00,Dipl.-Ing. Emin Hettner B.Eng. here. Why was my position closed? Ticket from 2026-10-10 was ignored.
-tk_00352,266,chat,2026-10-10 12:47:00+00,"Hi, this is Willibert Scholz. My withdrawal is still pending, see 5 481.77 EUR. Please call me on +41 996 5724 580."
-tk_00353,748,phone_note,2026-10-04 20:06:00+00,Spread on DAX was too wide yesterday. Call the office 0807 1529529 if you need details.
-tk_00354,904,chat,2026-10-10 06:31:00+00,"Verification documents uploaded twice, agnieszka.schmidt@corp.example. Please confirm. Dr. Imre Lindau, +41 658 3976 4132."
-tk_00355,1389,phone_note,2026-10-02 09:56:00+00,I was charged twice on card 4350729495184428 for yves.bauer@corp.example. Contact me at mary12@example.com.
-tk_00356,1119,chat,2026-10-10 20:24:00+00,I was charged twice on card 4493209060512327 for 2026-10-13. Contact me at droos@example.com.
-tk_00357,422,email,2026-10-14 05:39:00+00,Spread on DAX was too wide yesterday. Call the office 0332 9394934 if you need details.
-tk_00358,454,email,2026-10-01 22:16:00+00,Your agent christoph.kessler@corp.example promised a callback on 2026-10-07. Nobody called. Reach me at freyrita@example.org.
-tk_00359,774,chat,2026-10-06 22:35:00+00,I was charged twice on card 4973374707932723 for 0795 1332674. Contact me at bbucher@example.com.
-tk_00360,1469,chat,2026-10-01 16:46:00+00,Please send the refund to AT732628525508513977. Account holder: Prof. Damian Seiser.
-tk_00361,1003,phone_note,2026-10-14 00:42:00+00,Change my email to muhammedmeier@example.net and the payout account to CH8110215148418476363.
-tk_00362,437,phone_note,2026-10-13 05:42:00+00,I was charged twice on card 4685523100591762 for 0950 6676043. Contact me at renee90@example.net.
-tk_00363,1036,chat,2026-10-03 02:08:00+00,Please send the refund to CH9852740047304603615. Account holder: Margot Kunz.
-tk_00364,1260,chat,2026-10-06 07:56:00+00,"Verification documents uploaded twice, 0893 1662208. Please confirm. Willi Scheibe, +49-906-3050093."
-tk_00365,738,chat,2026-10-14 14:02:00+00,I was charged twice on card 4999673860995520 for 0189 3482274. Contact me at ringhofersofia@example.net.
-tk_00366,65,email,2026-10-14 02:04:00+00,I was charged twice on card 5469184530726202 for ref 1759788088688. Contact me at abel65@example.com.
-tk_00367,122,phone_note,2026-10-14 02:01:00+00,"Deposit failed again. Card 4657053316569158, tried grzegorz.mettler@corp.example. My number is +49-588-570951, Bukurije Kaufmann."
-tk_00368,427,email,2026-10-12 03:23:00+00,"Deposit failed again. Card 4395141694479368, tried order 3453709710711422. My number is +41 629 4847 005, Jacqueline Stocker."
-tk_00369,364,chat,2026-10-06 15:57:00+00,Change my email to schoepfmariana@example.net and the payout account to AT911302262419508072.
-tk_00370,79,phone_note,2026-10-14 02:46:00+00,"Hi, this is Marcel Stern-Arnold. My withdrawal is still pending, see order 1299672763981558. Please call me on +49-299-0325759."
-tk_00371,305,email,2026-10-08 19:53:00+00,"Deposit failed again. Card 5479264476955185, tried order 5975303790224641. My number is +41-599-8920813, Ellie Klaus."
-tk_00372,1153,chat,2026-10-07 07:00:00+00,"Verification documents uploaded twice, 1 671.46 EUR. Please confirm. Branislav Schneider, +43214558358."
-tk_00373,502,email,2026-10-08 01:03:00+00,"Deposit failed again. Card 4682017636858202, tried 5 574.85 EUR. My number is +43-853-3522307, Clemens Suppan."
-tk_00374,227,chat,2026-10-14 19:38:00+00,Caroline Huber here. Why was my position closed? Ticket from 2026-09-20 was ignored.
-tk_00375,1113,email,2026-10-02 08:57:00+00,"Verification documents uploaded twice, order 2444985139192495. Please confirm. Victor Kreusel-Bloch, +436175244802."
-tk_00376,737,phone_note,2026-10-11 00:13:00+00,Your agent chris.radl@corp.example promised a callback on 378.27 EUR. Nobody called. Reach me at florian82@example.net.
-tk_00377,689,phone_note,2026-10-07 03:31:00+00,Aleksander Schenk B.A. here. Why was my position closed? Ticket from 0305 4841834 was ignored.
-tk_00378,1065,chat,2026-10-06 21:36:00+00,I was charged twice on card 4852010753193929 for ref 1760576015393. Contact me at laure39@example.net.
-tk_00379,922,phone_note,2026-10-02 19:55:00+00,Please send the refund to DE05600267511253287046. Account holder: Georgine Margraf.
-tk_00380,1192,chat,2026-10-08 22:08:00+00,"Hi, this is Mandy Beck. My withdrawal is still pending, see order 1952034805035507. Please call me on +43-520-60195796."
-tk_00381,152,phone_note,2026-10-05 13:30:00+00,"Hi, this is Hanna Knapp. My withdrawal is still pending, see order 5950695210232815. Please call me on +43-589-8299539."
-tk_00382,614,phone_note,2026-10-04 00:37:00+00,Spread on DAX was too wide yesterday. Call the office 0881 630718 if you need details.
-tk_00383,467,email,2026-10-07 10:34:00+00,"App crashes when I open the chart, 7 474.71 EUR. Not urgent."
-tk_00384,67,email,2026-10-14 07:57:00+00,"Deposit failed again. Card 5283339845326155, tried ref 1759543131806. My number is +49 715 2361 0921, Lionel Zechner."
-tk_00385,340,chat,2026-10-14 11:41:00+00,Change my email to andreburri@example.net and the payout account to CH0220038363041604387.
-tk_00386,1094,chat,2026-10-10 06:55:00+00,Change my email to elmaradler@example.org and the payout account to DE20415618365461073587.
-tk_00387,780,email,2026-10-05 20:45:00+00,"App crashes when I open the chart, 2026-09-24. Not urgent."
-tk_00388,464,email,2026-10-09 18:48:00+00,Please send the refund to CH4332554005419011243. Account holder: Maryline Bader Wirz.
-tk_00389,1385,email,2026-10-07 03:24:00+00,Please send the refund to DE78355706360607104319. Account holder: Gretchen Heydrich.
-tk_00390,1235,chat,2026-10-01 15:54:00+00,"Hi, this is Dana Stalder-Spörri. My withdrawal is still pending, see enrique.martin@corp.example. Please call me on +41 773 5673 50."
-tk_00391,1002,email,2026-10-10 12:43:00+00,"Hi, this is Antje Knecht. My withdrawal is still pending, see order 6503966630404633. Please call me on +43-564-473927."
-tk_00392,176,email,2026-10-07 07:04:00+00,"App crashes when I open the chart, metin.schmiedt@corp.example. Not urgent."
-tk_00393,291,email,2026-10-08 02:52:00+00,"Deposit failed again. Card 4454409103177644, tried 0993 4289822. My number is +49 997 3903 507, Dipl.-Ing. Birthe Oestrovsky."
-tk_00394,454,email,2026-10-05 16:57:00+00,Please send the refund to AT555163096134259266. Account holder: Bernhard Riedl.
-tk_00395,1026,phone_note,2026-10-07 02:28:00+00,"Hi, this is Juna Winter-Ortner. My withdrawal is still pending, see order 2024285127616565. Please call me on +4933002893961."
-tk_00396,1401,email,2026-10-04 01:21:00+00,"Hi, this is Herr Rolf-Dieter Warmer. My withdrawal is still pending, see laurenz.süßebier@corp.example. Please call me on +49 172 8602 38."
-tk_00397,398,phone_note,2026-10-06 19:07:00+00,Change my email to michapfister@example.net and the payout account to CH0350819088090151501.
-tk_00398,105,chat,2026-10-08 23:05:00+00,I was charged twice on card 5228069399480300 for 0179 5962656. Contact me at nathanfrei@example.com.
-tk_00399,1496,email,2026-10-02 00:42:00+00,Your agent lara.flantz@corp.example promised a callback on 1 236.34 EUR. Nobody called. Reach me at matthiasjuncken@example.com.
-tk_00400,666,chat,2026-10-13 15:23:00+00,Please send the refund to CH2918038756104100145. Account holder: Priscilla Knecht Gross.
+tk_00001,186,chat,2026-10-12 08:31:00+00,Change my email to bernadette63@example.com and the payout account to AT273387339835711612.
+tk_00002,859,chat,2026-10-03 10:05:00+00,"App crashes when I open the chart, ref 1760061848165. Not urgent."
+tk_00003,122,chat,2026-10-05 14:57:00+00,Change my email to willi11@example.com and the payout account to DE81777412154728038528.
+tk_00004,664,email,2026-10-04 11:38:00+00,Spread on DAX was too wide yesterday. Call the office 0787 2062609 if you need details.
+tk_00005,119,phone_note,2026-10-05 09:29:00+00,"App crashes when I open the chart, 0339 2437708. Not urgent."
+tk_00006,1098,chat,2026-10-07 17:01:00+00,Change my email to bruni21@example.net and the payout account to DE46935181909378657975.
+tk_00007,664,chat,2026-10-05 00:14:00+00,Spread on DAX was too wide yesterday. Call the office 0247 8343858 if you need details.
+tk_00008,309,phone_note,2026-10-05 05:36:00+00,Please send the refund to AT578392918073297974. Account holder: Milan Brenner.
+tk_00009,1194,email,2026-10-05 04:54:00+00,"Hi, this is Randolf Hövel B.A.. My withdrawal is still pending, see ref 1760805534491. Please call me on +4333875004743."
+tk_00010,809,email,2026-10-06 19:50:00+00,"Verification documents uploaded twice, 0781 5079770. Please confirm. Henri Freitag, +41 321 2233 079."
+tk_00011,385,phone_note,2026-10-12 14:08:00+00,"Deposit failed again. Card 4116517298927688, tried 0528 1364940. My number is +43 313 2281 718, Dr. Ensar Ott."
+tk_00012,664,chat,2026-10-06 15:58:00+00,"Deposit failed again. Card 4304867614116967, tried 517.02 EUR. My number is +41 075 2917 034, Jannis Kohler."
+tk_00013,177,chat,2026-10-05 09:27:00+00,"Deposit failed again. Card 4519573639069501, tried order 5371535429106868. My number is +4954862057986, Bruna Schmid."
+tk_00014,1040,chat,2026-10-06 19:34:00+00,Ing. Lia Neuhold here. Why was my position closed? Ticket from carlotta.seidl@corp.example was ignored.
+tk_00015,664,phone_note,2026-10-04 13:16:00+00,"Hi, this is Jannis Kohler. My withdrawal is still pending, see ref 1760765148284. Please call me on +41 075 2917 034."
+tk_00016,704,email,2026-10-14 18:08:00+00,"Verification documents uploaded twice, 1 035.64 EUR. Please confirm. Fatima Ott, +43 464 9366 5787."
+tk_00017,168,chat,2026-10-14 20:38:00+00,"Verification documents uploaded twice, 0731 2567117. Please confirm. Univ.Prof. Franz Fichtinger, +41-663-062611."
+tk_00018,889,email,2026-10-13 22:52:00+00,"Verification documents uploaded twice, 1 409.27 EUR. Please confirm. Dominique Gasser, +4980729022279."
+tk_00019,664,phone_note,2026-10-12 11:49:00+00,Spread on DAX was too wide yesterday. Call the office 0740 3017630 if you need details.
+tk_00020,664,chat,2026-10-02 00:24:00+00,Please send the refund to AT271238360777679361. Account holder: Jannis Kohler.
+tk_00021,422,chat,2026-10-07 08:00:00+00,Dr. Ronja Wilhelm here. Why was my position closed? Ticket from order 0524844260506990 was ignored.
+tk_00022,193,chat,2026-10-14 10:31:00+00,Change my email to sybilleniemeier@example.com and the payout account to DE70018955597971147104.
+tk_00023,664,phone_note,2026-10-14 14:00:00+00,I was charged twice on card 4304867614116967 for 0689 6888874. Contact me at philipschmuck@example.org.
+tk_00024,149,email,2026-10-13 22:48:00+00,"Hi, this is Violetta Flantz. My withdrawal is still pending, see 6 392.76 EUR. Please call me on +43 010 9281 5901."
+tk_00025,440,email,2026-10-01 23:11:00+00,Please send the refund to CH5260672036190193350. Account holder: Omer Zollinger.
+tk_00026,1098,chat,2026-10-01 07:11:00+00,Jurij Drubin-Rudolph here. Why was my position closed? Ticket from 2026-09-07 was ignored.
+tk_00027,664,phone_note,2026-10-04 21:51:00+00,Spread on DAX was too wide yesterday. Call the office 0317 2646181 if you need details.
+tk_00028,889,phone_note,2026-10-01 17:01:00+00,Dominique Gasser here. Why was my position closed? Ticket from order 0113127049372052 was ignored.
+tk_00029,1285,phone_note,2026-10-10 19:47:00+00,I was charged twice on card 4379907511637267 for jaroslav.paffrath@corp.example. Contact me at hans-wernerpohl@example.com.
+tk_00030,889,chat,2026-10-01 23:23:00+00,Spread on DAX was too wide yesterday. Call the office 0571 4362261 if you need details.
+tk_00031,615,email,2026-10-01 06:50:00+00,"Hi, this is Georgine Margraf. My withdrawal is still pending, see 573.01 EUR. Please call me on +43 282 1167 342."
+tk_00032,664,phone_note,2026-10-06 18:50:00+00,"Verification documents uploaded twice, order 6449279055977221. Please confirm. Jannis Kohler, +41 075 2917 034."
+tk_00033,1334,email,2026-10-12 02:05:00+00,Please send the refund to AT077661914101188528. Account holder: Michelle Zeiler.
+tk_00034,857,chat,2026-10-06 03:20:00+00,Marianna Ernst here. Why was my position closed? Ticket from 0494 7695977 was ignored.
+tk_00035,864,chat,2026-10-01 09:47:00+00,"Verification documents uploaded twice, susi.scherrer@corp.example. Please confirm. Adrian Huber-Frei, +4946400859979."
+tk_00036,809,phone_note,2026-10-08 09:25:00+00,"Hi, this is Henri Freitag. My withdrawal is still pending, see 2026-10-12. Please call me on +41 321 2233 079."
+tk_00037,1159,phone_note,2026-10-07 05:22:00+00,"Verification documents uploaded twice, aurélie.wyss@corp.example. Please confirm. Urs Häfliger, +41-751-40261401."
+tk_00038,422,phone_note,2026-10-12 01:51:00+00,"Hi, this is Dr. Ronja Wilhelm. My withdrawal is still pending, see ref 1760290932530. Please call me on +431073587355."
+tk_00039,1192,email,2026-10-02 01:07:00+00,"Verification documents uploaded twice, 0352 6419588. Please confirm. Selena Kreuzer, +43-074-9528831."
+tk_00040,1334,phone_note,2026-10-13 03:53:00+00,Michelle Zeiler here. Why was my position closed? Ticket from 2026-09-15 was ignored.
+tk_00041,1170,chat,2026-10-01 10:33:00+00,"App crashes when I open the chart, 77.41 EUR. Not urgent."
+tk_00042,309,chat,2026-10-09 21:17:00+00,Milan Brenner here. Why was my position closed? Ticket from ref 1760259806274 was ignored.
+tk_00043,704,chat,2026-10-14 09:15:00+00,"Hi, this is Fatima Ott. My withdrawal is still pending, see maik.jost@corp.example. Please call me on +43 464 9366 5787."
+tk_00044,1192,chat,2026-10-01 19:04:00+00,"Verification documents uploaded twice, ref 1759588085567. Please confirm. Selena Kreuzer, +43-074-9528831."
+tk_00045,553,phone_note,2026-10-05 01:55:00+00,Change my email to frederikhell@example.org and the payout account to AT148666211328923098.
+tk_00046,870,email,2026-10-12 15:25:00+00,Spread on DAX was too wide yesterday. Call the office 0455 9068384 if you need details.
+tk_00047,664,phone_note,2026-10-05 21:52:00+00,Change my email to philipschmuck@example.org and the payout account to AT271238360777679361.
+tk_00048,193,chat,2026-10-08 20:17:00+00,Dr. Nuray Karz here. Why was my position closed? Ticket from ref 1760691551754 was ignored.
+tk_00049,813,email,2026-10-01 23:22:00+00,Your agent waldtraut.naser@corp.example promised a callback on hartmuth.scheel@corp.example. Nobody called. Reach me at burghardwarmer@example.com.
+tk_00050,177,email,2026-10-11 06:11:00+00,Bruna Schmid here. Why was my position closed? Ticket from 0825 3565939 was ignored.
+tk_00051,920,email,2026-10-02 05:08:00+00,"Verification documents uploaded twice, order 6781851369848578. Please confirm. Anna Stockinger, +43 788 0021 58."
+tk_00052,440,phone_note,2026-10-05 05:04:00+00,Your agent vlora.hermann@corp.example promised a callback on ref 1759412991252. Nobody called. Reach me at friedliceline@example.org.
+tk_00053,664,email,2026-10-07 00:09:00+00,"App crashes when I open the chart, pia.hauer@corp.example. Not urgent."
+tk_00054,1040,email,2026-10-05 11:15:00+00,"Deposit failed again. Card 2237881421746193, tried 0898 8777467. My number is +41-116-3726516, Ing. Lia Neuhold."
+tk_00055,129,chat,2026-10-10 16:05:00+00,Your agent jonathan.schmiedt@corp.example promised a callback on order 7515712590548901. Nobody called. Reach me at gholsten@example.net.
+tk_00056,664,chat,2026-10-03 17:12:00+00,"Verification documents uploaded twice, 0700 9615767. Please confirm. Jannis Kohler, +41 075 2917 034."
+tk_00057,309,phone_note,2026-10-07 02:25:00+00,"App crashes when I open the chart, 0199 7597096. Not urgent."
+tk_00058,96,phone_note,2026-10-01 23:21:00+00,"Verification documents uploaded twice, ref 1759545451260. Please confirm. Dominik Beck, +43 678 0083 74."
+tk_00059,763,chat,2026-10-03 01:34:00+00,"Deposit failed again. Card 4704558530435203, tried ref 1759388126309. My number is +4904248611148, Erdogan Karz B.A.."
+tk_00060,1334,email,2026-10-08 07:08:00+00,"Hi, this is Michelle Zeiler. My withdrawal is still pending, see order 0857719611459318. Please call me on +49685995289."
+tk_00061,99,email,2026-10-11 17:46:00+00,Spread on DAX was too wide yesterday. Call the office 0970 2779798 if you need details.
+tk_00062,1334,phone_note,2026-10-02 14:34:00+00,Your agent leonhard.payer@corp.example promised a callback on 3 682.22 EUR. Nobody called. Reach me at lukaskurz@example.net.
+tk_00063,664,email,2026-10-05 07:02:00+00,"App crashes when I open the chart, aleksandra.eichinger@corp.example. Not urgent."
+tk_00064,664,email,2026-10-13 21:52:00+00,Change my email to philipschmuck@example.org and the payout account to AT271238360777679361.
+tk_00065,1432,chat,2026-10-02 20:58:00+00,"Hi, this is Erhard Mohaupt B.A.. My withdrawal is still pending, see amalie.hellwig@corp.example. Please call me on +49787161682."
+tk_00066,594,chat,2026-10-05 12:38:00+00,Spread on DAX was too wide yesterday. Call the office 0157 1795451 if you need details.
+tk_00067,664,phone_note,2026-10-07 14:02:00+00,"Hi, this is Jannis Kohler. My withdrawal is still pending, see ref 1760453608423. Please call me on +41 075 2917 034."
+tk_00068,1200,chat,2026-10-02 10:02:00+00,"Verification documents uploaded twice, 2026-09-29. Please confirm. Annie Ullmann, +493520561748."
+tk_00069,102,email,2026-10-03 00:35:00+00,I was charged twice on card 4291543782808538 for 0431 6335890. Contact me at katherineleunberger@example.org.
+tk_00070,309,chat,2026-10-10 02:59:00+00,I was charged twice on card 2705622918557898 for katarina.steininger@corp.example. Contact me at adriana17@example.net.
+tk_00071,1098,chat,2026-10-08 02:01:00+00,Please send the refund to DE46935181909378657975. Account holder: Jurij Drubin-Rudolph.
+tk_00072,149,email,2026-10-01 11:25:00+00,Please send the refund to DE40815908301661318609. Account holder: Violetta Flantz.
+tk_00073,615,phone_note,2026-10-07 00:40:00+00,"Hi, this is Georgine Margraf. My withdrawal is still pending, see 0834 3373297. Please call me on +43 282 1167 342."
+tk_00074,1108,phone_note,2026-10-06 13:39:00+00,Please send the refund to DE86646288975140261401. Account holder: August Hettner.
+tk_00075,590,chat,2026-10-07 15:10:00+00,Your agent gabrielle.albrecht@corp.example promised a callback on order 9527160175537152. Nobody called. Reach me at lottipfister@example.org.
+tk_00076,809,email,2026-10-11 12:58:00+00,"Hi, this is Henri Freitag. My withdrawal is still pending, see ref 1760532711529. Please call me on +41 321 2233 079."
+tk_00077,149,phone_note,2026-10-13 00:12:00+00,Please send the refund to DE40815908301661318609. Account holder: Violetta Flantz.
+tk_00078,149,chat,2026-10-02 06:47:00+00,Please send the refund to DE40815908301661318609. Account holder: Violetta Flantz.
+tk_00079,309,phone_note,2026-10-14 06:59:00+00,Milan Brenner here. Why was my position closed? Ticket from ref 1759334334137 was ignored.
+tk_00080,664,email,2026-10-07 21:15:00+00,"Verification documents uploaded twice, vivian.neumayr@corp.example. Please confirm. Jannis Kohler, +41 075 2917 034."
+tk_00081,809,email,2026-10-05 09:32:00+00,Please send the refund to AT621883530453406464. Account holder: Henri Freitag.
+tk_00082,309,phone_note,2026-10-01 14:58:00+00,I was charged twice on card 2705622918557898 for anita.kronberger@corp.example. Contact me at adriana17@example.net.
+tk_00083,149,chat,2026-10-09 07:40:00+00,Spread on DAX was too wide yesterday. Call the office 0216 2673105 if you need details.
+tk_00084,971,chat,2026-10-09 08:55:00+00,"Hi, this is Gertrude Haas. My withdrawal is still pending, see 3 509.71 EUR. Please call me on +49598523534."
+tk_00085,1098,email,2026-10-01 21:36:00+00,"App crashes when I open the chart, order 4356433164620420. Not urgent."
+tk_00086,149,email,2026-10-06 07:26:00+00,Change my email to dsiering@example.org and the payout account to DE40815908301661318609.
+tk_00087,809,email,2026-10-11 00:02:00+00,Please send the refund to AT621883530453406464. Account holder: Henri Freitag.
+tk_00088,149,chat,2026-10-12 13:24:00+00,Change my email to dsiering@example.org and the payout account to DE40815908301661318609.
+tk_00089,809,chat,2026-10-01 21:41:00+00,"Deposit failed again. Card 2326120324106524, tried 0141 6960883. My number is +41 321 2233 079, Henri Freitag."
+tk_00090,309,email,2026-10-13 14:33:00+00,"Verification documents uploaded twice, ref 1759296512719. Please confirm. Milan Brenner, +431276842684."
+tk_00091,763,phone_note,2026-10-05 14:05:00+00,Change my email to rouvenkensy@example.org and the payout account to DE58201462016849340722.
+tk_00092,96,email,2026-10-08 03:16:00+00,Please send the refund to CH5625460163770522938. Account holder: Dominik Beck.
+tk_00093,309,email,2026-10-04 04:05:00+00,I was charged twice on card 2705622918557898 for order 9742329394301860. Contact me at adriana17@example.net.
+tk_00094,749,chat,2026-10-13 01:19:00+00,"Deposit failed again. Card 4289161433614363, tried lilian.roos@corp.example. My number is +4948525388853, Elvira Keller-Hasler."
+tk_00095,809,chat,2026-10-06 08:58:00+00,Spread on DAX was too wide yesterday. Call the office 0192 359126 if you need details.
+tk_00096,99,phone_note,2026-10-03 13:25:00+00,Spread on DAX was too wide yesterday. Call the office 0236 4567093 if you need details.
+tk_00097,309,chat,2026-10-04 07:00:00+00,"Verification documents uploaded twice, severin.zechner@corp.example. Please confirm. Milan Brenner, +431276842684."
+tk_00098,664,chat,2026-10-10 07:54:00+00,"Deposit failed again. Card 4304867614116967, tried 2026-10-09. My number is +41 075 2917 034, Jannis Kohler."
+tk_00099,129,chat,2026-10-03 23:49:00+00,"Deposit failed again. Card 4965724920868288, tried 2026-09-29. My number is +43 373 4419 79, Hanna Carsten."
+tk_00100,1188,chat,2026-10-11 19:32:00+00,I was charged twice on card 2389411297602613 for order 5356904177808820. Contact me at qrauscher@example.org.
+tk_00101,309,email,2026-10-14 18:32:00+00,I was charged twice on card 2705622918557898 for ref 1760329462212. Contact me at adriana17@example.net.
+tk_00102,664,email,2026-10-04 10:00:00+00,I was charged twice on card 4304867614116967 for luise.schulz@corp.example. Contact me at philipschmuck@example.org.
+tk_00103,309,email,2026-10-03 22:38:00+00,"Hi, this is Milan Brenner. My withdrawal is still pending, see order 1340997837151204. Please call me on +431276842684."
+tk_00104,664,email,2026-10-03 05:28:00+00,Spread on DAX was too wide yesterday. Call the office 0699 8501283 if you need details.
+tk_00105,102,email,2026-10-08 04:54:00+00,I was charged twice on card 4291543782808538 for order 1628933297620669. Contact me at katherineleunberger@example.org.
+tk_00106,385,email,2026-10-03 01:54:00+00,Change my email to georgette21@example.net and the payout account to CH4084262347478587098.
+tk_00107,664,phone_note,2026-10-11 05:31:00+00,"Hi, this is Jannis Kohler. My withdrawal is still pending, see tobias.gärtner@corp.example. Please call me on +41 075 2917 034."
+tk_00108,809,chat,2026-10-07 00:56:00+00,Your agent carlo.metzler@corp.example promised a callback on vivian.petz@corp.example. Nobody called. Reach me at therese48@example.net.
+tk_00109,458,chat,2026-10-04 12:01:00+00,"Verification documents uploaded twice, domingos.berger@corp.example. Please confirm. Jari Giger, +41 124 0234 48."
+tk_00110,1148,phone_note,2026-10-06 15:27:00+00,Change my email to jaroslav51@example.com and the payout account to CH3482115670461643972.
+tk_00111,664,chat,2026-10-05 04:01:00+00,Change my email to philipschmuck@example.org and the payout account to AT271238360777679361.
+tk_00112,664,email,2026-10-13 01:39:00+00,"Deposit failed again. Card 4304867614116967, tried ref 1760869377257. My number is +41 075 2917 034, Jannis Kohler."
+tk_00113,99,phone_note,2026-10-02 14:22:00+00,"Hi, this is Mert Uhl. My withdrawal is still pending, see zoe.prantl@corp.example. Please call me on +41-666-61760313."
+tk_00114,664,email,2026-10-11 17:24:00+00,Please send the refund to AT271238360777679361. Account holder: Jannis Kohler.
+tk_00115,664,phone_note,2026-10-03 09:45:00+00,Jannis Kohler here. Why was my position closed? Ticket from ref 1760083995315 was ignored.
+tk_00116,186,phone_note,2026-10-03 11:23:00+00,Your agent jasmina.gross@corp.example promised a callback on ref 1759903506430. Nobody called. Reach me at bernadette63@example.com.
+tk_00117,1188,email,2026-10-09 21:26:00+00,Spread on DAX was too wide yesterday. Call the office 0748 884533 if you need details.
+tk_00118,1170,phone_note,2026-10-07 01:16:00+00,"Hi, this is Univ.Prof. Ina Grasser. My withdrawal is still pending, see order 9494809141806304. Please call me on +43 669 1564 04."
+tk_00119,664,phone_note,2026-10-08 05:15:00+00,"Deposit failed again. Card 4304867614116967, tried 2 785.15 EUR. My number is +41 075 2917 034, Jannis Kohler."
+tk_00120,664,chat,2026-10-07 23:05:00+00,Change my email to philipschmuck@example.org and the payout account to AT271238360777679361.
+tk_00121,369,phone_note,2026-10-13 19:28:00+00,I was charged twice on card 2276563048137343 for 0704 9056206. Contact me at willibaldputz@example.org.
+tk_00122,150,email,2026-10-02 19:26:00+00,Spread on DAX was too wide yesterday. Call the office 0226 8683768 if you need details.
+tk_00123,664,email,2026-10-02 03:23:00+00,"App crashes when I open the chart, 0691 4936991. Not urgent."
+tk_00124,309,phone_note,2026-10-06 21:39:00+00,I was charged twice on card 2705622918557898 for 9 000.36 EUR. Contact me at adriana17@example.net.
+tk_00125,385,email,2026-10-05 02:08:00+00,"Verification documents uploaded twice, 3 680.83 EUR. Please confirm. Dr. Ensar Ott, +43 313 2281 718."
+tk_00126,1334,phone_note,2026-10-10 04:50:00+00,Change my email to lukaskurz@example.net and the payout account to AT077661914101188528.
+tk_00127,254,chat,2026-10-14 18:05:00+00,Spread on DAX was too wide yesterday. Call the office 0661 5195261 if you need details.
+tk_00128,177,chat,2026-10-08 04:22:00+00,Spread on DAX was too wide yesterday. Call the office 0938 5309401 if you need details.
+tk_00129,664,email,2026-10-06 11:18:00+00,"Deposit failed again. Card 4304867614116967, tried ref 1759405453689. My number is +41 075 2917 034, Jannis Kohler."
+tk_00130,749,email,2026-10-05 17:05:00+00,Elvira Keller-Hasler here. Why was my position closed? Ticket from 2026-09-26 was ignored.
+tk_00131,664,phone_note,2026-10-04 20:52:00+00,"Deposit failed again. Card 4304867614116967, tried ref 1760850841455. My number is +41 075 2917 034, Jannis Kohler."
+tk_00132,159,chat,2026-10-10 23:27:00+00,"Deposit failed again. Card 4822999673860996, tried 2026-09-21. My number is +41 780 6671 72, Andjelina Kessler."
+tk_00133,193,chat,2026-10-04 21:24:00+00,"App crashes when I open the chart, ref 1759634590561. Not urgent."
+tk_00134,664,chat,2026-10-07 08:33:00+00,"Hi, this is Jannis Kohler. My withdrawal is still pending, see ref 1760183539514. Please call me on +41 075 2917 034."
+tk_00135,664,phone_note,2026-10-06 04:22:00+00,"Deposit failed again. Card 4304867614116967, tried 0773 1140470. My number is +41 075 2917 034, Jannis Kohler."
+tk_00136,749,phone_note,2026-10-02 05:42:00+00,Spread on DAX was too wide yesterday. Call the office 0462 1932814 if you need details.
+tk_00137,749,email,2026-10-03 04:16:00+00,Please send the refund to CH7758791589062762230. Account holder: Elvira Keller-Hasler.
+tk_00138,99,email,2026-10-02 12:19:00+00,"Deposit failed again. Card 4197278179657306, tried ref 1760450290138. My number is +41-666-61760313, Mert Uhl."
+tk_00139,309,phone_note,2026-10-05 14:30:00+00,"Verification documents uploaded twice, alexia.wenger@corp.example. Please confirm. Milan Brenner, +431276842684."
+tk_00140,1397,chat,2026-10-14 07:58:00+00,Change my email to alaraschubert@example.net and the payout account to AT726056541167690758.
+tk_00141,664,phone_note,2026-10-01 12:48:00+00,Spread on DAX was too wide yesterday. Call the office 0375 2235280 if you need details.
+tk_00142,99,phone_note,2026-10-05 14:53:00+00,I was charged twice on card 4197278179657306 for order 6891769264991677. Contact me at dgoeschl@example.net.
+tk_00143,809,phone_note,2026-10-04 20:28:00+00,"Deposit failed again. Card 2326120324106524, tried selma.moser@corp.example. My number is +41 321 2233 079, Henri Freitag."
+tk_00144,1334,chat,2026-10-03 03:14:00+00,Change my email to lukaskurz@example.net and the payout account to AT077661914101188528.
+tk_00145,119,email,2026-10-04 14:00:00+00,Anton Lercher here. Why was my position closed? Ticket from 5 325.00 EUR was ignored.
+tk_00146,594,email,2026-10-08 07:51:00+00,Spread on DAX was too wide yesterday. Call the office 0489 7549602 if you need details.
+tk_00147,809,email,2026-10-07 01:07:00+00,Change my email to therese48@example.net and the payout account to AT621883530453406464.
+tk_00148,809,email,2026-10-07 05:23:00+00,Please send the refund to AT621883530453406464. Account holder: Henri Freitag.
+tk_00149,149,chat,2026-10-06 10:26:00+00,Violetta Flantz here. Why was my position closed? Ticket from 2026-09-15 was ignored.
+tk_00150,664,phone_note,2026-10-01 08:50:00+00,"Deposit failed again. Card 4304867614116967, tried patrik.heger@corp.example. My number is +41 075 2917 034, Jannis Kohler."
+tk_00151,1188,chat,2026-10-04 21:05:00+00,"Verification documents uploaded twice, ref 1759699690821. Please confirm. Dipl.-Ing. Nicola Klotz, +49-340-05717279."
+tk_00152,309,email,2026-10-02 04:25:00+00,Milan Brenner here. Why was my position closed? Ticket from order 0049748489688667 was ignored.
+tk_00153,1334,phone_note,2026-10-13 12:12:00+00,"Verification documents uploaded twice, 5 802.57 EUR. Please confirm. Michelle Zeiler, +49685995289."
+tk_00154,81,email,2026-10-03 18:51:00+00,I was charged twice on card 4737504310399319 for 2026-09-15. Contact me at hans-uwe73@example.org.
+tk_00155,664,email,2026-10-10 02:25:00+00,"Deposit failed again. Card 4304867614116967, tried 2026-09-26. My number is +41 075 2917 034, Jannis Kohler."
+tk_00156,144,phone_note,2026-10-01 07:19:00+00,"Verification documents uploaded twice, ref 1760889431497. Please confirm. Agnes Ferrari Ziegler, +4301759898347."
+tk_00157,309,phone_note,2026-10-04 17:34:00+00,Milan Brenner here. Why was my position closed? Ticket from 0511 7484716 was ignored.
+tk_00158,96,phone_note,2026-10-01 03:43:00+00,"Verification documents uploaded twice, enrico.hasler@corp.example. Please confirm. Dominik Beck, +43 678 0083 74."
+tk_00159,122,email,2026-10-08 10:12:00+00,I was charged twice on card 4841485253888539 for ref 1759778928591. Contact me at willi11@example.com.
+tk_00160,809,phone_note,2026-10-09 08:09:00+00,I was charged twice on card 2326120324106524 for vito.hofer@corp.example. Contact me at therese48@example.net.
+tk_00161,749,phone_note,2026-10-10 11:05:00+00,I was charged twice on card 4289161433614363 for 4 881.88 EUR. Contact me at steffenstettler@example.org.
+tk_00162,1334,email,2026-10-13 18:53:00+00,Change my email to lukaskurz@example.net and the payout account to AT077661914101188528.
+tk_00163,954,phone_note,2026-10-03 11:26:00+00,Detlef Mude-Liebelt here. Why was my position closed? Ticket from 2 612.67 EUR was ignored.
+tk_00164,809,chat,2026-10-06 21:26:00+00,Change my email to therese48@example.net and the payout account to AT621883530453406464.
+tk_00165,309,email,2026-10-14 03:43:00+00,Your agent laura.lettner@corp.example promised a callback on 0286 1109483. Nobody called. Reach me at adriana17@example.net.
+tk_00166,857,chat,2026-10-05 15:48:00+00,"Verification documents uploaded twice, order 5906004804619003. Please confirm. Marianna Ernst, +49 888 7180 334."
+tk_00167,664,chat,2026-10-13 05:15:00+00,Change my email to philipschmuck@example.org and the payout account to AT271238360777679361.
+tk_00168,1040,chat,2026-10-04 22:42:00+00,Change my email to julia41@example.org and the payout account to AT137569434696859956.
+tk_00169,749,chat,2026-10-05 16:47:00+00,Please send the refund to CH7758791589062762230. Account holder: Elvira Keller-Hasler.
+tk_00170,1040,chat,2026-10-14 00:13:00+00,Ing. Lia Neuhold here. Why was my position closed? Ticket from 2026-09-08 was ignored.
+tk_00171,664,phone_note,2026-10-03 06:47:00+00,Change my email to philipschmuck@example.org and the payout account to AT271238360777679361.
+tk_00172,102,chat,2026-10-10 11:19:00+00,I was charged twice on card 4291543782808538 for order 1128779600952354. Contact me at katherineleunberger@example.org.
+tk_00173,664,chat,2026-10-07 04:12:00+00,"App crashes when I open the chart, 1 679.74 EUR. Not urgent."
+tk_00174,664,email,2026-10-07 04:36:00+00,Your agent timon.taferner@corp.example promised a callback on 0738 6570244. Nobody called. Reach me at philipschmuck@example.org.
+tk_00175,664,phone_note,2026-10-06 07:03:00+00,Your agent mert.buchinger@corp.example promised a callback on 0696 836915. Nobody called. Reach me at philipschmuck@example.org.
+tk_00176,149,phone_note,2026-10-03 18:42:00+00,"Verification documents uploaded twice, ref 1759535430892. Please confirm. Violetta Flantz, +43 010 9281 5901."
+tk_00177,309,email,2026-10-01 16:11:00+00,Please send the refund to AT578392918073297974. Account holder: Milan Brenner.
+tk_00178,1248,chat,2026-10-02 03:19:00+00,Please send the refund to CH6229787597973374707. Account holder: Walter Tanner.
+tk_00179,809,phone_note,2026-10-01 19:48:00+00,Spread on DAX was too wide yesterday. Call the office 0410 7119191 if you need details.
+tk_00180,77,chat,2026-10-03 20:34:00+00,Spread on DAX was too wide yesterday. Call the office 0169 4175653 if you need details.
+tk_00181,1129,phone_note,2026-10-14 12:10:00+00,"Verification documents uploaded twice, ref 1759887973660. Please confirm. Louise Weiser, +43-326-865635."
+tk_00182,809,email,2026-10-02 06:28:00+00,Spread on DAX was too wide yesterday. Call the office 0122 4183422 if you need details.
+tk_00183,664,chat,2026-10-10 21:00:00+00,Please send the refund to AT271238360777679361. Account holder: Jannis Kohler.
+tk_00184,1334,phone_note,2026-10-12 21:33:00+00,Please send the refund to AT077661914101188528. Account holder: Michelle Zeiler.
+tk_00185,664,chat,2026-10-03 13:23:00+00,"App crashes when I open the chart, 0675 6189061. Not urgent."
+tk_00186,664,phone_note,2026-10-02 12:52:00+00,Change my email to philipschmuck@example.org and the payout account to AT271238360777679361.
+tk_00187,422,phone_note,2026-10-13 06:27:00+00,"Deposit failed again. Card 5580558368937748, tried 0766 1198017. My number is +431073587355, Dr. Ronja Wilhelm."
+tk_00188,1424,phone_note,2026-10-04 15:35:00+00,Marcus Reinhardt-Conradi here. Why was my position closed? Ticket from marco.köhler@corp.example was ignored.
+tk_00189,119,phone_note,2026-10-13 04:22:00+00,Anton Lercher here. Why was my position closed? Ticket from ref 1760002904613 was ignored.
+tk_00190,809,phone_note,2026-10-12 21:53:00+00,Your agent ruth.pollak@corp.example promised a callback on 0135 4783072. Nobody called. Reach me at therese48@example.net.
+tk_00191,186,email,2026-10-08 19:56:00+00,"Deposit failed again. Card 4020934117749125, tried ref 1759519260918. My number is +49412524273, Gabriel Hoffmann-Strauß."
+tk_00192,254,email,2026-10-10 01:39:00+00,I was charged twice on card 4521579963851089 for ref 1759579106897. Contact me at hermannemmanuel@example.com.
+tk_00193,1194,phone_note,2026-10-01 12:29:00+00,Please send the refund to DE49127684268465632122. Account holder: Randolf Hövel B.A..
+tk_00194,119,email,2026-10-09 18:27:00+00,Spread on DAX was too wide yesterday. Call the office 0956 4129625 if you need details.
+tk_00195,664,email,2026-10-07 13:14:00+00,"Deposit failed again. Card 4304867614116967, tried ref 1760551484557. My number is +41 075 2917 034, Jannis Kohler."
+tk_00196,99,email,2026-10-12 10:42:00+00,"Verification documents uploaded twice, ref 1759638347303. Please confirm. Mert Uhl, +41-666-61760313."
+tk_00197,159,email,2026-10-05 12:02:00+00,Change my email to freyrita@example.org and the payout account to AT732628525508513977.
+tk_00198,309,chat,2026-10-07 19:11:00+00,Spread on DAX was too wide yesterday. Call the office 0791 2296890 if you need details.
+tk_00199,312,chat,2026-10-09 15:38:00+00,"App crashes when I open the chart, 2026-09-29. Not urgent."
+tk_00200,440,phone_note,2026-10-08 11:56:00+00,"Deposit failed again. Card 5328081978361636, tried 2026-09-16. My number is +4922202972997, Omer Zollinger."
+tk_00201,99,chat,2026-10-01 23:31:00+00,Change my email to dgoeschl@example.net and the payout account to AT410922567113937726.
+tk_00202,309,email,2026-10-12 15:32:00+00,I was charged twice on card 2705622918557898 for 8 455.11 EUR. Contact me at adriana17@example.net.
+tk_00203,1194,chat,2026-10-06 20:00:00+00,"App crashes when I open the chart, 6 354.03 EUR. Not urgent."
+tk_00204,493,phone_note,2026-10-14 11:37:00+00,"Verification documents uploaded twice, ref 1759667414210. Please confirm. Joanna Eichenberger, +49 848 3726 1675."
+tk_00205,664,phone_note,2026-10-06 01:17:00+00,I was charged twice on card 4304867614116967 for 2 950.99 EUR. Contact me at philipschmuck@example.org.
+tk_00206,1122,phone_note,2026-10-05 17:43:00+00,"Deposit failed again. Card 2275715419440968, tried ref 1760423242214. My number is +49 640 0376 14, Albulena Bühler-Schlatter."
+tk_00207,929,email,2026-10-08 04:19:00+00,I was charged twice on card 4348580436684751 for 2026-09-24. Contact me at vmeusburger@example.org.
+tk_00208,242,email,2026-10-03 23:58:00+00,"App crashes when I open the chart, ref 1759141542777. Not urgent."
+tk_00209,1292,phone_note,2026-10-14 07:31:00+00,I was charged twice on card 2223707994669593 for ref 1759619695491. Contact me at pesendorfernikola@example.org.
+tk_00210,664,email,2026-10-03 20:57:00+00,Jannis Kohler here. Why was my position closed? Ticket from sarah.eberharter@corp.example was ignored.
+tk_00211,1334,phone_note,2026-10-08 03:25:00+00,Spread on DAX was too wide yesterday. Call the office 0893 2317408 if you need details.
+tk_00212,338,chat,2026-10-02 16:25:00+00,Please send the refund to AT512724786455945032. Account holder: Lily Biedermann.
+tk_00213,664,chat,2026-10-05 07:21:00+00,"Deposit failed again. Card 4304867614116967, tried 0125 7860833. My number is +41 075 2917 034, Jannis Kohler."
+tk_00214,309,email,2026-10-07 02:19:00+00,Milan Brenner here. Why was my position closed? Ticket from karl.hartl@corp.example was ignored.
+tk_00215,500,chat,2026-10-14 11:53:00+00,I was charged twice on card 4029162649716245 for ref 1759625940985. Contact me at manon37@example.net.
+tk_00216,664,chat,2026-10-06 08:39:00+00,"Verification documents uploaded twice, 3 641.91 EUR. Please confirm. Jannis Kohler, +41 075 2917 034."
+tk_00217,1129,chat,2026-10-14 11:05:00+00,Louise Weiser here. Why was my position closed? Ticket from order 9263426084293978 was ignored.
+tk_00218,309,phone_note,2026-10-12 09:32:00+00,Milan Brenner here. Why was my position closed? Ticket from 5 768.00 EUR was ignored.
+tk_00219,664,phone_note,2026-10-10 06:25:00+00,"App crashes when I open the chart, order 9903105351669348. Not urgent."
+tk_00220,664,phone_note,2026-10-07 00:57:00+00,Jannis Kohler here. Why was my position closed? Ticket from 0448 8540193 was ignored.
+tk_00221,1182,email,2026-10-04 15:51:00+00,Spread on DAX was too wide yesterday. Call the office 0620 1011012 if you need details.
+tk_00222,1129,chat,2026-10-02 06:18:00+00,Your agent florentin.riegler@corp.example promised a callback on 0789 8687939. Nobody called. Reach me at jungcornelius@example.org.
+tk_00223,200,chat,2026-10-04 01:17:00+00,Please send the refund to AT046212373498238055. Account holder: Christine Steindl.
+tk_00224,193,phone_note,2026-10-05 04:38:00+00,Your agent arndt.gumprich@corp.example promised a callback on order 8428238430255613. Nobody called. Reach me at sybilleniemeier@example.com.
+tk_00225,857,email,2026-10-14 11:35:00+00,Please send the refund to CH4636490542784218411. Account holder: Marianna Ernst.
+tk_00226,664,email,2026-10-06 17:18:00+00,Spread on DAX was too wide yesterday. Call the office 0786 8199671 if you need details.
+tk_00227,309,email,2026-10-13 00:59:00+00,Your agent diana.kober@corp.example promised a callback on order 8725422993518622. Nobody called. Reach me at adriana17@example.net.
+tk_00228,77,email,2026-10-10 02:43:00+00,Spread on DAX was too wide yesterday. Call the office 0959 6913207 if you need details.
+tk_00229,1192,email,2026-10-05 00:10:00+00,I was charged twice on card 4141261812275931 for 4 790.01 EUR. Contact me at lettnernoah@example.com.
+tk_00230,1334,chat,2026-10-06 19:00:00+00,Your agent tim.becker@corp.example promised a callback on order 0443147125779542. Nobody called. Reach me at lukaskurz@example.net.
+tk_00231,119,chat,2026-10-02 01:24:00+00,"Hi, this is Anton Lercher. My withdrawal is still pending, see order 7715941767385051. Please call me on +415131373537."
+tk_00232,144,email,2026-10-08 03:30:00+00,"Verification documents uploaded twice, 4 169.83 EUR. Please confirm. Agnes Ferrari Ziegler, +4301759898347."
+tk_00233,309,phone_note,2026-10-14 18:49:00+00,Please send the refund to AT578392918073297974. Account holder: Milan Brenner.
+tk_00234,1200,chat,2026-10-06 06:46:00+00,"Hi, this is Annie Ullmann. My withdrawal is still pending, see 0959 2534998. Please call me on +493520561748."
+tk_00235,809,email,2026-10-14 13:26:00+00,Please send the refund to AT621883530453406464. Account holder: Henri Freitag.
+tk_00236,1424,email,2026-10-05 09:34:00+00,Change my email to robintextor@example.com and the payout account to DE74644604956605366306.
+tk_00237,200,chat,2026-10-08 14:20:00+00,Please send the refund to AT046212373498238055. Account holder: Christine Steindl.
+tk_00238,664,chat,2026-10-02 18:09:00+00,"App crashes when I open the chart, 5 402.48 EUR. Not urgent."
+tk_00239,664,chat,2026-10-01 22:03:00+00,"Deposit failed again. Card 4304867614116967, tried felicitas.praxmarer@corp.example. My number is +41 075 2917 034, Jannis Kohler."
+tk_00240,309,phone_note,2026-10-07 10:21:00+00,Please send the refund to AT578392918073297974. Account holder: Milan Brenner.
+tk_00241,119,email,2026-10-04 17:52:00+00,"Deposit failed again. Card 4830494156341862, tried sandro.hirschmann@corp.example. My number is +415131373537, Anton Lercher."
+tk_00242,309,email,2026-10-12 15:36:00+00,"Hi, this is Milan Brenner. My withdrawal is still pending, see order 9603767249912322. Please call me on +431276842684."
+tk_00243,149,phone_note,2026-10-14 19:44:00+00,Violetta Flantz here. Why was my position closed? Ticket from order 0773350098624108 was ignored.
+tk_00244,458,chat,2026-10-13 18:29:00+00,"Deposit failed again. Card 2296982855435697, tried order 7022640795937185. My number is +41 124 0234 48, Jari Giger."
+tk_00245,749,chat,2026-10-07 22:17:00+00,Elvira Keller-Hasler here. Why was my position closed? Ticket from 2026-10-11 was ignored.
+tk_00246,1268,phone_note,2026-10-08 11:50:00+00,Steven Reinisch here. Why was my position closed? Ticket from 2026-10-10 was ignored.
+tk_00247,664,phone_note,2026-10-09 00:33:00+00,"Hi, this is Jannis Kohler. My withdrawal is still pending, see 5 481.77 EUR. Please call me on +41 075 2917 034."
+tk_00248,493,chat,2026-10-01 14:06:00+00,"Verification documents uploaded twice, 2026-09-27. Please confirm. Joanna Eichenberger, +49 848 3726 1675."
+tk_00249,1143,phone_note,2026-10-04 09:53:00+00,Spread on DAX was too wide yesterday. Call the office 0772 2395998 if you need details.
+tk_00250,809,email,2026-10-14 14:21:00+00,"Deposit failed again. Card 2326120324106524, tried 2026-10-11. My number is +41 321 2233 079, Henri Freitag."
+tk_00251,664,phone_note,2026-10-02 07:37:00+00,Your agent ronya.schuster@corp.example promised a callback on ref 1760457462106. Nobody called. Reach me at philipschmuck@example.org.
+tk_00252,1182,email,2026-10-08 11:05:00+00,I was charged twice on card 2289084509281723 for ref 1760418374622. Contact me at myriamfelder@example.org.
+tk_00253,440,email,2026-10-02 16:19:00+00,Change my email to friedliceline@example.org and the payout account to CH5260672036190193350.
+tk_00254,440,phone_note,2026-10-10 11:24:00+00,Omer Zollinger here. Why was my position closed? Ticket from rosina.mayer@corp.example was ignored.
+tk_00255,1194,chat,2026-10-08 14:34:00+00,"Verification documents uploaded twice, 0505 4480216. Please confirm. Randolf Hövel B.A., +4333875004743."
+tk_00256,664,chat,2026-10-11 01:04:00+00,Please send the refund to AT271238360777679361. Account holder: Jannis Kohler.
+tk_00257,1188,chat,2026-10-03 19:43:00+00,Your agent constanze.trummer@corp.example promised a callback on 2026-09-08. Nobody called. Reach me at qrauscher@example.org.
+tk_00258,309,chat,2026-10-01 06:47:00+00,"App crashes when I open the chart, 1 605.24 EUR. Not urgent."
+tk_00259,1194,chat,2026-10-02 15:57:00+00,"App crashes when I open the chart, 8 066.29 EUR. Not urgent."
+tk_00260,119,chat,2026-10-05 17:20:00+00,Your agent henri.hosp@corp.example promised a callback on 2026-10-07. Nobody called. Reach me at eislsimon@example.net.
+tk_00261,1159,email,2026-10-06 04:35:00+00,Change my email to pascallutz@example.com and the payout account to CH2990186047593042402.
+tk_00262,168,chat,2026-10-04 09:42:00+00,"Verification documents uploaded twice, order 6172888181768239. Please confirm. Univ.Prof. Franz Fichtinger, +41-663-062611."
+tk_00263,1098,email,2026-10-12 10:29:00+00,I was charged twice on card 4323194875749114 for ref 1759801793546. Contact me at bruni21@example.net.
+tk_00264,1141,email,2026-10-12 13:04:00+00,"Hi, this is Brunhilde Herrmann. My withdrawal is still pending, see 0342 892255. Please call me on +4181817414333."
+tk_00265,1334,phone_note,2026-10-10 10:00:00+00,"Hi, this is Michelle Zeiler. My withdrawal is still pending, see 3 541.58 EUR. Please call me on +49685995289."
+tk_00266,809,chat,2026-10-04 09:31:00+00,Please send the refund to AT621883530453406464. Account holder: Henri Freitag.
+tk_00267,149,phone_note,2026-10-02 02:27:00+00,I was charged twice on card 5439099603082464 for 2026-09-13. Contact me at dsiering@example.org.
+tk_00268,1040,email,2026-10-13 15:10:00+00,"Deposit failed again. Card 2237881421746193, tried ref 1759788088688. My number is +41-116-3726516, Ing. Lia Neuhold."
+tk_00269,1200,email,2026-10-09 14:28:00+00,"Deposit failed again. Card 4182633043483957, tried 240.32 EUR. My number is +493520561748, Annie Ullmann."
+tk_00270,664,chat,2026-10-05 09:52:00+00,"Deposit failed again. Card 4304867614116967, tried 2026-10-04. My number is +41 075 2917 034, Jannis Kohler."
+tk_00271,81,chat,2026-10-07 06:15:00+00,Spread on DAX was too wide yesterday. Call the office 0144 6029781 if you need details.
+tk_00272,664,chat,2026-10-05 13:11:00+00,Change my email to philipschmuck@example.org and the payout account to AT271238360777679361.
+tk_00273,809,email,2026-10-08 01:53:00+00,"Verification documents uploaded twice, order 0345370971071142. Please confirm. Henri Freitag, +41 321 2233 079."
+tk_00274,664,chat,2026-10-12 06:17:00+00,"App crashes when I open the chart, 6 289.18 EUR. Not urgent."
+tk_00275,440,email,2026-10-14 10:53:00+00,"App crashes when I open the chart, 2026-09-18. Not urgent."
+tk_00276,1369,email,2026-10-04 05:47:00+00,"Hi, this is Noé Wirth. My withdrawal is still pending, see order 5278700129967276. Please call me on +41-326-38986928."
+tk_00277,309,email,2026-10-02 18:09:00+00,"Verification documents uploaded twice, 2026-09-05. Please confirm. Milan Brenner, +431276842684."
+tk_00278,1334,chat,2026-10-05 09:17:00+00,Change my email to lukaskurz@example.net and the payout account to AT077661914101188528.
+tk_00279,309,phone_note,2026-10-08 21:51:00+00,Please send the refund to AT578392918073297974. Account holder: Milan Brenner.
+tk_00280,440,chat,2026-10-14 02:40:00+00,"Hi, this is Omer Zollinger. My withdrawal is still pending, see ref 1759364487692. Please call me on +4922202972997."
+tk_00281,1397,email,2026-10-14 09:56:00+00,Spread on DAX was too wide yesterday. Call the office 0439 9781165 if you need details.
+tk_00282,1098,phone_note,2026-10-13 12:49:00+00,"Deposit failed again. Card 4323194875749114, tried hans-christian.kusch@corp.example. My number is +41-595-7117777, Jurij Drubin-Rudolph."
+tk_00283,664,chat,2026-10-01 22:40:00+00,"Verification documents uploaded twice, 0441 3902002. Please confirm. Jannis Kohler, +41 075 2917 034."
+tk_00284,664,email,2026-10-10 10:17:00+00,Spread on DAX was too wide yesterday. Call the office 0997 861375 if you need details.
+tk_00285,857,phone_note,2026-10-14 08:25:00+00,Please send the refund to CH4636490542784218411. Account holder: Marianna Ernst.
+tk_00286,309,email,2026-10-14 19:11:00+00,"App crashes when I open the chart, order 8459989208136915. Not urgent."
+tk_00287,859,email,2026-10-07 23:57:00+00,Your agent selena.gratzl@corp.example promised a callback on ref 1760463153213. Nobody called. Reach me at dorafink@example.net.
+tk_00288,664,email,2026-10-09 20:17:00+00,"Deposit failed again. Card 4304867614116967, tried 5 991.65 EUR. My number is +41 075 2917 034, Jannis Kohler."
+tk_00289,1459,chat,2026-10-03 03:06:00+00,Your agent filip.doppler@corp.example promised a callback on sandro.wachter@corp.example. Nobody called. Reach me at mariusmitterer@example.com.
+tk_00290,1017,phone_note,2026-10-13 11:38:00+00,Oxana Bien here. Why was my position closed? Ticket from gottfried.schuster@corp.example was ignored.
+tk_00291,664,email,2026-10-14 11:48:00+00,"Deposit failed again. Card 4304867614116967, tried 5 345.61 EUR. My number is +41 075 2917 034, Jannis Kohler."
+tk_00292,193,chat,2026-10-13 11:28:00+00,Your agent tabea.holsten@corp.example promised a callback on ref 1759749978580. Nobody called. Reach me at sybilleniemeier@example.com.
+tk_00293,664,phone_note,2026-10-06 23:06:00+00,Your agent rebecca.rauter@corp.example promised a callback on order 7676942912444985. Nobody called. Reach me at philipschmuck@example.org.
+tk_00294,664,email,2026-10-07 14:07:00+00,Your agent laura.scherer@corp.example promised a callback on 2026-09-06. Nobody called. Reach me at philipschmuck@example.org.
+tk_00295,440,chat,2026-10-02 09:54:00+00,"App crashes when I open the chart, 2026-09-23. Not urgent."
+tk_00296,1437,phone_note,2026-10-05 02:42:00+00,"Deposit failed again. Card 5591416401516333, tried 7 066.92 EUR. My number is +43-978-378058, Sandra Pfister Lüscher."
+tk_00297,1268,chat,2026-10-08 14:09:00+00,I was charged twice on card 2692547454257790 for 0426 3039922. Contact me at ela20@example.net.
+tk_00298,309,email,2026-10-10 01:33:00+00,"App crashes when I open the chart, 2026-09-02. Not urgent."
+tk_00299,102,email,2026-10-08 09:16:00+00,"App crashes when I open the chart, ref 1760512677031. Not urgent."
+tk_00300,664,chat,2026-10-08 02:58:00+00,"Hi, this is Jannis Kohler. My withdrawal is still pending, see 0558 3461277. Please call me on +41 075 2917 034."
+tk_00301,741,chat,2026-10-07 01:41:00+00,"App crashes when I open the chart, 2026-10-12. Not urgent."
+tk_00302,664,phone_note,2026-10-01 10:55:00+00,Your agent daniela.stelzer@corp.example promised a callback on 980.16 EUR. Nobody called. Reach me at philipschmuck@example.org.
+tk_00303,77,chat,2026-10-09 07:40:00+00,I was charged twice on card 5409281590139624 for order 9520348050355076. Contact me at meyerrotraut@example.net.
+tk_00304,177,phone_note,2026-10-08 08:24:00+00,"Deposit failed again. Card 4519573639069501, tried ref 1759123368761. My number is +4954862057986, Bruna Schmid."
+tk_00305,123,email,2026-10-03 03:55:00+00,"Hi, this is Sandro Striebitz. My withdrawal is still pending, see order 9579647005950695. Please call me on +43-511-2532870."
+tk_00306,664,phone_note,2026-10-11 04:57:00+00,"Hi, this is Jannis Kohler. My withdrawal is still pending, see ref 1759452006755. Please call me on +41 075 2917 034."
+tk_00307,664,chat,2026-10-07 03:33:00+00,I was charged twice on card 4304867614116967 for madeleine.dangl@corp.example. Contact me at philipschmuck@example.org.
+tk_00308,632,chat,2026-10-10 03:35:00+00,Etienne Amrein here. Why was my position closed? Ticket from noé.keller@corp.example was ignored.
+tk_00309,1194,phone_note,2026-10-11 07:29:00+00,"Verification documents uploaded twice, 2026-09-10. Please confirm. Randolf Hövel B.A., +4333875004743."
+tk_00310,493,phone_note,2026-10-11 11:39:00+00,"Verification documents uploaded twice, 2026-09-22. Please confirm. Joanna Eichenberger, +49 848 3726 1675."
+tk_00311,309,chat,2026-10-03 06:19:00+00,"Verification documents uploaded twice, victoria.pirker@corp.example. Please confirm. Milan Brenner, +431276842684."
+tk_00312,632,phone_note,2026-10-14 10:30:00+00,Spread on DAX was too wide yesterday. Call the office 0881 630718 if you need details.
+tk_00313,1141,chat,2026-10-07 23:49:00+00,"App crashes when I open the chart, 7 474.71 EUR. Not urgent."
+tk_00314,309,phone_note,2026-10-14 02:20:00+00,Change my email to adriana17@example.net and the payout account to AT578392918073297974.
+tk_00315,1194,phone_note,2026-10-14 05:32:00+00,"App crashes when I open the chart, ref 1759543131806. Not urgent."
+tk_00316,664,email,2026-10-04 20:15:00+00,Spread on DAX was too wide yesterday. Call the office 0202 6181720 if you need details.
+tk_00317,664,phone_note,2026-10-12 21:57:00+00,Your agent alex.gabriel@corp.example promised a callback on 0874 1608477. Nobody called. Reach me at philipschmuck@example.org.
+tk_00318,338,chat,2026-10-12 11:58:00+00,"Verification documents uploaded twice, ref 1759262470633. Please confirm. Lily Biedermann, +41551732904."
+tk_00319,664,chat,2026-10-04 17:17:00+00,Change my email to philipschmuck@example.org and the payout account to AT271238360777679361.
+tk_00320,309,phone_note,2026-10-01 18:06:00+00,Please send the refund to AT578392918073297974. Account holder: Milan Brenner.
+tk_00321,309,chat,2026-10-11 03:22:00+00,"Verification documents uploaded twice, sophie-marie.pinter@corp.example. Please confirm. Milan Brenner, +431276842684."
+tk_00322,127,email,2026-10-14 09:52:00+00,Please send the refund to AT857247888439862771. Account holder: Dipl.-Ing. Luisa Schwendinger.
+tk_00323,422,phone_note,2026-10-07 20:00:00+00,Please send the refund to AT820458140097698300. Account holder: Dr. Ronja Wilhelm.
+tk_00324,1194,phone_note,2026-10-08 04:58:00+00,"Deposit failed again. Card 2243079244026859, tried 4 024.56 EUR. My number is +4333875004743, Randolf Hövel B.A.."
+tk_00325,134,email,2026-10-11 13:01:00+00,Spread on DAX was too wide yesterday. Call the office 0318 5875185 if you need details.
+tk_00326,369,email,2026-10-08 14:09:00+00,Wanda Jopich here. Why was my position closed? Ticket from 0317 5532995 was ignored.
+tk_00327,859,chat,2026-10-06 09:01:00+00,"Hi, this is Dipl.-Ing. Jannik Marte. My withdrawal is still pending, see order 0165039666304046. Please call me on +431834170471."
+tk_00328,309,phone_note,2026-10-12 13:49:00+00,"Deposit failed again. Card 2705622918557898, tried ref 1759700177212. My number is +431276842684, Milan Brenner."
+tk_00329,102,phone_note,2026-10-10 13:46:00+00,"App crashes when I open the chart, agim.furrer@corp.example. Not urgent."
+tk_00330,1089,phone_note,2026-10-12 12:19:00+00,Spread on DAX was too wide yesterday. Call the office 0321 9655014 if you need details.
+tk_00331,859,email,2026-10-05 15:23:00+00,Spread on DAX was too wide yesterday. Call the office 0983 4584150 if you need details.
+tk_00332,1143,chat,2026-10-09 18:21:00+00,Please send the refund to AT911302262419508072. Account holder: Ing. Constantin Erber.
+tk_00333,371,phone_note,2026-10-01 08:34:00+00,"App crashes when I open the chart, order 5073259973903507. Not urgent."
+tk_00334,664,chat,2026-10-13 03:01:00+00,Please send the refund to AT271238360777679361. Account holder: Jannis Kohler.
+tk_00335,1396,chat,2026-10-11 19:02:00+00,"App crashes when I open the chart, 450.14 EUR. Not urgent."
+tk_00336,664,chat,2026-10-04 13:37:00+00,"Hi, this is Jannis Kohler. My withdrawal is still pending, see ref 1760957661330. Please call me on +41 075 2917 034."
+tk_00337,809,email,2026-10-04 14:09:00+00,Change my email to therese48@example.net and the payout account to AT621883530453406464.
+tk_00338,127,email,2026-10-13 08:53:00+00,I was charged twice on card 2266005845609209 for ref 1759997461341. Contact me at elisabethhinteregger@example.net.
+tk_00339,870,phone_note,2026-10-11 19:42:00+00,I was charged twice on card 4110111510783511 for 0447 6755104. Contact me at tbachmann@example.org.
+tk_00340,876,chat,2026-10-11 14:48:00+00,"Hi, this is Aziz Thommen. My withdrawal is still pending, see 2026-09-16. Please call me on +49 355 7591 8362."
+tk_00341,309,email,2026-10-05 05:21:00+00,"Hi, this is Milan Brenner. My withdrawal is still pending, see order 6023828818571533. Please call me on +431276842684."
+tk_00342,1285,phone_note,2026-10-01 01:33:00+00,"App crashes when I open the chart, 2 953.01 EUR. Not urgent."
+tk_00343,309,chat,2026-10-04 08:59:00+00,I was charged twice on card 2705622918557898 for order 3806854050784856. Contact me at adriana17@example.net.
+tk_00344,134,email,2026-10-07 15:55:00+00,"App crashes when I open the chart, 0532 5439605. Not urgent."
+tk_00345,1194,email,2026-10-03 06:21:00+00,Randolf Hövel B.A. here. Why was my position closed? Ticket from ref 1759831242875 was ignored.
+tk_00346,102,phone_note,2026-10-03 09:17:00+00,Etienne Wehrli here. Why was my position closed? Ticket from ref 1760928649140 was ignored.
+tk_00347,583,chat,2026-10-06 03:09:00+00,"Hi, this is Julie Bolliger. My withdrawal is still pending, see ref 1760305304834. Please call me on +43859003144."
+tk_00348,193,phone_note,2026-10-01 09:55:00+00,"App crashes when I open the chart, 6 226.30 EUR. Not urgent."
+tk_00349,371,email,2026-10-14 19:24:00+00,I was charged twice on card 4883873716786847 for order 9006857857907785. Contact me at tatianadoerschner@example.org.
+tk_00350,440,email,2026-10-02 14:23:00+00,Omer Zollinger here. Why was my position closed? Ticket from ref 1760771654287 was ignored.
+tk_00351,889,email,2026-10-12 01:52:00+00,Dominique Gasser here. Why was my position closed? Ticket from tino.leu@corp.example was ignored.
+tk_00352,458,phone_note,2026-10-10 19:38:00+00,Jari Giger here. Why was my position closed? Ticket from 2026-09-18 was ignored.
+tk_00353,177,email,2026-10-14 00:03:00+00,"Deposit failed again. Card 4519573639069501, tried order 8394475897932185. My number is +4954862057986, Bruna Schmid."
+tk_00354,749,chat,2026-10-01 12:36:00+00,Change my email to steffenstettler@example.org and the payout account to CH7758791589062762230.
+tk_00355,664,email,2026-10-08 01:42:00+00,"Deposit failed again. Card 4304867614116967, tried ref 1760446722059. My number is +41 075 2917 034, Jannis Kohler."
+tk_00356,664,email,2026-10-10 02:26:00+00,Spread on DAX was too wide yesterday. Call the office 0281 825768 if you need details.
+tk_00357,809,phone_note,2026-10-09 16:57:00+00,"Deposit failed again. Card 2326120324106524, tried 0225 6979096. My number is +41 321 2233 079, Henri Freitag."
+tk_00358,664,email,2026-10-05 12:09:00+00,"App crashes when I open the chart, 0205 6219897. Not urgent."
+tk_00359,1334,phone_note,2026-10-03 09:24:00+00,Change my email to lukaskurz@example.net and the payout account to AT077661914101188528.
+tk_00360,749,phone_note,2026-10-05 08:37:00+00,Spread on DAX was too wide yesterday. Call the office 0778 1576399 if you need details.
+tk_00361,309,chat,2026-10-08 08:26:00+00,"App crashes when I open the chart, 0811 1975666. Not urgent."
+tk_00362,149,email,2026-10-11 04:07:00+00,Spread on DAX was too wide yesterday. Call the office 0848 3027849 if you need details.
+tk_00363,102,chat,2026-10-01 11:41:00+00,Please send the refund to CH5183960805750567638. Account holder: Etienne Wehrli.
+tk_00364,664,chat,2026-10-07 15:46:00+00,Please send the refund to AT271238360777679361. Account holder: Jannis Kohler.
+tk_00365,1334,phone_note,2026-10-03 01:00:00+00,Change my email to lukaskurz@example.net and the payout account to AT077661914101188528.
+tk_00366,493,chat,2026-10-08 21:04:00+00,"Verification documents uploaded twice, john.schaub@corp.example. Please confirm. Joanna Eichenberger, +49 848 3726 1675."
+tk_00367,749,chat,2026-10-07 17:21:00+00,Elvira Keller-Hasler here. Why was my position closed? Ticket from céline.steffen@corp.example was ignored.
+tk_00368,664,email,2026-10-11 02:57:00+00,Your agent laurenz.haslauer@corp.example promised a callback on order 9409248454347187. Nobody called. Reach me at philipschmuck@example.org.
+tk_00369,129,chat,2026-10-13 20:46:00+00,Your agent hannah.junken@corp.example promised a callback on ref 1759908698382. Nobody called. Reach me at gholsten@example.net.
+tk_00370,643,chat,2026-10-02 09:49:00+00,"App crashes when I open the chart, 2026-09-24. Not urgent."
+tk_00371,704,phone_note,2026-10-13 17:32:00+00,Spread on DAX was too wide yesterday. Call the office 0484 6260164 if you need details.
+tk_00372,664,phone_note,2026-10-03 02:19:00+00,"App crashes when I open the chart, 0541 4408248. Not urgent."
+tk_00373,1334,chat,2026-10-09 17:28:00+00,Michelle Zeiler here. Why was my position closed? Ticket from 2026-09-09 was ignored.
+tk_00374,1494,email,2026-10-06 01:56:00+00,Your agent rosemarie.kohl@corp.example promised a callback on 6 150.08 EUR. Nobody called. Reach me at kweller@example.org.
+tk_00375,186,email,2026-10-07 07:11:00+00,"Deposit failed again. Card 4020934117749125, tried order 1766867019977667. My number is +49412524273, Gabriel Hoffmann-Strauß."
+tk_00376,664,phone_note,2026-10-06 00:54:00+00,I was charged twice on card 4304867614116967 for 0507 8342145. Contact me at philipschmuck@example.org.
+tk_00377,664,chat,2026-10-14 23:17:00+00,"Hi, this is Jannis Kohler. My withdrawal is still pending, see 3 857.94 EUR. Please call me on +41 075 2917 034."
+tk_00378,309,chat,2026-10-07 00:06:00+00,Change my email to adriana17@example.net and the payout account to AT578392918073297974.
+tk_00379,664,chat,2026-10-04 07:45:00+00,"App crashes when I open the chart, 2026-09-22. Not urgent."
+tk_00380,96,phone_note,2026-10-01 18:35:00+00,Spread on DAX was too wide yesterday. Call the office 0220 1610822 if you need details.
+tk_00381,309,phone_note,2026-10-10 19:11:00+00,I was charged twice on card 2705622918557898 for 2026-09-01. Contact me at adriana17@example.net.
+tk_00382,664,email,2026-10-07 13:10:00+00,I was charged twice on card 4304867614116967 for ref 1760212069364. Contact me at philipschmuck@example.org.
+tk_00383,149,chat,2026-10-03 15:59:00+00,Your agent gunter.zorbach@corp.example promised a callback on 5 548.61 EUR. Nobody called. Reach me at dsiering@example.org.
+tk_00384,123,phone_note,2026-10-11 19:02:00+00,Change my email to detlefbecker@example.org and the payout account to DE69251678008374071881.
+tk_00385,122,chat,2026-10-04 19:02:00+00,Waltraud Kensy here. Why was my position closed? Ticket from 2026-09-09 was ignored.
+tk_00386,583,chat,2026-10-10 13:06:00+00,"Hi, this is Julie Bolliger. My withdrawal is still pending, see 2 434.41 EUR. Please call me on +43859003144."
+tk_00387,809,phone_note,2026-10-01 04:59:00+00,Change my email to therese48@example.net and the payout account to AT621883530453406464.
+tk_00388,134,chat,2026-10-04 01:52:00+00,Please send the refund to CH0592727785932147028. Account holder: Leander Stöckli.
+tk_00389,1437,chat,2026-10-12 13:22:00+00,"App crashes when I open the chart, 2026-09-17. Not urgent."
+tk_00390,664,phone_note,2026-10-11 05:23:00+00,Jannis Kohler here. Why was my position closed? Ticket from madeleine.obermüller@corp.example was ignored.
+tk_00391,186,phone_note,2026-10-08 08:12:00+00,"App crashes when I open the chart, 2026-09-26. Not urgent."
+tk_00392,749,phone_note,2026-10-07 15:34:00+00,Elvira Keller-Hasler here. Why was my position closed? Ticket from 888.39 EUR was ignored.
+tk_00393,809,phone_note,2026-10-02 20:28:00+00,Henri Freitag here. Why was my position closed? Ticket from 0977 9152947 was ignored.
+tk_00394,309,email,2026-10-04 14:12:00+00,Your agent antonella.holler@corp.example promised a callback on ref 1759111899410. Nobody called. Reach me at adriana17@example.net.
+tk_00395,309,chat,2026-10-03 01:21:00+00,"Deposit failed again. Card 2705622918557898, tried 0772 8303841. My number is +431276842684, Milan Brenner."
+tk_00396,254,chat,2026-10-11 14:41:00+00,Please send the refund to CH2779977625605125803. Account holder: Swen Furrer.
+tk_00397,1334,email,2026-10-07 22:50:00+00,"Deposit failed again. Card 4291302569145550, tried ref 1759980177176. My number is +49685995289, Michelle Zeiler."
+tk_00398,1014,email,2026-10-05 00:39:00+00,Change my email to auch-schlauchinmikhail@example.com and the payout account to DE76459045440910317764.
+tk_00399,186,email,2026-10-08 20:40:00+00,"Deposit failed again. Card 4020934117749125, tried order 8169504374339976. My number is +49412524273, Gabriel Hoffmann-Strauß."
+tk_00400,1049,phone_note,2026-10-09 01:17:00+00,Spread on DAX was too wide yesterday. Call the office 0308 3509357 if you need details.
