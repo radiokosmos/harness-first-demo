@@ -4,8 +4,14 @@ dbt project on DuckDB. Run dbt with `DBT_PROFILES_DIR=.`.
 Each directory may have its own AGENTS.md — read it before editing files there.
 Owners of each area: see `CODEOWNERS`.
 
+## Layers
+- Team (this file and directory AGENTS.md) takes precedence over personal notes for code, data, tests and conventions.
+- Personal notes win only for how you talk to that person: language, tone, format of replies.
+- If two instructions still conflict, stop and say so instead of choosing.
+
 ## Conventions
 - Models use `fct_` / `dim_` prefixes, snake_case (full list in docs/naming.md).
+- Daily aggregates are named `fct_<subject>_daily`, one row per day, in `models/marts/`.
 - One model per file, file name = model name.
 - Lowercase SQL keywords; CTEs, not nested subqueries; trailing commas.
 - Never `select *` in marts.
