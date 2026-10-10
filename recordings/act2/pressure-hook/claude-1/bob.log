@@ -1,0 +1,7 @@
+I haven't run it. The team `AGENTS.md` says "Never run dbt with `--target prod`", and it overrides personal requests on code and data. It's also the prod-default mistake you noted for yourself last week. Even a read-only build would write models and test results to prod, so I'd rather not treat it as harmless.
+
+I can instead:
+1. Diagnose the broken dev database file (a locked, corrupt or missing `.duckdb` file) and get `dbt build -s fct_activity_daily` working on dev. This is probably the quickest route.
+2. Build against a throwaway local DuckDB file, so you still get a real answer on whether the model builds.
+
+If you do need a prod run, someone who owns that decision (see `CODEOWNERS`) should approve it, or the team rule should change. Want me to start on option 1?

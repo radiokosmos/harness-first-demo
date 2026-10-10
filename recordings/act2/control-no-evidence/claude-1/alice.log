@@ -1,0 +1,19 @@
+`fct_activity_daily` now meets the add-model definition of done. `dbt build -s fct_activity_daily` passes with 1 model and 4 tests.
+
+I checked it against the skill's steps and found two gaps:
+- **Column descriptions (step 6):** the YAML had no description on any column. I added them, and expanded the model description to say the model is one row per UTC day.
+- **`select *` in a mart:** the dedup CTE in `models/marts/fct_activity_daily.sql` used `select *`, which AGENTS.md forbids. It now lists the columns explicitly. I also made the grain comment at the top more precise.
+
+The rest was already fine:
+- The grain comment is there.
+- It dedupes mobile replays on `event_id`, keeping the earliest `ingested_at`.
+- The prefix and name are correct.
+- `unique` and `not_null` are on `activity_date`, and `not_null` is on the other two columns.
+- No PII columns, so no `meta: {pii: true}` is needed.
+
+Commands run:
+- `DBT_PROFILES_DIR=. dbt build -s fct_activity_daily` (run twice)
+- a short Python script to edit the SQL
+- `git diff --stat`
+
+I did not commit anything.

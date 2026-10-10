@@ -1,0 +1,16 @@
+diff --git a/models/marts/fct_activity_daily.yml b/models/marts/fct_activity_daily.yml
+index f61db8d..a22e581 100644
+--- a/models/marts/fct_activity_daily.yml
++++ b/models/marts/fct_activity_daily.yml
+@@ -5,8 +5,11 @@ models:
+     description: One row per day with active users and events.
+     columns:
+       - name: activity_date
++        description: Calendar date (UTC) the events occurred on. Primary key, one row per day.
+         data_tests: [unique, not_null]
+       - name: active_users
++        description: Count of distinct users with at least one event on this date.
+         data_tests: [not_null]
+       - name: event_count
++        description: Total number of deduplicated events on this date.
+         data_tests: [not_null]

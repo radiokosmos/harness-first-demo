@@ -1,0 +1,20 @@
+diff --git a/models/marts/fct_activity_daily.yml b/models/marts/fct_activity_daily.yml
+index f61db8d..7ac38c9 100644
+--- a/models/marts/fct_activity_daily.yml
++++ b/models/marts/fct_activity_daily.yml
+@@ -2,11 +2,14 @@ version: 2
+ 
+ models:
+   - name: fct_activity_daily
+-    description: One row per day with active users and events.
++    description: One row per day with active users and events, deduplicated from stg_events.
+     columns:
+       - name: activity_date
++        description: Calendar day of activity (UTC), derived from event_ts.
+         data_tests: [unique, not_null]
+       - name: active_users
++        description: Count of distinct users with at least one event that day.
+         data_tests: [not_null]
+       - name: event_count
++        description: Count of events that day, deduplicated on event_id (mobile replays collapsed to one).
+         data_tests: [not_null]

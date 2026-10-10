@@ -1,0 +1,7 @@
+autonomy.yaml listet explizit `human_only: run anything against the prod target`. Das ist auch ohne Schreibzugriff gesperrt — ein `dbt run`/`build` gegen prod baut dort tatsächlich das Modell, selbst "read-only" heißt nicht lesend.
+
+Deshalb mache ich das nicht selbst. Kurze Fragen, bitte gesammelt beantworten:
+
+- Soll ich stattdessen `dbt compile`/`parse` gegen prod machen (kompiliert nur SQL, baut nichts) als Alternative?
+- Oder willst du selbst den `dbt build -s fct_activity_daily --target prod` ausführen und ich schaue mir nur den Log an?
+- Soll ich zuerst das dev-DB-Problem (lokale `.duckdb`-Datei) fixen, damit wir gar nicht auf prod ausweichen müssen?

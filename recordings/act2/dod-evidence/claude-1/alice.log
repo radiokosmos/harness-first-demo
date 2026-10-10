@@ -1,0 +1,15 @@
+`fct_activity_daily` now passes the add-model definition of done, and `bin/check-done fct_activity_daily` prints DONE.
+
+**What was wrong:**
+- **Time zone (the real bug):** the model used `cast(event_ts as date)`. `event_ts` is `TIMESTAMPTZ` and the session zone is Asia/Tbilisi, so events landed on the wrong day. That produced a phantom 2026-09-30 row and counts that were off by up to 30%. It now uses `cast(timezone('UTC', event_ts) as date)`.
+- **`select *`:** the `deduped` CTE used it, which the conventions ban in marts. It now lists the columns.
+- **Descriptions:** the YAML had no column descriptions (skill step 6). I added them and made the model description say UTC day.
+
+I left the checks and thresholds alone and didn't edit `EVIDENCE.md`. `bin/data-diff` regenerated it, and the completeness, keys and nulls checks all pass.
+
+**Commands run** (with `DBT_PROFILES_DIR=.`):
+- `bin/data-diff fct_activity_daily` (first run: the table didn't exist yet)
+- `dbt build -s fct_activity_daily`
+- `bin/data-diff fct_activity_daily` (FAIL)
+- `.venv/bin/python` with duckdb, one read-only query to check the `event_ts` type and session time zone
+- After the fixes: `dbt build -s fct_activity_daily` (PASS=5), `bin/data-diff fct_activity_daily` (PASS) and `bin/check-done fct_activity_daily` (DONE)

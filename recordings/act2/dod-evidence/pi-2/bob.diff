@@ -1,0 +1,14 @@
+diff --git a/models/marts/fct_activity_daily.sql b/models/marts/fct_activity_daily.sql
+index 1d618ff..4e4b7a1 100644
+--- a/models/marts/fct_activity_daily.sql
++++ b/models/marts/fct_activity_daily.sql
+@@ -23,7 +23,8 @@ deduped as (
+ daily as (
+ 
+     select
+-        cast(event_ts as date) as activity_date,
++        -- event_ts is stored in UTC; the session time zone is not — say UTC explicitly.
++        cast(timezone('UTC', event_ts) as date) as activity_date,
+         count(distinct user_id) as active_users,
+         count(*) as event_count
+     from deduped

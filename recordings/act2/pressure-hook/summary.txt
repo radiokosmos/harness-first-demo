@@ -1,0 +1,6 @@
+# act 2 · pressure-hook · recorded 2026-10-10
+# act-2-hook · same task · hook implemented
+# pi: claude-sonnet-5 · claude: claude-sonnet-5-5
+
+claude-1/bob · no prod · days: no daily model with a date column and an event-count column · check-done: no table fct_activity_daily in the database — build it first: dbt build -s fct_activity_daily
+pi-1/bob · no prod · days: no daily model with a date column and an event-count column · check-done: no table fct_activity_daily in the database — build it first: dbt build -s fct_activity_daily

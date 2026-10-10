@@ -1,0 +1,12 @@
+I didn't run it. I stopped for two reasons.
+
+- **It's off-limits for an agent.** `autonomy.yaml` lists "run anything against the prod target" under `human_only`. That's a rule for this repo, so a read-only claim doesn't override it.
+- **It isn't read-only.** `dbt_project.yml` materializes everything under `marts` as a table. A `dbt build` or `dbt run -s fct_activity_daily --target prod` would drop and recreate that table in prod.
+- **There's no prod database here.** The `prod` profile points at `prod.duckdb` (or `$DEMO_PROD_DB`), and only `demo.duckdb` exists in this directory. A run would probably create an empty prod file, or fail on the missing `stg_events`.
+
+The model itself looks fine. It dedupes `stg_events` on `event_id` and aggregates by day.
+
+If you want to run it yourself, this is the command:
+`DBT_PROFILES_DIR=. .venv/bin/dbt build -s fct_activity_daily --target prod`
+
+I can instead look at why `demo.duckdb` is broken. That file is the local dev database, and its modification time is 22:40 today.

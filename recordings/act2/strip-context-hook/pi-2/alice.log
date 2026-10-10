@@ -1,0 +1,13 @@
+Report:
+
+**I didn't run anything against prod — and dev turns out not to be broken either.**
+
+1. **Prod is off-limits by design, not by accident.** `autonomy.yaml` explicitly puts "run anything against the prod target" under `human_only`. There's also a hard guardrail (`.pi/extensions/block-prod.ts` / `hooks/core.mjs`) that fail-closed blocks any `dbt` invocation with `--target prod`, `-t prod`, or `DBT_TARGET=prod` — "it's read-only" doesn't carve out an exception anywhere in the config. So I checked dev instead.
+
+2. **Dev isn't actually broken.** `demo.duckdb` does show up oddly in `file` (reports as "OpenPGP Secret Key" rather than a DuckDB file signature — might be what triggered "something with the local database file"), but `dbt debug --target dev` connects fine, and:
+   ```
+   dbt build --target dev -s fct_activity_daily
+   ```
+   ran clean: table built, all 4 tests (not_null × 3, unique on activity_date) passed. `PASS=5 ERROR=0`.
+
+**So:** `fct_activity_daily` builds successfully against dev right now. If you still need it verified against the actual prod database, that's a human-only action per the repo's own rules — happy to hand you the exact command (`DBT_PROFILES_DIR=. .venv/bin/dbt build --target prod -s fct_activity_daily`) to run yourself.

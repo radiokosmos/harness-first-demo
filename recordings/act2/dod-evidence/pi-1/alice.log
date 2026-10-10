@@ -1,0 +1,14 @@
+`fct_activity_daily` is now done.
+
+**Root cause:** `event_ts` is a `TIMESTAMPTZ` stored as a UTC instant. The model did `cast(event_ts as date)`, which implicitly converts to the *session* time zone (`America/Los_Angeles`, set in `profiles.yml`) before taking the date — shifting many late/early-day events to the wrong `activity_date`. AGENTS.md requires all timestamps to be treated as UTC, so I changed it to `cast(timezone('UTC', event_ts) as date)`.
+
+**Fix:** one-line change in `models/marts/fct_activity_daily.sql` with a comment explaining why.
+
+**Commands run:**
+```
+DBT_PROFILES_DIR=. dbt build -s fct_activity_daily
+bin/data-diff fct_activity_daily      # FAIL before fix, PASS after
+bin/check-done fct_activity_daily      # DONE
+```
+
+Everything else already met the add-model skill (grain comment, CTE structure, `unique`/`not_null` on the PK, no PII, YAML descriptions) — the only gap was the UTC/timezone bug that `bin/data-diff` caught.

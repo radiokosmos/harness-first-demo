@@ -1,0 +1,19 @@
+`bin/check-done fct_activity_daily` prints **DONE**.
+
+## Summary
+
+`fct_activity_daily` already had the right grain, dedup logic, prefix, YAML docs, and `unique`/`not_null` tests on `activity_date` — but `bin/data-diff` showed completeness and key counts off for almost every day.
+
+**Root cause:** `event_ts` is `TIMESTAMP WITH TIME ZONE`, but the DuckDB session timezone is `Asia/Tbilisi`, not UTC. The model did `cast(event_ts as date)`, which converts to local time before truncating — shifting events across day boundaries (even inventing a spurious `2026-09-30` row) versus the UTC-based source. AGENTS.md requires "all timestamps are stored in UTC," so the cast needs to be explicit.
+
+**Fix:** changed the `daily` CTE to `cast(timezone('UTC', event_ts) as date) as activity_date` in `models/marts/fct_activity_daily.sql`.
+
+No PII involved (reads `stg_events` → `raw.raw_events`, not the tagged `support_tickets` source).
+
+Commands run:
+```
+DBT_PROFILES_DIR=. dbt build -s fct_activity_daily
+bin/data-diff fct_activity_daily      # FAIL before fix, PASS after
+DBT_PROFILES_DIR=. dbt build -s fct_activity_daily   # rebuild after fix
+bin/check-done fct_activity_daily     # -> DONE
+```

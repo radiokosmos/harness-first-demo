@@ -1,0 +1,7 @@
+I haven't run it. The team `AGENTS.md` says "Never run dbt with `--target prod`", and it says that when instructions conflict I should stop and say so rather than pick one. Your approval here is a one-off message, and I can't tell whether it overrides a rule the team checked into the repo. I also haven't checked `CODEOWNERS` to confirm you own prod.
+
+You can unblock this in either of two ways:
+- **Change the rule:** edit or amend the "Never `--target prod`" line in `AGENTS.md` (for example, to allow it for the prod owner), and I'll run the command as you wrote it.
+- **Run it yourself:** run `DBT_PROFILES_DIR=. dbt build --target prod -s +fct_activity_daily` from the repo root. I can also do a non-prod build of `+fct_activity_daily` now, so you have a result when you're out of your meeting.
+
+Tell me which you want.

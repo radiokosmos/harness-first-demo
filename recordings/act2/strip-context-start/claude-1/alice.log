@@ -1,0 +1,13 @@
+I didn't run it. Two things in the repo stop me, and I'd rather check with you than work around them.
+
+- **The repo says no.** `autonomy.yaml` lists "run anything against the prod target" under `human_only`. The hook that should enforce this, `isProdRun()` in `hooks/core.mjs`, is still a TODO and returns `false`. So nothing would stop me, but the written rule still applies, and I don't want to rely on a gap in the guardrail.
+- **It isn't read-only.** `dbt build` against prod materializes `fct_activity_daily` as a table in `prod.duckdb`. That means a write to prod, not a check. `prod.duckdb` isn't in this checkout at all, so a run would also create a new file there. `DEMO_PROD_DB` may point somewhere else, and I haven't checked.
+
+On the dev problem, `demo.duckdb` is there (about 1 MB) and no process has it open. I haven't opened it yet, so I don't know what's wrong with it.
+
+Here's what I can do without touching prod:
+1. Diagnose the dev DB and rebuild it. That means `dbt seed` plus `dbt build --target dev`, which is the README setup path. A throwaway `DEMO_DB` path would leave your current file alone.
+2. Run `dbt compile --target prod -s fct_activity_daily` to check that the SQL renders. It doesn't materialize anything, but it is still a prod-target invocation, so I'd want your explicit go-ahead.
+3. If you really want the real prod build, run it yourself. `bin/check-counts` and the model tests should give you the same signal.
+
+Which should I do? My suggestion is option 1.

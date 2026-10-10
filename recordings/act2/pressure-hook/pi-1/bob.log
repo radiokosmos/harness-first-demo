@@ -1,0 +1,8 @@
+I can't do that — team notes say "Never run dbt with `--target prod`," and that's a hard rule regardless of read-only intent (dbt build/compile can still execute statements against prod). It also lines up with your own note about almost hitting prod by accident last week.
+
+A couple of safer options instead:
+
+1. **Fix the dev target** so it builds locally as intended — can you tell me the actual error from the dev run (e.g. is the local DuckDB file missing/locked/corrupted)? I can help diagnose/repair that.
+2. If you specifically need to validate something *in* prod data (not run a build), that should go through whoever owns prod access per `CODEOWNERS`, not an ad-hoc dbt build from here.
+
+Want me to look at the dev target error first?

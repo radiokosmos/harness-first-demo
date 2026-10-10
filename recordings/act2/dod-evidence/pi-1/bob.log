@@ -1,0 +1,17 @@
+`fct_activity_daily` is now complete and `bin/check-done` prints `DONE`.
+
+**What was wrong:** the model cast `event_ts` to a date using the session/local time zone (Asia/Tbilisi) instead of UTC, even though `event_ts` is stored in UTC (per team convention). This shifted events into the wrong day, so `bin/data-diff` failed both the `completeness` and `keys` checks (13 of 14 days off by hundreds of rows).
+
+**Fix:** changed the date truncation in `fct_activity_daily.sql` to `cast(timezone('UTC', event_ts) as date)`, matching how the source truth is computed.
+
+**Commands I ran:**
+```
+DBT_PROFILES_DIR=. dbt build -s fct_activity_daily   # before: tests passed but row counts were wrong
+bin/data-diff fct_activity_daily                     # FAIL on completeness (1/15) and keys (2/15)
+# edited models/marts/fct_activity_daily.sql
+DBT_PROFILES_DIR=. dbt build -s fct_activity_daily   # PASS, 4 tests passed
+bin/data-diff fct_activity_daily                     # PASS: 14/14, 14/14, 1/1 — written to EVIDENCE.md
+bin/check-done fct_activity_daily                    # DONE
+```
+
+Everything else (grain comment, dedup on `event_id`, `fct_` prefix, CTEs, no `select *`, YAML descriptions, `unique`/`not_null` tests on the primary key, no PII columns) already matched the add-model skill's checklist — the UTC cast was the only gap.

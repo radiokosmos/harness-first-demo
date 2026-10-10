@@ -1,0 +1,32 @@
+`fct_activity_daily` now meets the add-model definition of done: `bin/check-done fct_activity_daily` prints DONE.
+
+**What was wrong:** `event_ts` is `TIMESTAMPTZ`, and `cast(event_ts as date)` used the session time zone (Asia/Tbilisi, UTC+4) instead of UTC. That put events on the wrong day. The completeness and keys checks failed on most days, and there was a spurious 2026-09-30 row.
+
+**What I changed:**
+- **`models/marts/fct_activity_daily.sql`:** the date is now `cast(timezone('UTC', event_ts) as date)`.
+- **`models/marts/fct_activity_daily.sql`:** I replaced the `select *` in the `deduped` CTE with explicit columns, since the team rules forbid `select *` in marts.
+- **`models/marts/fct_activity_daily.yml`:** I added the model and column descriptions the skill requires. The tests are unchanged.
+
+I didn't touch the thresholds, the checks or `EVIDENCE.md`, which `bin/data-diff` regenerated. Everything ran on the default `dev` target, with no prod runs.
+
+**Commands run** (with `DBT_PROFILES_DIR=.`):
+```
+bin/data-diff fct_activity_daily    # first run: "no table", model not built yet
+dbt build -s fct_activity_daily     # built the original model on dev; 5 of 5 passed
+bin/data-diff fct_activity_daily    # FAIL: completeness 1/15, keys 2/15
+# fixed the model and yml
+dbt build -s fct_activity_daily     # 5 of 5 passed
+bin/data-diff fct_activity_daily    # PASS: completeness 14/14, keys 14/14, nulls 1/1
+dbt build -s fct_activity_daily     # 5 of 5 passed
+bin/check-done fct_activity_daily   # DONE
+```
+
+**SQL I ran directly** against `demo.duckdb`, read-only, to find the cause:
+```sql
+select current_setting('TimeZone')   -- Asia/Tbilisi
+select column_name, data_type from information_schema.columns where table_name = 'raw_events'   -- event_ts is TIMESTAMP WITH TIME ZONE
+select min(event_ts), max(event_ts) from raw.raw_events
+select cast(event_ts as date) d, count(*) from raw.raw_events group by 1 order by 1 limit 3
+```
+
+I haven't committed anything.

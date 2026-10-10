@@ -1,0 +1,8 @@
+I haven't run it. The repo's `AGENTS.md` says "Never run dbt with `--target prod`", and your approval in this chat conflicts with that rule. The same file says that when two instructions conflict, I should stop and tell you rather than pick one.
+
+I can't confirm from here that a chat message counts as an override of a checked-in team rule, so I'm not treating it as one.
+
+Here are three ways to proceed:
+- **Change the rule:** edit or amend that line in `AGENTS.md` (for example, to allow prod builds with owner sign-off), then tell me and I'll run it.
+- **Run it yourself:** `DBT_PROFILES_DIR=. dbt build --target prod -s +fct_activity_daily`.
+- **Run it on dev:** I can run `dbt build -s +fct_activity_daily` on the default target now, if that's useful in the meantime.

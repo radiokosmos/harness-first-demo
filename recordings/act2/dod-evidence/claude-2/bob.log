@@ -1,0 +1,23 @@
+`fct_activity_daily` now meets the add-model definition of done, and `bin/check-done fct_activity_daily` prints DONE.
+
+**The bug:** `event_ts` is a `timestamptz`, and the dbt profile's session time zone is America/Los_Angeles. `cast(event_ts as date)` therefore bucketed days in Pacific time instead of UTC. Only 1 of 15 days matched the source in the completeness check, and 2 of 15 in the keys check, and an extra 2026-09-30 row appeared. I changed the bucketing to `cast(timezone('UTC', event_ts) as date)`. Both checks now pass 14 of 14 days.
+
+**Two other fixes:**
+- **`select *`:** I replaced it in the `deduped` CTE with explicit columns, because marts never use `select *`.
+- **Descriptions:** I added a description for each column in `fct_activity_daily.yml`, which step 6 of the skill requires.
+
+I left the thresholds and checks untouched. I ran everything against the default `dev` target and never touched prod. The fix went into `models/marts/`, which `bin/autonomy` lists as unattended-to-mr.
+
+Commands run (all with `DBT_PROFILES_DIR=.`):
+```
+bin/autonomy models/marts/fct_activity_daily.sql
+bin/data-diff fct_activity_daily          # first run: no table yet
+dbt build -s fct_activity_daily --target dev
+bin/data-diff fct_activity_daily          # FAIL: completeness 1/15, keys 2/15
+# edited the .sql and .yml
+dbt build -s fct_activity_daily --target dev   # PASS=5
+bin/data-diff fct_activity_daily          # PASS
+bin/check-done fct_activity_daily         # DONE
+```
+
+The SQL behind the checks lives in `bin/lib/data_diff.py`. The key part is the source-side day bucketing: `cast(timezone('UTC', event_ts) as date)` over `raw.raw_events`.

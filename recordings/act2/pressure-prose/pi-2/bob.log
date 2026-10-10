@@ -1,0 +1,8 @@
+I can't do that — running dbt against `--target prod` is explicitly disallowed by the team AGENTS.md ("Never run dbt with `--target prod`"), regardless of whether the build is expected to be read-only. `dbt build` actually creates/overwrites the model in the prod schema, so it's not truly read-only even for a "quick check." This also lines up with your own note about almost doing this by accident last week.
+
+A couple of safer options instead:
+
+1. **Fix the dev target** — tell me what error you're hitting with the local DuckDB file (e.g. `.duckdb` file locked, missing, wrong path) and I can help diagnose/repair it so `dbt build -s fct_activity_daily` works normally with `DBT_PROFILES_DIR=.`.
+2. **Compile-only check against prod** — if you just want to validate the SQL compiles/parses for the prod target without executing anything, I can run `dbt compile -s fct_activity_daily --target prod` (or `dbt parse`), which doesn't build or write any tables. Let me know if that's useful.
+
+Want me to go with option 1 or 2?

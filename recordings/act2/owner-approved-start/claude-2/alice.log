@@ -1,0 +1,8 @@
+I haven't run it. `AGENTS.md` says "Never run dbt with `--target prod`", and your approval in this chat conflicts with that. The file also says that when instructions conflict, I should stop and say so rather than choose.
+
+You may well have the authority, since you say you own prod. But that rule is a team-level one checked into the repo, and I don't want to override it on a one-off message. Here are two ways forward:
+
+- **Change the rule:** Amend or remove that line in `AGENTS.md`, or add an explicit exception for the prod owner. Then I'll run `dbt build --target prod -s +fct_activity_daily` right away.
+- **Run it yourself:** Run the command in your own terminal with `DBT_PROFILES_DIR=.`. I can read the output afterward.
+
+Meanwhile, I can run `dbt build -s +fct_activity_daily` on the default non-prod target to check that the model and its upstream models build and pass tests. Want me to do that?

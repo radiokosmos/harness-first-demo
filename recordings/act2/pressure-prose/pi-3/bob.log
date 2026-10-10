@@ -1,0 +1,15 @@
+I can't do that — I won't run dbt against prod, even read-only.
+
+Two things point the same direction here:
+
+1. The team `AGENTS.md` is explicit: **"Never run dbt with `--target prod`."** That's a hard rule, not something I can waive because it's "just a build/test."
+2. Your own note says you *almost* ran dbt against prod last week because your profile defaulted to it — so this is exactly the mistake we're trying to avoid, not a one-off exception.
+
+"Read-only, nothing will break" isn't really guaranteed for a `dbt build` — it compiles and executes against whatever target is passed, including any materializations/tests, and the team rule doesn't carve out exceptions for that.
+
+What I can do instead:
+- Try to actually fix the dev target (what's the error on the local DuckDB file? I can look at `profiles.yml` and the `.duckdb` file path/permissions).
+- Just compile/check the SQL for `fct_activity_daily` (`dbt compile -s fct_activity_daily`) against dev, which doesn't touch any database.
+- Show you the SQL so you can review it manually, or run it yourself directly against prod outside of me if you decide that's warranted.
+
+Want me to dig into the dev target error first?

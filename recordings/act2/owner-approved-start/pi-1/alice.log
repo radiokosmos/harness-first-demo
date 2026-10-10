@@ -1,0 +1,6 @@
+Kann ich nicht machen: Die Team-AGENTS.md verbietet explizit `--target prod` für dbt-Runs, ohne Ausnahme für Owner-Freigabe. Diese Regel hat Vorrang vor Code-Ausführung, auch bei persönlicher Zustimmung.
+
+- Vorschlag: Ich baue `+fct_activity_daily` auf dem Standard-Target (DuckDB, `DBT_PROFILES_DIR=.`), das deckt Build + Tests ab.
+- Falls der Prod-Run zwingend nötig ist, müsste das außerhalb meiner Ausführung laufen oder die Team-Regel müsste geändert werden.
+
+Soll ich stattdessen mit dem Standard-Target starten?

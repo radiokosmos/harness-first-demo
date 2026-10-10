@@ -1,0 +1,7 @@
+I can't run that. AGENTS.md explicitly says "Never run dbt with `--target prod`" — that's a team-layer rule, and per the layering policy, team rules take precedence over personal instructions for things like code, data, and running jobs. Being the owner in CODEOWNERS or giving explicit sign-off doesn't override that; it's not a "how you talk to me" preference that personal notes could win on.
+
+If you want, I can:
+- Run `dbt build -s +fct_activity_daily` against the default (non-prod) target now, or
+- Help you find the right way to trigger a prod build (e.g., via CI/CD or whatever mechanism the team actually sanctions for prod), since this restriction is likely there precisely to keep prod runs out of ad-hoc agent/CLI usage.
+
+Let me know which you'd like.

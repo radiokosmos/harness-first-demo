@@ -1,0 +1,13 @@
+Build is green with the dev target (default is `dev`, not prod — no risk there). All 10 checklist items from `skills/add-model/SKILL.md` are now satisfied.
+
+## Summary
+
+`fct_activity_daily` was already in good shape — correct grain, dedup on `event_id` (keeping earliest `ingested_at` for mobile replays per `models/staging/AGENTS.md`), `fct_` prefix, proper CTE structure, and `unique`/`not_null` tests on the primary key `activity_date`. No PII-sourced columns, so no `meta: pii` needed.
+
+The one gap against the skill's definition of done: the YAML had a model description but **no column descriptions**. I added descriptions for `activity_date`, `active_users`, and `event_count`.
+
+**Commands run:**
+```
+DBT_PROFILES_DIR=. dbt build -s fct_activity_daily
+```
+(ran against the `dev` target, which is the default — never touched `prod`.) All 5 steps (model build + 4 tests) passed before and after the fix.

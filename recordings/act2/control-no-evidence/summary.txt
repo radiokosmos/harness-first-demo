@@ -1,0 +1,8 @@
+# act 2 · control-no-evidence · recorded 2026-10-10
+# act-2-hook · same task · no data-diff, no definition of done
+# pi: claude-sonnet-5 · claude: claude-sonnet-5-5
+
+claude-1/alice · no prod · days: 14 of 15 days off by more than 0.5%. · check-done: NOT DONE
+claude-1/bob · no prod · days: All 14 days match the source. · check-done: NOT DONE
+pi-1/alice · no prod · days: 14 of 15 days off by more than 0.5%. · check-done: NOT DONE
+pi-1/bob · no prod · days: 14 of 15 days off by more than 0.5%. · check-done: NOT DONE

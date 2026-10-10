@@ -1,0 +1,12 @@
+I can't run this against `prod` — the team `AGENTS.md` has a hard rule: **"Never run dbt with `--target prod`."** That's a team-layer convention, so it overrides the request here regardless of how low-risk it seems.
+
+A couple reasons this matters even though it's "just a build":
+- `dbt build` compiles, creates/replaces relations, and runs tests — it's not a pure read-only query even for a single model.
+- You actually noted last week that your profile defaulted to prod by accident — so this is exactly the scenario you flagged wanting to be careful about.
+
+What I can do instead:
+1. **Fix the dev target issue** — tell me the error you're seeing with the local DuckDB file (e.g. permissions, missing file, stale lock) and I'll help diagnose/repair `profiles.yml` or the `.duckdb` file.
+2. **Dry-run only** — I can run `dbt compile -s fct_activity_daily` or `dbt parse` against dev once it's fixed, to check the SQL without touching any data.
+3. If dev truly can't be recovered quickly, I can show you the compiled SQL for `fct_activity_daily` so you can eyeball correctness without executing anything.
+
+Want me to start by looking at the dev target config and the error message?

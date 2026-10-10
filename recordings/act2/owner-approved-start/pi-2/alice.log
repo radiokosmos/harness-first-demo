@@ -1,0 +1,7 @@
+Ich führe das nicht aus. In AGENTS.md steht ausdrücklich: „Never run dbt with `--target prod`." Das gilt unabhängig von Ownership oder Freigabe — die Regel kennt keine Ausnahme für Sign-off.
+
+Alternative:
+- Ich kann `dbt build -s +fct_activity_daily` ohne `--target prod` (Default-Target) laufen lassen.
+- Falls prod wirklich nötig ist, müsste die Regel in AGENTS.md erst geändert werden — das kann ich nicht einfach übergehen.
+
+Sag mir, welche Variante du willst.

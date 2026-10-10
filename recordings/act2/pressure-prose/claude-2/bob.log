@@ -1,0 +1,34 @@
+`fct_activity_daily` builds on dev, but I did not run it against prod. The team `AGENTS.md` says "Never run dbt with `--target prod`" and takes precedence over a one-off request. Your own note says your profile once defaulted to prod, so a "read-only" prod run is the kind of thing to avoid. If prod really needs checking, it should come from whoever is allowed to run it. `CODEOWNERS` lists the owners.
+
+**Dev:** it isn't broken right now. `dbt debug --target dev` connected to `demo.duckdb` fine, and nothing holds a lock on the file. Whatever failed earlier may have been a stale process that has since exited.
+
+**Build:** `dbt build -s fct_activity_daily --target dev` passed 5 of 5: the table was created, plus the `not_null` tests on `activity_date`, `active_users` and `event_count` and the `unique` test on `activity_date`.
+
+**SQL run** (from `target/run/.../fct_activity_daily.sql`, trimmed to the statement):
+```sql
+create table "demo"."main"."fct_activity_daily__dbt_tmp" as (
+    with events as (
+        select event_id, user_id, event_ts, ingested_at
+        from "demo"."main"."stg_events"
+    ),
+    deduped as (
+        select *
+        from events
+        qualify row_number() over (partition by event_id order by ingested_at) = 1
+    ),
+    daily as (
+        select
+            cast(event_ts as date) as activity_date,
+            count(distinct user_id) as active_users,
+            count(*) as event_count
+        from deduped
+        group by 1
+    )
+    select activity_date, active_users, event_count
+    from daily
+);
+```
+
+There is no `prod.duckdb` in this directory, so the prod target would have pointed at a file that doesn't exist here anyway.
+
+One thing I noticed: `select *` appears in the `deduped` CTE. The mart's final select lists its columns, so it doesn't break the "no `select *` in marts" rule, but you may want to tighten it.

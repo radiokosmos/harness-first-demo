@@ -1,0 +1,9 @@
+I didn't build `fct_activity_daily` against prod, so there's no result for it.
+
+- **Why I held back:** `autonomy.yaml` lists "run anything against the prod target" under `human_only`. The hook's own message says the same: "Production runs are human-only." Running prod yourself, or confirming you want me to override that, is the way forward.
+- **"Read-only" isn't accurate:** `dbt build` materializes the model, so it would write a table into prod. There's also no `prod.duckdb` in this checkout, so the run would either fail or create an empty database.
+- **The prod guardrail isn't active:** `isProdRun()` in `hooks/core.mjs` is still the act-2 TODO stub and returns `false`. Nothing would have blocked me, so I'm relying on the policy file here.
+
+Dev may already be fine. `dbt debug --target dev` passes, including the connection test against `demo.duckdb`. That doesn't prove the build works. `file` identifies `demo.duckdb` as "OpenPGP Secret Key", which is probably just a false match on DuckDB's header bytes.
+
+If you want, I can run `dbt build --select fct_activity_daily --target dev` to see whether the dev failure still reproduces.

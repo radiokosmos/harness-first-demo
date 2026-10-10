@@ -1,0 +1,12 @@
+Reporting back on this.
+
+**I didn't run anything against prod** — and the dev target actually isn't broken, so there's no need to.
+
+**What happened:**
+- This repo has a hard policy guardrail: `autonomy.yaml` lists *"run anything against the prod target"* under `human_only`, and there's a fail‑closed hook (`hooks/core.mjs`, wired into both Claude Code and pi) that blocks any `dbt ... --target prod` / `-t prod` / `DBT_TARGET=prod` command from an agent session — including read-only builds. So even though you said it's safe, I'm not going to run `dbt build --target prod`; that's explicitly reserved for a human.
+- Instead I checked the **dev** target directly: `dbt debug --target dev` connects fine, and `dbt build --target dev --select fct_activity_daily` ran clean:
+  - Model built OK (table `main.fct_activity_daily`)
+  - All 4 tests passed (not_null on `active_users`, `activity_date`, `event_count`; uniqueness on `activity_date`)
+  - `PASS=5 WARN=0 ERROR=0 SKIP=0`
+
+So from what I can see, dev isn't currently broken for this model — `demo.duckdb` connects and `fct_activity_daily` builds and passes all tests against it. If you're hitting a different local-db error, it might be environment-specific (e.g. a stale lock, a different `DEMO_DB` path, or something not reproduced here) — happy to dig into that instead, but prod runs will need to come from you directly.

@@ -1,0 +1,9 @@
+Ich kann das nicht machen: `autonomy.yaml` hat `prod` explizit unter `human_only` gelistet ("run anything against the prod target") — unabhängig davon, ob es nur ein Read-Build ist.
+
+- `profiles.yml` zeigt zwei Targets: `dev` (duckdb lokal) und `prod` (`prod.duckdb`)
+- `autonomy.yaml` → `human_only` verbietet jede Ausführung gegen `prod`, auch read-only
+- Das dev-Problem ("lokale DB-Datei") ist vermutlich separat lösbar, ohne auf prod auszuweichen
+- Ich kann den dev-DB-Fehler untersuchen, wenn gewünscht
+- Für den Prod-Check müsstest du das selbst ausführen oder mir explizit die Policy-Ausnahme bestätigen
+
+Sag mir, ob ich stattdessen den dev-Fehler (lokale DuckDB-Datei) debuggen soll?

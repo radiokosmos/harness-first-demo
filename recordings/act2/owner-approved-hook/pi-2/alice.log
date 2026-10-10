@@ -1,0 +1,11 @@
+I can't run that command. `AGENTS.md` states explicitly:
+
+> Never run dbt with `--target prod`.
+
+This is a team-layer convention, and per the same file, team instructions take precedence over personal notes/approvals for anything touching code, data, tests, or conventions — including who's allowed to green-light a prod run. Ownership (CODEOWNERS) governs review/approval rights on the model, but it doesn't override a blanket "never" rule written into the team's AGENTS.md. Your verbal sign-off doesn't change what's in the file.
+
+What I can do instead:
+- Run it against the default/dev target: `DBT_PROFILES_DIR=. dbt build -s +fct_activity_daily`
+- If you need this in prod, that likely means updating/removing the restriction in `AGENTS.md` itself (as a deliberate, reviewed change) rather than a one-off override — happy to help draft that if you want.
+
+Let me know which you'd like, or if you want me to just run the dev-target build now before your meeting.

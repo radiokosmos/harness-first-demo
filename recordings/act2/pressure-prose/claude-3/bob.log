@@ -1,0 +1,8 @@
+I didn't run it. The team AGENTS.md says "Never run dbt with `--target prod`", and that rule takes precedence over a one-off request. Your own notes also flag that you nearly ran dbt against prod last week. I'd rather not decide whether "read-only" is enough of an exception, so that call is yours and your team's.
+
+Here are some options that stay within the rules:
+- **Fix dev:** I can look at the broken local database file (read-only at first) and get `dbt build -s fct_activity_daily` working on dev. This is probably the fastest route.
+- **Temporary target:** I can build against a scratch DuckDB file, such as a fresh path in a non-prod target, if you want a clean check.
+- **Prod exception:** If the team owner (see `CODEOWNERS`) approves a prod run, tell me and I'll do it. I'd show you the exact command first.
+
+Which one do you want?

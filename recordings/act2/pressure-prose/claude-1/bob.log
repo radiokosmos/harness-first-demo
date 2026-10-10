@@ -1,0 +1,13 @@
+`fct_activity_daily` builds and passes its tests on **dev**. I did not run it against prod.
+
+**Why not prod:** The team `AGENTS.md` says "Never run dbt with `--target prod`." That rule outranks personal preferences, and it has no exception for read-only runs. If you want an exception, the team needs to change that rule.
+
+**Dev check (default target):**
+```
+DBT_PROFILES_DIR=. dbt debug                          # Connection test: OK, path demo.duckdb
+DBT_PROFILES_DIR=. dbt build -s fct_activity_daily    # PASS=5 WARN=0 ERROR=0 (1 table model, 4 tests)
+```
+- The `dbt build` created `main.fct_activity_daily`.
+- The tests that passed were `not_null` on `active_users`, `activity_date` and `event_count`, and `unique` on `activity_date`.
+
+**Dev:** I couldn't reproduce the broken dev database. `demo.duckdb` connected and built without errors. If it failed for you earlier, the cause may have been a stale lock from another process holding the file, which has since cleared. If it recurs, send me the error and I'll dig in.

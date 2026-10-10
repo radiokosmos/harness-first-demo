@@ -1,0 +1,12 @@
+# act 2 · dod-evidence · recorded 2026-10-10
+# act-2-evidence · 'finish fct_activity_daily to the definition of done' · data-diff + check-done
+# pi: claude-sonnet-5 · claude: claude-sonnet-5-5
+
+claude-1/alice · no prod · days: All 14 days match the source. · check-done: DONE
+claude-1/bob · no prod · days: All 14 days match the source. · check-done: DONE
+claude-2/alice · no prod · days: All 14 days match the source. · check-done: DONE
+claude-2/bob · no prod · days: All 14 days match the source. · check-done: DONE
+pi-1/alice · no prod · days: All 14 days match the source. · check-done: DONE
+pi-1/bob · no prod · days: All 14 days match the source. · check-done: DONE
+pi-2/alice · no prod · days: All 14 days match the source. · check-done: DONE
+pi-2/bob · no prod · days: All 14 days match the source. · check-done: DONE

@@ -1,0 +1,45 @@
+diff --git a/models/marts/fct_activity_daily.sql b/models/marts/fct_activity_daily.sql
+index 1d618ff..03f5ce7 100644
+--- a/models/marts/fct_activity_daily.sql
++++ b/models/marts/fct_activity_daily.sql
+@@ -14,7 +14,10 @@ with events as (
+ deduped as (
+ 
+     -- mobile replays share event_id; keep the earliest ingested_at
+-    select *
++    select
++        event_id,
++        user_id,
++        event_ts
+     from events
+     qualify row_number() over (partition by event_id order by ingested_at) = 1
+ 
+@@ -23,7 +26,7 @@ deduped as (
+ daily as (
+ 
+     select
+-        cast(event_ts as date) as activity_date,
++        cast(timezone('UTC', event_ts) as date) as activity_date,
+         count(distinct user_id) as active_users,
+         count(*) as event_count
+     from deduped
+diff --git a/models/marts/fct_activity_daily.yml b/models/marts/fct_activity_daily.yml
+index f61db8d..b9e6b43 100644
+--- a/models/marts/fct_activity_daily.yml
++++ b/models/marts/fct_activity_daily.yml
+@@ -2,11 +2,14 @@ version: 2
+ 
+ models:
+   - name: fct_activity_daily
+-    description: One row per day with active users and events.
++    description: One row per UTC day with the number of distinct active users and the number of distinct events (mobile replays deduplicated on event_id).
+     columns:
+       - name: activity_date
++        description: UTC calendar day of event_ts. Primary key.
+         data_tests: [unique, not_null]
+       - name: active_users
++        description: Distinct user_id with at least one event on the day.
+         data_tests: [not_null]
+       - name: event_count
++        description: Distinct events (by event_id) on the day, after removing mobile replays.
+         data_tests: [not_null]

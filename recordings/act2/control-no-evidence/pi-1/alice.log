@@ -1,0 +1,19 @@
+## Summary
+
+Checked `fct_activity_daily` against `skills/add-model/SKILL.md`'s definition of done:
+
+- ✅ Grain documented (`-- grain: one row per day`)
+- ✅ Dedup on source duplicates (`stg_events` mobile replays, per `models/staging/AGENTS.md`)
+- ✅ Correct `fct_` prefix, CTE structure (import → logic → final select), no `select *`
+- ✅ `unique` + `not_null` tests on the primary key (`activity_date`)
+- ✅ No PII: source is `raw_events` (not PII-tagged, unlike `support_tickets`), so no `meta: {pii: true}` needed
+- ❌ **Gap found**: the YAML had a model description but **no column descriptions** — fixed by adding descriptions for `activity_date`, `active_users`, and `event_count` in `models/marts/fct_activity_daily.yml`
+- ✅ Ran `dbt build -s fct_activity_daily` — all tests pass
+
+Commands run:
+```
+DBT_PROFILES_DIR=. dbt build -s fct_activity_daily   # before fix: passed, confirmed baseline
+DBT_PROFILES_DIR=. dbt build -s fct_activity_daily   # after fix: re-confirmed all green
+```
+
+Only edit made: added column-level `description` fields to `models/marts/fct_activity_daily.yml` to satisfy step 6 of the add-model skill ("description for the model and each column"). Everything else was already compliant.

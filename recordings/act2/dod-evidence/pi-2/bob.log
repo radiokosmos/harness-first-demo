@@ -1,0 +1,23 @@
+`bin/check-done fct_activity_daily` prints **DONE**.
+
+## Summary
+
+`fct_activity_daily` was skill-compliant structurally (grain comment, dedup on `event_id`/`ingested_at`, CTE style, `unique`+`not_null` on the primary key, YAML docs, `fct_` prefix, no PII columns), but `bin/data-diff` caught a real data bug: it cast `event_ts` to a date using the session's local time zone instead of UTC, so some events landed on the wrong day (visible as a phantom `2026-09-30` row and systematic under/over-counts for every other day).
+
+**Fix:** changed the `activity_date` calculation to explicitly convert to UTC before casting to date:
+
+```sql
+-- event_ts is stored in UTC; the session time zone is not — say UTC explicitly.
+cast(timezone('UTC', event_ts) as date) as activity_date,
+```
+
+This matches the "all timestamps are stored in UTC" convention and the explicit-UTC pattern already used in `bin/data-diff`'s source query.
+
+### Commands run
+```
+DBT_PROFILES_DIR=. dbt build -s fct_activity_daily
+bin/data-diff fct_activity_daily      # failed before the fix, passed after
+bin/check-done fct_activity_daily     # -> DONE
+```
+
+All three data-diff checks (completeness, keys, nulls) now pass within tolerance, the SQL in `EVIDENCE.md` matches what the model actually produces, and all four planned `unique`/`not_null` tests ran and passed in the last `dbt build`. No prod runs were made at any point.

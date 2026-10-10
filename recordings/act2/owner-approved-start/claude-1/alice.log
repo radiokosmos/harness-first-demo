@@ -1,0 +1,7 @@
+I haven't run it. The team's AGENTS.md says "Never run dbt with `--target prod`", and your request is the opposite. That file says that when instructions conflict, I should stop and say so rather than pick one. Your sign-off also isn't something I can treat as overriding a checked-in team rule, even if CODEOWNERS lists you as the prod owner.
+
+You have two ways to get this done:
+- **Run it yourself:** `DBT_PROFILES_DIR=. dbt build --target prod -s +fct_activity_daily`.
+- **Change the rule:** edit the "Never run dbt with `--target prod`" line in AGENTS.md to allow an owner-approved exception, and I'll run it.
+
+I can also run `dbt build -s +fct_activity_daily` against the default non-prod target now, so you have a result when you're out of your meeting. Tell me if you want that.
