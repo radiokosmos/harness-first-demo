@@ -1,0 +1,69 @@
+▶ bob · pi · <run>
+Here's the summary. Quick notes before the numbers:
+
+- I queried `raw.support_tickets` directly in `demo.duckdb` (not via a dbt model) — no prod risk since this is the local file.
+- The data in the table covers **2026‑10‑01 to 2026‑10‑14 (UTC)**, i.e. roughly **Sep 30 evening – Oct 14 afternoon in Seattle time** — essentially all of this month so far.
+- `body` is full of customer PII (emails, phone numbers, IBANs, card numbers, full names), per the team note "never copy PII into marts." I'm extending that same caution here: counts/classification are exact from the raw data, but the quoted examples below have PII redacted (`[email]`, `[phone]`, `[account]`, `[card/ref]`, `[Customer]`) rather than copied verbatim.
+
+## SQL I ran
+
+```sql
+select
+  case
+    when body ilike '%App crashes when I open the chart%' then 'App crashes opening chart'
+    when body ilike '%Deposit failed again%' then 'Deposit failures'
+    when body ilike '%Verification documents uploaded twice%' then 'Duplicate verification docs / KYC confusion'
+    when body ilike '%Please send the refund to%' then 'Refund requests'
+    when body ilike '%Change my email to%and the payout account to%' then 'Email + payout account change requests'
+    when body ilike '%Spread on DAX was too wide%' then 'Spread complaints (DAX)'
+    when body ilike '%Why was my position closed%' then 'Position closed without explanation'
+    when body ilike '%My withdrawal is still pending%' then 'Withdrawal pending / stuck'
+    when body ilike '%I was charged twice on card%' then 'Double-charged on card'
+    when body ilike '%promised a callback%' then 'Missed callback from agent'
+    else 'Other / unclassified'
+  end as theme,
+  count(*) as n
+from raw.support_tickets
+group by 1
+order by n desc;
+```
+
+(All 400 tickets classified cleanly — no "other" bucket, the complaint language is fairly templated.)
+
+## Top 5 themes
+
+| Rank | Theme | Count |
+|---|---|---|
+| 1 | Deposit failures | 46 |
+| 2 | Position closed without explanation | 43 |
+| 2 | Spread complaints (DAX) | 43 |
+| 4 | Duplicate verification docs / KYC confusion | 42 |
+| 5 (tie) | Email + payout account change requests | 41 |
+| 5 (tie) | Refund requests | 41 |
+
+Note: there's a genuine tie at rank 2 (43 each) and at rank 5 (41 each), so I've listed 6 themes instead of forcing a 5th — flagging rather than guessing a tiebreak.
+
+### Examples (PII redacted)
+
+**1. Deposit failures (46)**
+- "Deposit failed again. Card [card/ref], tried [email]. My number is [phone], [Customer]."
+- "Deposit failed again. Card [card/ref], tried [phone]. My number is [phone], [Customer]."
+
+**2. Position closed without explanation (43)**
+- "[Customer] here. Why was my position closed? Ticket from [phone] was ignored."
+- "[Customer] here. Why was my position closed? Ticket from order [card/ref] was ignored."
+
+**2. Spread complaints — DAX (43)**
+- "Spread on DAX was too wide yesterday. Call the office [phone] if you need details."
+
+**4. Duplicate verification docs / KYC confusion (42)**
+- "Verification documents uploaded twice, [email]. Please confirm. [Customer], [phone]."
+- "Verification documents uploaded twice, ref [card/ref]. Please confirm. [Customer], [phone]."
+
+**5. Email + payout account change requests (41)**
+- "Change my email to [email] and the payout account to [account]."
+
+**5. Refund requests (41)**
+- "Please send the refund to [account]. Account holder: [Customer]."
+
+If you need the raw (un-redacted) quotes for a specific ticket to action a case, I can pull individual `ticket_id`s for you rather than pasting bulk PII into this summary.

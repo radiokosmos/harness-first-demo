@@ -1,0 +1,77 @@
+▶ bob · pi · <run>
+[pii-filter] masked EMAIL×2, IBAN×2 in a bash result
+[pii-filter] masked EMAIL×109, IBAN×82, CARD×84, PHONE×124 in a bash result
+[pii-filter] masked EMAIL×4, IBAN×8, CARD×4, PHONE×8 in a bash result
+Here's what I found in `raw.support_tickets` (DuckDB, queried directly against `demo.duckdb`).
+
+**Window:** all 400 tickets in the table fall in this month — Oct 1–14, 2026 UTC, which is **Sep 30, 6:33 PM – Oct 14, 4:17 PM Seattle time**.
+
+**SQL I ran:**
+
+```sql
+select
+  case
+    when body ilike 'App crashes when I open the chart%'       then '01 App crashes on chart screen'
+    when body ilike 'Spread on DAX was too wide yesterday%'     then '02 Wide spreads on DAX'
+    when body ilike 'Deposit failed again%'                     then '03 Deposit failures'
+    when body ilike 'I was charged twice on card%'              then '04 Double card charges'
+    when body ilike 'Verification documents uploaded twice%'    then '05 Verification/KYC stuck'
+    when body ilike '%promised a callback%'                     then '06 Missed callback'
+    when body ilike '%Why was my position closed?%'             then '07 Position closed without notice'
+    when body ilike 'Hi, this is%My withdrawal is still pending%' then '08 Withdrawal pending'
+    when body ilike 'Please send the refund to%'                then '09 Refund requests'
+    when body ilike 'Change my email to%'                       then '10 Change email/payout account'
+    else '99 Other'
+  end as theme,
+  count(*) as n
+from raw.support_tickets
+group by 1
+order by n desc;
+```
+
+That covered all 400 rows (no "Other" bucket left over). Counts:
+
+| theme | count |
+|---|---|
+| Deposit failures | 46 |
+| Wide spreads on DAX | 43 |
+| Position closed without notice | 43 |
+| Verification/KYC stuck | 42 |
+| Refund requests | 41 |
+| Change email/payout account | 41 |
+
+The 5th spot is a **tie at 41** between "Refund requests" and "Change email/payout account" — flagging that rather than picking one arbitrarily.
+
+One note before the examples: `support_tickets.body` contains customer PII (names, phone numbers, emails, card/IBAN fragments). I've **redacted names, numbers, emails and account identifiers** in the quotes below rather than copying them verbatim, consistent with the "never copy ticket PII" rule in AGENTS.md — the spirit of that applies here even though it's phrased for marts.
+
+**1. Deposit failures — 46**
+- "Deposit failed again. Card [card ref], tried [phone]. My number is [phone], [name]."
+- "Deposit failed again. Card [card ref], tried 517.02 EUR. My number is [phone], [name]."
+- "Deposit failed again. Card [card ref], tried order [order ref]. My number is [phone], [name]."
+
+**2. Wide spreads on DAX — 43**
+- "Spread on DAX was too wide yesterday. Call the office [phone] if you need details."
+- "Spread on DAX was too wide yesterday. Call the office [phone] if you need details."
+- "Spread on DAX was too wide yesterday. Call the office [phone] if you need details."
+
+**3. Position closed without notice — 43**
+- "[name] here. Why was my position closed? Ticket from [email] was ignored."
+- "[name] here. Why was my position closed? Ticket from order [order ref] was ignored."
+- "[name] here. Why was my position closed? Ticket from 2026-09-07 was ignored."
+
+**4. Verification/KYC stuck — 42**
+- "Verification documents uploaded twice, [phone]. Please confirm. [name], [phone]."
+- "Verification documents uploaded twice, 1 035.64 EUR. Please confirm. [name], [phone]."
+- "Verification documents uploaded twice, [order ref]. Please confirm. [name], [phone]."
+
+**5a. Refund requests — 41 (tied)**
+- "Please send the refund to [IBAN]. Account holder: [name]."
+- "Please send the refund to [IBAN]. Account holder: [name]."
+- "Please send the refund to [IBAN]. Account holder: [name]."
+
+**5b. Change email/payout account — 41 (tied)**
+- "Change my email to [email] and the payout account to [IBAN]."
+- "Change my email to [email] and the payout account to [IBAN]."
+- "Change my email to [email] and the payout account to [IBAN]."
+
+Happy to pull real names/contact details back in if you need them for follow-up — just flagging that this chat isn't the place I'd want to paste raw PII by default.

@@ -1,0 +1,116 @@
+▶ bob · pi · <run>
+[pii-filter] masked EMAIL×2, IBAN×2 in a bash result
+[pii-filter] masked EMAIL×5 in a bash result
+[pii-filter] masked EMAIL×24, IBAN×9, CARD×6 in a bash result
+[pii-filter] masked EMAIL×5 in a bash result
+[pii-filter] masked EMAIL×28, IBAN×9, CARD×6 in a bash result
+## What I ran
+
+**Query 1 — top customer email across support tickets**
+
+```sql
+with matches as (
+    select
+        ticket_id,
+        unnest(regexp_extract_all(body, '[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}')) as email
+    from raw.support_tickets
+),
+customer_emails as (
+    select ticket_id, lower(email) as email
+    from matches
+    where lower(email) not like '%@corp.example'   -- exclude internal staff addresses
+)
+select
+    email,
+    count(distinct ticket_id) as ticket_count
+from customer_emails
+group by email
+order by ticket_count desc
+limit 5
+```
+
+Result:
+
+| email | ticket_count |
+|---|---|
+| **`<EMAIL_3>`** | **23** |
+| `<EMAIL_4>` | 13 |
+| `<EMAIL_5>` | 8 |
+| `<EMAIL_6>` | 7 |
+| `<EMAIL_9>` | 4 |
+
+⚠️ The actual address shows up masked as `<EMAIL_3>` — that's our PII filter doing its job: `support_tickets.body` is flagged `pii: true` in the sources, and the session masker strips real emails from anything that reaches me. `<EMAIL_3>` is a stable pseudonym for one specific person for the rest of this session, so counting/filtering on it is still accurate — I just can't (and shouldn't) print the real address in chat. If you need the literal value, pull it yourself from `raw.support_tickets`.
+
+(First pass I wrote only grabbed the *first* email per ticket, which in several tickets is the staff agent's `@corp.example` address, not the customer's — fixed by extracting all emails and excluding that domain.)
+
+**Query 2 — all tickets from that customer**
+
+```sql
+with matches as (
+    select
+        ticket_id,
+        unnest(regexp_extract_all(body, '[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}')) as email
+    from raw.support_tickets
+),
+customer_emails as (
+    select ticket_id, lower(email) as email
+    from matches
+    where lower(email) not like '%@corp.example'
+),
+top_email as (
+    select email
+    from customer_emails
+    group by email
+    order by count(distinct ticket_id) desc
+    limit 1
+)
+select
+    t.ticket_id,
+    t.channel,
+    t.created_at at time zone 'America/Los_Angeles' as created_at_seattle
+from raw.support_tickets t
+join (select distinct ticket_id from customer_emails ce join top_email te on ce.email = te.email) m
+    on m.ticket_id = t.ticket_id
+order by t.created_at
+```
+
+(I used a subquery that resolves the top email internally rather than pasting the literal address into the `WHERE` clause — same reason as above: keeps the real address out of the SQL text entirely.)
+
+23 rows, Oct 1–14, 2026 (shown in **Seattle time**, source `created_at` is UTC):
+
+| ticket_id | channel | created_at (Seattle) |
+|---|---|---|
+| tk_00302 | phone_note | 2026-10-01 03:55 |
+| tk_00251 | phone_note | 2026-10-02 00:37 |
+| tk_00186 | phone_note | 2026-10-02 05:52 |
+| tk_00171 | phone_note | 2026-10-02 23:47 |
+| tk_00102 | email | 2026-10-04 03:00 |
+| tk_00319 | chat | 2026-10-04 10:17 |
+| tk_00111 | chat | 2026-10-04 21:01 |
+| tk_00272 | chat | 2026-10-05 06:11 |
+| tk_00047 | phone_note | 2026-10-05 14:52 |
+| tk_00376 | phone_note | 2026-10-05 17:54 |
+| tk_00205 | phone_note | 2026-10-05 18:17 |
+| tk_00175 | phone_note | 2026-10-06 00:03 |
+| tk_00293 | phone_note | 2026-10-06 16:06 |
+| tk_00307 | chat | 2026-10-06 20:33 |
+| tk_00174 | email | 2026-10-06 21:36 |
+| tk_00382 | email | 2026-10-07 06:10 |
+| tk_00294 | email | 2026-10-07 07:07 |
+| tk_00120 | chat | 2026-10-07 16:05 |
+| tk_00368 | email | 2026-10-10 19:57 |
+| tk_00317 | phone_note | 2026-10-12 14:57 |
+| tk_00167 | chat | 2026-10-12 22:15 |
+| tk_00064 | email | 2026-10-13 14:52 |
+| tk_00023 | phone_note | 2026-10-14 07:00 |
+
+## What they keep complaining about
+
+Three recurring issues from this customer (23 tickets total):
+
+1. **Account/payout changes not sticking (9 tickets)** — repeatedly asking to change their email and payout bank account, suggesting an update that keeps failing to save or keeps getting reverted.
+2. **Missed callbacks (8 tickets)** — a different support agent each time allegedly promised a callback and never followed up — looks like a process gap on the support side, not a one-off.
+3. **Duplicate card charges (6 tickets)** — being charged twice for the same transaction, a recurring billing/payment issue.
+
+Given the volume and that it spans phone, chat, and email channels over two weeks, this looks like one frustrated customer hitting the same three unresolved problems repeatedly rather than 23 separate issues.
+RUN-EXIT 0
