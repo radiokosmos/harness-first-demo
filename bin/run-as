@@ -34,6 +34,10 @@ persona_file="$root/people/$who.md"
 [[ -f "$persona_file" ]] || { echo "no personal layer: $persona_file" >&2; exit 1; }
 [[ -f "$root/$task" || -f "$task" ]] || { echo "no task file: $task" >&2; exit 1; }
 task_text="$(cat "$root/$task" 2>/dev/null || cat "$task")"
+# read everything from the repo up front: the working tree may change while the copy is prepared
+persona="You are working with $who. These are $who's personal notes for their agent:
+
+$(cat "$persona_file")"
 
 runs="${HARNESS_RUNS:-$HOME/.cache/harness-first-demo/runs}"
 dest="$runs/$who"
@@ -50,10 +54,6 @@ fi
   git init -q && git add -A && git -c user.name=demo -c user.email=demo@example.com commit -qm baseline
   DBT_PROFILES_DIR=. .venv/bin/dbt seed -q >/dev/null && DBT_PROFILES_DIR=. .venv/bin/dbt run -q -s staging >/dev/null
 )
-
-persona="You are working with $who. These are $who's personal notes for their agent:
-
-$(cat "$persona_file")"
 
 echo "▶ $who · $runtime · $dest"
 cd "$dest"
