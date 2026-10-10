@@ -27,6 +27,8 @@ You need one agent runtime: [pi](https://pi.dev), Claude Code or Codex, logged i
 | 4. You leave the loop | `act-4-start` | a heartbeat from run artifacts |
 | 5. The harness rots | `act-5-start` | mistake → check |
 
+Recorded runs for the stage live in `recordings/`.
+
 Fell behind? Every exercise has a checkpoint branch: `git checkout act-N-…`.
 
 ## Tools
@@ -35,6 +37,8 @@ Fell behind? Every exercise has a checkpoint branch: `git checkout act-N-…`.
 |---|---|
 | `bin/doctor` | is the machine ready |
 | `bin/run-as <who> <task>` | run the agent as Alice or Bob (their personal layer goes into the system prompt) in a throwaway copy |
-| `bin/compare alice bob` | what each agent built |
-| `bin/check-layers` | act 1: is every line of context in the right layer |
+| `bin/run-many -n N alice bob` | many runs in parallel (agents are not deterministic) |
+| `bin/compare alice bob` / `--all` | what each run built; `--all` = the distribution over every run |
+| `bin/decisions` | where the agent chose between layers on its own |
+| `bin/check-layers` | act 1: is every line of context in the right layer (7 checks) |
 | `bin/check-counts [who]` | daily model vs source, by UTC day |
