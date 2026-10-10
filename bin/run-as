@@ -57,7 +57,7 @@ fi
   git init -q && git add -A && git -c user.name=demo -c user.email=demo@example.com commit -qm baseline
   DBT_PROFILES_DIR=. .venv/bin/dbt seed -q >/dev/null && DBT_PROFILES_DIR=. .venv/bin/dbt run -q -s staging >/dev/null
   if [[ "${SCENARIO_NO_WAREHOUSE:-0}" == 1 ]]; then   # act 4: the warehouse is unreachable
-    rm -f demo.duckdb && mkdir demo.duckdb && chmod 000 demo.duckdb
+    rm -f demo.duckdb && mkdir demo.duckdb   # opening it fails: "Is a directory"
   fi
 )
 
