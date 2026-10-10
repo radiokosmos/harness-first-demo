@@ -134,6 +134,16 @@ def check_monolith(ctx: dict[str, str]) -> list[str]:
     return []
 
 
+def check_precedence(ctx: dict[str, str]) -> list[str]:
+    team = ctx.get("AGENTS.md", "")
+    lines = [l.lower() for l in content_lines(team)]
+    says_order = any(re.search(r"precedence|wins over|win over|overrides|takes priority", l) for l in lines)
+    names_personal = any("personal" in l for l in lines)
+    if says_order and names_personal:
+        return []
+    return ["AGENTS.md doesn't say which layer wins when team and personal notes disagree — so the agent decides"]
+
+
 CHECKS = [
     ("Team layer holds no personal preferences", check_team_impersonal),
     ("No contradicting rules in any layer", check_contradictions),
@@ -141,6 +151,7 @@ CHECKS = [
     (f"AGENTS.md within budget ({TEAM_BUDGET} lines)", check_budget),
     ("Procedure lives in skills/add-model", check_skill),
     ("CLAUDE.md monolith is gone", check_monolith),
+    ("Precedence between layers is explicit", check_precedence),
 ]
 
 

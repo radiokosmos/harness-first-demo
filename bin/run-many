@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+# Run the same task many times, as several engineers, in parallel.
+#
+#   bin/run-many -n 4 [--runtime pi|claude] [--task tasks/act1.md] alice bob
+#
+# Each run lands in $HARNESS_RUNS/<runtime>-<i>/<who>. Then:
+#   bin/compare --all      # what every run built
+#   bin/decisions          # where agents chose between layers on their own
+set -euo pipefail
+root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+n=3; runtime="${AGENT_RUNTIME:-pi}"; task=tasks/act1.md; people=()
+while [[ $# -gt 0 ]]; do
+  case "$1" in
+    -n) n="$2"; shift 2 ;;
+    --runtime) runtime="$2"; shift 2 ;;
+    --task) task="$2"; shift 2 ;;
+    *) people+=("$1"); shift ;;
+  esac
+done
+[[ ${#people[@]} -gt 0 ]] || people=(alice bob)
+base="${HARNESS_RUNS:-$HOME/.cache/harness-first-demo/runs}"
+mkdir -p "$base"
+pids=()
+for i in $(seq 1 "$n"); do
+  for who in "${people[@]}"; do
+    HARNESS_RUNS="$base/$runtime-$i" "$root/bin/run-as" "$who" "$task" --runtime "$runtime" \
+      > "$base/$runtime-$i-$who.out" 2>&1 &
+    pids+=($!)
+    sleep 2   # let rsync finish before the next copy starts
+  done
+done
+fail=0
+for p in "${pids[@]}"; do wait "$p" || fail=$((fail + 1)); done
+echo "$(( ${#pids[@]} - fail )) of ${#pids[@]} runs finished cleanly · logs in $base"

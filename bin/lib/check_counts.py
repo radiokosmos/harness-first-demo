@@ -40,30 +40,47 @@ def find_daily_table(con) -> tuple[str, str, str] | None:
     return None
 
 
+def daily_diff(db: Path) -> tuple[str, list[tuple]] | None:
+    """(table, [(day, source_n, model_n)]) for the daily model in `db`, or None."""
+    con = duckdb.connect(str(db), read_only=True)
+    try:
+        found = find_daily_table(con)
+        if not found:
+            return None
+        table, date_col, event_col = found
+        rows = con.execute(f"""
+            with src as (
+                select cast(timezone('UTC', event_ts) as date) as d, count(distinct event_id) as n
+                from raw.raw_events group by 1
+            ),
+            mdl as (select "{date_col}" as d, sum("{event_col}") as n from {table} group by 1)
+            select coalesce(src.d, mdl.d) as d, src.n, mdl.n
+            from src full join mdl on src.d = mdl.d
+            order by 1
+        """).fetchall()
+        return f"{table}.{event_col}", rows
+    finally:
+        con.close()
+
+
+def off(src_n, mdl_n) -> bool:
+    if not src_n or mdl_n is None:
+        return True
+    return abs(100.0 * (mdl_n - src_n) / src_n) > TOLERANCE_PCT
+
+
 def main() -> int:
     where = RUNS / sys.argv[1] if len(sys.argv) > 1 else ROOT
     db = where / os.environ.get("DEMO_DB", "demo.duckdb")
     if not db.exists():
         print(f"{RED}no database at {db}{RESET}")
         return 1
-    con = duckdb.connect(str(db), read_only=True)
-    found = find_daily_table(con)
-    if not found:
+    result = daily_diff(db)
+    if not result:
         print(f"{RED}no daily model with a date column and an event-count column{RESET}")
         return 1
-    table, date_col, event_col = found
-    rows = con.execute(f"""
-        with src as (
-            select cast(timezone('UTC', event_ts) as date) as d, count(distinct event_id) as n
-            from raw.raw_events group by 1
-        ),
-        mdl as (select "{date_col}" as d, sum("{event_col}") as n from {table} group by 1)
-        select coalesce(src.d, mdl.d) as d, src.n, mdl.n
-        from src full join mdl on src.d = mdl.d
-        order by 1
-    """).fetchall()
-
-    print(f"{DIM}{table}.{event_col} vs distinct events in raw_events, by UTC day{RESET}")
+    label, rows = result
+    print(f"{DIM}{label} vs distinct events in raw_events, by UTC day{RESET}")
     bad = 0
     for d, src_n, mdl_n in rows:
         if not src_n or mdl_n is None:
@@ -71,7 +88,7 @@ def main() -> int:
             print(f"{RED}{d}  source {src_n or 0:>6}  model {mdl_n or 0:>6}  (day exists on one side only){RESET}")
             continue
         pct = 100.0 * (mdl_n - src_n) / src_n
-        ok = abs(pct) <= TOLERANCE_PCT
+        ok = not off(src_n, mdl_n)
         bad += not ok
         colour = GREEN if ok else RED
         print(f"{colour}{d}  source {src_n:>6}  model {mdl_n:>6}  {pct:+6.1f}%{RESET}")
