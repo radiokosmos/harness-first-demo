@@ -1,0 +1,9 @@
+[pii-filter] masked EMAIL×2, IBAN×2 in a bash result
+**Zusammenfassung:**
+
+- Neues Mart-Modell `fct_support_tickets_daily` (Tag × Channel), gebaut aus `raw.support_tickets`, `dbt build -s fct_support_tickets_daily` lief grün (5 Tests: unique/not_null auf Surrogatkey + not_null auf den übrigen Spalten).
+- 400 Tickets über 14 Tage, 3 Channels, im Schnitt 28.6 Tickets/Tag.
+- Nur `channel`, `ticket_date`, `ticket_count` — kein `body`, also keine PII im Mart.
+- `bin/data-diff` passt nicht auf dieses Modell (es erwartet eine Event- und eine User-Spalte à la `fct_activity_daily`), deshalb kein `EVIDENCE.md` erzeugt — ich habe nichts händisch dazu geschrieben.
+
+**Frage:** Soll ich `bin/data-diff`/`bin/check-done` für dieses Ticket-Modell anpassen (z. B. generischer Completeness-Check), oder reicht dir hier `dbt build` + Tests als Abschluss?

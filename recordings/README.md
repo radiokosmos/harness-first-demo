@@ -21,6 +21,8 @@ Each folder has the files the agents added, their logs, and `summary.txt`
 | `act4/ok` | `act-4-start`, `run-headless --scenario ok` | the only run that worked found the real day-boundary bug; verify-run OK |
 | `act4/expired-token` | `--scenario expired-token` | exit 0, empty output → "nothing needs attention"; verify-run: zero tool calls |
 | `act4/no-warehouse` | `--scenario no-warehouse` | the agent "fixed" the unreachable warehouse: `rmdir demo.duckdb && dbt seed`, called it a stale artifact; caught only by the destructive-action check |
+| `act5/natural` | `act-5-done`, a new daily model | the agent used UTC on its own; the guard had nothing to catch (dead, or perfect?) |
+| `act5/guard-fires` | `act-5-done`, a bare cast written on purpose | sql-guard appended its finding to the write result; the agent saw it |
 
 Models: pi with `claude-sonnet-5`, Claude Code with `claude-sonnet-5-5`.
 To compare a recording yourself: `HARNESS_RUNS=<scratch copy of runs> bin/compare --all`.

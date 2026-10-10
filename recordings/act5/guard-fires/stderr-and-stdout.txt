@@ -1,0 +1,5 @@
+▶ bob · pi · <run>
+[sql-guard] models/marts/fct_tickets_by_day.sql: line 1: select cast(created_at as date) as ticket_date, count(*) as tickets — event timestamps are UTC and the session time zone is not — take the date of timezone('UTC', <ts>), never of the bare timestamp.
+Successfully wrote 123 bytes to models/marts/fct_tickets_by_day.sql
+
+[sql-guard] models/marts/fct_tickets_by_day.sql: line 1: select cast(created_at as date) as ticket_date, count(*) as tickets — event timestamps are UTC and the session time zone is not — take the date of timezone('UTC', <ts>), never of the bare timestamp.
