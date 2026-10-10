@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: fct_activity_daily
+    description: One row per day with active users and events.
+    columns:
+      - name: activity_date
+        data_tests: [unique, not_null]
+      - name: active_users
+        data_tests: [not_null]
+      - name: event_count
+        data_tests: [not_null]

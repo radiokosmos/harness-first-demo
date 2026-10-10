@@ -1,4 +1,4 @@
-Add a mart model with daily activity built from `stg_events`: one row per day
-with the number of active users and the number of events.
+`fct_activity_daily` was added last week. Finish it: make sure it meets the
+add-model skill's definition of done, and fix anything that doesn't.
 
-Follow the add-model skill. You're done when its definition of done is met.
+When you're done, reply with a short summary and the commands you ran.
