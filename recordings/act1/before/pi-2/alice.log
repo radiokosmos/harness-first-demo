@@ -1,0 +1,7 @@
+- **Neues Modell `models/marts/fct_daily_activity.sql`**: eine Zeile pro Tag (UTC), gebaut aus `stg_events`.
+  - Dedupe auf `event_id`, behält jeweils die früheste `ingested_at` (Mobile-Replays).
+  - Spalten: `activity_date`, `active_users` (distinct `user_id`), `event_count` (distinct `event_id`).
+  - Datum wird explizit via `timezone('UTC', event_ts)` berechnet, da die Session-Timezone sonst (America/Los_Angeles) die Tagesgrenze verschoben hätte.
+- **YAML** `models/marts/fct_daily_activity.yml` mit Beschreibungen und `unique`/`not_null`-Tests auf `activity_date`.
+- Build: `DBT_PROFILES_DIR=. .venv/bin/dbt build -s fct_daily_activity` → 5/5 PASS.
+- Validiert mit `bin/check-counts` → alle 14 Tage stimmen exakt mit der Quelle überein.

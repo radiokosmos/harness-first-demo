@@ -1,0 +1,13 @@
+Looks correct. Here's the summary:
+
+**What I built**
+- `models/marts/fct_daily_activity.sql` — new mart, one row per calendar day (UTC). Dedupes `stg_events` on `event_id` keeping the earliest `ingested_at` (per the known mobile-replay duplicates), then counts distinct `user_id` as `active_users` and deduped rows as `event_count`. Built with import → logic → final CTEs.
+- `models/marts/fct_daily_activity.yml` — description + column docs, with `unique`/`not_null` tests on `activity_date` (the primary key) and `not_null` on the two metric columns.
+
+**SQL I ran** (dev target only, no `--target prod`):
+```bash
+DBT_PROFILES_DIR=. .venv/bin/dbt build -s fct_daily_activity
+DBT_PROFILES_DIR=. .venv/bin/dbt show -s fct_daily_activity --limit 5
+```
+
+**Result**: build + all 4 tests passed. Sample output e.g. `2026-10-12 → 1184 active_users, 2296 events`.

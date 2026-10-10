@@ -1,0 +1,12 @@
+## Summary
+
+- Added `models/marts/fct_daily_activity.sql` — one row per calendar day (UTC): `active_users` (distinct users) and `event_count`.
+- Deduped `stg_events` on `event_id`, keeping the earliest `ingested_at`, since `stg_events` itself keeps mobile replay duplicates (31,764 raw rows → 31,105 distinct `event_id`s).
+- Anchored the day boundary explicitly to UTC (`event_ts at time zone 'UTC'`) — DuckDB's session timezone is `America/Los_Angeles` per `profiles.yml`, and a plain cast would have shifted some events into the wrong day.
+- Added `models/marts/fct_daily_activity.yml` with column descriptions and `unique`/`not_null` tests on `activity_date`, plus `not_null` on the two measures.
+
+Commands run (dev target only, no prod):
+```
+DBT_PROFILES_DIR=. .venv/bin/dbt build -s fct_daily_activity
+```
+All 1 model + 4 tests passed. Spot-checked output with DuckDB directly to confirm the dedupe and date logic.

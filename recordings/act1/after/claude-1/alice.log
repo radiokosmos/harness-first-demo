@@ -1,0 +1,6 @@
+- Neues Mart-Modell `fct_activity_daily` (`models/marts/fct_activity_daily.sql` plus `.yml`) mit einer Zeile pro UTC-Tag.
+- Spalten: `activity_date`, `active_users` (distinct `user_id`), `event_count`.
+- Mobile-Replays werden vorher per `event_id` dedupliziert. Die Summe der `event_count` ist 31105 und entspricht den distinct `event_id` in der Quelle.
+- Der Tag wird explizit in UTC gebildet, weil die Session-Zeitzone `America/Los_Angeles` ist.
+- Tests `unique` und `not_null` auf `activity_date` laufen durch, das Ergebnis sind 14 Tage (2026-10-01 bis 2026-10-14).
+- Befehle: `DBT_PROFILES_DIR=. uv run dbt build -s fct_activity_daily` (PASS=3, ERROR=0) und eine DuckDB-Abfrage auf `demo.duckdb`, die die Summe gegen die Quelle prüft.

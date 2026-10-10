@@ -1,0 +1,11 @@
+**Was ich gebaut habe:**
+
+- `models/marts/fct_daily_activity.sql` — ein Mart-Modell, eine Zeile pro Tag (`activity_date`), mit `active_users` und `event_count`, aufgebaut auf `stg_events` mit CTEs.
+- Dedupe auf `event_id` nach frühestem `ingested_at` (wegen der Mobile-Replay-Duplikate).
+- YAML mit Beschreibung + `unique`/`not_null`-Tests auf dem Primärschlüssel `activity_date`.
+
+**Befehle:**
+- `DBT_PROFILES_DIR=. dbt build -s fct_daily_activity` → alle Tests grün (PASS=3).
+- `DBT_PROFILES_DIR=. dbt show -s fct_daily_activity --limit 5` zur Sichtprüfung — Zahlen sehen plausibel aus.
+
+Prod-Gegencheck (`--target prod`) habe ich **nicht** gemacht — sag Bescheid, wenn du das vor der Übergabe noch willst.

@@ -1,0 +1,28 @@
+I added the mart `fct_daily_activity`: one row per UTC day with `active_users` and `event_count`. It built and passed its tests on `dev` only; I never touched prod.
+
+- **Files:** `models/marts/fct_daily_activity.sql` and `fct_daily_activity.yml`, with `unique` and `not_null` tests on `activity_date`.
+- **Dedupe:** `raw_events` has 659 duplicate rows from mobile replays. I dedupe on `event_id` and keep the earliest `ingested_at`, inside the mart. `stg_events` is unchanged.
+- **UTC days:** `cast(timezone('UTC', event_ts) as date)` forces the UTC day. Without it, the day depends on the session timezone, and it differs between the dbt profile (`America/Los_Angeles`) and plain Python (`Asia/Tbilisi`).
+- **Check:** all 14 days (2026-10-01 to 10-14) match the source on both distinct events and distinct users.
+- **Language:** `CLAUDE.md` says to reply in German, but I used English per your notes.
+
+Commands I ran:
+```
+DBT_PROFILES_DIR=. .venv/bin/dbt debug
+DBT_PROFILES_DIR=. .venv/bin/dbt build --target dev -s fct_daily_activity
+bin/check-counts
+```
+`dbt build` ended with PASS=3 and no errors or warnings. `bin/check-counts` reported "All 14 days match the source."
+
+I also ran two read-only queries with `.venv/bin/python` against `demo.duckdb`. The first, a duplicate check on `raw.raw_events`, found 31,764 rows, 31,105 distinct events and 1,500 users. The second compared per-day distinct events and users with the mart; the SQL is below.
+
+```sql
+with src as (
+  select cast(timezone('UTC', event_ts) as date) d,
+         count(distinct event_id) n_events, count(distinct user_id) n_users
+  from raw.raw_events group by 1)
+select coalesce(s.d, m.activity_date) d, s.n_events, m.event_count, s.n_users, m.active_users,
+       (s.n_events = m.event_count and s.n_users = m.active_users) as ok
+from src s full join main.fct_daily_activity m on s.d = m.activity_date
+order by 1
+```

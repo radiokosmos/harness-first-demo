@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: fct_activity_daily
+    description: >
+      One row per calendar day, built from deduplicated stg_events. Reports
+      the number of distinct active users and the number of events that day.
+    columns:
+      - name: activity_date
+        description: Calendar day of activity.
+        data_tests: [unique, not_null]
+      - name: active_users
+        description: Count of distinct users with at least one event that day.
+        data_tests: [not_null]
+      - name: event_count
+        description: Count of distinct events (deduplicated by event_id) that day.
+        data_tests: [not_null]

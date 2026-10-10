@@ -1,0 +1,20 @@
+Done. Build and tests passed against the `dev` target (never touched prod).
+
+**What I built**
+
+- `models/marts/fct_daily_activity.sql` — one row per UTC calendar day, built from `stg_events`, deduplicated on `event_id` (keeping earliest `ingested_at`, per the known mobile-replay issue), with `active_users` (distinct users) and `event_count`.
+- `models/marts/fct_daily_activity.yml` — column docs + `unique`/`not_null` tests on `activity_date` (primary key).
+
+**Commands run**
+
+```
+DBT_PROFILES_DIR=. .venv/bin/dbt build -s fct_daily_activity
+```
+→ model built, 4 tests passed, target='dev'.
+
+Sanity check SQL (via DuckDB directly on `demo.duckdb`):
+```sql
+select * from fct_daily_activity order by activity_date limit 5;
+select count(*) as days, sum(event_count) as events from fct_daily_activity;
+```
+→ 15 days, 31,105 total deduplicated events, numbers look sane (no gaps, no duplicate dates).

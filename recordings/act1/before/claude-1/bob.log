@@ -1,0 +1,25 @@
+I added `fct_daily_activity` (one row per UTC day: `activity_date`, `active_users`, `event_count`). It builds and passes its tests on the dev target. I didn't commit anything.
+
+I replied in English because your personal notes say so, even though the repo `CLAUDE.md` says German.
+
+- **Dedupe:** `stg_events` has 31,764 rows but only 31,105 distinct `event_id`s. The model keeps the earliest `ingested_at` per `event_id`, so mobile replays aren't double-counted.
+- **UTC days:** the DuckDB session timezone is America/Los_Angeles, and a plain `cast(event_ts as date)` moves about 10% of events to the next day. The model uses `cast(timezone('UTC', event_ts) as date)` instead.
+- **Checks:** `unique` and `not_null` on `activity_date`, and `bin/check-counts` shows all 14 days matching the source. The model's event total is 31,105, which equals the source's distinct events.
+
+The model is `models/marts/fct_daily_activity.sql`, with `fct_daily_activity.yml` next to it. The core SQL (full file in the model):
+
+```sql
+select
+    cast(timezone('UTC', event_ts) as date) as activity_date,
+    count(distinct user_id) as active_users,
+    count(*) as event_count
+from deduped  -- stg_events, qualify row_number() over (partition by event_id order by ingested_at) = 1
+group by 1
+```
+
+Commands I ran, all against dev and never prod:
+- `DBT_PROFILES_DIR=. .venv/bin/dbt build -s fct_daily_activity --target dev` (3 of 3 passed)
+- `bin/check-counts`
+- Read-only DuckDB queries: row and distinct-event counts on `raw.raw_events`, UTC-versus-local day comparison, and a reconciliation of `sum(event_count)` with `count(distinct event_id)`.
+
+`CLAUDE.md` says Alice double-checks with `dbt build --target prod`, but your notes warn about prod, so I didn't run it.

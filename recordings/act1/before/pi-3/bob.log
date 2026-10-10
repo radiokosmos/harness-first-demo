@@ -1,0 +1,15 @@
+Looks correct and built cleanly. Only ran against `dev` (demo.duckdb) — no prod target used, as I know that's the thing to watch for.
+
+## Summary
+
+- Added `models/marts/fct_daily_activity.sql`: one row per UTC calendar day, built from `stg_events`, deduped on `event_id` (keeping earliest `ingested_at`) to remove mobile-replay duplicates, with `active_users` (distinct user count) and `event_count` (deduped event count) per day.
+- Used `timezone('UTC', event_ts)` explicitly for the day bucket, since the duckdb session timezone is set to `America/Los_Angeles` — bucketing on raw timestamp would have shifted some events to the wrong day.
+- Added `models/marts/fct_daily_activity.yml` with column descriptions and `unique` + `not_null` tests on `activity_date`.
+
+**Commands run:**
+```
+DBT_PROFILES_DIR=. .venv/bin/dbt build -s fct_daily_activity   # ran against dev (demo.duckdb) — 5/5 pass
+bin/check-counts                                                # all 14 days match raw_events exactly
+```
+
+**Result (14 days, Oct 1–14 2026):** events/day range ~2058–2408, active users ~1092–1214. Checked against the raw source day-by-day via `bin/check-counts` — all match with 0.0% difference.

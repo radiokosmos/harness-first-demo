@@ -1,0 +1,35 @@
+I added `fct_daily_activity`, which has one row per UTC day with `active_users` and `event_count`. It builds and both tests pass. I compared it to an independent count from the raw seed, and all 14 days match. The total is 31,105 events, which is the number of distinct `event_id`s.
+
+- **Dedup:** `stg_events` has 659 replayed rows (31,764 rows but 31,105 distinct `event_id`s). The model keeps the earliest `ingested_at` per `event_id`, as the repo notes say.
+- **UTC days:** your profile sets `TimeZone: America/Los_Angeles`. A plain `cast(event_ts as date)` gives 15 days, and the data actually spans 14 UTC days. I used `cast(event_ts at time zone 'UTC' as date)` to avoid that.
+- **Language:** the repo's `CLAUDE.md` says to reply in German, but your notes say English, so I replied in English.
+- **Prod:** I only ran against `--target dev`. I did not run the prod double-check that `CLAUDE.md` suggests, given your note about prod.
+- **Files:** `models/marts/fct_daily_activity.sql` and `fct_daily_activity.yml`. The YAML has descriptions, plus `unique` and `not_null` on `activity_date`. I haven't committed anything.
+
+**SQL for the dedup and daily count** (full file in the model):
+```sql
+row_number() over (partition by event_id order by ingested_at asc) as row_num
+-- ...
+select cast(event_ts at time zone 'UTC' as date) as activity_date,
+       count(distinct user_id) as active_users,
+       count(*) as event_count
+from deduped where row_num = 1
+group by 1
+```
+
+**Commands I ran:**
+- `DBT_PROFILES_DIR=. .venv/bin/dbt build --target dev -s fct_daily_activity`
+- `.venv/bin/python /tmp/q1.py`: profiling queries for duplicates and the timezone check.
+- `.venv/bin/python /tmp/q2.py`: the cross-check below.
+
+```sql
+with ref as (
+    select cast(event_ts at time zone 'UTC' as date) as d,
+           count(distinct user_id) as u, count(distinct event_id) as e
+    from raw.raw_events group by 1
+)
+select r.d, r.u as ref_users, m.active_users, r.e as ref_events, m.event_count,
+       (r.u = m.active_users and r.e = m.event_count) as match
+from ref r full join main.fct_daily_activity m on m.activity_date = r.d
+order by r.d
+```

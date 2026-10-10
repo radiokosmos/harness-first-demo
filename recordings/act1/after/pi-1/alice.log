@@ -1,0 +1,11 @@
+**Zusammenfassung:**
+
+- `models/marts/fct_activity_daily.sql` neu: ein Zeile pro Tag mit `active_users` (distinct user_id) und `event_count`, gebaut auf `stg_events`.
+- Nebenbei `stg_events.sql` auf Dedup umgestellt (event_id, früheste `ingested_at`) — das war laut `models/staging/AGENTS.md` bereits vorgeschrieben, aber noch nicht umgesetzt; sonst hätten Mobile-Replays die Event-Zahlen verdoppelt. YAML-Beschreibung entsprechend angepasst.
+- `models/marts/fct_activity_daily.yml` mit `unique`/`not_null` auf `activity_date` und `not_null` auf den Metriken.
+
+Befehle:
+- `DBT_PROFILES_DIR=. dbt build -s stg_events fct_activity_daily` → 9/9 PASS
+- `DBT_PROFILES_DIR=. dbt show -s fct_activity_daily --limit 5` zur Stichprobe
+
+Hinweis: Ich habe die Dedup-Logik in `stg_events` selbst umgesetzt statt sie im Mart zu duplizieren. Sag Bescheid, falls das nicht gewollt war.

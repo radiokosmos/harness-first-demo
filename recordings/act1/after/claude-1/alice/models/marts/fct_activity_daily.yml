@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: fct_activity_daily
+    description: Daily product activity, one row per UTC day. Events are deduplicated by event_id (mobile replays counted once).
+    columns:
+      - name: activity_date
+        description: Calendar day of the event, in UTC.
+        data_tests: [unique, not_null]
+      - name: active_users
+        description: Number of distinct users with at least one event that day.
+      - name: event_count
+        description: Number of distinct events that day (after dedup by event_id).

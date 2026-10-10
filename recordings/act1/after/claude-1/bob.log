@@ -1,0 +1,32 @@
+I added `fct_activity_daily`, a mart with one row per UTC day, and it builds and passes its tests on dev.
+
+**Files**
+- `models/marts/fct_activity_daily.sql` has `activity_date`, `active_users` (distinct users) and `events`.
+- `models/marts/fct_activity_daily.yml` has descriptions and `unique` + `not_null` tests on `activity_date`.
+
+**Choices**
+- **Dedup:** `stg_events` contains mobile-replay duplicates, so the model keeps one row per `event_id` (earliest `ingested_at`), as `models/staging/AGENTS.md` requires. That takes 31,764 raw rows down to 31,105 events.
+- **UTC days:** the dev profile sets the session timezone to Los Angeles, so a plain date cast gives 15 days. The model uses `cast(event_ts at time zone 'UTC' as date)`, which gives the correct 14 days (Oct 1–14).
+- **No PII:** it reads only `user_id` and timestamps from `stg_events`, not `body` from support tickets.
+
+**Commands run**
+```
+DBT_PROFILES_DIR=. .venv/bin/dbt build -s fct_activity_daily --target dev
+```
+This ran 1 model and 2 tests: PASS=3, ERROR=0. I passed `--target dev` explicitly so it couldn't go to prod.
+
+**SQL for the cross-check** (against `raw.raw_events` in `demo.duckdb`)
+```sql
+with ref as (
+    select cast(event_ts at time zone 'UTC' as date) as d,
+           count(distinct user_id) as u, count(distinct event_id) as e
+    from raw.raw_events group by 1
+)
+select m.activity_date, m.active_users, m.events, r.u as ref_users, r.e as ref_events,
+       (m.active_users = r.u and m.events = r.e) as matches
+from main.fct_activity_daily m full join ref r on m.activity_date = r.d
+order by 1;
+```
+All 14 days match, with 31,105 events in total.
+
+The files are uncommitted in the working tree.

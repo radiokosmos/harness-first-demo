@@ -1,0 +1,7 @@
+**Zusammenfassung:**
+
+- Neues Mart-Modell `models/marts/fct_daily_activity.sql`: eine Zeile pro Tag, basiert auf `stg_events`.
+- Dedupe auf `event_id` (früheste `ingested_at`), um Mobile-Replays rauszufiltern — davor Aggregation.
+- Spalten: `event_date`, `active_users` (distinct user_id), `event_count`.
+- YAML mit Beschreibung + `unique`/`not_null`-Tests auf `event_date` erstellt.
+- Befehl: `DBT_PROFILES_DIR=. dbt build -s fct_daily_activity` → alle 4 Tests grün, Tabelle erstellt. Preview mit `dbt show -s fct_daily_activity --limit 5` geprüft.

@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: fct_activity_daily
+    description: One row per day with the number of active users and the number of events, built from stg_events.
+    columns:
+      - name: activity_date
+        description: Calendar day (UTC) the activity occurred.
+        data_tests: [unique, not_null]
+      - name: active_users
+        description: Distinct count of users with at least one event on that day.
+        data_tests: [not_null]
+      - name: event_count
+        description: Total number of events on that day.
+        data_tests: [not_null]

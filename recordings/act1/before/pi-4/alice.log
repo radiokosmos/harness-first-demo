@@ -1,0 +1,7 @@
+**Zusammenfassung:**
+
+- Neues Modell `models/marts/fct_daily_activity.sql`: eine Zeile pro Tag (UTC) mit `active_users` (distinct user_id) und `event_count` (distinct event_id).
+- Dedupliziert mobile Replays aus `stg_events` (früheste `ingested_at` pro `event_id`), bevor aggregiert wird.
+- YAML `fct_daily_activity.yml` mit Beschreibung + `unique`/`not_null`-Tests auf `activity_date`, `not_null` auf den beiden Kennzahlen.
+- Ausgeführt: `DBT_PROFILES_DIR=. dbt build -s fct_daily_activity` → alle 4 Tests PASS.
+- Stichprobe via `dbt show -s fct_daily_activity --limit 5` sieht plausibel aus.

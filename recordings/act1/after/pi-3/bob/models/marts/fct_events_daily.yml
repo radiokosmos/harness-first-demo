@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: fct_events_daily
+    description: >
+      Daily activity built from stg_events. One row per calendar day (UTC),
+      deduplicated on event_id (keeping the earliest ingested_at, since
+      stg_events itself still contains mobile-replay duplicates).
+    columns:
+      - name: event_date
+        description: Calendar day (UTC), derived from event_ts. Primary key.
+        data_tests: [unique, not_null]
+      - name: active_users
+        description: Number of distinct users with at least one event that day.
+        data_tests: [not_null]
+      - name: event_count
+        description: Number of events that day, after deduplication on event_id.
+        data_tests: [not_null]

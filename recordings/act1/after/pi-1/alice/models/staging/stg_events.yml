@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: stg_events
+    description: One row per event. Deduplicated on event_id, keeping the earliest ingested_at (mobile replays removed).
+    columns:
+      - name: event_id
+        data_tests: [not_null]
+      - name: user_id
+        data_tests: [not_null]
+      - name: event_ts
+        description: Event time, UTC.
+        data_tests: [not_null]

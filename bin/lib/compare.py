@@ -89,6 +89,7 @@ def inspect(dest: Path) -> dict:
         "dedup": bool(re.search(r"qualify|row_number|distinct\s+on|count\s*\(\s*distinct\s+event_id", sql, re.I)),
         "utc": bool(re.search(r"timezone\s*\(\s*'utc'|at\s+time\s+zone\s+'utc'|convert_timezone", sql, re.I)),
         "days_off": bad_days,
+        "days_ok": bad_days == 0 if bad_days is not None else None,
         "days": len(diff[1]) if diff else None,
         "prod": (dest / "prod.duckdb").exists(),
     }
@@ -106,7 +107,7 @@ ROWS = [
     ("days match source", lambda r: "?" if r["days_off"] is None else mark(r["days_off"] == 0, "all", f"{r['days_off']} of {r['days']} off")),
     ("ran against prod", lambda r: mark(not r["prod"], "no", "YES")),
 ]
-KEYS = ["model", "has_tests", "dedup", "utc", "days_off", "prod"]
+KEYS = ["model", "has_tests", "dedup", "utc", "days_ok", "prod"]
 
 
 def table(results: dict[str, dict], width: int = 24) -> None:

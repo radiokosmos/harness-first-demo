@@ -17,7 +17,7 @@ RUNS = Path(os.environ.get("HARNESS_RUNS", Path.home() / ".cache/harness-first-d
 BOLD, DIM, RESET = "\033[1m", "\033[2m", "\033[0m"
 
 SOURCE = re.compile(r"CLAUDE\.md|AGENTS\.md|your notes|personal notes|your preference|repo's|the repo|Alice's|Bob's|team", re.I)
-CHOICE = re.compile(r"\b(but|however|followed|chose|went with|instead|conflict|contradict|override|ignored|took precedence|prioriti[sz]ed)\b", re.I)
+CHOICE = re.compile(r"\b(but|however|instead|conflict\w*|contradict\w*|overrid\w+|ignored|took precedence|prioriti[sz]ed)\b", re.I)
 SENTENCE_END = re.compile(r"(?<=[.!?])\s+")
 
 

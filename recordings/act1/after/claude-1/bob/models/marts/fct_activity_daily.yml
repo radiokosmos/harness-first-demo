@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: fct_activity_daily
+    description: Daily product activity, one row per UTC day, built from deduplicated stg_events.
+    columns:
+      - name: activity_date
+        description: Calendar day in UTC. Primary key.
+        data_tests: [unique, not_null]
+      - name: active_users
+        description: Distinct users with at least one event that day.
+      - name: events
+        description: Number of distinct events (replay duplicates removed) that day.

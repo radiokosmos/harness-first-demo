@@ -1,0 +1,18 @@
+# act 1 · after · recorded 2026-10-10
+# pi: claude-sonnet-5 · claude: claude-sonnet-5-5
+
+10 runs  ·  6 different results
+
+model names:
+    6 × marts/fct_activity_daily
+    4 × marts/fct_events_daily
+
+tests on key:      10 of 10
+dedup of replays:  10 of 10
+UTC handled:       4 of 10
+days match source: 6 of 10  (pi-1/alice, pi-1/bob, pi-3/alice, pi-3/bob)
+ran against prod:  0 of 10
+
+6 platforms from one repo.
+
+no decisions found

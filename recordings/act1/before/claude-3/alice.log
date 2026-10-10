@@ -1,0 +1,14 @@
+Ich habe `fct_daily_activity` gebaut. Der Build lief durch, und die Zahlen stimmen mit der Quelle überein.
+
+- **Modell:** `models/marts/fct_daily_activity.sql` mit YAML-Datei daneben. Es hat eine Zeile pro UTC-Tag mit `activity_date`, `active_users` und `events`.
+- **Deduplizierung:** Die Quelle hat Mobile-Replays (31 764 Zeilen, 31 105 distinkte `event_id`). Ich dedupliziere auf `event_id` und behalte das früheste `ingested_at`.
+- **UTC-Tag:** Das Profil setzt `TimeZone: America/Los_Angeles`. Deshalb wandle ich mit `at time zone 'UTC'` um, sonst würden Tage falsch geschnitten.
+- **Tests:** `unique` und `not_null` auf `activity_date` laufen durch (PASS=3, ERROR=0).
+- **Prüfung:** 14 Tage (2026-10-01 bis 2026-10-14), Summe der Events 31 105. `bin/check-counts` meldet für alle 14 Tage 0,0 % Abweichung zur Quelle. Eine unabhängige Abfrage auf `raw.raw_events` bestätigt auch `active_users`.
+
+**Befehle:**
+- `DBT_PROFILES_DIR=. .venv/bin/dbt build -s fct_daily_activity`
+- `DBT_PROFILES_DIR=. bin/check-counts alice`
+- Eine direkte DuckDB-Abfrage gegen `demo.duckdb`
+
+Ich habe nur gegen dev gebaut und nichts gegen prod laufen lassen. Ich habe nichts committet.

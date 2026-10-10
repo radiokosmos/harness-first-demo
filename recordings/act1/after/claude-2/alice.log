@@ -1,0 +1,14 @@
+I added the mart `fct_events_daily`: one row per UTC day with `active_users` (distinct users) and `events`. `dbt build -s +fct_events_daily` passed (7 of 7), including the `unique` and `not_null` tests on `event_date`.
+
+- **Files:** `models/marts/fct_events_daily.sql` and `models/marts/fct_events_daily.yml`. The YAML has descriptions for the model and each column.
+- **Deduplication:** `stg_events` still has mobile-replay duplicates. The mart keeps the earliest `ingested_at` per `event_id`, as `models/staging/AGENTS.md` requires. Events total 31,105 across the 14 days, equal to the distinct `event_id` count in the raw data (the raw table has 31,764 rows).
+- **UTC days:** The dev profile's session time zone is America/Los_Angeles. I convert `event_ts` to UTC before taking the date so days don't shift.
+- **PII:** I didn't read the support tickets seed, so no PII is involved.
+- **Missing doc:** `docs/naming.md`, which `AGENTS.md` points to for the full naming list, doesn't exist. I followed the `fct_<subject>_daily` rule instead.
+
+Commands run:
+- `dbt seed --full-refresh`
+- `dbt build -s +fct_events_daily`
+- A read-only DuckDB check of the output
+
+All dbt commands used `DBT_PROFILES_DIR=.` with `uv run`, on the default dev target.

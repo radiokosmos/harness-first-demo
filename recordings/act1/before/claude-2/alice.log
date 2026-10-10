@@ -1,0 +1,11 @@
+- **Modell:** `models/marts/fct_daily_activity.sql` mit YAML (`fct_daily_activity.yml`). Eine Zeile pro UTC-Tag mit den Spalten `activity_date`, `active_users` und `event_count`.
+- **Deduplizierung:** `stg_events` enthält 659 doppelte `event_id`s (Mobile-Replays). Das Modell behält je `event_id` die Zeile mit dem frühesten `ingested_at`.
+- **UTC-Tag:** Das Profil setzt die Session-Zeitzone auf America/Los_Angeles. Der Tag wird deshalb explizit mit `timezone('UTC', event_ts)` berechnet.
+- **Tests und Abgleich:**
+  - `unique` und `not_null` auf `activity_date` bestehen.
+  - `bin/check-counts` zeigt für alle 14 Tage 0,0 % Abweichung zur Quelle.
+- **Befehle:**
+  - `DBT_PROFILES_DIR=. .venv/bin/dbt build -s fct_daily_activity`
+  - `bin/check-counts`
+  - Zusätzlich eine DuckDB-Abfrage auf `raw.raw_events` zur Duplikatprüfung.
+  - Ich habe nur die Dev-DB `demo.duckdb` verwendet (Standard im Profil, `dev_wh.duckdb` gibt es nicht), nichts gegen prod.

@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: fct_daily_activity
+    description: Daily activity, one row per UTC day. Built from deduplicated stg_events (one row per event_id, earliest ingested_at kept).
+    columns:
+      - name: activity_date
+        description: Calendar day in UTC.
+        data_tests: [unique, not_null]
+      - name: active_users
+        description: Number of distinct users with at least one event on the day.
+      - name: events
+        description: Number of distinct events (after deduplication on event_id) on the day.

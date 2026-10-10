@@ -1,0 +1,17 @@
+Looks correct. Note the model doesn't contain PII (only `event_id`, `user_id`, `event_ts` from `stg_events`), so no `meta: pii` tag needed.
+
+## Summary
+
+Built a new mart model, `models/marts/fct_events_daily.sql` (+ `fct_events_daily.yml`), following `skills/add-model/SKILL.md`:
+
+- **Grain**: one row per UTC calendar day (noted as a comment at the top of the SQL).
+- **Dedup**: `stg_events` is documented as *not* deduplicated (mobile replays), so the model dedupes on `event_id`, keeping the earliest `ingested_at`, per `models/staging/AGENTS.md`.
+- **Columns**: `event_date`, `active_users` (distinct users that day), `event_count` (deduplicated event count that day).
+- **Style**: CTEs (import → dedup → daily → final), lowercase keywords, no `select *`, trailing commas, snake_case, `fct_` prefix since it's an event/fact aggregate (`fct_events_daily` matches the `fct_<subject>_daily` convention).
+- **Tests**: `unique` + `not_null` on `event_date` (the primary key), plus `not_null` on the two measures.
+
+Commands run:
+```
+DBT_PROFILES_DIR=. dbt build -s fct_events_daily
+```
+→ model built as a table and all 4 tests passed. I also spot-checked the output with a quick DuckDB query — 15 daily rows, counts look sane (e.g. ~1,100–1,200 active users and ~2,000–2,300 events/day).

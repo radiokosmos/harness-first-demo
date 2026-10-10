@@ -1,0 +1,8 @@
+- **Modell:** `models/marts/fct_daily_activity.sql` mit Schema und Tests in `fct_daily_activity.yml`. Es hat eine Zeile pro UTC-Tag mit `activity_date`, `active_users` und `events`.
+- **Deduplizierung:** Ich dedupliziere auf `event_id` und behalte den frühesten `ingested_at`. Die Quelle hat 31.764 Zeilen, aber nur 31.105 distinkte Events (Mobile-Replays).
+- **UTC:** Das Datum wird mit `timezone('UTC', event_ts)` berechnet, weil die DuckDB-Session auf `America/Los_Angeles` läuft.
+- **Tests:** `unique` und `not_null` auf `activity_date` sind grün.
+- **Kontrolle:** Alle 14 Tage stimmen mit den distinkten Events in `raw_events` überein (0,0 % Abweichung).
+- **Befehle:** `DBT_PROFILES_DIR=. .venv/bin/dbt build -s fct_daily_activity` und `.venv/bin/python bin/lib/check_counts.py`.
+
+Eine Unstimmigkeit in der CLAUDE.md: Dort steht sowohl "Never run dbt with `--target prod`" als auch "I always double-check against prod". Ich habe nichts gegen prod gebaut. Wenn du den Prod-Check willst, sag Bescheid.

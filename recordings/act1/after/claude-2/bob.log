@@ -1,0 +1,23 @@
+I added the mart `fct_activity_daily`, one row per UTC day, and it builds with all tests passing. It covers 14 days, 2026-10-01 to 2026-10-14. The files are `models/marts/fct_activity_daily.sql` and `models/marts/fct_activity_daily.yml`.
+
+- **Columns:** `event_date` is the primary key and has `unique` and `not_null` tests. `active_users` is the number of distinct users per day. `event_count` is the number of events per day.
+- **Deduplication:** `stg_events` still contains mobile replays (659 duplicated `event_id`s). The mart keeps the earliest `ingested_at` per `event_id`, as `models/staging/AGENTS.md` requires. I left `stg_events` unchanged. The event total is 31,105, which matches the distinct event count in the raw seed.
+- **UTC days:** your dev session runs in America/Los_Angeles, so a plain `cast(event_ts as date)` would have put 9,746 events on the wrong day. The model uses `event_ts at time zone 'UTC'` so days are UTC, as the team convention requires.
+- **PII:** the mart uses no support-ticket data.
+
+**Commands I ran** (`DBT_PROFILES_DIR=.`, target `dev`, local `demo.duckdb`; nothing ran against prod):
+- `dbt seed --target dev`
+- `dbt build -s +fct_activity_daily --target dev`. This built `stg_events` and the mart and ran all 5 tests: PASS=7, ERROR=0.
+
+I also checked the mart against a separate query on `raw.raw_events` and found 0 mismatches across the 14 days. This is the check query:
+
+```sql
+select count(*), sum(e),
+       sum(case when e = m.event_count and u = m.active_users then 0 else 1 end) as mismatches
+from (select cast(event_ts at time zone 'UTC' as date) d,
+             count(distinct event_id) e, count(distinct user_id) u
+      from raw.raw_events group by 1) r
+join main.fct_activity_daily m on m.event_date = r.d
+```
+
+The new files are untracked and not committed.

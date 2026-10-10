@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: fct_daily_activity
+    description: One row per UTC day with the number of distinct active users and the number of distinct events. Built from stg_events, deduplicated on event_id (mobile replays).
+    columns:
+      - name: activity_date
+        description: Calendar day of the event, in UTC.
+        data_tests: [unique, not_null]
+      - name: active_users
+        description: Distinct users with at least one event on that day.
+      - name: event_count
+        description: Distinct events (by event_id) on that day.

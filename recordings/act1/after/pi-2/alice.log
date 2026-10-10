@@ -1,0 +1,16 @@
+Looks correct.
+
+## Summary
+
+Built `models/marts/fct_events_daily.sql` + accompanying `.yml`:
+
+- **Grain:** one row per day (`event_date`).
+- **Logic:** reads `stg_events`, dedupes on `event_id` keeping the earliest `ingested_at` (per `models/staging/AGENTS.md` — mobile replays share `event_id`), then aggregates by UTC calendar day into `active_users` (distinct user count) and `event_count` (deduped event count).
+- Followed team conventions: `fct_` prefix, `fct_<subject>_daily` naming, lives in `models/marts/`, CTEs not nested subqueries, lowercase keywords, trailing commas, no `select *`.
+- Added `unique` + `not_null` tests on the primary key (`event_date`), plus `not_null` on the two measures.
+
+**Commands run:**
+```
+DBT_PROFILES_DIR=. dbt build -s fct_events_daily   # table built, 4/4 tests passed
+DBT_PROFILES_DIR=. dbt show -s fct_events_daily --limit 5   # sanity-checked output
+```
