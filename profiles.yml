@@ -1,5 +1,3 @@
-# The session time zone below is deliberate. Like many real warehouse accounts,
-# this one has a non-UTC default that someone set years ago. Data is UTC.
 harness_demo:
   target: dev
   outputs:

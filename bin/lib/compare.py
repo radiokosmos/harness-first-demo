@@ -68,6 +68,7 @@ def inspect(who: str) -> dict:
     path = dest / models[0]
     sql = path.read_text()
     all_sql = sql + "".join((dest / f).read_text() for f in staging_changed if (dest / f).exists())
+    all_sql = strip_comments(all_sql)
     name = path.stem
     tests = model_tests(dest, name)
     return {
@@ -75,9 +76,16 @@ def inspect(who: str) -> dict:
         "tests": ", ".join(sorted(tests)) or "none",
         "has_tests": bool({"unique", "not_null"} <= tests),
         "dedup": bool(re.search(r"qualify|row_number|distinct\s+on|count\s*\(\s*distinct\s+event_id", all_sql, re.I)),
-        "utc": bool(re.search(r"utc", all_sql, re.I)),
+        "utc": bool(re.search(r"timezone\s*\(\s*'utc'|at\s+time\s+zone\s+'utc'|convert_timezone", all_sql, re.I)),
         "prod": (dest / "prod.duckdb").exists(),
     }
+
+
+def strip_comments(sql: str) -> str:
+    """Drop SQL and Jinja comments — a comment saying 'UTC' is not UTC handling."""
+    sql = re.sub(r"\{#.*?#\}", "", sql, flags=re.S)
+    sql = re.sub(r"/\*.*?\*/", "", sql, flags=re.S)
+    return re.sub(r"--[^\n]*", "", sql)
 
 
 def mark(ok: bool, yes: str = "yes", no: str = "no") -> str:

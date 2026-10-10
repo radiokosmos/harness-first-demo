@@ -59,8 +59,7 @@ When you add a new model, follow these steps:
 7. Add `unique` and `not_null` tests on the primary key.
 8. If any column comes from a PII source, add `meta: {pii: true}` to it.
 9. Run `dbt build -s <model>` and fix failures.
-10. Compare row counts with the source for a few days.
-11. Write a short summary of what you built.
+10. Write a short summary of what you built.
 
 ## Misc
 
