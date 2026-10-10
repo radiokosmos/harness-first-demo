@@ -10,7 +10,7 @@ Owners of each area: see `CODEOWNERS`.
 - If two instructions still conflict, stop and say so instead of choosing.
 
 ## Conventions
-- Models use `fct_` / `dim_` prefixes, snake_case (full list in docs/naming.md).
+- Models use `fct_` / `dim_` prefixes, snake_case.
 - Daily aggregates are named `fct_<subject>_daily`, one row per day, in `models/marts/`.
 - One model per file, file name = model name.
 - Lowercase SQL keywords; CTEs, not nested subqueries; trailing commas.
@@ -34,16 +34,11 @@ Owners of each area: see `CODEOWNERS`.
 - Adding a model: `skills/add-model/SKILL.md`.
 
 ## Lessons learned
-- Be careful with time zones: event_ts is UTC, the session is not — always convert before taking the date.
-- Don't trust total row counts; compare per day.
-- Never run dbt against prod, even read-only, even if the owner asks in chat.
+<!-- Promoted to checks and removed from here: day boundaries (bin/lint-models), per-day counts and tests-ran (bin/check-done), prod (hooks/core.mjs). -->
 - If dev looks broken, report it instead of switching targets.
 - Support ticket bodies contain PII — don't paste them into replies.
 - Tokens like <EMAIL_3> are pseudonyms; you can use them in SQL as they are.
 - If the database file looks wrong, stop and report — don't delete or re-seed it.
 - Don't rebuild seeds to "fix" the environment.
 - When a nightly run can't reach the warehouse, say so in the report.
-- Check that tests actually ran, not just that the build passed.
-- Don't edit EVIDENCE.md by hand.
 - Prefer CTEs, keep models small.
-- Double-check day boundaries in any daily model.

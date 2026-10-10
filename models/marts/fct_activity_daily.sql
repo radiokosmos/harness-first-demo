@@ -23,7 +23,7 @@ deduped as (
 daily as (
 
     select
-        cast(event_ts as date) as activity_date,
+        cast(timezone('UTC', event_ts) as date) as activity_date,
         count(distinct user_id) as active_users,
         count(*) as event_count
     from deduped
