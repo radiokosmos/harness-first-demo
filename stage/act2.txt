@@ -12,7 +12,7 @@ $ bin/test-hook
 @ act-2-hook
 $ bin/test-hook
 --- 18 · tests are green, data is not
-$ DBT_PROFILES_DIR=. .venv/bin/dbt build -q -s +fct_activity_daily
+$ DBT_PROFILES_DIR=. .venv/bin/dbt build -s +fct_activity_daily 2>&1 | tail -3
 $ bin/check-counts
 --- 19 · evidence
 @ act-2-evidence
