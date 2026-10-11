@@ -1,0 +1,14 @@
+# Act 5 — the harness rots (slides 31–34)
+--- 32 · run it on the repo you built today
+@ act-5-start
+$ bin/drift-check
+--- 33 · mistake → candidate
+$ bin/reflections-report
+$ echo '{"date":"2026-10-14","repo":"demo","severity":"major","class":"edge-case","finding":"model took the date of a UTC timestamp in the session time zone","caught_by":"reconcile","missed_by":"schema tests","candidate_check":"lint: no bare cast(<timestamp> as date) or current_date in models","promoted":""}' >> reflections/2026-10.jsonl
+$ bin/reflections-report
+--- 33 · the check you just wrote (reference solution)
+! git checkout act-5-done -- guards/day-boundary.mjs
+$ bin/test-guard
+$ bin/lint-models
+! git checkout act-5-start -- guards/day-boundary.mjs reflections
+@ main

@@ -1,0 +1,18 @@
+# Act 1 — a second engineer joins (slides 5–13)
+--- 5 · Alice's monolith
+@ act-1-start
+$ head -32 CLAUDE.md
+--- 7 · 14 runs, one repo, one task
+> recordings/act1/before/summary.txt
+--- 10 · exercise: split the monolith
+$ bin/check-layers
+--- 10 · the reference split
+@ act-1-layers
+$ cat AGENTS.md
+$ bin/check-layers
+--- 11 · after the split, 10 runs
+> recordings/act1/after/summary.txt
+--- 13 · the agent checked its own work
+> recordings/act1/self-check/models/marts/fct_events_daily.sql
+> recordings/act1/self-check/summary.txt
+@ main

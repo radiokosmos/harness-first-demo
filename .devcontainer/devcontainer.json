@@ -1,0 +1,30 @@
+{
+  "name": "harness-first-demo",
+  "image": "mcr.microsoft.com/devcontainers/python:1-3.12-bookworm",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "22"
+    }
+  },
+  "postCreateCommand": "bash .devcontainer/setup.sh",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.fontSize": 16
+      }
+    },
+    "codespaces": {
+      "openFiles": [
+        "README.md",
+        "CLAUDE.md"
+      ]
+    }
+  },
+  "hostRequirements": {
+    "cpus": 2,
+    "memory": "4gb"
+  },
+  "remoteEnv": {
+    "DBT_PROFILES_DIR": "${containerWorkspaceFolder}"
+  }
+}

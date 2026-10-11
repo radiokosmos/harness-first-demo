@@ -1,0 +1,11 @@
+# Act 4 — you leave the loop (slides 26–30)
+--- 27 · which run actually did the work?
+@ act-4-start
+> recordings/act4/ok/report.md head 14
+> recordings/act4/expired-token/report.md
+> recordings/act4/no-warehouse/report.md head 12
+--- 29 · verify the run by its artifacts
+> recordings/act4/ok/verify-run.txt
+> recordings/act4/expired-token/verify-run.txt
+> recordings/act4/no-warehouse/verify-run.txt
+@ main

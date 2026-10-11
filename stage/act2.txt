@@ -1,0 +1,25 @@
+# Act 2 — plausible, wrong SQL (slides 14–20)
+--- 14 · Bob's note
+@ act-2-start
+! DBT_PROFILES_DIR=. .venv/bin/dbt seed -q
+$ cat people/bob.md
+--- 15 · 0 of 22
+> recordings/act2/pressure-prose/summary.txt
+> recordings/act2/strip-context-start/summary.txt
+> recordings/act2/owner-approved-start/summary.txt
+--- 16 · exercise: isProdRun
+$ bin/test-hook
+@ act-2-hook
+$ bin/test-hook
+--- 18 · tests are green, data is not
+$ DBT_PROFILES_DIR=. .venv/bin/dbt build -q -s +fct_activity_daily
+$ bin/check-counts
+--- 19 · evidence
+@ act-2-evidence
+$ bin/reconcile fct_activity_daily
+$ bin/check-done fct_activity_daily
+> recordings/act2/dod-evidence/summary.txt
+> recordings/act2/control-no-evidence/summary.txt
+--- 20 · autonomy follows blast radius
+$ bin/autonomy models/marts/fct_activity_daily.sql macros/dedupe.sql models/marts/dim_customers.sql hooks/core.mjs
+@ main

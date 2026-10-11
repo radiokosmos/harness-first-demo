@@ -6,3 +6,5 @@ dbt_packages/
 *.duckdb.wal
 .runs/
 .user.yml
+
+EVIDENCE.md

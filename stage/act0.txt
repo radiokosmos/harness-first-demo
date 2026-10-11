@@ -1,0 +1,4 @@
+# Opening — slide 4
+--- 4 · is your machine ready
+@ main
+$ bin/doctor

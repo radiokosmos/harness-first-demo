@@ -1,0 +1,15 @@
+# Act 3 — the agent sees customer data (slides 21–25)
+--- 21 · what left the machine
+@ act-3-start
+> recordings/act3/leak/provider-payload-summary.txt
+--- 23 · exercise: the masker
+$ bin/pii-score
+@ act-3-masker
+$ bin/pii-score
+$ bin/pii-score --hidden
+--- 24 · echelon 2 catches a paste
+> recordings/act3/paste/stderr-and-stdout.txt
+--- 24 · detokenize: the agent's answer
+> recordings/act3/detokenize/stderr-and-stdout.txt tail 22
+> recordings/act3/detokenize/provider-payload-summary.txt
+@ main

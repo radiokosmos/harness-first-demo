@@ -8,6 +8,10 @@ All data is synthetic (Faker, fixed seeds). No real customers, no real company.
 
 ## Setup
 
+**Online, no installs:** [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/radiokosmos/harness-first-demo) — the devcontainer installs everything, generates the data and runs `bin/doctor`. Then log in to one agent runtime (`pi` → `/login`, or `claude` → `/login`), or set `ANTHROPIC_API_KEY`.
+
+**Locally:**
+
 ```bash
 uv sync
 uv run python data/generate.py     # seeds/ and corpus/
@@ -29,6 +33,8 @@ You need one agent runtime: [pi](https://pi.dev), Claude Code or Codex, logged i
 
 Recorded runs for the stage live in `recordings/`.
 
+Not coding along? That's fine — every exercise is also done live by the presenter, and every checkpoint branch is a complete solution.
+
 Fell behind? Every exercise has a checkpoint branch: `git checkout act-N-…`.
 
 ## Tools
@@ -36,6 +42,7 @@ Fell behind? Every exercise has a checkpoint branch: `git checkout act-N-…`.
 | Command | Act | What |
 |---|---|---|
 | `bin/doctor` | — | is the machine ready |
+| `bin/stage <act>` | presenter | the presenter's terminal script: one step per Enter, agent output from recordings |
 | `bin/run-as <who> <task>` | 1+ | run the agent as Alice or Bob (their personal layer goes into the system prompt) in a throwaway copy |
 | `bin/run-many -n N alice bob` | 1+ | many runs in parallel (agents are not deterministic) |
 | `bin/compare alice bob` / `--all` | 1 | what each run built; `--all` = the distribution over every run |
