@@ -98,8 +98,22 @@ def is_off(src, mdl) -> bool:
     return abs(100.0 * (mdl - src) / src) > TOLERANCE_PCT
 
 
+def session_settings() -> dict:
+    """The warehouse session settings dbt uses (profiles.yml) — evidence must run in the same session."""
+    try:
+        import yaml
+        prof = yaml.safe_load((ROOT / "profiles.yml").read_text())
+        name = next(iter(prof))
+        out = prof[name]["outputs"][prof[name].get("target", "dev")]
+        return out.get("settings") or {}
+    except Exception:
+        return {}
+
+
 def run_checks(model: str, db: Path) -> list[tuple[str, list[tuple]]]:
     con = duckdb.connect(str(db), read_only=True)
+    for key, value in session_settings().items():
+        con.execute(f"SET {key} = '{value}'")
     try:
         cols = find_columns(con, model)
         return [(name, fn(con, *cols)) for name, fn in CHECKS]
