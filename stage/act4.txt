@@ -4,8 +4,9 @@
 > recordings/act4/ok/report.md head 14
 > recordings/act4/expired-token/report.md
 > recordings/act4/no-warehouse/report.md head 12
---- 29 · verify the run by its artifacts
-> recordings/act4/ok/verify-run.txt
-> recordings/act4/expired-token/verify-run.txt
-> recordings/act4/no-warehouse/verify-run.txt
+--- 29 · verify the run by its artifacts (reference checks)
+@ act-4-heartbeat
+$ bin/verify-run recordings/act4/ok
+$ bin/verify-run recordings/act4/expired-token
+$ bin/verify-run recordings/act4/no-warehouse
 @ main
