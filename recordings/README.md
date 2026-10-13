@@ -27,6 +27,7 @@ Each folder has the files the agents added, their logs, and `summary.txt`
 | `act4/agent-writes-verify-run` | `act-4-start` (recordings/ and stage/ left out of the copy), `tasks/act4-verify.md` | one pi run: 2 of 2 on ok and expired-token with 5 checks of its own; RUN OK on no-warehouse (2 of 3 on act-4-heartbeat's cases) |
 | `act5/natural` | `act-5-done`, a new daily model | the agent used UTC on its own; the guard had nothing to catch (dead, or perfect?) |
 | `act5/guard-fires` | `act-5-done`, a bare cast written on purpose | sql-guard appended its finding to the write result; the agent saw it |
+| `act5/agent-writes-guard` | `act-5-start` (recordings/ and stage/ left out of the copy), `tasks/act5-guard.md` | one pi run: 6 of 6, its guard finds the act 2 bug; it flags the comment that explains the fix and `at time zone 'UTC'` (8 of 10 on act-5-done's cases) |
 
 Models: pi with `claude-sonnet-5`, Claude Code with `claude-sonnet-5-5`.
 To compare a recording yourself: `HARNESS_RUNS=<scratch copy of runs> bin/compare --all`.

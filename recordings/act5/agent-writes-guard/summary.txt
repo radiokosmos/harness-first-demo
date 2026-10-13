@@ -1,0 +1,19 @@
+# act 5 · agent-writes-guard · recorded 2026-10-14
+# act-5-start (one-line docstring, 6 obvious cases, no comment helper) · tasks/act5-guard.md · bin/run-as bob
+# pi: claude-sonnet-5 · one run, the first try · 58 s
+
+the agent's findBareDayCasts on the 6 cases it was given: 6 of 6
+lint-models on the repo: models/marts/fct_activity_daily.sql:26, the act 2 bug
+on the 10 in act-5-done (with the cases a human added):
+  ✗ allow  -- not cast(event_ts as date): the session is America/Los_Angeles ⏎ select cast(timezone('UTC', event_ts) as date) as d from e   (got flag)
+  ✓ flag   select cast(event_ts as date) as d from e -- event_ts is UTC
+  ✗ allow  select (event_ts at time zone 'UTC')::date as d from e   (got flag)
+  ✓ allow  select cast(ingested_at as varchar) from e
+  8 of 10: it reads a comment as code, and knows only timezone(…) as UTC
+  on the fixed model, lint-models is red on the comment that explains the fix
+
+same setup, measured 2026-10-14 (pi × 10, Claude Code × 10):
+  every guard found the act 2 bug and was quiet on the fixed model (20 of 20)
+  pi flagged the comment in 10 of 10 and `at time zone 'UTC'` in 9 of 10;
+  Claude Code got the comment right in 10 of 10 and flagged `at time zone` in 1
+  with the human's cases in the tests: 10 of 10 runs green, pi still flags /* … */ in 4 of 5

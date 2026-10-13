@@ -6,9 +6,28 @@ $ bin/drift-check
 $ bin/reflections-report
 $ echo '{"date":"2026-10-14","repo":"demo","severity":"major","class":"edge-case","finding":"model took the date of a UTC timestamp in the session time zone","caught_by":"reconcile","missed_by":"schema tests","candidate_check":"lint: no bare cast(<timestamp> as date) or current_date in models","promoted":""}' >> reflections/2026-10.jsonl
 $ bin/reflections-report
---- 33 · the check you just wrote (reference solution)
-! git checkout act-5-done -- guards/day-boundary.mjs
+--- 33 · exercise: the agent writes the check
+$ cat tasks/act5-guard.md
 $ bin/test-guard
+> recordings/act5/agent-writes-guard/bob.log
+! git checkout -q -- guards && git apply recordings/act5/agent-writes-guard/bob.diff
+$ bin/test-guard
+--- 33 · the check goes looking
 $ bin/lint-models
-! git checkout act-5-start -- guards/day-boundary.mjs reflections
+--- 33 · you fix the model and say why — the check is still red
+# the fix from the checkpoint branch; the agent's guard stays
+! git checkout -q act-5-done -- models/marts/fct_activity_daily.sql
+$ git --no-pager diff --cached models
+$ bin/lint-models
+--- 33 · pin it as a test
+! git checkout -q act-5-done -- guards/test-day-boundary.mjs
+$ git --no-pager diff --cached guards
+$ bin/test-guard
+--- 33 · fixed: act-5-done — and the lesson is gone from AGENTS.md
+! git checkout -q HEAD -- guards models reflections
+@ act-5-done
+$ bin/test-guard
+> recordings/act5/agent-writes-guard/summary.txt tail 5
+$ git --no-pager diff act-5-start act-5-done -- AGENTS.md
+$ bin/lint-models && bin/drift-check
 @ main

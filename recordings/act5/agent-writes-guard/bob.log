@@ -1,0 +1,9 @@
+All 6 cases pass. `findBareDayCasts` in `guards/day-boundary.mjs` now flags:
+
+- `cast(<expr> as date)` 
+- `<expr>::date`
+- `date_trunc('day', <expr>)`
+- plain `date(<expr>)`
+- bare `current_date`
+
+...unless the timestamp expression is wrapped in `timezone(...)` first (e.g. `timezone('UTC', event_ts)`), matching the lesson: convert to UTC before taking the date. Change was scoped entirely to `guards/day-boundary.mjs`.

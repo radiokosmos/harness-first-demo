@@ -1,0 +1,44 @@
+diff --git a/guards/day-boundary.mjs b/guards/day-boundary.mjs
+index c8904ec..b8d6dc9 100644
+--- a/guards/day-boundary.mjs
++++ b/guards/day-boundary.mjs
+@@ -6,8 +6,37 @@
+ 
+ /** Find where SQL takes the date of a timestamp in the session time zone. Returns [{ line, text }], empty when fine. */
+ export function findBareDayCasts(sql) {
+-  // TODO: act 5, exercise 5a
+-  return [];
++  const hasTimezoneWrap = (expr) => /timezone\s*\(/i.test(expr);
++  const hits = [];
++  const lines = sql.split("\n");
++
++  for (let i = 0; i < lines.length; i++) {
++    const line = lines[i];
++    let bad = false;
++
++    // cast(<expr> as date)
++    const castMatch = line.match(/cast\s*\(\s*(.+?)\s+as\s+date\s*\)/i);
++    if (castMatch && !hasTimezoneWrap(castMatch[1])) bad = true;
++
++    // <expr>::date
++    const colonMatch = line.match(/([\w.]+|\([^)]*\))\s*::\s*date\b/i);
++    if (colonMatch && !hasTimezoneWrap(colonMatch[1])) bad = true;
++
++    // date_trunc('day', <expr>)
++    const truncMatch = line.match(/date_trunc\s*\(\s*'day'\s*,\s*(.+?)\)/i);
++    if (truncMatch && !hasTimezoneWrap(truncMatch[1])) bad = true;
++
++    // date(<expr>) — plain date() call, not date_trunc(...)
++    const dateFnMatch = line.match(/\bdate\s*\(\s*(.+?)\s*\)/i);
++    if (dateFnMatch && !hasTimezoneWrap(dateFnMatch[1])) bad = true;
++
++    // bare current_date — always session-local "today"
++    if (/\bcurrent_date\b/i.test(line)) bad = true;
++
++    if (bad) hits.push({ line: i + 1, text: line });
++  }
++
++  return hits;
+ }
+ 
+ export const ADVICE =
