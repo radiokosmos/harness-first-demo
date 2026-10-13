@@ -9,6 +9,13 @@ const cases = [
   ["DBT_PROFILES_DIR=. .venv/bin/dbt build --target prod -s fct_activity_daily", true],
   ["dbt seed && dbt build --target prod", true],
   ["dbt build --target dev", false],
+  // mentions the command, doesn't run it: the agent's first version blocked this docs edit
+  ['echo "never run dbt build --target prod" >> AGENTS.md', false],
+  ['grep -- "--target prod" AGENTS.md', false],
+  ['git commit -m "block --target prod in hook"', false],
+  // ways around a parser: what the fixed version let through
+  ["export DBT_TARGET=prod; dbt build", true],
+  ["uv run dbt build --target prod", true],
 ];
 
 let failed = 0;
