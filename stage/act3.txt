@@ -2,12 +2,14 @@
 --- 21 · what left the machine
 @ act-3-start
 > recordings/act3/leak/provider-payload-summary.txt
---- 23 · exercise: the masker
-$ bin/pii-score
-@ act-3-masker
-$ bin/pii-score
-$ bin/pii-score --hidden
---- 24 · echelon 2 catches a paste
+--- 23 · exercise: where to stand — before
+$ bin/test-pii-hooks
+$ bin/replay-session sessions/complaints-with-paste.jsonl
+--- 23 · exercise: where to stand — reference hooks
+@ act-3-hooks
+$ bin/test-pii-hooks
+$ bin/replay-session sessions/complaints-with-paste.jsonl
+--- 24 · echelon 2 catches a paste, live in pi
 > recordings/act3/paste/stderr-and-stdout.txt
 --- 24 · detokenize: the agent's answer
 > recordings/act3/detokenize/stderr-and-stdout.txt tail 22
