@@ -33,7 +33,6 @@ TOLERANCE_PCT = 0.5
 def completeness(con, m: str, d: str, e: str, u: str) -> list[tuple]:
     # TODO: act 2, exercise 2b.
     # Source side: the number of distinct event_id per day in raw.raw_events.
-    # What is "a day" for this data? Look at how event_ts is stored.
     source_sql = "select null::date as day, null::bigint as n"
     return con.execute(f"""
         with src as ({source_sql}),
@@ -47,8 +46,7 @@ def completeness(con, m: str, d: str, e: str, u: str) -> list[tuple]:
 
 def keys(con, m: str, d: str, e: str, u: str) -> list[tuple]:
     # TODO: act 2, exercise 2b.
-    # Source side: the number of distinct user_id per day in raw.raw_events —
-    # same notion of "a day" as in completeness().
+    # Source side: the number of distinct user_id per day in raw.raw_events.
     source_sql = "select null::date as day, null::bigint as n"
     return con.execute(f"""
         with src as ({source_sql}),
