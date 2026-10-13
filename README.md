@@ -27,7 +27,7 @@ You need one agent runtime: [pi](https://pi.dev), Claude Code or Codex, logged i
 |---|---|---|
 | 1. A second engineer joins | `act-1-start` | context layers with owners |
 | 2. Plausible, wrong SQL | `act-2-start` | a must-rule as code, data evidence |
-| 3. The agent sees customer data | `act-3-start` | PII masking before the LLM call |
+| 3. The agent sees customer data | `act-3-start` | where to stand in the agent loop so PII never reaches the model |
 | 4. You leave the loop | `act-4-start` | a heartbeat from run artifacts |
 | 5. The harness rots | `act-5-start` | mistake → check |
 
@@ -52,7 +52,8 @@ Fell behind? Every exercise has a checkpoint branch: `git checkout act-N-…`.
 | `bin/test-hook` | 2 | cases for the prod guardrail (`hooks/core.mjs`) |
 | `bin/reconcile <model>` · `bin/check-done <model>` | 2 | evidence on data; done = generated evidence + planned tests ran |
 | `bin/autonomy <path>` | 2 | how far an agent may go on a change (`autonomy.yaml`) |
-| `bin/pii-score [--hidden]` | 3 | the PII masker (`pii/masker.mjs`) on a labelled corpus |
+| `bin/test-pii-hooks` · `bin/replay-session <session>` | 3 | the PII hooks (`pii/hooks.mjs`): cases, and what a recorded session would send to the provider, by path |
+| `bin/pii-score [--hidden]` | 3 | the masker itself (`pii/masker.mjs`) on a labelled corpus |
 | `bin/show-provider-payload [who]` | 3 | what actually left the machine |
 | `bin/run-headless <task> --scenario …` · `bin/verify-run <dir>` | 4 | an unattended run, and checking it by artifacts |
 | `bin/drift-check` · `bin/reflections-report` | 5 | does the harness agree with itself; which mistakes keep coming back |
