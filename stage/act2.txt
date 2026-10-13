@@ -25,11 +25,31 @@ $ bin/test-hook
 $ bin/test-hook
 > recordings/act2/agent-writes-hook/summary.txt tail 6
 --- 18 · tests are green, data is not
+@ act-2-hook
 $ DBT_PROFILES_DIR=. .venv/bin/dbt build -s +fct_activity_daily 2>&1 | tail -3
 $ bin/check-counts
---- 19 · evidence
-@ act-2-evidence
+--- 18 · exercise: the agent writes reconcile
+$ cat tasks/act2-evidence.md
+$ bin/test-reconcile
+> recordings/act2/agent-writes-data-diff/bob.log
+> recordings/act2/agent-writes-data-diff/bob.diff
+! git checkout -q -- bin/lib && git apply recordings/act2/agent-writes-data-diff/bob.diff
+$ bin/test-reconcile
 $ bin/reconcile fct_activity_daily
+--- 18 · you find the case it gets wrong
+# the cases a human added, from the checkpoint branch; the agent's reconcile stays
+! git checkout -q act-2-evidence -- bin/lib/test_reconcile.py
+$ git --no-pager diff --cached
+$ bin/test-reconcile
+--- 18 · fixed: act-2-evidence
+! git checkout -q HEAD -- bin/lib
+@ act-2-evidence
+$ bin/test-reconcile
+$ bin/reconcile fct_activity_daily
+> recordings/act2/agent-writes-data-diff/summary.txt tail 5
+--- 19 · finish it to the definition of done
+@ act-2-evidence
+$ tail -6 skills/add-model/SKILL.md
 $ bin/check-done fct_activity_daily
 > recordings/act2/dod-evidence/summary.txt
 > recordings/act2/control-no-evidence/summary.txt

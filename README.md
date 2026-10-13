@@ -51,6 +51,7 @@ Fell behind? Every exercise has a checkpoint branch: `git checkout act-N-…`.
 | `bin/check-counts [who]` | 1–2 | daily model vs source, by UTC day |
 | `bin/test-hook` | 2 | cases for the prod guardrail (`hooks/core.mjs`) |
 | `bin/reconcile <model>` · `bin/check-done <model>` | 2 | evidence on data; done = generated evidence + planned tests ran |
+| `bin/test-reconcile` | 2 | cases for reconcile itself: versions of the model whose verdict we know |
 | `bin/autonomy <path>` | 2 | how far an agent may go on a change (`autonomy.yaml`) |
 | `bin/test-pii-hooks` · `bin/replay-session <session>` | 3 | the PII hooks (`pii/hooks.mjs`): cases, and what a recorded session would send to the provider, by path |
 | `bin/pii-score [--hidden]` | 3 | the masker itself (`pii/masker.mjs`) on a labelled corpus |

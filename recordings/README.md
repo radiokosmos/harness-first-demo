@@ -15,6 +15,7 @@ Each folder has the files the agents added, their logs, and `summary.txt`
 | `act2/dod-evidence` | `act-2-evidence` | 8 of 8 found and fixed the day boundary through data-diff |
 | `act2/control-no-evidence` | `act-2-hook`, no definition of done | 3 of 4 left the bug in |
 | `act2/agent-writes-hook` | `act-2-start` (recordings/ and stage/ left out of the copy), `tasks/act2-hook.md` | one pi run: 7 of 7, then on act-2-hook's cases it blocks a docs edit that mentions the command (11 of 12) |
+| `act2/agent-writes-data-diff` | `act-2-hook` (recordings/ and stage/ left out of the copy), `tasks/act2-evidence.md` | one pi run: 3 of 3, data-diff PASS on the broken model — it takes a day the way the model does (3 of 5 on act-2-evidence's cases) |
 | `act3/leak` | `act-3-start`, `PII_FILTER=0` | 16 requests; the last one carried 42 distinct customer emails (history is re-sent every turn) |
 | `act3/masked` | `act-3-masker`, both echelons | no email, phone, IBAN or card left the machine; names did |
 | `act3/detokenize` | `act-3-masker` + `PII_DETOKENIZE=1` | filtered on `<EMAIL_3>`, found all 23 tickets, never saw the address |

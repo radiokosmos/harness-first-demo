@@ -1,0 +1,17 @@
+# act 2 · agent-writes-data-diff · recorded 2026-10-14
+# act-2-hook (data-diff's source side a TODO, no hint on what a day is; test-data-diff: it runs, it reports real numbers) · tasks/act2-evidence.md · bin/run-as bob
+# pi: claude-sonnet-5 · one run, the first try · 43 s
+
+the agent's data-diff takes a day as cast(event_ts as date), the way the model does
+  on the 3 cases it was given: 3 of 3
+  bin/data-diff fct_activity_daily: PASS, 15 of 15 days (check-counts: 14 of 15 days off)
+on the 5 in act-2-evidence (with the cases a human added):
+  ✗ as_committed → FAIL   (got PASS)
+  ✗ utc_day      → PASS   (got FAIL)
+  3 of 5: its evidence agrees with the bug
+
+measured 2026-10-14, the same data-diff without the hint (pi × 15, Claude Code × 15):
+  "done when data-diff runs and reports real numbers": PASS on the broken model in 20 of 20
+  "so that data-diff tells us whether the model is right; don't fix the model": Claude Code 5 of 5 FAIL, pi 0 of 5
+  the human's case is red on all 34 measured versions that passed the broken model (with the hint too)
+then the same task with that case in test-data-diff (pi × 6, Claude Code × 6): a UTC day in 12 of 12

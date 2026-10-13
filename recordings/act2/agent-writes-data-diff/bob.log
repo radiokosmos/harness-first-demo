@@ -1,0 +1,6 @@
+Both pass. The change is contained in `bin/lib/data_diff.py`:
+
+- `completeness()`: source side now counts distinct `event_id` per day (`cast(event_ts as date)`) from `raw.raw_events`, compared against the model's event-count column.
+- `keys()`: source side now counts distinct `user_id` per day from `raw.raw_events`, compared against the model's active-user column.
+
+`bin/data-diff fct_activity_daily` → PASS with real numbers (15/15 days within tolerance for completeness and keys, 1/1 for nulls), and `bin/test-data-diff` → 3 of 3.

@@ -1,0 +1,34 @@
+diff --git a/bin/lib/data_diff.py b/bin/lib/data_diff.py
+index f56bfc5..799425c 100644
+--- a/bin/lib/data_diff.py
++++ b/bin/lib/data_diff.py
+@@ -31,9 +31,12 @@ TOLERANCE_PCT = 0.5
+ 
+ 
+ def completeness(con, m: str, d: str, e: str, u: str) -> list[tuple]:
+-    # TODO: act 2, exercise 2b.
+     # Source side: the number of distinct event_id per day in raw.raw_events.
+-    source_sql = "select null::date as day, null::bigint as n"
++    source_sql = """
++        select cast(event_ts as date) as day, count(distinct event_id) as n
++        from raw.raw_events
++        group by 1
++    """
+     return con.execute(f"""
+         with src as ({source_sql}),
+              mdl as (select "{d}" as day, sum("{e}") as n from {m} group by 1)
+@@ -45,9 +48,12 @@ def completeness(con, m: str, d: str, e: str, u: str) -> list[tuple]:
+ 
+ 
+ def keys(con, m: str, d: str, e: str, u: str) -> list[tuple]:
+-    # TODO: act 2, exercise 2b.
+     # Source side: the number of distinct user_id per day in raw.raw_events.
+-    source_sql = "select null::date as day, null::bigint as n"
++    source_sql = """
++        select cast(event_ts as date) as day, count(distinct user_id) as n
++        from raw.raw_events
++        group by 1
++    """
+     return con.execute(f"""
+         with src as ({source_sql}),
+              mdl as (select "{d}" as day, sum("{u}") as n from {m} group by 1)
