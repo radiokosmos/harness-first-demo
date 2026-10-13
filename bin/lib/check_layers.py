@@ -2,7 +2,7 @@
 
     bin/check-layers
 
-Six checks. Run it as often as you like — it only reads files.
+Seven checks. Run it as often as you like — it only reads files.
 """
 
 from __future__ import annotations
@@ -134,15 +134,55 @@ def check_monolith(ctx: dict[str, str]) -> list[str]:
     return []
 
 
-def check_precedence(ctx: dict[str, str]) -> list[str]:
-    team = ctx.get("AGENTS.md", "")
-    lines = [l.lower() for l in content_lines(team)]
-    says_order = any(re.search(r"precedence|wins over|win over|overrides|takes priority", l) for l in lines)
-    names_personal = any("personal" in l for l in lines)
-    if says_order and names_personal:
-        return []
-    return ["AGENTS.md doesn't say which layer wins when team and personal notes disagree — so the agent decides"]
+def sentences(text: str) -> list[str]:
+    """Bullets and wrapped paragraphs, joined back up and split into sentences."""
+    blocks, cur = [], []
+    for line in content_lines(text):
+        s = line.strip()
+        if s.startswith(("#", "- ", "* ")) or NUMBERED.match(s):
+            if cur:
+                blocks.append(" ".join(cur))
+            cur = [] if s.startswith("#") else [s.lstrip("-* ")]
+        else:
+            cur.append(s)
+    if cur:
+        blocks.append(" ".join(cur))
+    return [x for b in blocks for x in re.split(r"(?<=[.;])\s+", b) if x.strip()]
 
+
+# Which layer wins is the team's call, not the agent's. Asked only to make it
+# explicit, every agent we ran wrote an order of its own: personal notes win on
+# "workflow", personal notes win over the team, nobody stops on a conflict.
+# This is what the team decided; change it by MR.
+TEAM_DECISION = [
+    ("team rules win over personal notes",
+     re.compile(r"\b(team|this file|AGENTS\.md)\b.*\b(take[s]? precedence over|win[s]? over|override[s]?|beat[s]?)\b.*\bpersonal", re.I)),
+    ("personal notes win only on how to talk to that person: language, tone, format of replies",
+     re.compile(r"\bpersonal\b.*\bonly\b.*\b(talk|language|tone|repl(y|ies))|\bpersonal\b.*\b(talk|language|tone|repl(y|ies))\b.*\bonly\b", re.I)),
+    ("if two instructions still conflict, stop and say so instead of choosing",
+     re.compile(r"\b(conflict|disagree|contradict)\w*\b.*\b(stop|ask)|\b(stop|ask)\b.*\b(conflict|disagree|contradict)", re.I)),
+]
+OVER_TEAM = r"[^;]*?\b(take[s]? precedence over|win[s]? over|override[s]?|beat[s]?)\b[^;]*?\b(team|this file|AGENTS\.md|repo|project)\b"
+PERSONAL_OVER_TEAM = re.compile(r"\bpersonal\b" + OVER_TEAM, re.I)
+# in a personal file, "my notes" and "this file" are the personal layer too
+MINE_OVER_TEAM = re.compile(r"\b(personal|my|mine|I|this file|these notes)\b" + OVER_TEAM, re.I)
+PERSONAL_WINS = re.compile(r"\bpersonal\b[^;]*?\b(win[s]?|take[s]? precedence|override[s]?|set[s]?|decide[s]?)\b", re.I)
+BEYOND_TALK = re.compile(r"\b(workflow|habit|process|how (you|they) work|tooling|tests?|data|safety)\b", re.I)
+
+
+def check_precedence(ctx: dict[str, str]) -> list[str]:
+    issues = []
+    for path, text in ctx.items():
+        for s in sentences(text):
+            if (MINE_OVER_TEAM if path.startswith("people/") else PERSONAL_OVER_TEAM).search(s):
+                issues.append(f"{path}: personal notes win over the team here: {s[:72]}")
+            elif (m := PERSONAL_WINS.search(s)) and (b := BEYOND_TALK.search(s, m.end())) and not re.search(r"\b(never|not|don't)\b", s[m.end():b.start()], re.I):
+                issues.append(f"{path}: personal notes win on {b.group(0)} here, not only on how to talk: {s[:60]}")
+    team = sentences(ctx.get("AGENTS.md", ""))
+    for what, rx in TEAM_DECISION:
+        if not any(rx.search(s) for s in team):
+            issues.append(f"AGENTS.md doesn't say what the team decided: {what}")
+    return issues
 
 CHECKS = [
     ("Team layer holds no personal preferences", check_team_impersonal),
@@ -151,7 +191,7 @@ CHECKS = [
     (f"AGENTS.md within budget ({TEAM_BUDGET} lines)", check_budget),
     ("Procedure lives in skills/add-model", check_skill),
     ("CLAUDE.md monolith is gone", check_monolith),
-    ("Precedence between layers is explicit", check_precedence),
+    ("Precedence is written by the team", check_precedence),
 ]
 
 
