@@ -1,31 +1,19 @@
-// pi adapter for the PII masker — keep customer PII out of the LLM context.
+// pi adapter for the PII hooks (pii/hooks.mjs) — keep customer PII away from the model.
 //
-//   echelon 1  tool_result              mask what tools return, before the model sees it   (PII_FILTER, default on)
-//   echelon 2  before_provider_request  mask the outgoing request — the smoke detector     (PII_PROVIDER_GUARD, default off)
-//   back       tool_call                tokens -> real values, only for SQL commands       (PII_DETOKENIZE, default off)
+//   tool_result              echelon 1    PII_FILTER          (default on)
+//   before_provider_request  echelon 2    PII_PROVIDER_GUARD  (default off)
+//   tool_call                way back     PII_DETOKENIZE      (default off)
 //
 // PII_PAYLOAD_LOG=<file> appends every request as it actually leaves (after masking).
-// Warnings go to the UI *and* stderr, so headless runs keep them (act 4).
+// Behaviour lives in pii/hooks.mjs; this file only plugs it into pi.
 import type { ExtensionAPI } from "@earendil-works/pi-coding-agent";
 import { appendFileSync } from "node:fs";
 import { PiiMasker } from "../../pii/masker.mjs";
+import { onToolResult, onProviderRequest, onToolCall } from "../../pii/hooks.mjs";
 
 const masker = new PiiMasker(); // one per session: the same value keeps the same token
 const flag = (name: string, dflt: string) => (process.env[name] ?? dflt) !== "0";
-const SQL_TOOLS = /\bduckdb\b|\bdbt\s+show\b/;
-
-type Stats = Record<string, number>;
-const add = (agg: Stats, s: Stats) => { for (const [k, v] of Object.entries(s)) agg[k] = (agg[k] ?? 0) + v; };
-const line = (s: Stats) => Object.entries(s).map(([k, v]) => `${k}×${v}`).join(", ");
-
-function maskDeep(value: unknown, agg: Stats): unknown {
-  if (typeof value === "string") { const r = masker.mask(value); add(agg, r.stats); return r.text; }
-  if (Array.isArray(value)) return value.map((v) => maskDeep(v, agg));
-  if (value && typeof value === "object") {
-    return Object.fromEntries(Object.entries(value).map(([k, v]) => [k, maskDeep(v, agg)]));
-  }
-  return value;
-}
+const line = (s: Record<string, number>) => Object.entries(s).map(([k, v]) => `${k}×${v}`).join(", ");
 
 export default function (pi: ExtensionAPI) {
   const warn = (ctx: any, msg: string) => {
@@ -34,20 +22,21 @@ export default function (pi: ExtensionAPI) {
   };
 
   pi.on("tool_call", async (event) => {
-    if (!flag("PII_DETOKENIZE", "0") || event.toolName !== "bash") return;
+    if (!flag("PII_DETOKENIZE", "0")) return;
     const input = event.input as { command?: string };
-    if (input.command && SQL_TOOLS.test(input.command)) input.command = masker.detokenize(input.command);
+    if (typeof input.command === "string") input.command = onToolCall(masker, event.toolName, input.command);
   });
 
   pi.on("tool_result", async (event, ctx) => {
     if (!flag("PII_FILTER", "1")) return;
-    const agg: Stats = {};
+    const agg: Record<string, number> = {};
     let changed = false;
     const content = event.content.map((item: any) => {
       if (item?.type !== "text") return item;
-      const r = masker.mask(item.text);
-      if (!Object.keys(r.stats).length) return item;
-      changed = true; add(agg, r.stats);
+      const r = onToolResult(masker, event.toolName, item.text);
+      if (r.text === item.text) return item;
+      changed = true;
+      for (const [k, v] of Object.entries(r.stats)) agg[k] = (agg[k] ?? 0) + (v as number);
       return { ...item, text: r.text };
     });
     if (!changed) return;
@@ -58,10 +47,10 @@ export default function (pi: ExtensionAPI) {
   pi.on("before_provider_request", (event, ctx) => {
     let payload = event.payload;
     if (flag("PII_FILTER", "1") && flag("PII_PROVIDER_GUARD", "0")) {
-      const agg: Stats = {};
-      payload = maskDeep(event.payload, agg) as typeof event.payload;
-      if (Object.keys(agg).length) {
-        warn(ctx, `provider guard masked ${line(agg)} in the outgoing request — PII reached the context outside a tool result`);
+      const r = onProviderRequest(masker, event.payload);
+      payload = r.payload;
+      if (Object.keys(r.stats).length) {
+        warn(ctx, `provider guard masked ${line(r.stats)} in the outgoing request — PII reached the context outside a tool result`);
       }
     }
     const log = process.env.PII_PAYLOAD_LOG;

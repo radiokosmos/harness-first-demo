@@ -21,10 +21,25 @@ const DETECTORS = [
     },
     norm: (m) => m.toLowerCase(),
   },
-  // TODO: act 3, exercise 3a — IBAN, CARD, PHONE.
-  // Decoys in the data: order numbers and epoch millis (13–19 digits),
-  // local numbers without a country code, dates, amounts. See corpus/public.jsonl.
-  // Validators: luhnValid(digits), ibanValid(iban) from ./validators.mjs.
+  {
+    type: "IBAN",
+    re: /\b[A-Z]{2}\d{2}[A-Z0-9]{11,30}\b/g,
+    keep: (m) => ibanValid(m), // mod-97
+  },
+  {
+    type: "CARD",
+    // 15–19 digits: epoch millis are 13 and pass Luhn one time in ten
+    re: /\b(?:\d[ -]?){14,18}\d\b/g,
+    keep: (m) => luhnValid(m.replace(/[ -]/g, "")), // order numbers fail Luhn
+    norm: (m) => m.replace(/[ -]/g, ""),
+  },
+  {
+    type: "PHONE",
+    // international format only: a bare local number looks like any other number
+    re: /\+\d[\d\s\-().]{7,}\d/g,
+    keep: (m) => m.replace(/\D/g, "").length >= 9,
+    norm: (m) => m.replace(/\D/g, ""),
+  },
 ];
 
 export class PiiMasker {
