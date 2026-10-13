@@ -56,7 +56,7 @@ Fell behind? Every exercise has a checkpoint branch: `git checkout act-N-…`.
 | `bin/test-pii-hooks` · `bin/replay-session <session>` | 3 | the PII hooks (`pii/hooks.mjs`): cases, and what a recorded session would send to the provider, by path |
 | `bin/pii-score [--hidden]` | 3 | the masker itself (`pii/masker.mjs`) on a labelled corpus |
 | `bin/show-provider-payload [who]` | 3 | what actually left the machine |
-| `bin/run-headless <task> --scenario …` · `bin/verify-run <dir>` | 4 | an unattended run, and checking it by artifacts |
+| `bin/run-headless <task> --scenario …` · `bin/verify-run <dir>` · `bin/test-verify-run` | 4 | an unattended run, and checking it by artifacts; cases: recorded runs in `ci/fixtures/runs/` and the verdict each must get |
 | `bin/drift-check` · `bin/reflections-report` | 5 | does the harness agree with itself; which mistakes keep coming back |
 | `bin/test-guard` · `bin/lint-models` | 5 | the day-boundary guard |
 
