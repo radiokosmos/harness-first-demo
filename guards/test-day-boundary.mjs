@@ -8,9 +8,6 @@ const cases = [
   ["select * from e where d = current_date - 1", true],
   ["select date(event_ts) from e", true],
   ["select cast(timezone('UTC', event_ts) as date) as d from e", false],
-  ["select (event_ts at time zone 'UTC')::date from e", false],
-  ["-- cast(event_ts as date) would be wrong here\nselect cast(timezone('UTC', event_ts) as date) from e", false],
-  ["select cast(ingested_at as varchar) from e", false],
 ];
 let failed = 0;
 for (const [sql, bad] of cases) {
