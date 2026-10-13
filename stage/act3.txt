@@ -2,13 +2,23 @@
 --- 21 · what left the machine
 @ act-3-start
 > recordings/act3/leak/provider-payload-summary.txt
---- 23 · exercise: where to stand — before
+--- 23 · exercise: the agent writes the hooks
+$ cat tasks/act3-hooks.md
+$ bin/replay-session sessions/complaints-with-paste.jsonl
+> recordings/act3/agent-writes-hooks/bob.log
+! git checkout -q -- pii && git apply recordings/act3/agent-writes-hooks/bob.diff
 $ bin/test-pii-hooks
 $ bin/replay-session sessions/complaints-with-paste.jsonl
---- 23 · exercise: where to stand — reference hooks
+--- 23 · you find the case it gets wrong
+# the cases a human added, from the checkpoint branch; the agent's hooks stay
+! git checkout -q act-3-hooks -- pii/test-hooks.mjs
+$ git --no-pager diff --cached
+$ bin/test-pii-hooks
+--- 23 · fixed: act-3-hooks
+! git checkout -q HEAD -- pii
 @ act-3-hooks
 $ bin/test-pii-hooks
-$ bin/replay-session sessions/complaints-with-paste.jsonl
+> recordings/act3/agent-writes-hooks/summary.txt tail 4
 --- 24 · echelon 2 catches a paste, live in pi
 > recordings/act3/paste/stderr-and-stdout.txt
 --- 24 · detokenize: the agent's answer

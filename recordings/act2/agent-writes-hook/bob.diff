@@ -1,0 +1,25 @@
+diff --git a/hooks/core.mjs b/hooks/core.mjs
+index 4a7148e..1a72600 100644
+--- a/hooks/core.mjs
++++ b/hooks/core.mjs
+@@ -4,8 +4,18 @@
+ 
+ /** Would this shell command run dbt against the prod target? */
+ export function isProdRun(command) {
+-  // TODO: act 2, exercise 2a
+-  return false;
++  if (typeof command !== "string") return false;
++
++  // Only dbt invocations are in scope.
++  if (!/\bdbt\b/i.test(command)) return false;
++
++  // --target prod / --target=prod / -t prod (any whitespace or '=' separator).
++  const flagProd = /(?:--target|-t)[\s=]+prod\b/i.test(command);
++
++  // DBT_TARGET=prod set as an env var anywhere in the command line.
++  const envProd = /\bDBT_TARGET=prod\b/i.test(command);
++
++  return flagProd || envProd;
+ }
+ 
+ export const REASON =

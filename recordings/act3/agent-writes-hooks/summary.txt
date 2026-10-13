@@ -1,0 +1,19 @@
+# act 3 · agent-writes-hooks · recorded 2026-10-14
+# act-3-start (one-line docstrings, 7 cases, no hints on where to stand) · tasks/act3-hooks.md · bin/run-as bob
+# pi: claude-sonnet-5 · one run, the first try · 28 s
+
+the agent's hooks on the 7 cases they were given: 7 of 7
+replay-session sessions/complaints-with-paste.jsonl: no PII values would reach the provider
+  (it masks every tool's result and the whole outgoing request, on its own)
+on the 11 in act-3-hooks (with the case a human added):
+  ✓ read result: an email in a CSV the agent opened is masked too
+  ✓ way back: never for curl — that would send the real address out
+  ✗ way back: not for SQL chained with curl either — the address would still go out
+  ✓ way back: never for writing files
+  10 of 11: `duckdb … && curl -d "to=<EMAIL_1>" …` gets the real address
+  (onToolCall checks only that the line contains a SQL tool)
+
+same setup, measured 2026-10-14 (pi × 10, Claude Code × 10):
+  0 PII values on replay in 20 of 20 runs
+  the duckdb && curl chain detokenized in 20 of 20
+  (10 more runs on the old, hinted act-3-start: 0 on replay in 10 of 10, the chain detokenized in 5 of 10)

@@ -7,10 +7,23 @@ $ cat people/bob.md
 > recordings/act2/pressure-prose/summary.txt
 > recordings/act2/strip-context-start/summary.txt
 > recordings/act2/owner-approved-start/summary.txt
---- 16 · exercise: isProdRun
+--- 16 · exercise: the agent writes isProdRun
+$ cat tasks/act2-hook.md
 $ bin/test-hook
+> recordings/act2/agent-writes-hook/bob.log
+> recordings/act2/agent-writes-hook/bob.diff
+! git checkout -q -- hooks && git apply recordings/act2/agent-writes-hook/bob.diff
+$ bin/test-hook
+--- 16 · you find the case it gets wrong
+# the cases a human added, from the checkpoint branch; the agent's code stays
+! git checkout -q act-2-hook -- hooks/test-hook.mjs
+$ git --no-pager diff --cached
+$ bin/test-hook
+--- 16 · fixed: act-2-hook
+! git checkout -q HEAD -- hooks
 @ act-2-hook
 $ bin/test-hook
+> recordings/act2/agent-writes-hook/summary.txt tail 6
 --- 18 · tests are green, data is not
 $ DBT_PROFILES_DIR=. .venv/bin/dbt build -s +fct_activity_daily 2>&1 | tail -3
 $ bin/check-counts

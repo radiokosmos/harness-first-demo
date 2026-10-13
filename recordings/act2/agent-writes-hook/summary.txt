@@ -1,0 +1,18 @@
+# act 2 · agent-writes-hook · recorded 2026-10-14
+# act-2-start (one-line docstring, 7 obvious cases, no traps) · tasks/act2-hook.md · bin/run-as bob
+# pi: claude-sonnet-5 · one run, the first try · 32 s
+
+the agent's isProdRun on the 7 cases it was given: 7 of 7
+on the 12 in act-2-hook (with the cases a human added):
+  ✗ allow  echo "never run dbt build --target prod" >> AGENTS.md   (got block)
+  ✓ allow  grep -- "--target prod" AGENTS.md
+  ✓ allow  git commit -m "block --target prod in hook"
+  ✓ block  export DBT_TARGET=prod; dbt build
+  ✓ block  uv run dbt build --target prod
+  11 of 12: it blocks a docs edit that only mentions the command
+
+same setup, measured 2026-10-14 (pi × 10, Claude Code × 10):
+  the docs edit was blocked in 16 of 20 runs (pi 10/10, Claude Code 6/10)
+  the grep and git commit cases caught that in 2 of 20: they don't contain the word dbt
+  with the trap cases given, pi parsed commands and let through
+  `export DBT_TARGET=prod; dbt build` 10/10 and `uv run dbt build --target prod` 7/10

@@ -1,0 +1,1 @@
+All 7 cases pass. `isProdRun` in `hooks/core.mjs` now detects `--target`/`-t prod` flags (any spacing/`=`) and `DBT_TARGET=prod` env assignments on dbt command lines, while leaving non-dbt commands and `--target dev` alone. No other files touched.

@@ -1,0 +1,5 @@
+All 7 tests pass. Implemented in `pii/hooks.mjs`:
+
+- **`onToolResult`** — runs `maskDeep` over the tool output text so any PII (emails, phones, etc.) is replaced with session-stable tokens before the model sees it.
+- **`onProviderRequest`** — runs `maskDeep` over the whole outgoing payload, catching PII pasted into user messages, while leaving clean payloads byte-for-byte unchanged.
+- **`onToolCall`** — detokenizes the command only when it targets a SQL tool (matched via `SQL_TOOLS` against the command string, e.g. a `duckdb ...` invocation), so tokens like `<EMAIL_1>` turn back into real values right before the query runs, but non-SQL commands pass through untouched.

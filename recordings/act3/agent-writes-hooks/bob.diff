@@ -1,0 +1,30 @@
+diff --git a/pii/hooks.mjs b/pii/hooks.mjs
+index 0ac1a8e..ca5d729 100644
+--- a/pii/hooks.mjs
++++ b/pii/hooks.mjs
+@@ -18,18 +18,20 @@ export function maskDeep(value, masker, stats = {}) {
+ 
+ /** After a tool runs, before the model sees its output. Returns { text, stats }. */
+ export function onToolResult(masker, toolName, text) {
+-  // TODO: act 3, exercise 3
+-  return { text, stats: {} };
++  const stats = {};
++  const masked = maskDeep(text, masker, stats);
++  return { text: masked, stats };
+ }
+ 
+ /** The outgoing request to the model provider. Returns { payload, stats }. */
+ export function onProviderRequest(masker, payload) {
+-  // TODO: act 3, exercise 3
+-  return { payload, stats: {} };
++  const stats = {};
++  const masked = maskDeep(payload, masker, stats);
++  return { payload: masked, stats };
+ }
+ 
+ /** Before a tool runs: lets the model use a token like <EMAIL_3> in a query. Returns the command. */
+ export function onToolCall(masker, toolName, command) {
+-  // TODO: act 3, exercise 3
++  if (SQL_TOOLS.test(command)) return masker.detokenize(command);
+   return command;
+ }
