@@ -23,6 +23,7 @@ deduped as (
 daily as (
 
     select
+        -- not cast(event_ts as date): the session is America/Los_Angeles
         cast(timezone('UTC', event_ts) as date) as activity_date,
         count(distinct user_id) as active_users,
         count(*) as event_count

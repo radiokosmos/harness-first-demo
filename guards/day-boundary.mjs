@@ -4,7 +4,7 @@
 //
 // Used by bin/lint-models (any runtime, CI) and .pi/extensions/sql-guard.ts.
 
-/** Strip SQL and Jinja comments: a comment saying "UTC" is not UTC handling. */
+/** Strip SQL and Jinja comments: a comment is not code, either way. */
 export function stripComments(sql) {
   return sql.replace(/\{#[\s\S]*?#\}/g, "").replace(/\/\*[\s\S]*?\*\//g, "").replace(/--[^\n]*/g, "");
 }
@@ -16,6 +16,11 @@ export function stripComments(sql) {
  * Comments are stripped first. Then each line is checked: cast(… as date), ::date,
  * date_trunc('day', …), date(…) and current_date are hits, unless the line says
  * which time zone it means — timezone('UTC', …) or at time zone 'UTC'.
+ *
+ * Cases people found and pinned in guards/test-day-boundary.mjs:
+ *   a comment that explains the fix must not fire (a guard that fires on the
+ *   explanation gets turned off), and a comment saying "UTC" doesn't make a bare
+ *   cast right; `(event_ts at time zone 'UTC')::date` is UTC too.
  */
 const UTC = /timezone\s*\(\s*'utc'|at\s+time\s+zone\s+'utc'|convert_timezone/i;
 const PATTERNS = [
