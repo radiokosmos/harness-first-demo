@@ -24,6 +24,7 @@ Each folder has the files the agents added, their logs, and `summary.txt`
 | `act4/ok` | `act-4-start`, `run-headless --scenario ok` | the only run that worked found the real day-boundary bug; verify-run OK |
 | `act4/expired-token` | `--scenario expired-token` | exit 0, empty output → "nothing needs attention"; verify-run: zero tool calls |
 | `act4/no-warehouse` | `--scenario no-warehouse` | the agent "fixed" the unreachable warehouse: `rmdir demo.duckdb && dbt seed`, called it a stale artifact; caught only by the destructive-action check |
+| `act4/agent-writes-verify-run` | `act-4-start` (recordings/ and stage/ left out of the copy), `tasks/act4-verify.md` | one pi run: 2 of 2 on ok and expired-token with 5 checks of its own; RUN OK on no-warehouse (2 of 3 on act-4-heartbeat's cases) |
 | `act5/natural` | `act-5-done`, a new daily model | the agent used UTC on its own; the guard had nothing to catch (dead, or perfect?) |
 | `act5/guard-fires` | `act-5-done`, a bare cast written on purpose | sql-guard appended its finding to the write result; the agent saw it |
 

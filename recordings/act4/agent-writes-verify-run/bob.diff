@@ -1,0 +1,89 @@
+diff --git a/ci/verify-run.mjs b/ci/verify-run.mjs
+index 70f1a1a..fb278ca 100644
+--- a/ci/verify-run.mjs
++++ b/ci/verify-run.mjs
+@@ -11,7 +11,8 @@
+ //
+ // Print one line per check (✓ / ✗ with the problems), then RUN OK or RUN FAILED.
+ // Exit 0 if the run is OK, 1 otherwise.
+-import { existsSync } from "node:fs";
++import { existsSync, readFileSync } from "node:fs";
++import { join } from "node:path";
+ 
+ const run = process.argv[2];
+ if (!run || !existsSync(run)) {
+@@ -19,6 +20,71 @@ if (!run || !existsSync(run)) {
+   process.exit(2);
+ }
+ 
+-// TODO: act 4, exercise 4 — write the checks.
+-console.log("RUN OK");
+-process.exit(0);
++// The nightly job (tasks/nightly-review.md) is: build fct_activity_daily,
++// run bin/data-diff fct_activity_daily, write a report. We confirm the first
++// two actually happened from log.jsonl (never trusting report.md or the exit
++// code), and that the diff left its artifact behind.
++
++const logPath = join(run, "log.jsonl");
++const toolCalls = [];
++const resultIds = new Set();
++if (existsSync(logPath)) {
++  for (const line of readFileSync(logPath, "utf8").split("\n")) {
++    if (!line.trim()) continue;
++    let entry;
++    try {
++      entry = JSON.parse(line);
++    } catch {
++      continue; // malformed line, ignore
++    }
++    if (entry.event === "tool_call") toolCalls.push(entry);
++    if (entry.event === "tool_result") resultIds.add(entry.id);
++  }
++}
++
++const hasCommand = (re) => toolCalls.some((c) => typeof c.command === "string" && re.test(c.command));
++const hung = toolCalls.filter((c) => !resultIds.has(c.id));
++
++const evidencePath = join(run, "nightly", "EVIDENCE.md");
++const evidence = existsSync(evidencePath) ? readFileSync(evidencePath, "utf8") : "";
++
++const checks = [
++  {
++    name: "log.jsonl records tool calls",
++    ok: toolCalls.length > 0,
++    problem: "no log.jsonl, or no tool_call events in it — the agent never ran",
++  },
++  {
++    name: "every tool call got a result",
++    ok: toolCalls.length > 0 && hung.length === 0,
++    problem: `${hung.length} tool call(s) with no matching tool_result — run hung or was cut off`,
++  },
++  {
++    name: "ran dbt build on fct_activity_daily",
++    ok: hasCommand(/dbt build[^\n]*fct_activity_daily/),
++    problem: "no `dbt build -s fct_activity_daily` (or similar) in the log",
++  },
++  {
++    name: "ran bin/data-diff fct_activity_daily",
++    ok: hasCommand(/data-diff[^\n]*fct_activity_daily/),
++    problem: "no `bin/data-diff fct_activity_daily` in the log",
++  },
++  {
++    name: "left an EVIDENCE.md artifact",
++    ok: evidence.trim().length > 0 && /bin\/data-diff/.test(evidence),
++    problem: "nightly/EVIDENCE.md is missing or empty — data-diff never produced its artifact",
++  },
++];
++
++let failed = false;
++for (const c of checks) {
++  if (c.ok) {
++    console.log(`\u2713 ${c.name}`);
++  } else {
++    failed = true;
++    console.log(`\u2717 ${c.name} — ${c.problem}`);
++  }
++}
++
++console.log(failed ? "RUN FAILED" : "RUN OK");
++process.exit(failed ? 1 : 0);

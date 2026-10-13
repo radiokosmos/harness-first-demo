@@ -4,9 +4,26 @@
 > recordings/act4/ok/report.md head 14
 > recordings/act4/expired-token/report.md
 > recordings/act4/no-warehouse/report.md head 12
---- 29 · verify the run by its artifacts (reference checks)
-@ act-4-heartbeat
-$ bin/verify-run recordings/act4/ok
-$ bin/verify-run recordings/act4/expired-token
+--- 29 · exercise: the agent writes verify-run
+@ act-4-start
+$ cat tasks/act4-verify.md
+$ bin/test-verify-run
+> recordings/act4/agent-writes-verify-run/bob.log tail 9
+# the agent's checks look for the tool by name: the fixtures say reconcile, recordings/act4 still say data-diff;
+# its diff goes in with those two regexes matching both names, as in ci/verify-run.mjs
+! git checkout -q -- ci && sed -e 's#hasCommand(/data-diff#hasCommand(/(data-diff|reconcile)#' -e 's#/bin\\/data-diff/#/bin\\/(data-diff|reconcile)/#' recordings/act4/agent-writes-verify-run/bob.diff | git apply
+$ bin/test-verify-run
+--- 29 · you show it the third run
 $ bin/verify-run recordings/act4/no-warehouse
+# the run a human added, from the checkpoint branch; the agent's verify-run stays
+! git checkout -q act-4-heartbeat -- ci/test-verify-run.mjs ci/fixtures/runs/no-warehouse
+$ git --no-pager diff --cached --stat
+$ git --no-pager diff --cached -- ci/test-verify-run.mjs
+$ bin/test-verify-run
+--- 29 · fixed: act-4-heartbeat
+! git reset -q -- ci && git checkout -q -- ci && git clean -fdqx -- ci
+@ act-4-heartbeat
+$ bin/test-verify-run
+$ bin/verify-run recordings/act4/no-warehouse
+> recordings/act4/agent-writes-verify-run/summary.txt tail 4
 @ main
