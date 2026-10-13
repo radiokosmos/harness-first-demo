@@ -25,12 +25,16 @@ GREEN, RED, RESET = "\033[32m", "\033[31m", "\033[0m"
 # Versions of fct_activity_daily: how each one turns event_ts into a day.
 VERSIONS = {
     "as_committed": "cast(event_ts as date)",  # models/marts/fct_activity_daily.sql as committed in act 1
+    "utc_day": "cast(timezone('UTC', event_ts) as date)",  # the same, with the day taken in UTC
 }
 
 cases = [
     ("as_committed", "runs"),  # three checks, a row per day
     ("as_committed", "completeness has source numbers"),
     ("as_committed", "keys has source numbers"),
+    # found after the agent's reconcile passed everything above: it took "a day" the way the model does
+    ("as_committed", "FAIL"),  # we know this version is wrong: bin/check-counts, 14 of 15 days off
+    ("utc_day", "PASS"),  # and the right one passes: the TODO stub said FAIL to everything
 ]
 
 
