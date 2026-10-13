@@ -4,12 +4,26 @@
 $ head -32 CLAUDE.md
 --- 7 · 14 runs, one repo, one task
 > recordings/act1/before/summary.txt
---- 10 · exercise: split the monolith
+--- 10 · exercise: the agent splits the monolith
+$ cat tasks/act1-split.md
 $ bin/check-layers
---- 10 · the reference split
+> recordings/act1/agent-splits-monolith/alice.log
+! git apply --index recordings/act1/agent-splits-monolith/alice.diff
+$ git --no-pager diff --cached --stat
+$ bin/check-layers
+--- 10 · who decided which layer wins?
+$ grep -n -A3 '## Precedence' AGENTS.md
+--- 10 · the team decides, and pins it as a check
+# the human's check, from the checkpoint branch; the agent's split stays
+! git checkout -q act-1-layers -- bin/lib/check_layers.py
+$ sed -n '/^# Which layer wins/,/^]/p' bin/lib/check_layers.py | grep -v compile
+$ bin/check-layers
+--- 10 · fixed: act-1-layers
+! git checkout -q HEAD -- bin && git apply -R --index recordings/act1/agent-splits-monolith/alice.diff
 @ act-1-layers
-$ cat AGENTS.md
+$ sed -n '/^## Layers/,/^$/p' AGENTS.md
 $ bin/check-layers
+> recordings/act1/agent-splits-monolith/summary.txt tail 6
 --- 11 · after the split, 10 runs
 > recordings/act1/after/summary.txt
 --- 13 · the agent checked its own work

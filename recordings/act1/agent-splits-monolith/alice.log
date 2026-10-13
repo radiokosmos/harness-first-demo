@@ -1,0 +1,16 @@
+All 7 checks pass. Here's the layering:
+
+**Personal** (`people/alice.md`) — German replies, no "Great question", ≤5-bullet summaries, work-late batching, no emojis, rounded numbers, her scratch folder.
+
+**Team** (`AGENTS.md`, root, 23 content lines) — dbt run/safety commands, package/ownership rules, pointers to the other layers, and an explicit precedence rule (personal > team > directory defaults).
+
+**Directory layers**:
+- `models/AGENTS.md` — naming, SQL style, marts rule, test requirement, PII tagging.
+- `models/staging/AGENTS.md` — one-model-per-source, `_sources.yml`, `stg_events` dedupe, PII-in-body rule.
+- `macros/AGENTS.md` — docstring requirement.
+
+**Skill** (`skills/add-model/SKILL.md`) — the 10-step "adding a model" procedure, with frontmatter.
+
+**`CLAUDE.md`** — now just `@AGENTS.md`.
+
+**Dropped entirely** (stale/contradictory, not worth keeping anywhere): "Python 3.10 required" (pyproject needs ≥3.11), "dev_wh.duckdb" (actual default is `demo.duckdb` per `profiles.yml`), the Q3 migration note (a plan, not a fact), "skip tests for quick prototypes" and "double-check against prod" (both contradicted the team's own safety rules).

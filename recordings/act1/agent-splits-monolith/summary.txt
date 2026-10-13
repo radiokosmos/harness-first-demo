@@ -1,0 +1,20 @@
+# act 1 · agent-splits-monolith · recorded 2026-10-14
+# act-1-start (check-layers as shipped: 7 checks, the last one only asks that precedence be explicit) · tasks/act1-split.md · bin/run-as alice
+# pi: claude-sonnet-5 · one run, the first try · 146 s
+
+the agent's split on the 7 checks it was given: 7 of 7
+the order of layers it wrote into AGENTS.md, on its own:
+  "When layers disagree: personal notes in people/<name>.md win over this
+   file, and this file wins over the defaults in directory AGENTS.md files."
+  it put "every model needs unique + not_null tests" in models/AGENTS.md, the bottom of that order
+on act-1-layers' check (the team's decision): 6 of 7
+  ✗ AGENTS.md: personal notes win over the team here
+  ✗ AGENTS.md doesn't say: team rules win · personal notes only on how to talk · a conflict stops the agent
+it also wrote "Never run dbt with --target prod without explicit sign-off from a human"; check 2 lets that through
+
+same setup, measured 2026-10-14 (pi × 5, Claude Code × 5):
+  every run wrote an order of layers of its own; 0 of 10 match the team's check
+  personal notes win on "workflow" or "habits": 6 of 10 (pi 4 of 5, Claude Code 2 of 5)
+  "on a conflict, stop and say so": 0 of 10
+  without the precedence check, 0 of 30 wrote any order (6 checks: 0 of 10; 3 structural ones: 0 of 20)
+  with the team's check added, the same 10 agents fixed their own split: 10 of 10 green

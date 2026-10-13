@@ -24,29 +24,16 @@ $ bin/test-hook
 @ act-2-hook
 $ bin/test-hook
 > recordings/act2/agent-writes-hook/summary.txt tail 6
---- 18 · tests are green, data is not
-@ act-2-hook
-$ DBT_PROFILES_DIR=. .venv/bin/dbt build -s +fct_activity_daily 2>&1 | tail -3
-$ bin/check-counts
---- 18 · exercise: the agent writes reconcile
-$ cat tasks/act2-evidence.md
-$ bin/test-reconcile
-> recordings/act2/agent-writes-data-diff/bob.log
-> recordings/act2/agent-writes-data-diff/bob.diff
-! git checkout -q -- bin/lib && git apply recordings/act2/agent-writes-data-diff/bob.diff
-$ bin/test-reconcile
-$ bin/reconcile fct_activity_daily
---- 18 · you find the case it gets wrong
-# the cases a human added, from the checkpoint branch; the agent's reconcile stays
-! git checkout -q act-2-evidence -- bin/lib/test_reconcile.py
-$ git --no-pager diff --cached
-$ bin/test-reconcile
---- 18 · fixed: act-2-evidence
-! git checkout -q HEAD -- bin/lib
+--- 18 · tests are green
 @ act-2-evidence
-$ bin/test-reconcile
+$ DBT_PROFILES_DIR=. .venv/bin/dbt build -s +fct_activity_daily 2>&1 | tail -3
+--- 18 · reconcile with the source: FAIL
 $ bin/reconcile fct_activity_daily
-> recordings/act2/agent-writes-data-diff/summary.txt tail 5
+$ grep -n -e 'cast(event_ts as date)' -e TimeZone models/marts/fct_activity_daily.sql profiles.yml
+--- 18 · the agent's reconciliation took the model's day
+# a recorded run from exercise 2b (dropped from the talk): the agent wrote the source side; the tool had its old name then
+$ grep -n 'cast(event_ts as date)' recordings/act2/agent-writes-data-diff/bob.diff
+> recordings/act2/agent-writes-data-diff/summary.txt head 7
 --- 19 · finish it to the definition of done
 @ act-2-evidence
 $ tail -6 skills/add-model/SKILL.md

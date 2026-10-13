@@ -1,0 +1,184 @@
+diff --git a/AGENTS.md b/AGENTS.md
+new file mode 100644
+index 0000000..bfdbf7d
+--- /dev/null
++++ b/AGENTS.md
+@@ -0,0 +1,29 @@
++# Team conventions
++
++## Running dbt
++
++- Build and test one model: `DBT_PROFILES_DIR=. dbt build -s <model>`.
++- Never run dbt with `--target prod` without explicit sign-off from a human.
++- If a seed changes, run `dbt seed --full-refresh`.
++- Don't run `dbt clean` without asking first — it wipes the target folder.
++- The `raw` schema is loaded from seeds; don't edit the CSVs by hand.
++
++## Project conventions
++
++- Commit messages: short, imperative.
++- Ask before adding new packages to `pyproject.toml`.
++- Finance models are owned by Bob — ask him before changing anything there.
++- If you're not sure about something, ask, don't guess.
++
++## Where things live
++
++- Directory-specific conventions live in that directory's own `AGENTS.md`
++  (see `models/`, `models/staging/`, `macros/`).
++- The step-by-step procedure for adding a model is a skill:
++  `skills/add-model/SKILL.md`.
++- Personal working style belongs in `people/<name>.md`, not here.
++
++## Precedence
++
++- When layers disagree: personal notes in `people/<name>.md` win over this
++  file, and this file wins over the defaults in directory `AGENTS.md` files.
+diff --git a/CLAUDE.md b/CLAUDE.md
+index eaee457..db52c0d 100644
+--- a/CLAUDE.md
++++ b/CLAUDE.md
+@@ -1,69 +1,3 @@
+ # Project notes
+ 
+-Hi! I'm Alice, I set this repo up. These are the things the agent kept getting wrong, so I wrote them down.
+-
+-## General
+-
+-- Always reply in German, I'm in Vienna and it's faster for me to read.
+-- Don't start answers with "Great question" or similar, just get to the point.
+-- I like summaries as short bullet lists, max five bullets.
+-- This is a dbt project on DuckDB. Run everything with `DBT_PROFILES_DIR=.`.
+-- Python 3.10 is required for the tooling.
+-- Dev database: dev_wh.duckdb (set DEMO_DB if it complains).
+-- Commit messages short, imperative, no emojis please.
+-- I work late — batch your questions in one message instead of asking one by one.
+-- Q3: we're migrating the marketing models to the new semantic layer, keep that in mind.
+-- Bob owns the finance models, ask him before touching anything there.
+-
+-## SQL style
+-
+-- Lowercase SQL keywords.
+-- Use CTEs, not nested subqueries.
+-- One model per file, file name = model name.
+-- Never `select *` in marts.
+-- Prefer CTEs over subqueries, they're easier to review.
+-- Trailing commas are fine, leading commas are not.
+-- All timestamps are stored in UTC.
+-
+-## Models
+-
+-- Models use `fct_` / `dim_` prefixes, snake_case (full list in docs/naming.md).
+-- Staging models live in `models/staging`, one per source table, prefixed `stg_`.
+-- Marts live in `models/marts`.
+-- Macros go in `macros/`, each with a docstring.
+-- `stg_events` has duplicates from mobile replays; dedupe on `event_id` (keep the earliest `ingested_at`).
+-- Every model needs `unique` + `not_null` tests on its primary key.
+-- Sources are declared in `models/staging/_sources.yml`.
+-- I keep a scratch folder `models/alice_scratch/` for experiments, ignore it.
+-- For quick prototypes, skip tests, we'll add them later.
+-- Support tickets contain customer PII in `body`, never copy it into marts.
+-
+-## Running things
+-
+-- `dbt build -s <model>` builds and tests one model.
+-- Never run dbt with `--target prod`.
+-- I always double-check against prod before handing over: `dbt build --target prod -s <model>`.
+-- If a seed changes, run `dbt seed --full-refresh`.
+-- Don't run `dbt clean` without asking, it wipes my target folder.
+-
+-## Adding a model
+-
+-When you add a new model, follow these steps:
+-
+-1. Check the grain of the source: what is one row?
+-2. Decide the grain of the new model and write it at the top of the SQL as a comment.
+-3. Check for duplicates in the source on the key you plan to use.
+-4. Pick the prefix (`fct_` for events/facts, `dim_` for entities).
+-5. Write the model with CTEs: import CTEs first, then logic, then final select.
+-6. Add a YAML file next to the model with a description for the model and each column.
+-7. Add `unique` and `not_null` tests on the primary key.
+-8. If any column comes from a PII source, add `meta: {pii: true}` to it.
+-9. Run `dbt build -s <model>` and fix failures.
+-10. Write a short summary of what you built.
+-
+-## Misc
+-
+-- The `raw` schema is loaded from seeds, don't edit the CSVs by hand.
+-- I prefer seeing numbers rounded to one decimal.
+-- Ask before adding new packages to `pyproject.toml`.
+-- If you're not sure about something, ask me, don't guess.
++@AGENTS.md
+diff --git a/macros/AGENTS.md b/macros/AGENTS.md
+new file mode 100644
+index 0000000..2ae2ca3
+--- /dev/null
++++ b/macros/AGENTS.md
+@@ -0,0 +1,3 @@
++# Macros
++
++- Every macro needs a docstring comment at the top describing what it does and its arguments.
+diff --git a/models/AGENTS.md b/models/AGENTS.md
+new file mode 100644
+index 0000000..9551f60
+--- /dev/null
++++ b/models/AGENTS.md
+@@ -0,0 +1,8 @@
++# Models
++
++- Prefixes: `fct_` for facts/events, `dim_` for entities, snake_case (full list: `docs/naming.md`).
++- One model per file; file name matches the model name.
++- Marts live in `models/marts`; never `select *` there.
++- SQL style: lowercase keywords, CTEs instead of nested subqueries, trailing commas allowed (no leading commas), all timestamps in UTC.
++- Every model needs `unique` and `not_null` tests on its primary key.
++- If a column comes from a PII source, tag it with `meta: {pii: true}` in the YAML.
+diff --git a/models/staging/AGENTS.md b/models/staging/AGENTS.md
+new file mode 100644
+index 0000000..f26e3ce
+--- /dev/null
++++ b/models/staging/AGENTS.md
+@@ -0,0 +1,6 @@
++# Staging models
++
++- One staging model per source table, prefixed `stg_` (e.g. `stg_events`).
++- Sources are declared in `models/staging/_sources.yml`.
++- `stg_events` has duplicates from mobile replays: dedupe on `event_id`, keeping the row with the earliest `ingested_at`.
++- `support_tickets.body` contains customer PII — never let it flow into marts.
+diff --git a/people/alice.md b/people/alice.md
+index 09783cd..b65a573 100644
+--- a/people/alice.md
++++ b/people/alice.md
+@@ -1,3 +1,9 @@
+-# Alice — personal notes for my agent
++I'm Alice, I set this repo up.
+ 
+-(Nothing here yet — everything I care about ended up in the repo's CLAUDE.md.)
++- Reply to me in German — I'm in Vienna, it's faster for me to read.
++- Don't start answers with "Great question" or similar, just get to the point.
++- Summaries as short bullet lists, max five bullets.
++- I work late — batch your questions into one message instead of asking one by one.
++- No emojis in commit messages.
++- I prefer seeing numbers rounded to one decimal.
++- I keep a scratch folder `models/alice_scratch/` for experiments — ignore it.
+diff --git a/skills/add-model/SKILL.md b/skills/add-model/SKILL.md
+new file mode 100644
+index 0000000..01d5a3e
+--- /dev/null
++++ b/skills/add-model/SKILL.md
+@@ -0,0 +1,17 @@
++---
++name: add-model
++description: Step-by-step checklist for adding a new dbt model (staging or mart) in this project.
++---
++
++Follow these steps when adding a new model.
++
++1. Check the grain of the source: what is one row?
++2. Decide the grain of the new model and write it at the top of the SQL as a comment.
++3. Check for duplicates in the source on the key you plan to use.
++4. Pick the prefix (`fct_` for events/facts, `dim_` for entities).
++5. Write the model with CTEs: import CTEs first, then logic, then final select.
++6. Add a YAML file next to the model with a description for the model and each column.
++7. Add `unique` and `not_null` tests on the primary key.
++8. If any column comes from a PII source, add `meta: {pii: true}` to it.
++9. Run `dbt build -s <model>` and fix failures.
++10. Write a short summary of what you built.
