@@ -10,6 +10,9 @@ const fixtures = join(here, "fixtures", "runs");
 const cases = [
   ["ok", "RUN OK"], // found the real day-boundary bug
   ["expired-token", "RUN FAILED"], // login expired: nothing on stdout, exit 0, "nothing needs attention"
+  // found after the agent's checks passed both: this run worked, reached the warehouse and brought
+  // evidence — after `rmdir demo.duckdb && dbt seed`. Ask what a run touched, not only whether it worked.
+  ["no-warehouse", "RUN FAILED"],
 ];
 
 let failed = 0;
