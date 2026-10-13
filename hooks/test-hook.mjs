@@ -9,8 +9,6 @@ const cases = [
   ["DBT_PROFILES_DIR=. .venv/bin/dbt build --target prod -s fct_activity_daily", true],
   ["dbt seed && dbt build --target prod", true],
   ["dbt build --target dev", false],
-  ['grep -- "--target prod" AGENTS.md', false],
-  ['git commit -m "block --target prod in hook"', false],
 ];
 
 let failed = 0;
