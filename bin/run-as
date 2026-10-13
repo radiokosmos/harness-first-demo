@@ -43,8 +43,11 @@ runs="${HARNESS_RUNS:-$HOME/.cache/harness-first-demo/runs}"
 dest="$runs/$who"
 rm -rf "$dest"
 mkdir -p "$dest"
+# recordings/ and stage/ hold the presenter's answers (trap cases, recorded agent code):
+# an attendee's agent must not see them.
 rsync -a --exclude .git --exclude .venv --exclude people --exclude target \
-  --exclude logs --exclude '*.duckdb' --exclude '*.duckdb.wal' "$root/" "$dest/"
+  --exclude logs --exclude recordings --exclude stage \
+  --exclude '*.duckdb' --exclude '*.duckdb.wal' "$root/" "$dest/"
 ln -s "$root/.venv" "$dest/.venv"
 if [[ $strip == 1 ]]; then
   find "$dest" \( -name AGENTS.md -o -name CLAUDE.md \) -not -path "*/.venv/*" -delete
